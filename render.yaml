@@ -1,0 +1,54 @@
+# Blueprint de Render para el backend FastAPI.
+#
+# En Render: New -> Blueprint -> este repositorio. Crea el servicio con esta
+# definicion. Las variables marcadas `sync: false` se rellenan en el panel de
+# Render y nunca se versionan.
+#
+# Plan gratuito: el servicio se duerme tras inactividad y tarda unos segundos
+# en despertar. No afecta al visitante, porque el frontend sirve paginas
+# estaticas con ISR y solo llama aqui al revalidar o desde el panel /admin.
+
+services:
+  - type: web
+    name: portafolio-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install uv && uv sync --frozen --no-dev
+    startCommand: uv run uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12"
+      - key: ENVIRONMENT
+        value: production
+      - key: PERSISTENCE_BACKEND
+        value: supabase
+      - key: AUTH_BACKEND
+        value: supabase
+      - key: API_PREFIX
+        value: /api/v1
+      - key: LOG_LEVEL
+        value: INFO
+      - key: SUPABASE_STORAGE_BUCKET
+        value: media
+      - key: SUPABASE_JWT_AUDIENCE
+        value: authenticated
+      # --- se rellenan en el panel de Render ---------------------------------
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: MEDIA_PUBLIC_BASE_URL
+        sync: false
+      # Origen del frontend en Netlify, y luego el dominio propio. Separados por coma.
+      - key: CORS_ORIGINS
+        sync: false
+      # URL del endpoint de revalidacion del frontend y su secreto compartido.
+      - key: FRONTEND_REVALIDATE_URL
+        sync: false
+      - key: FRONTEND_REVALIDATE_SECRET
+        sync: false

@@ -1,0 +1,23 @@
+# Despliegue del frontend en Netlify.
+#
+# El repo es un monorepo: el sitio Next.js vive en `web/`. Netlify clona el
+# repositorio entero y cambia el directorio de trabajo a `base`, asi que
+# `web/` sigue pudiendo leer `../content/catalog.seed.json` y
+# `../content/media-manifest.json` durante el build.
+#
+# Las variables de entorno se definen en el panel de Netlify, no aqui:
+# ver docs/05-despliegue.md.
+
+[build]
+  base    = "web"
+  command = "pnpm build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Sin telemetria de Next en los builds de CI.
+  NEXT_TELEMETRY_DISABLED = "1"
+
+# Runtime de Next.js de Netlify: App Router, ISR y next/image.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
