@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix Ruiz M. - Python Developer & Data Scientist</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    
+<style>
+    .education-description, .certification-description {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        margin-top: 0;
+        border-top: 1px solid #eee;
+    }
+    
+    .education-description.active, .certification-description.active {
+        max-height: 500px; /* Altura máxima arbitraria para la animación */
+        margin-top: 15px;
+        padding-top: 15px;
+    }
+    
+    .description-toggle.active {
+        background-color: #e67e22;
+    }
+    
+    .education-card, .certification-card, .project-card, .work-card {
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        background-color: #fff;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    /* Estilo de las cabeceras naranjas */
+    .certification-card-header, .project-card-header, .work-card-header {
+        background-color: #ff7a00;
+        color: white;
+        padding: 1.5rem;
+    }
+    
+    .certification-card-body, .project-card-body, .work-card-body {
+        padding: 1.5rem;
+    }
+    
+    .hero-social-icons {
+        margin-top: 20px;
+    }
+    
+    .hero-social-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        margin-right: 15px;
+        border-radius: 50%;
+        background-color: #e67e22;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+    
+    .hero-social-icons a:hover {
+        background-color: #d35400;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .hero-social-icon {
+        width: 25px;
+        height: 25px;
+        transition: all 0.3s ease;
+    }
+    
+    .bio-container {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        opacity: 0;
+        margin-bottom: 0;
+    }
+    
+    .bio-container.active {
+        max-height: 500px; /* Altura máxima arbitraria para la animación */
+        opacity: 1;
+        margin-bottom: 1rem;
+    }
+    
+    .about-me-btn.active {
+        background-color: #d35400;
+    }
+    
+    /* Estilos para la sección de experiencia laboral */
+    .work-card {
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        border: none;
+    }
+    
+    .work-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .work-img-container {
+        height: 220px;
+        overflow: hidden;
+        position: relative;
+        background-color: #f8f9fa;
+    }
+    
+    .work-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s ease;
+    }
+    
+    .work-card:hover .work-img {
+        transform: scale(1.05);
+    }
+    
+    .company-logo {
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+        border-radius: 6px;
+        background-color: #f8f9fa;
+        padding: 3px;
+    }
+    
+    .position-title {
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    
+    .work-dates {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+    }
+    
+    .work-dates i {
+        color: #e67e22;
+        margin-right: 6px;
+    }
+</style>
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="/portfolio/">
+                
+                <img src="/media/profile/professional/Dise%C3%B1o_sin_t%C3%ADtulo_4.png" alt="Félix Ruiz M." class="navbar-profile-img me-2" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                
+                <span class="fw-bold text-orange">Felix</span> <span class="text-dark">Ruiz M.</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/portfolio/">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/education/">
+                            Educación
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/certifications/">
+                            Certificaciones
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/projects/">
+                            Proyectos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/experience/">
+                            Experiencia Laboral
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/publications/">
+                            Publicaciones
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/contact/">
+                            Contacto
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown ms-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe"></i> Español
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item active" href="/set-language/?lang=es&next=/portfolio/">Español</a></li>
+                            <li><a class="dropdown-item " href="/set-language/?lang=en&next=/portfolio/">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        
+        
+        
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="hero-img-container" data-aos="fade-left">
+                    
+                        <img src="/media/profile/Dise%C3%B1o_sin_t%C3%ADtulo_4.png" alt="Félix Ruiz M." class="hero-img">
+                    
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="hero-content" data-aos="fade-right">
+                    <h1>
+                        
+                            
+                                Félix Ruiz M.
+                            
+                        
+                    </h1>
+                    <p class="subtitle">
+                        
+                            
+                                Python Developer &amp; Data Scientist
+                            
+                        
+                    </p>
+                    
+                    <div id="bioContainer" class="bio-container">
+                        <p>
+                            
+                                
+                                    Especialista en Data Science con sólida formación en Python y Machine Learning. Mi portfolio incluye proyectos completos como Data Scientist, Data Analyst y Python Developer, utilizando TensorFlow, Scikit-learn y Keras para modelado predictivo e implementaciones de deep learning. Experiencia en visualización de datos con Matplotlib y Plotly, desarrollo web con Django y Flask, flujos ETL y automatización de procesos. Combino experiencia avanzada en el ecosistema Python con capacidades analíticas para transformar conjuntos de datos complejos en insights accionables y desarrollar aplicaciones funcionales que generan valor de negocio inmediato.
+                                
+                            
+                        </p>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <button id="aboutMeBtn" class="btn btn-orange about-me-btn me-3">
+                            Acerca de Mí
+                        </button>
+                        <a href="/portfolio/projects/" class="btn btn-orange me-3">Ver Proyectos</a>
+                        <a href="/portfolio/contact/" class="btn btn-outline-dark">Contactar</a>
+                    </div>
+                    
+                    <!-- Social Icons -->
+                    <div class="hero-social-icons">
+                        
+                            
+                                
+                                    <a href="https://www.linkedin.com/in/felix-ruiz-mu%C3%B1oz-111784b8/" target="_blank" title="LinkedIn">
+                                        <img src="/static/images/social/linkedin.svg" alt="LinkedIn" class="hero-social-icon">
+                                    </a>
+                                    
+                                
+                                
+                                
+                                
+                            
+                                
+                                
+                                
+                                    <a href="https://www.instagram.com/f.alejorm93/?hl=es3" target="_blank" title="Instagram">
+                                        <img src="/static/images/social/instagram.svg" alt="Instagram" class="hero-social-icon">
+                                    </a>
+                                    
+                                
+                                
+                            
+                                
+                                
+                                    <a href="https://github.com/MFelix9310" target="_blank" title="GitHub">
+                                        <img src="/static/images/social/github.svg" alt="GitHub" class="hero-social-icon">
+                                    </a>
+                                    
+                                
+                                
+                                
+                            
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section class="py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title" data-aos="fade-up">Educación</h2>
+            </div>
+        </div>
+        <div class="row">
+            
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    
+                        <div class="education-card h-100">
+                            <div class="education-card-header">
+                                <h4>
+                                    
+                                        Maestría en Ciencias de Datos y Máquinas de Aprendizaje, Mención en Inteligencia Artificial
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Universidad Internacional del Ecuador (UIDE) en colaboración con EIG Business School (España) y Arizona State University
+                                    
+                                </p>
+                                <span class="education-year">2026</span>
+                            </div>
+                            <div class="education-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="home-education-description-6">
+                                    Descripción
+                                </button>
+                                
+                                <div id="home-education-description-6" class="education-description">
+                                    <p>
+                                        
+                                            Programa de posgrado de un año en modalidad en línea con enfoque en inteligencia artificial, machine learning y deep learning
+Doble titulación con validez en países de la Unión Europea a través de EIG Business School (España)
+Currículo académico que incluye metodologías del MIT, Design Thinking de Stanford y el modelo STEM
+Desarrollo de competencias en diseño de procesos ETL, arquitectura y modelado de datos, visualización avanzada, machine learning y redes neuronales
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    
+                        <div class="education-card h-100">
+                            <div class="education-card-header">
+                                <h4>
+                                    
+                                        Diploma en Data Science
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Universidad Nacional de Córdoba (UNC)
+                                    
+                                </p>
+                                <span class="education-year">2025</span>
+                            </div>
+                            <div class="education-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="home-education-description-3">
+                                    Descripción
+                                </button>
+                                
+                                <div id="home-education-description-3" class="education-description">
+                                    <p>
+                                        
+                                            En este programa adquirí conocimientos sobre el ciclo de vida completo de los datos, desde la obtención y limpieza hasta su visualización y análisis. Desarrollé habilidades en programación (R y Python), estadística, bases de datos, visualización de datos, machine learning y deep learning. El programa incluyó 26 encuentros a lo largo de 7 meses, con un proyecto integrador que me permitió aplicar las competencias adquiridas en un caso real.
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    
+                        <div class="education-card h-100">
+                            <div class="education-card-header">
+                                <h4>
+                                    
+                                        Especialización en Python
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Tokio New Technology School
+                                    
+                                </p>
+                                <span class="education-year">2024</span>
+                            </div>
+                            <div class="education-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="home-education-description-4">
+                                    Descripción
+                                </button>
+                                
+                                <div id="home-education-description-4" class="education-description">
+                                    <p>
+                                        
+                                            Programa completo de 400 horas sobre programación en Python, incluyendo conceptos de programación orientada a objetos, manipulación de datos y desarrollo de aplicaciones web y de escritorio
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title" data-aos="fade-up">Certificaciones</h2>
+            </div>
+        </div>
+        <div class="row">
+            
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    
+                        <div class="certification-card h-100">
+                            <div class="certification-card-header">
+                                <h4>
+                                    
+                                        Certificación Profesional en Inteligencia Artificial
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Tokio New Technology School
+                                    
+                                </p>
+                                <span class="certification-date">julio 2025</span>
+                            </div>
+                            <div class="certification-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="home-certification-description-4">
+                                    Descripción
+                                </button>
+                                
+                                
+                                    <a href="/media/certificates/1_Iyhdt23.pdf" class="btn btn-sm btn-outline-secondary mb-2 ms-2" target="_blank">
+                                        Ver Certificado
+                                    </a>
+                                
+                                
+                                <div id="home-certification-description-4" class="certification-description">
+                                    <p>
+                                        
+                                            Programa profesional de 200 horas en Inteligencia Artificial enfocado en fundamentos de IA, machine learning, deep learning, procesamiento de lenguaje natural y aplicaciones prácticas de sistemas inteligentes. Certificación otorgada por Tokio School (enero 2026).
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    
+                        <div class="certification-card h-100">
+                            <div class="certification-card-header">
+                                <h4>
+                                    
+                                        PCEP – Certified Entry-Level Python Programmer
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        OpenEDG Python Institute
+                                    
+                                </p>
+                                <span class="certification-date">agosto 2024</span>
+                            </div>
+                            <div class="certification-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="home-certification-description-1">
+                                    Descripción
+                                </button>
+                                
+                                
+                                    <a href="/media/certificates/pcep.png" class="btn btn-sm btn-outline-secondary mb-2 ms-2" target="_blank">
+                                        Ver Certificado
+                                    </a>
+                                
+                                
+                                <div id="home-certification-description-1" class="certification-description">
+                                    <p>
+                                        
+                                            El PCEP (Certified Entry-Level Python Programmer) es una certificación básica de programación en Python ofrecida por el Python Institute de OpenEDG. Esta certificación está diseñada para principiantes que desean validar sus habilidades fundamentales en Python y es el primer paso en la ruta de certificaciones profesionales de Python.
+El PCEP verifica que el candidato tiene un conocimiento general de los conceptos de programación en Python, entiende la sintaxis y la semántica del lenguaje, y es capaz de resolver problemas básicos utilizando Python. La certificación demuestra que el programador puede trabajar con las características esenciales del lenguaje y realizar tareas de codificación simples de manera independiente.
+Esta certificación es ideal para estudiantes, personas que están cambiando de carrera, o profesionales que buscan complementar sus habilidades técnicas con conocimientos de programación en Python.
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    
+                        <div class="certification-card h-100">
+                            <div class="certification-card-header">
+                                <h4>
+                                    
+                                        Python Essentials 1
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Cisco
+                                    
+                                </p>
+                                <span class="certification-date">agosto 2024</span>
+                            </div>
+                            <div class="certification-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="home-certification-description-2">
+                                    Descripción
+                                </button>
+                                
+                                
+                                
+                                <div id="home-certification-description-2" class="certification-description">
+                                    <p>
+                                        
+                                            Este curso introductorio de Cisco Networking Academy proporciona una base sólida en programación con Python. Diseñado para principiantes, cubre conceptos fundamentales como variables, tipos de datos, operadores, estructuras de control (condicionales y bucles), funciones, y fundamentos de programación orientada a objetos. Los estudiantes aprenden a escribir código limpio y eficiente, resolviendo problemas prácticos mediante laboratorios interactivos. Al completar el curso, los participantes pueden obtener la certificación PCEP (Python Certified Entry-level Programmer), un reconocimiento oficial de la Python Institute que valida las habilidades básicas de programación en Python.
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title" data-aos="fade-up">Proyectos</h2>
+            </div>
+        </div>
+        <div class="row">
+            
+                
+                    
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    
+                        <div class="project-card h-100">
+                            <div class="project-card-header">
+                                <h4>
+                                    
+                                        StructRelAI — Data Engineering &amp; Data Science para Confiabilidad Estructural
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Python, NumPy, Pandas, SciPy, Scikit-learn, Matplotlib, PyYAML, Pytest
+                                    
+                                </p>
+                                
+                                
+                            </div>
+                            
+                            <div class="project-card-body">
+                                
+                                    <img src="/media/projects/monte_carlo_structural.gif" alt="StructRelAI — Data Engineering &amp; Data Science para Confiabilidad Estructural" class="img-fluid rounded mb-3">
+                                
+                                
+                                <p>
+                                    
+                                        Pipeline de datos con arquitectura Medallion (Bronze, Silver, Gold) para estimar la probabilidad de…
+                                    
+                                </p>
+                                <div class="d-flex flex-wrap mt-3">
+                                    
+                                    
+                                            <a href="https://github.com/MFelix9310/StructRelAI" target="_blank" class="btn btn-sm btn-orange me-2 mb-2">GitHub</a>
+                                    
+                                    
+                                    
+                                    <a href="/portfolio/projects/29/" class="btn btn-sm btn-orange mb-2">Detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    
+                        <div class="project-card h-100">
+                            <div class="project-card-header">
+                                <h4>
+                                    
+                                        Pipeline Medallion para datos de generación eléctrica EERSA
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Microsoft Fabric, PySpark, Delta Lake, Python, pandas, OneLake, Medallion Architecture, Kimball
+                                    
+                                </p>
+                                
+                                
+                            </div>
+                            
+                            <div class="project-card-body">
+                                
+                                    <img src="/media/projects/task_flow_medallion.png" alt="Pipeline Medallion para datos de generación eléctrica EERSA" class="img-fluid rounded mb-3">
+                                
+                                
+                                <p>
+                                    
+                                        Pipeline de ingeniería de datos end-to-end que procesa registros diarios de generación eléctrica de…
+                                    
+                                </p>
+                                <div class="d-flex flex-wrap mt-3">
+                                    
+                                    
+                                            <a href="https://github.com/MFelix9310/eersa-data-plataform/tree/master" target="_blank" class="btn btn-sm btn-orange me-2 mb-2">GitHub</a>
+                                    
+                                    
+                                    
+                                    <a href="/portfolio/projects/28/" class="btn btn-sm btn-orange mb-2">Detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    
+                        <div class="project-card h-100">
+                            <div class="project-card-header">
+                                <h4>
+                                    
+                                        Pipeline de Monitoreo de Sequía — Arquitectura Medallón con Datos Satelitales
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Python, xarray, pandas, NumPy, earthaccess, pyhdf, NetCDF4, scipy, REST API, HDF-EOS, Parquet, PyYAML, pytest, Git
+                                    
+                                </p>
+                                
+                                
+                            </div>
+                            
+                            <div class="project-card-body">
+                                
+                                    <img src="/media/projects/WhatsApp_Image_2026-03-30_at_17.40.58.jpeg" alt="Pipeline de Monitoreo de Sequía — Arquitectura Medallón con Datos Satelitales" class="img-fluid rounded mb-3">
+                                
+                                
+                                <p>
+                                    
+                                        Pipeline de Data Engineering end-to-end para monitoreo de sequía en los Andes ecuatorianos, constru…
+                                    
+                                </p>
+                                <div class="d-flex flex-wrap mt-3">
+                                    
+                                    
+                                            <a href="https://github.com/MFelix9310/chimborazo-drought-pipeline" target="_blank" class="btn btn-sm btn-orange me-2 mb-2">GitHub</a>
+                                    
+                                    
+                                    
+                                    <a href="/portfolio/projects/27/" class="btn btn-sm btn-orange mb-2">Detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            
+        </div>
+    </div>
+</section>
+
+<!-- Work Experience Section -->
+<section id="work-experience" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Experiencia Laboral</h2>
+            <p class="section-subtitle">Mi trayectoria profesional</p>
+        </div>
+        
+        <div class="row">
+            
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    
+                        <div class="work-card h-100">
+                            <div class="work-card-header">
+                                
+                                <img src="/media/companies/8base.png" alt="8base" class="me-2 company-logo" style="background-color: white; border-radius: 4px; padding: 3px; height: 30px; width: auto; margin-bottom: 10px;">
+                                
+                                <h4>
+                                    
+                                        8base
+                                    
+                                </h4>
+                                <h5 class="mb-2">
+                                    
+                                        Computer Vision Engineer (Contractor) - BIM Automation
+                                    
+                                </h5>
+                                <p class="mb-0">
+                                    <i class="far fa-calendar-alt me-1"></i>
+                                    octubre 2025 - 
+                                    
+                                        Actualidad
+                                    
+                                </p>
+                            </div>
+                            <div class="work-card-body">
+                                
+                                <img src="/media/work/8base.png" class="img-fluid rounded mb-3" alt="Computer Vision Engineer (Contractor) - BIM Automation">
+                                
+                                <p>
+                                    
+                                        Contratado como especialista en Computer Vision para desarrollar un sistema de reconocimiento automático de planos arquitectónicos y generación de mo…
+                                    
+                                </p>
+                                <div class="text-end mt-3">
+                                    <a href="/portfolio/experience/2/" class="btn btn-sm btn-orange">
+                                        Detalles
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    
+                        <div class="work-card h-100">
+                            <div class="work-card-header">
+                                
+                                <h4>
+                                    
+                                        Upwork
+                                    
+                                </h4>
+                                <h5 class="mb-2">
+                                    
+                                        Freelance Data Scientist &amp; Python Developer
+                                    
+                                </h5>
+                                <p class="mb-0">
+                                    <i class="far fa-calendar-alt me-1"></i>
+                                    julio 2024 - 
+                                    
+                                        Actualidad
+                                    
+                                </p>
+                            </div>
+                            <div class="work-card-body">
+                                
+                                <img src="/media/work/images.png" class="img-fluid rounded mb-3" alt="Freelance Data Scientist &amp; Python Developer">
+                                
+                                <p>
+                                    
+                                        Proyectos freelance internacionales en ciencia de datos, automatización Python y BIM, trabajando con clientes de EE.UU. y América Latina.
+Sistema Fu…
+                                    
+                                </p>
+                                <div class="text-end mt-3">
+                                    <a href="/portfolio/experience/3/" class="btn btn-sm btn-orange">
+                                        Detalles
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    
+                        <div class="work-card h-100">
+                            <div class="work-card-header">
+                                
+                                <img src="/media/companies/ESPOCH-LOGO.jpg" alt="Escuela Superior Politécnica de Chimborazo" class="me-2 company-logo" style="background-color: white; border-radius: 4px; padding: 3px; height: 30px; width: auto; margin-bottom: 10px;">
+                                
+                                <h4>
+                                    
+                                        Escuela Superior Politécnica de Chimborazo
+                                    
+                                </h4>
+                                <h5 class="mb-2">
+                                    
+                                        Especialista Técnico de Laboratorio &amp; Ingeniero de Ciencia de Datos
+                                    
+                                </h5>
+                                <p class="mb-0">
+                                    <i class="far fa-calendar-alt me-1"></i>
+                                    mayo 2022 - 
+                                    
+                                        Actualidad
+                                    
+                                </p>
+                            </div>
+                            <div class="work-card-body">
+                                
+                                <img src="/media/work/ESPOCH-LOGO.jpg" class="img-fluid rounded mb-3" alt="Especialista Técnico de Laboratorio &amp; Ingeniero de Ciencia de Datos">
+                                
+                                <p>
+                                    
+                                        Profesional de datos con experiencia en análisis predictivo, machine learning y gestión técnica de laboratorios. Competencias en ciencia de datos, an…
+                                    
+                                </p>
+                                <div class="text-end mt-3">
+                                    <a href="/portfolio/experience/1/" class="btn btn-sm btn-orange">
+                                        Detalles
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="section-title text-center" data-aos="fade-up">Contacto</h2>
+                <p class="lead mb-5" data-aos="fade-up">¿Tienes alguna pregunta o propuesta? ¡No dudes en contactarme!</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8" data-aos="fade-up">
+                <div class="contact-info text-center">
+                    
+                        
+                            <div class="contact-info-item d-inline-block mx-3">
+                                
+                                    <a href="https://www.linkedin.com/in/felix-ruiz-mu%C3%B1oz-111784b8/" target="_blank" class="text-dark">
+                                        <i class="fab fa-linkedin fa-2x"></i>
+                                    </a>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="contact-info-item d-inline-block mx-3">
+                                
+                                    <a href="https://www.instagram.com/f.alejorm93/?hl=es3" target="_blank" class="text-dark">
+                                        <i class="fab fa-instagram fa-2x"></i>
+                                    </a>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="contact-info-item d-inline-block mx-3">
+                                
+                                    <a href="https://github.com/MFelix9310" target="_blank" class="text-dark">
+                                        <i class="fab fa-github fa-2x"></i>
+                                    </a>
+                                
+                            </div>
+                        
+                    
+                </div>
+                <div class="text-center mt-4">
+                    <a href="/portfolio/contact/" class="btn btn-orange">Contactar ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Felix Ruiz M.</h5>
+                    <p>Python Developer & Data Scientist</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-icons">
+                        
+                            
+                                <a href="https://www.linkedin.com/in/felix-ruiz-mu%C3%B1oz-111784b8/" class="text-light me-3" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+                            
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                                <a href="https://www.instagram.com/f.alejorm93/?hl=es3" class="text-light me-3" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                            
+                            
+                        
+                            
+                            
+                                <a href="https://github.com/MFelix9310" class="text-light me-3" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+                            
+                            
+                            
+                        
+                    </div>
+                    <p class="mt-2">&copy; 2026 Felix Ruiz M. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/static/js/main.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Funcionalidad para el botón "Acerca de mí"
+        const aboutMeBtn = document.getElementById('aboutMeBtn');
+        const bioContainer = document.getElementById('bioContainer');
+        
+        if (aboutMeBtn && bioContainer) {
+            aboutMeBtn.addEventListener('click', function() {
+                bioContainer.classList.toggle('active');
+                aboutMeBtn.classList.toggle('active');
+            });
+        }
+        
+        // Funcionalidad para botones de descripción
+        const descriptionToggles = document.querySelectorAll('.description-toggle');
+        
+        descriptionToggles.forEach(function(toggle) {
+            toggle.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const descriptionElement = document.getElementById(targetId);
+                
+                // Alternar la clase active para la descripción
+                descriptionElement.classList.toggle('active');
+                
+                // Alternar la clase active para el botón
+                this.classList.toggle('active');
+            });
+        });
+    });
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificaciones - Felix Ruiz M.</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    
+<style>
+    .certificate-description {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        margin-top: 0;
+        border-top: 1px solid #eee;
+    }
+    
+    .certificate-description.active {
+        max-height: 500px; /* Altura máxima arbitraria para la animación */
+        margin-top: 15px;
+        padding-top: 15px;
+    }
+    
+    .description-toggle.active {
+        background-color: #e67e22;
+    }
+    
+    .certification-card {
+        transition: all 0.3s ease;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        background-color: #fff;
+    }
+</style>
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="/portfolio/">
+                
+                <img src="/media/profile/professional/Dise%C3%B1o_sin_t%C3%ADtulo_4.png" alt="Félix Ruiz M." class="navbar-profile-img me-2" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                
+                <span class="fw-bold text-orange">Felix</span> <span class="text-dark">Ruiz M.</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/education/">
+                            Educación
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/portfolio/certifications/">
+                            Certificaciones
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/projects/">
+                            Proyectos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/experience/">
+                            Experiencia Laboral
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/publications/">
+                            Publicaciones
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/contact/">
+                            Contacto
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown ms-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe"></i> Español
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item active" href="/set-language/?lang=es&next=/portfolio/certifications/">Español</a></li>
+                            <li><a class="dropdown-item " href="/set-language/?lang=en&next=/portfolio/certifications/">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        
+        
+        
+<!-- Certifications Header -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold" data-aos="fade-up">Certificaciones</h1>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100">Mis credenciales y certificados profesionales</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications List -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            
+                
+                    
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    
+                        <div class="certification-card h-100">
+                            <div class="certification-card-header">
+                                <h4>
+                                    
+                                        Certificación Profesional en Inteligencia Artificial
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Tokio New Technology School
+                                    
+                                </p>
+                                <span class="certification-date">julio 2025</span>
+                            </div>
+                            
+                            <div class="certification-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="description-4">
+                                    Descripción
+                                </button>
+                                
+                                
+                                    <a href="/media/certificates/1_Iyhdt23.pdf" class="btn btn-sm btn-outline-secondary mb-2 ms-2" target="_blank">
+                                        Ver Certificado
+                                    </a>
+                                
+                                
+                                
+                                
+                                <div id="description-4" class="certificate-description">
+                                    <p>
+                                        
+                                            Programa profesional de 200 horas en Inteligencia Artificial enfocado en fundamentos de IA, machine learning, deep learning, procesamiento de lenguaje natural y aplicaciones prácticas de sistemas inteligentes. Certificación otorgada por Tokio School (enero 2026).
+                                        
+                                    </p>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    
+                        <div class="certification-card h-100">
+                            <div class="certification-card-header">
+                                <h4>
+                                    
+                                        PCEP – Certified Entry-Level Python Programmer
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        OpenEDG Python Institute
+                                    
+                                </p>
+                                <span class="certification-date">agosto 2024</span>
+                            </div>
+                            
+                            <div class="certification-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="description-1">
+                                    Descripción
+                                </button>
+                                
+                                
+                                    <a href="/media/certificates/pcep.png" class="btn btn-sm btn-outline-secondary mb-2 ms-2" target="_blank">
+                                        Ver Certificado
+                                    </a>
+                                
+                                
+                                
+                                    <a href="https://www.credly.com/badges/5c659716-c25c-4ed0-8c31-f3d2682d4ccd/linked_in_profile" class="btn btn-sm btn-orange mb-2 ms-2" target="_blank">
+                                        Verificar Credencial
+                                    </a>
+                                
+                                
+                                <div id="description-1" class="certificate-description">
+                                    <p>
+                                        
+                                            El PCEP (Certified Entry-Level Python Programmer) es una certificación básica de programación en Python ofrecida por el Python Institute de OpenEDG. Esta certificación está diseñada para principiantes que desean validar sus habilidades fundamentales en Python y es el primer paso en la ruta de certificaciones profesionales de Python.
+El PCEP verifica que el candidato tiene un conocimiento general de los conceptos de programación en Python, entiende la sintaxis y la semántica del lenguaje, y es capaz de resolver problemas básicos utilizando Python. La certificación demuestra que el programador puede trabajar con las características esenciales del lenguaje y realizar tareas de codificación simples de manera independiente.
+Esta certificación es ideal para estudiantes, personas que están cambiando de carrera, o profesionales que buscan complementar sus habilidades técnicas con conocimientos de programación en Python.
+                                        
+                                    </p>
+                                    
+                                    
+                                        <p class="mt-2 small text-muted">
+                                            Expira: 21/08/2028
+                                        </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    
+                        <div class="certification-card h-100">
+                            <div class="certification-card-header">
+                                <h4>
+                                    
+                                        Python Essentials 1
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Cisco
+                                    
+                                </p>
+                                <span class="certification-date">agosto 2024</span>
+                            </div>
+                            
+                            <div class="certification-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="description-2">
+                                    Descripción
+                                </button>
+                                
+                                
+                                
+                                
+                                    <a href="https://www.credly.com/badges/3cd7618e-63f7-4fcb-8bfe-081e55e1ca9f/linked_in_profile" class="btn btn-sm btn-orange mb-2 ms-2" target="_blank">
+                                        Verificar Credencial
+                                    </a>
+                                
+                                
+                                <div id="description-2" class="certificate-description">
+                                    <p>
+                                        
+                                            Este curso introductorio de Cisco Networking Academy proporciona una base sólida en programación con Python. Diseñado para principiantes, cubre conceptos fundamentales como variables, tipos de datos, operadores, estructuras de control (condicionales y bucles), funciones, y fundamentos de programación orientada a objetos. Los estudiantes aprenden a escribir código limpio y eficiente, resolviendo problemas prácticos mediante laboratorios interactivos. Al completar el curso, los participantes pueden obtener la certificación PCEP (Python Certified Entry-level Programmer), un reconocimiento oficial de la Python Institute que valida las habilidades básicas de programación en Python.
+                                        
+                                    </p>
+                                    
+                                    
+                                        <p class="mt-2 small text-muted">
+                                            Expira: 09/08/2028
+                                        </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    
+                        <div class="certification-card h-100">
+                            <div class="certification-card-header">
+                                <h4>
+                                    
+                                        Programador Python
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Tokio New Technology School
+                                    
+                                </p>
+                                <span class="certification-date">febrero 2025</span>
+                            </div>
+                            
+                            <div class="certification-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="description-3">
+                                    Descripción
+                                </button>
+                                
+                                
+                                    <a href="/media/certificates/CERTIFICADO_PROGRAMADOR_PYTHON.pdf" class="btn btn-sm btn-outline-secondary mb-2 ms-2" target="_blank">
+                                        Ver Certificado
+                                    </a>
+                                
+                                
+                                
+                                
+                                <div id="description-3" class="certificate-description">
+                                    <p>
+                                        
+                                            El certificado de Programador Python de Tokio School es un título propio que se completa en 400 horas académicas intensivas, formando profesionales en el lenguaje de programación más demandado mundialmente. Este programa oficial es muy completo ya que prepara para obtener la Certificación PCAP (Python Institute) y nos deja como programadores Python profesionales listos para el mundo laboral, combinando formación teórica con aplicación práctica en proyectos reales.
+                                        
+                                    </p>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Felix Ruiz M.</h5>
+                    <p>Python Developer & Data Scientist</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-icons">
+                        
+                            
+                                <a href="https://www.linkedin.com/in/felix-ruiz-mu%C3%B1oz-111784b8/" class="text-light me-3" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+                            
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                                <a href="https://www.instagram.com/f.alejorm93/?hl=es3" class="text-light me-3" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                            
+                            
+                        
+                            
+                            
+                                <a href="https://github.com/MFelix9310" class="text-light me-3" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+                            
+                            
+                            
+                        
+                    </div>
+                    <p class="mt-2">&copy; 2026 Felix Ruiz M. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/static/js/main.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Agregar evento de clic a todos los botones de descripción
+        const descriptionToggles = document.querySelectorAll('.description-toggle');
+        
+        descriptionToggles.forEach(function(toggle) {
+            toggle.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const descriptionElement = document.getElementById(targetId);
+                
+                // Alternar la clase active para la descripción
+                descriptionElement.classList.toggle('active');
+                
+                // Alternar la clase active para el botón
+                this.classList.toggle('active');
+            });
+        });
+    });
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,113 @@
+/**
+ * Tokens de la dirección de arte "Cota".
+ *
+ * Los colores se guardan como tripletas RGB sin `rgb()` para que Tailwind pueda
+ * aplicarles opacidad (`text-ink/60`). El modo oscuro no es un tema oscuro
+ * genérico: es el negativo del mismo plano — cianotipo invertido.
+ */
+
+:root {
+  /* Paleta literal del documento */
+  --paper: 240 238 231;
+  --ink: 15 18 22;
+  --prussian: 18 49 92;
+  --revision: 216 52 31;
+
+  --graphite-100: 220 217 209;
+  --graphite-200: 194 190 180;
+  --graphite-300: 161 156 144;
+  --graphite-400: 124 119 107;
+  --graphite-500: 86 82 73;
+  --graphite-600: 51 48 43;
+
+  /* Roles semánticos — modo claro (papel vegetal) */
+  --surface: var(--paper);
+  --surface-sunken: 233 230 222;
+  --surface-inverted: var(--prussian);
+  --text: var(--ink);
+  --text-muted: var(--graphite-500);
+  --text-faint: 100 95 86;
+  --text-on-inverted: 232 238 246;
+  --rule: var(--ink);
+  --rule-alpha: 0.16;
+  --grid-alpha: 0.08;
+  --structure: var(--prussian);
+  --accent: var(--revision);
+  /* Rojo revisión oscurecido: el #D8341F puro no llega a 4.5:1 en texto pequeño. */
+  --accent-text: 176 41 20;
+  --focus: var(--prussian);
+}
+
+/* Sistema en oscuro, salvo que el usuario haya forzado claro por atributo. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --surface: 7 21 39;
+    --surface-sunken: 4 14 27;
+    --surface-inverted: 232 238 246;
+    --text: 232 238 246;
+    --text-muted: 147 169 196;
+    --text-faint: 108 133 165;
+    --text-on-inverted: 7 21 39;
+    --rule: 255 255 255;
+    --rule-alpha: 0.24;
+    --grid-alpha: 0.12;
+    --structure: 120 168 224;
+    --accent: 240 92 63;
+    --accent-text: 240 92 63;
+    --focus: 240 92 63;
+  }
+}
+
+/* Override explícito por atributo (gana sobre el sistema en ambos sentidos). */
+:root[data-theme='dark'] {
+  --surface: 7 21 39;
+  --surface-sunken: 4 14 27;
+  --surface-inverted: 232 238 246;
+  --text: 232 238 246;
+  --text-muted: 147 169 196;
+  --text-faint: 108 133 165;
+  --text-on-inverted: 7 21 39;
+  --rule: 255 255 255;
+  --rule-alpha: 0.24;
+  --grid-alpha: 0.12;
+  --structure: 120 168 224;
+  --accent: 240 92 63;
+  --accent-text: 240 92 63;
+  --focus: 240 92 63;
+}
+
+:root[data-theme='light'] {
+  --surface: var(--paper);
+  --surface-sunken: 233 230 222;
+  --surface-inverted: var(--prussian);
+  --text: var(--ink);
+  --text-muted: var(--graphite-500);
+  --text-faint: 100 95 86;
+  --text-on-inverted: 232 238 246;
+  --rule: var(--ink);
+  --rule-alpha: 0.16;
+  --grid-alpha: 0.08;
+  --structure: var(--prussian);
+  --accent: var(--revision);
+  --accent-text: 176 41 20;
+  --focus: var(--prussian);
+}
+
+:root {
+  /* Retícula: 12 columnas, medianil 24, márgenes rotulados de 48 en escritorio. */
+  --grid-columns: 12;
+  --grid-gutter: 24px;
+  --grid-margin: 20px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --grid-margin: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --grid-margin: 48px;
+  }
+}

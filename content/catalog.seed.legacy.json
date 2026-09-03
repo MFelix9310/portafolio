@@ -1,0 +1,737 @@
+{
+  "_generated_by": "tools/export_legacy_content.py",
+  "_source": "C:\\tmp\\portfolio-research\\PORTFOLIO_WEB\\db.sqlite3",
+  "profile": {
+    "name": "Félix Ruiz M.",
+    "legacy_title": {
+      "es": "Python Developer & Data Scientist"
+    },
+    "bio": {
+      "es": "Especialista en Data Science con sólida formación en Python y Machine Learning. Mi portfolio incluye proyectos completos como Data Scientist, Data Analyst y Python Developer, utilizando TensorFlow, Scikit-learn y Keras para modelado predictivo e implementaciones de deep learning. Experiencia en visualización de datos con Matplotlib y Plotly, desarrollo web con Django y Flask, flujos ETL y automatización de procesos. Combino experiencia avanzada en el ecosistema Python con capacidades analíticas para transformar conjuntos de datos complejos en insights accionables y desarrollar aplicaciones funcionales que generan valor de negocio inmediato.",
+      "en": "Data Science specialist with strong training in Python and Machine Learning. My portfolio includes comprehensive projects as a Data Scientist, Data Analyst, and Python Developer, leveraging TensorFlow, Scikit-learn, and Keras for predictive modeling and deep learning implementations. Experienced in data visualization with Matplotlib and Plotly, web development with Django and Flask, ETL workflows, and process automation. I combine advanced Python ecosystem expertise with analytical capabilities to transform complex datasets into actionable insights and develop functional applications that deliver immediate business value."
+    },
+    "photo": "profile/Diseño_sin_título_1.jpg",
+    "professional_photo": "profile/professional/Diseño_sin_título_1.jpg"
+  },
+  "projects": [
+    {
+      "legacy_id": 1,
+      "slug": "sistema-de-gestion-y-control-de-laboratorios-academicos",
+      "title": {
+        "es": "Sistema de Gestión y Control de Laboratorios Académicos",
+        "en": "Academic Laboratory Management and Control System"
+      },
+      "summary": {
+        "es": "Sistema integral para la administración de laboratorios académicos que permite el registro y seguimiento de uso, generación de reportes personalizados en PDF con diseño profesional, gestión de docentes y laboratorios, e importación/exportación de datos. Facilita el control de acceso, la documentación de actividades y el análisis de utilización de recursos educativos.",
+        "en": "Comprehensive system for academic laboratory administration that enables usage registration and tracking, generation of customized PDF reports with professional design, management of faculty and laboratories, and data import/export. It facilitates access control, activity documentation, and analysis of educational resource utilization.\r\nTechnologi"
+      },
+      "technologies": [
+        "Python",
+        "PySide6 (Qt)",
+        "SQLAlchemy ORM",
+        "SQLite",
+        "PDF Rendering",
+        "CSV Processing",
+        "PyInstaller",
+        "Inno Setup",
+        "Git"
+      ],
+      "technologies_en": [
+        "Python",
+        "PySide6 (Qt)",
+        "SQLAlchemy ORM",
+        "SQLite",
+        "PDF Rendering",
+        "CSV Processing",
+        "PyInstaller",
+        "Inno Setup",
+        "Git"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/REGISTROS_LABS",
+      "thumbnail": "projects/1.png",
+      "created_at": "2025-05-13 20:27:39.761053",
+      "display_order": 0,
+      "status": "published",
+      "legacy_skills": [
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "developer",
+          "subarea": "backend"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/2.png",
+          "caption": null,
+          "order": 0
+        },
+        {
+          "path": "projects/images/3.png",
+          "caption": null,
+          "order": 0
+        },
+        {
+          "path": "projects/images/4.png",
+          "caption": null,
+          "order": 0
+        }
+      ],
+      "videos": [
+        {
+          "path": "projects/videos/1.mp4",
+          "caption": null,
+          "order": 0
+        }
+      ],
+      "documents": [
+        {
+          "path": "projects/documents/reporte_laboratorio.pdf",
+          "title": "csv_resumen",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "legacy_id": 2,
+      "slug": "petshop-adm-sistema-de-gestion-para-tiendas-de-mascotas",
+      "title": {
+        "es": "PetShop ADM - Sistema de Gestión para Tiendas de Mascotas",
+        "en": "PetShop ADM - Management System for Pet Stores"
+      },
+      "summary": {
+        "es": "Sistema completo de administración para tiendas de mascotas que permite gestionar inventario de productos, servicios, ventas y reportes analíticos. La aplicación facilita el control de stock, registro de ventas rápidas, seguimiento de servicios prestados y visualización de métricas clave del negocio a través de un dashboard interactivo.",
+        "en": "Complete management system for pet stores that allows inventory management of products, services, sales, and analytical reports. The application facilitates stock control, quick sales registration, tracking of services provided, and visualization of key business metrics through an interactive dashboard."
+      },
+      "technologies": [
+        "Python",
+        "Django",
+        "SQLAlchemy",
+        "SQLite",
+        "HTML",
+        "Bootstrap",
+        "JavaScript",
+        "Whitenoise",
+        "Python-dotenv"
+      ],
+      "technologies_en": [
+        "Python",
+        "Django",
+        "SQLAlchemy",
+        "SQLite",
+        "HTML",
+        "Bootstrap",
+        "JavaScript",
+        "Whitenoise",
+        "Python-dotenv"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/PETSHOP_ADM",
+      "thumbnail": "projects/2.png",
+      "created_at": "2025-05-13 20:42:39.992513",
+      "display_order": 0,
+      "status": "published",
+      "legacy_skills": [
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "developer",
+          "subarea": "fullstack"
+        },
+        {
+          "area": "data",
+          "subarea": "analyst"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/1.png",
+          "caption": null,
+          "order": 0
+        },
+        {
+          "path": "projects/images/3_2Cfrwni.png",
+          "caption": null,
+          "order": 0
+        },
+        {
+          "path": "projects/images/4_IH87yWC.png",
+          "caption": null,
+          "order": 0
+        },
+        {
+          "path": "projects/images/5.png",
+          "caption": null,
+          "order": 0
+        },
+        {
+          "path": "projects/images/6.png",
+          "caption": null,
+          "order": 0
+        }
+      ],
+      "videos": [
+        {
+          "path": "projects/videos/Grabación_2025-05-13_153909.mp4",
+          "caption": "Video de la página",
+          "order": 0
+        }
+      ],
+      "documents": []
+    },
+    {
+      "legacy_id": 3,
+      "slug": "predictor-de-curvas-esfuerzo-deformacion-para-materiales-compuestos",
+      "title": {
+        "es": "Predictor de Curvas Esfuerzo-Deformación para Materiales Compuestos",
+        "en": "Stress-Strain Curve Predictor for Composite Materials"
+      },
+      "summary": {
+        "es": "Desarrollé una aplicación web interactiva que predice el comportamiento mecánico de materiales con diferentes porcentajes de relave mediante modelos de machine learning. La herramienta permite ajustar parámetros como tiempo de curado y composición, generando visualizaciones en tiempo real que optimizan el diseño de materiales y reducen la necesidad de costosos ensayos físicos.",
+        "en": "I developed an interactive web application that predicts the mechanical behavior of materials with varying tailings percentages using machine learning models. The tool allows adjusting parameters such as curing time and composition, generating real-time visualizations that optimize material design and reduce the need for costly physical tests."
+      },
+      "technologies": [
+        "Python",
+        "Streamlit",
+        "Scikit-learn",
+        "NumPy",
+        "Pandas",
+        "Matplotlib",
+        "Joblib",
+        "SciPy"
+      ],
+      "technologies_en": [
+        "Python",
+        "Streamlit",
+        "Scikit-learn",
+        "NumPy",
+        "Pandas",
+        "Matplotlib",
+        "Joblib",
+        "SciPy"
+      ],
+      "project_url": "https://www.linkedin.com/feed/update/urn:li:activity:7316513974152294400/",
+      "repository_url": null,
+      "thumbnail": "projects/1_gvLpHvo.png",
+      "created_at": "2025-05-13 20:52:03.355282",
+      "display_order": 0,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst"
+      ],
+      "taxonomy": [
+        {
+          "area": "data",
+          "subarea": "scientist"
+        },
+        {
+          "area": "data",
+          "subarea": "analyst"
+        }
+      ],
+      "images": [],
+      "videos": [
+        {
+          "path": "projects/videos/Grabación_2025-05-13_083215.mp4",
+          "caption": null,
+          "order": 0
+        }
+      ],
+      "documents": [
+        {
+          "path": "projects/documents/datos_curva_28dias_0relave.csv",
+          "title": "CSV_DATOS_IMPORTANTES",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "legacy_id": 4,
+      "slug": "agavepredictor-ml-sistema-predictivo-para-el-crecimiento-de-agave",
+      "title": {
+        "es": "AgavePredictor ML: Sistema predictivo para el crecimiento de agave",
+        "en": "AgavePredictor ML: Predictive System for Agave Growth"
+      },
+      "summary": {
+        "es": "Sistema de machine learning que predice con alta precisión (R² = 0.92) el tiempo de crecimiento de plantas de agave. Utiliza RandomForest optimizado, técnicas avanzadas de ingeniería de datos y 8,000 observaciones sintéticas. La interfaz gráfica desarrollada con PySide6 ofrece visualizaciones interactivas y una representación dinámica del agave que se adapta a los parámetros ingresados. Esta herramienta apoya la agricultura sostenible con predicciones precisas basadas en la morfología de la planta.",
+        "en": "Machine learning system that predicts agave plant growth time with high precision (R² = 0.92). Utilizes optimized RandomForest, advanced data engineering techniques, and 8,000 synthetic observations. The graphical interface built with PySide6 provides interactive visualizations and a dynamic representation of the agave that adapts to input parameters. This tool supports sustainable agriculture with accurate predictions based on plant morphology."
+      },
+      "technologies": [
+        "Python",
+        "RandomForest",
+        "PySide6",
+        "Matplotlib",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "BeautifulSoup",
+        "Seaborn"
+      ],
+      "technologies_en": [
+        "Python",
+        "RandomForest",
+        "PySide6",
+        "Matplotlib",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "BeautifulSoup",
+        "Seaborn"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/AGAVE_WEB",
+      "thumbnail": "projects/miniatura.png",
+      "created_at": "2025-05-16 15:50:57.419646",
+      "display_order": 0,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "data",
+          "subarea": "scientist"
+        },
+        {
+          "area": "developer",
+          "subarea": "backend"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/evolucion_modelo.png",
+          "caption": null,
+          "order": 0
+        }
+      ],
+      "videos": [
+        {
+          "path": "projects/videos/1_3J1Sq4V.mp4",
+          "caption": null,
+          "order": 0
+        }
+      ],
+      "documents": []
+    },
+    {
+      "legacy_id": 5,
+      "slug": "prediccion-de-pandeo-en-estructuras-de-acero-con-machine-learning",
+      "title": {
+        "es": "Predicción de Pandeo en Estructuras de Acero con Machine Learning",
+        "en": "Steel Structure Buckling Prediction with Machine Learning"
+      },
+      "summary": {
+        "es": "Aplicación de machine learning que predice el comportamiento a pandeo en elementos estructurales de acero con precisión del 99.6%. Incluye web scraping de datos técnicos, limpieza con pandas, modelo CatBoost, visualización 3D interactiva y exportación automática a Excel. Valida resultados con métodos analíticos y normativas de ingeniería.",
+        "en": "Machine learning application that predicts buckling behavior in steel structural elements with 99.6% accuracy. Features technical data web scraping, pandas data cleaning, CatBoost model, interactive 3D visualization, and automatic Excel export. Validates results with analytical methods and engineering standards."
+      },
+      "technologies": [
+        "Python",
+        "CatBoost",
+        "Pandas",
+        "PyVista",
+        "Jupyter Notebook",
+        "Web Scraping",
+        "Machine Learning",
+        "Excel"
+      ],
+      "technologies_en": [
+        "Python",
+        "CatBoost",
+        "Pandas",
+        "PyVista",
+        "Jupyter Notebook",
+        "Web Scraping",
+        "Machine Learning",
+        "Excel"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/PANDEO_ML",
+      "thumbnail": "projects/12.jpg",
+      "created_at": "2025-05-30 18:45:19.618945",
+      "display_order": 0,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "data",
+          "subarea": "scientist"
+        },
+        {
+          "area": "data",
+          "subarea": "analyst"
+        }
+      ],
+      "images": [],
+      "videos": [
+        {
+          "path": "projects/videos/1_XxCaDBU.mp4",
+          "caption": "Video de la página",
+          "order": 0
+        }
+      ],
+      "documents": [
+        {
+          "path": "projects/documents/3.xlsx",
+          "title": "Excel_Resumen",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "legacy_id": 6,
+      "slug": "prediccion-de-consumo-en-pollos-cobb-500",
+      "title": {
+        "es": "Predicción de Consumo en Pollos Cobb 500",
+        "en": "Cobb 500 Chicken Feed Consumption Prediction"
+      },
+      "summary": {
+        "es": "Sistema inteligente que predice el consumo diario de alimento y el crecimiento de pollos Cobb 500 usando modelos de machine learning, facilitando la toma de decisiones en granjas avícolas.",
+        "en": "Smart system that predicts daily feed consumption and growth for Cobb 500 chickens using machine learning models, supporting decision-making in poultry farms."
+      },
+      "technologies": [
+        "Python",
+        "Scikit-learn",
+        "PyQt5",
+        "Pandas",
+        "Matplotlib"
+      ],
+      "technologies_en": [
+        "Python",
+        "Scikit-learn",
+        "PyQt5",
+        "Pandas",
+        "Matplotlib"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/POLLOS_ML",
+      "thumbnail": "projects/p1.jpg",
+      "created_at": "2025-05-30 19:18:23.682376",
+      "display_order": 0,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "data",
+          "subarea": "scientist"
+        },
+        {
+          "area": "data",
+          "subarea": "analyst"
+        },
+        {
+          "area": "developer",
+          "subarea": "backend"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/p1.jpg",
+          "caption": "1",
+          "order": 0
+        },
+        {
+          "path": "projects/images/p2.jpg",
+          "caption": "2",
+          "order": 0
+        },
+        {
+          "path": "projects/images/p3.jpg",
+          "caption": "3",
+          "order": 0
+        },
+        {
+          "path": "projects/images/p4.jpg",
+          "caption": "4",
+          "order": 0
+        }
+      ],
+      "videos": [
+        {
+          "path": "projects/videos/pollos.mp4",
+          "caption": "Video de la página",
+          "order": 0
+        }
+      ],
+      "documents": [
+        {
+          "path": "projects/documents/pollos.csv",
+          "title": "csv_resumen",
+          "order": 0
+        }
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "legacy_id": 1,
+      "slug": "especialista-tecnico-de-laboratorio-ingeniero-de-ciencia-de-datos-escuela-superi",
+      "company": {
+        "es": "Escuela Superior Politécnica de Chimborazo"
+      },
+      "position": {
+        "es": "Especialista Técnico de Laboratorio & Ingeniero de Ciencia de Datos",
+        "en": "Laboratory Technical Specialist & Data Science Engineer"
+      },
+      "description": {
+        "es": "Profesional de datos con experiencia en análisis predictivo, machine learning y gestión técnica de laboratorios. Competencias en ciencia de datos, análisis de datos, desarrollo Python y automatización de procesos para entornos de investigación. Especializado en procesamiento de datos experimentales, soluciones de visualización y proyectos de transformación digital que mejoran flujos de trabajo científicos.",
+        "en": "Data professional with expertise in predictive analytics, machine learning, and technical laboratory management. Skills span data science, data analysis, Python development, and process automation for research environments. Specialized in experimental data processing, visualization solutions, and digital transformation projects that enhance scientific workflows."
+      },
+      "keywords": [
+        "Machine Learning",
+        "Predictive Modeling",
+        "Python Development",
+        "Data Visualization",
+        "OpenCV",
+        "OCR/Tesseract",
+        "ETL Processes",
+        "Statistical Analysis",
+        "Dashboard Development",
+        "Laboratory Automation",
+        "Research Optimization",
+        "Web Application Development",
+        "Desktop Applicatio"
+      ],
+      "keywords_en": [
+        "Machine Learning",
+        "Predictive Modeling",
+        "Python Development",
+        "Data Visualization",
+        "OpenCV",
+        "OCR/Tesseract",
+        "ETL Processes",
+        "Statistical Analysis",
+        "Dashboard Development",
+        "Laboratory Automation",
+        "Research Optimization",
+        "Web Application Development",
+        "Desktop Applicatio"
+      ],
+      "company_logo": "companies/ESPOCH-LOGO.jpg",
+      "thumbnail": "work/ESPOCH-LOGO.jpg",
+      "start_date": "2022-05-24",
+      "end_date": null,
+      "is_current": true,
+      "display_order": 0,
+      "status": "published"
+    }
+  ],
+  "certifications": [
+    {
+      "legacy_id": 1,
+      "slug": "pcep-certified-entry-level-python-programmer",
+      "name": {
+        "es": "PCEP – Certified Entry-Level Python Programmer"
+      },
+      "issuer": {
+        "es": "OpenEDG Python Institute"
+      },
+      "description": {
+        "es": "El PCEP (Certified Entry-Level Python Programmer) es una certificación básica de programación en Python ofrecida por el Python Institute de OpenEDG. Esta certificación está diseñada para principiantes que desean validar sus habilidades fundamentales en Python y es el primer paso en la ruta de certificaciones profesionales de Python.\r\nEl PCEP verifica que el candidato tiene un conocimiento general de los conceptos de programación en Python, entiende la sintaxis y la semántica del lenguaje, y es capaz de resolver problemas básicos utilizando Python. La certificación demuestra que el programador puede trabajar con las características esenciales del lenguaje y realizar tareas de codificación simples de manera independiente.\r\nEsta certificación es ideal para estudiantes, personas que están cambiando de carrera, o profesionales que buscan complementar sus habilidades técnicas con conocimientos de programación en Python.",
+        "en": "The PCEP (Certified Entry-Level Python Programmer) is a basic Python programming certification offered by OpenEDG Python Institute. This certification is designed for beginners who want to validate their fundamental Python skills and is the first step in the Python professional certification path.\r\nThe PCEP verifies that the candidate has a general understanding of Python programming concepts, understands the syntax and semantics of the language, and is capable of solving basic problems using Python. The certification demonstrates that the programmer can work with the essential features of the language and perform simple coding tasks independently.\r\nThis certification is ideal for students, career changers, or professionals looking to complement their technical skills with Python programming knowledge."
+      },
+      "issued_on": "2024-08-21",
+      "expires_on": "2028-08-21",
+      "credential_url": "https://www.credly.com/badges/5c659716-c25c-4ed0-8c31-f3d2682d4ccd/linked_in_profile",
+      "certificate_file": "certificates/pcep.png",
+      "display_order": 0,
+      "status": "published"
+    },
+    {
+      "legacy_id": 2,
+      "slug": "python-essentials-1",
+      "name": {
+        "es": "Python Essentials 1"
+      },
+      "issuer": {
+        "es": "Cisco"
+      },
+      "description": {
+        "es": "Este curso introductorio de Cisco Networking Academy proporciona una base sólida en programación con Python. Diseñado para principiantes, cubre conceptos fundamentales como variables, tipos de datos, operadores, estructuras de control (condicionales y bucles), funciones, y fundamentos de programación orientada a objetos. Los estudiantes aprenden a escribir código limpio y eficiente, resolviendo problemas prácticos mediante laboratorios interactivos. Al completar el curso, los participantes pueden obtener la certificación PCEP (Python Certified Entry-level Programmer), un reconocimiento oficial de la Python Institute que valida las habilidades básicas de programación en Python.",
+        "en": "This introductory course from Cisco Networking Academy provides a solid foundation in Python programming. Designed for beginners, it covers fundamental concepts including variables, data types, operators, control structures (conditionals and loops), functions, and object-oriented programming basics. Students learn to write clean and efficient code, solving practical problems through interactive labs. Upon completion, participants can earn the PCEP (Python Certified Entry-level Programmer) certification, an official recognition from the Python Institute that validates basic Python programming skills."
+      },
+      "issued_on": "2024-08-09",
+      "expires_on": "2028-08-09",
+      "credential_url": "https://www.credly.com/badges/3cd7618e-63f7-4fcb-8bfe-081e55e1ca9f/linked_in_profile",
+      "certificate_file": "",
+      "display_order": 0,
+      "status": "published"
+    }
+  ],
+  "education": [
+    {
+      "legacy_id": 1,
+      "institution": {
+        "es": "Universidad Técnica de Ambato"
+      },
+      "title": {
+        "es": "Ingeniero Civil",
+        "en": "Civil Engineer"
+      },
+      "description": {
+        "es": "Como Ingeniero Civil titulado, soy un profesional especializado en el diseño, construcción y mantenimiento de infraestructuras esenciales. Mi formación me capacita para desarrollar proyectos que abarcan desde edificaciones y carreteras hasta sistemas hidráulicos, aplicando conocimientos en estructuras, geotecnia, hidráulica y gestión de proyectos. Me destaco por crear soluciones técnicas innovadoras que equilibran funcionalidad, estética y sostenibilidad, mientras garantizo el cumplimiento de normativas y estándares de calidad. Mi objetivo es desarrollar infraestructuras seguras y duraderas que mejoren la calidad de vida, complementando mis habilidades técnicas con capacidades de liderazgo y gestión de equipos multidisciplinarios.",
+        "en": "As a certified Civil Engineer, I am a professional specialized in the design, construction and maintenance of essential infrastructure. My training enables me to develop projects ranging from buildings and roads to hydraulic systems, applying knowledge in structures, geotechnics, hydraulics, and project management. I excel at creating innovative technical solutions that balance functionality, aesthetics, and sustainability, while ensuring compliance with regulations and quality standards. My goal is to develop safe and durable infrastructure that improves quality of life, complementing my technical skills with leadership abilities and management of multidisciplinary teams."
+      },
+      "graduation_year": 2018,
+      "display_order": 0,
+      "status": "published"
+    },
+    {
+      "legacy_id": 2,
+      "institution": {
+        "es": "Universidad Internacional SEK"
+      },
+      "title": {
+        "es": "Maestría en Salud y Seguridad Ocupacional mención Prevención de Riesgos Laborales",
+        "en": "Master's Degree in Occupational Health and Safety with specialization in Occupational Risk Prevention"
+      },
+      "description": {
+        "es": "Como profesional con una Maestría en Salud y Seguridad Ocupacional, poseo conocimientos especializados en la identificación, evaluación y control de riesgos laborales en diversos entornos de trabajo. Mi formación me capacita para desarrollar e implementar sistemas de gestión preventiva que promueven ambientes laborales seguros y saludables. Estoy preparado para realizar evaluaciones de riesgo, diseñar programas de capacitación, manejar emergencias y garantizar el cumplimiento normativo en materia de seguridad. Me destaco por integrar principios ergonómicos, psicosociales y técnicos para crear culturas organizacionales donde la prevención es prioritaria, contribuyendo así a reducir la siniestralidad laboral y mejorar la productividad mediante entornos de trabajo protegidos.",
+        "en": "As a professional with a Master's Degree in Occupational Health and Safety, I possess specialized knowledge in identifying, evaluating, and controlling workplace hazards across diverse work environments. My training enables me to develop and implement preventive management systems that promote safe and healthy workplaces. I am prepared to conduct risk assessments, design training programs, manage emergencies, and ensure regulatory compliance in safety matters. I excel at integrating ergonomic, psychosocial, and technical principles to create organizational cultures where prevention is a priority, thus contributing to reducing workplace accidents and improving productivity through protected work environments and comprehensive risk management strategies."
+      },
+      "graduation_year": 2023,
+      "display_order": 0,
+      "status": "published",
+      "_source": {
+        "institution": "Maestría en Salud y Seguridad Ocupacional mención Prevención de Riesgos Laborales",
+        "title": "Universidad Internacional SEK"
+      },
+      "_correction": "institution/title invertidos en la base antigua"
+    },
+    {
+      "legacy_id": 3,
+      "institution": {
+        "es": "Universidad Nacional de Córdoba (UNC)"
+      },
+      "title": {
+        "es": "Diploma en Data Science",
+        "en": "University Diploma in Data Science"
+      },
+      "description": {
+        "es": "En este programa adquirí conocimientos sobre el ciclo de vida completo de los datos, desde la obtención y limpieza hasta su visualización y análisis. Desarrollé habilidades en programación (R y Python), estadística, bases de datos, visualización de datos, machine learning y deep learning. El programa incluyó 26 encuentros a lo largo de 7 meses, con un proyecto integrador que me permitió aplicar las competencias adquiridas en un caso real.",
+        "en": "In this program, I acquired knowledge about the complete data lifecycle, from collection and cleaning to visualization and analysis. I developed skills in programming (R and Python), statistics, databases, data visualization, machine learning, and deep learning. The program included 26 sessions over 7 months, with an integrative project that allowed me to apply the acquired competencies to a real-world case."
+      },
+      "graduation_year": 2025,
+      "display_order": 0,
+      "status": "published"
+    },
+    {
+      "legacy_id": 4,
+      "institution": {
+        "es": "Tokio New Technology School"
+      },
+      "title": {
+        "es": "Especialización en Python",
+        "en": "Specialization in Python Programming"
+      },
+      "description": {
+        "es": "Programa completo de 400 horas sobre programación en Python, incluyendo conceptos de programación orientada a objetos, manipulación de datos y desarrollo de aplicaciones web y de escritorio",
+        "en": "Comprehensive 400-hour program on Python programming, including object-oriented programming concepts, data manipulation, and web and desktop application development"
+      },
+      "graduation_year": 2024,
+      "display_order": 0,
+      "status": "published"
+    },
+    {
+      "legacy_id": 5,
+      "institution": {
+        "es": "Tokio New Technology School"
+      },
+      "title": {
+        "es": "Especialización en Inteligencia Artificial",
+        "en": "Specialization in Artificial Intelligence"
+      },
+      "description": {
+        "es": "Programa avanzado de 200 horas sobre machine learning, deep learning y aplicaciones de inteligencia artificial utilizando Python\r\nDesarrollo de modelos predictivos y análisis de datos utilizando TensorFlow, Scikit-learn y otras bibliotecas especializadas",
+        "en": "Advanced 200-hour program on machine learning, deep learning, and artificial intelligence applications using Python\r\nDevelopment of predictive models and data analysis using TensorFlow, Scikit-learn, and other specialized libraries"
+      },
+      "graduation_year": 2024,
+      "display_order": 0,
+      "status": "published"
+    },
+    {
+      "legacy_id": 6,
+      "institution": {
+        "es": "Maestría en Ciencias de Datos y Máquinas de Aprendizaje, Mención en Inteligencia Artificial"
+      },
+      "title": {
+        "es": "Universidad Internacional del Ecuador (UIDE) en colaboración con EIG Business School (España) y Arizona State University",
+        "en": "International University of Ecuador (UIDE) in collaboration with EIG Business School (Spain) and Arizona State University"
+      },
+      "description": {
+        "es": "Programa de posgrado de un año en modalidad en línea con enfoque en inteligencia artificial, machine learning y deep learning\r\nDoble titulación con validez en países de la Unión Europea a través de EIG Business School (España)\r\nCurrículo académico que incluye metodologías del MIT, Design Thinking de Stanford y el modelo STEM\r\nDesarrollo de competencias en diseño de procesos ETL, arquitectura y modelado de datos, visualización avanzada, machine learning y redes neuronales",
+        "en": "One-year online postgraduate program focused on artificial intelligence, machine learning, and deep learning\r\nDual degree valid in European Union countries through EIG Business School (Spain)\r\nAcademic curriculum incorporating methodologies from MIT, Stanford's Design Thinking, and the STEM model\r\nDevelopment of skills in ETL process design, data architecture and modeling, advanced visualization, machine learning, and neural networks"
+      },
+      "graduation_year": 2026,
+      "display_order": 0,
+      "status": "published",
+      "_source": {
+        "institution": "Universidad Internacional del Ecuador (UIDE) en colaboración con EIG Business School (España) y Arizona State University",
+        "title": "Maestría en Ciencias de Datos y Máquinas de Aprendizaje, Mención en Inteligencia Artificial"
+      },
+      "_correction": "institution/title invertidos en la base antigua"
+    }
+  ],
+  "publications": [
+    {
+      "legacy_id": 1,
+      "slug": "programacion-con-matlab",
+      "kind": "book",
+      "title": {
+        "es": "Programación con MATLAB",
+        "en": "Programming with MATLAB"
+      },
+      "authors": {
+        "es": "Pazmiño A., Alexandra O. Jácome T., Jairo R. Ruiz M., Félix A."
+      },
+      "venue": {
+        "es": "Publicaciones CIDE"
+      },
+      "abstract": {
+        "es": "En la actualidad conocer de programaci´on es de vital importancia para estudiantes y profesionales,\r\npara la lectura del libro es necesario conocer el funcionamiento b´asico del software Matlab el cual se\r\nutiliza para estudiar las diferentes estructuras que existen en la programaci´on.\r\nEs por ello que en el primer cap´ıtulo se hace un revisi´on r´apida a Matlab recordando los principios\r\nb´asicos de su funcionamiento, c´omo se ingresa y maneja vectores y matrices en el software, en el\r\nsegundo cap´ıtulo se realiza una introducci´on a la Programaci´on con ejercicios resueltos de estructuras\r\nsecuenciales, estructuras de control y sus diferentes tipos como la Bifurcaci´on simple, anidada, compuesta y m´ultiple.\r\nSin dejar de lado las estructuras de repetici´on se contin´ua con ejercicios resueltos con la estructura\r\nfor y while. Finalmente en el cap´ıtulo se deja un n´umero de ejercicios para resolver y practicar lo\r\naprendido en el cap´ıtulo.\r\nEn el tercer cap´ıtulo es necesario abordar el tema de manejo de vectores y matrices utilizando\r\nestructuras de control y repetici´on, de tal manera que se permita manejar la informaci´on que esta\r\nalmacenada, accediendo a cada una de las posiciones de estas variables estructuradas.\r\nEn el cuarto y ´ultimo cap´ıtulo se trata el tema de funciones definidas por el usuario, al Matlab ser\r\nun software modular, se resuelve ejercicios utilizando lo aprendido en los cap´ıtulos anteriores, creando\r\nlos diferentes tipos de funciones como funciones con una sola entrada y una sola salida, funciones\r\ncon varias entradas y una salida, funciones con varias entradas y varias salidas, permitiendo crear\r\nprogramas en m´odulos mucho m´as f´acil de leer y dar soluci´on a ejercicios planteados.\r\nEn cada uno de los cap´ıtulos se ha dejado ejercicios por resolver de tal manera que el lector pueda\r\npracticar lo aprendido y reforzar sus conocimientos.",
+        "en": "In today's world, programming knowledge is vitally important for students and professionals. To read this book, it is necessary to understand the basic functioning of MATLAB software, which is used to study different programming structures.\r\nThe first chapter provides a quick review of MATLAB, covering basic operating principles and how to input and manage vectors and matrices in the software. The second chapter introduces programming with solved exercises focusing on sequential structures, control structures, and their different types such as simple, nested, compound, and multiple branching.\r\nThe chapter also covers repetition structures with solved exercises using for and while loops. To reinforce learning, a number of practice exercises are provided at the end of the chapter.\r\nThe third chapter addresses the management of vectors and matrices using control and repetition structures, enabling readers to effectively handle stored information by accessing each position within these structured variables.\r\nThe fourth and final chapter deals with user-defined functions. As MATLAB is modular software, exercises are solved using knowledge from previous chapters, creating different types of functions including single-input/single-output functions, multi-input/single-output functions, and multi-input/multi-output functions. This modular approach allows readers to create programs that are easier to read and provides solutions to proposed exercises.\r\nEach chapter includes exercises for readers to solve, allowing them to practice what they've learned and reinforce their knowledge."
+      },
+      "published_on": "2023-03-10",
+      "doi": null,
+      "isbn": null,
+      "url": "https://repositorio.cidecuador.org/handle/123456789/2377?locale=es",
+      "pdf_file": "publications/MATALAB1_FIINAL.pdf",
+      "thumbnail": "publications/Captura_de_pantalla_2025-05-13_072544.png",
+      "display_order": 0,
+      "status": "published"
+    }
+  ],
+  "contacts": [
+    {
+      "kind": "linkedin",
+      "value": "https://www.linkedin.com/in/felix-ruiz-mu%C3%B1oz-111784b8/",
+      "display_order": 1,
+      "status": "published"
+    },
+    {
+      "kind": "instagram",
+      "value": "https://www.instagram.com/f.alejorm93/?hl=es3",
+      "display_order": 2,
+      "status": "published"
+    },
+    {
+      "kind": "github",
+      "value": "https://github.com/MFelix9310",
+      "display_order": 3,
+      "status": "published"
+    }
+  ]
+}

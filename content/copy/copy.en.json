@@ -1,0 +1,298 @@
+{
+  "meta": {
+    "language": "en",
+    "positioning": "An engineer who automates: from construction site to dataset"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "areas": {
+      "data": "Data",
+      "developer": "Developer",
+      "civil_bim": "Civil & BIM"
+    }
+  },
+  "home": {
+    "headline": "An engineer who automates: from construction site to dataset",
+    "subtitle": "Civil engineer, Universidad Técnica de Ambato, 2018. Data science and automation at ESPOCH since 2022. Computer vision for BIM automation at 8base since October 2025. Master in Data Science and AI in progress: UIDE, EIG Business School and Arizona State University.",
+    "intro": "I predict how matter behaves before anyone tests it. Graph neural networks that solve a stress field in 0.18 seconds, where finite element analysis takes 28. A digital twin that estimates the interstory drift of a concrete frame while the earthquake is still happening. Soil classification from CPT soundings. When the problem is volume, Medallion architecture: 250 million job postings clustered by streaming 953 GB, with no local download. The hard part is never the model. It is knowing what you are measuring, and I learned that calculating structures.",
+    "cta_view_projects": "View projects",
+    "area_cards": {
+      "data": {
+        "title": "Data",
+        "description": "Models, data cleaning and Medallion pipelines for decisions grounded in real data."
+      },
+      "developer": {
+        "title": "Developer",
+        "description": "Desktop and web software in Python, from the database to the interface."
+      },
+      "civil_bim": {
+        "title": "Civil & BIM",
+        "description": "Structural analysis, geotechnics and construction planning, solved in code."
+      }
+    }
+  },
+  "areas": {
+    "data": {
+      "intro": "Data models and systems built to support decisions, not just to report on them. Each project covers the full cycle: collection and cleaning, modeling with Scikit-learn, CatBoost or RandomForest, and visualization. The Medallion pipelines live here too, Bronze through Gold, over satellite data, power generation records and labor market postings."
+    },
+    "developer": {
+      "intro": "Python software built to be installed and used: desktop interfaces in PySide6 and Qt, Django web backends, persistence layers in SQLAlchemy. Every repository includes what it takes to run the project, not just to read it."
+    },
+    "civil_bim": {
+      "intro": "Where civil engineering meets data: structural analysis, geotechnics, construction planning and BIM automation. It gathers 15 projects, from seismic digital twins and stress field prediction with graph networks to CPT test analysis and critical path scheduling. This is where the portfolio started.",
+      "empty_state": {
+        "title": "Blank sheet",
+        "body": "This layer exists in the structure of the site, not yet in its content. It is built to the same standard as the rest: nothing is published without being measured first. Until then the sheet keeps its title block and an empty drawing frame, which is exactly what it is."
+      }
+    }
+  },
+  "about": {
+    "heading": "About",
+    "paragraphs": [
+      "I am a civil engineer, graduated from Universidad Técnica de Ambato in 2018. My training was in structures, geotechnics and hydraulics: reading a drawing, calculating a load, verifying that something holds before it is built.",
+      "Since May 2022 I have worked at Escuela Superior Politécnica de Chimborazo as Laboratory Technical Specialist and Data Science Engineer. The role has two halves and the second one is the interesting part: predictive models, ETL pipelines, computer vision with OpenCV and OCR, and automating the reports that used to be written by hand.",
+      "Since July 2024 I take freelance work through Upwork for clients in the United States and Latin America. It ranges from demand forecasting with LSTM and ARIMA to RFM segmentation and churn models, and also to BIM automation in Python across the ETABS, Revit and Dynamo workflow with IFC export.",
+      "In October 2025 I joined 8base as a Computer Vision Engineer for BIM automation. The brief is a system that reads architectural drawings and generates IFC models: detection and classification of walls, doors, windows and columns, extraction of geometry and spatial relationships, and validated output under OpenBIM standards.",
+      "In 2023 I co-authored the book Programación con MATLAB, published by CIDE, and I hold Python certifications: PCEP from the Python Institute and Python Essentials 1 from Cisco. I do not read this as a career change. It is the same craft, measure before you act, applied first to structures and now to data."
+    ]
+  },
+  "contact": {
+    "heading": "Get in touch",
+    "support_text": "Tell me about the project, the timeline and what you need solved. I reply by email or LinkedIn.",
+    "form": {
+      "labels": {
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message"
+      },
+      "submit": "Send message",
+      "submitting": "Sending…",
+      "success": "Message received. I will get back to you soon.",
+      "errors": {
+        "name_required": "Enter your name.",
+        "email_required": "Enter your email.",
+        "email_invalid": "That email does not look valid.",
+        "subject_required": "Enter a subject.",
+        "message_required": "Write your message.",
+        "message_too_short": "The message is too short.",
+        "generic_error": "The message could not be sent. Please try again in a moment."
+      }
+    },
+    "channels": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "instagram": "Instagram"
+    }
+  },
+  "projects": {
+    "structrelai-data-engineering-data-science-para-confiabilidad-estructural": {
+      "summary": "Medallion data pipeline, Bronze through Gold, that estimates probability of failure and the reliability index of steel structural members through Monte Carlo simulation. It validates against the FORM analytical method, computes 95% confidence intervals and trains a logistic regression surrogate with Brier score and ROC AUC calibration metrics. The code references are Eurocode EN 1990 and ASCE 7-22."
+    },
+    "pipeline-medallion-para-datos-de-generacion-electrica-eersa": {
+      "summary": "Bronze, Silver and Gold pipeline on Microsoft Fabric for the daily electrical generation records of EERSA, the Riobamba utility. It ingests 12 monthly Excel files from the Alao, Río Blanco and Nizag plants plus the national interconnected grid, with cleansing, deduplication, quality gates and a quarantine table. It processed 7,695 Bronze rows, conformed 5,840 in Silver and produced 4 Gold tables with Kimball dimensional modeling covering the 12 months of 2021, with lineage in every layer."
+    },
+    "pipeline-de-monitoreo-de-sequia-arquitectura-medallon-con-datos-satelitales": {
+      "summary": "Medallion pipeline for drought monitoring in the Ecuadorian Andes, drawing on five satellite and reanalysis sources: CHIRPS, NASA POWER, NOAA CPC and the MODIS products for NDVI and land surface temperature. It computes the VHI, SPEI and SPI indices at several time scales for 13 stations in Chimborazo. The final dataset covers 45 years of monthly climate records and 24 years of satellite data, consolidated in Parquet."
+    },
+    "pipeline-de-clustering-para-250m-ofertas-de-trabajo-data-engineering": {
+      "summary": "Data engineering pipeline over 250 million job postings published between 2007 and 2025. It streams 2,160 Parquet shards from cloud storage through a FUSE mount, without downloading the 953 GB of embeddings, and chains incremental PCA, UMAP and HDBSCAN to discover 208 occupational groups. Cosine similarity scores the distance between real postings and the official O*NET descriptions, with a DBCV of 0.240 against the -0.010 Silhouette of the K-Means baseline."
+    },
+    "constructplan-pro-sistema-de-planificacion-de-obras-con-cpm": {
+      "summary": "Desktop application for planning and controlling construction projects with the critical path method. It computes durations, total and free float, and early and late dates, draws a Gantt chart with the critical path highlighted, and tracks labor, equipment, materials and subcontractors. It exports multi-page PDF and Excel, imports activities from CSV, and separates domain, application and infrastructure through a hexagonal architecture."
+    },
+    "geoprofile-plataforma-de-analisis-cpt": {
+      "summary": "Desktop application for processing and analyzing CPT soundings in geotechnical engineering. It implements Robertson soil behavior classification, 1990 and 2009, with iterative stress exponent calculation, the full qt, Qt, Fr, Bq and Ic pipeline, and automated quality control with 7 checks and a score. It produces the log-log Robertson chart with Ic contours, the Ic profile with a soil column, and PDF and Excel reports."
+    },
+    "collar-tie-calculator": {
+      "summary": "Desktop application for the structural design of collar ties in residential wood-frame roofs. From loads, roof geometry and material properties it returns collar tie tension, rafter bending moment, horizontal thrust and nailed connection design in real time, with a pass or fail check by rafter size. It exports the full calculation report as a PDF with step-by-step formulas, based on CBC 2022, NDS 2018 and the ASD method."
+    },
+    "prediccion-de-pandeo-en-acero-conformado-en-frio-con-machine-learning": {
+      "summary": "Animated visualization of the three buckling modes, local, distortional and global, for a C150×50×20×2.0 cold-formed steel section, with design curves generated in real time. Machine learning models were trained on finite element results to predict the critical stress of each mode, reaching R² above 0.96. The analytical references are plate theory, Euler and Perry-Robertson."
+    },
+    "analisis-estructural-con-machine-learning-viga-de-acero-a36": {
+      "summary": "Analysis of fixed-end A36 steel beams combining computational mechanics with machine learning. It covers elastic deformation under variable load, the stress-strain trajectory with elastic limit and plastic zone identification, and bending moment diagram generation. The analysis is nonlinear, with elastoplastic behavior and a 250 MPa yield strength, and the visualization shows load against deformation evolving in real time."
+    },
+    "digital-twin-con-ml-para-monitoreo-sismico-de-edificios": {
+      "summary": "Digital twin for structural health monitoring of buildings during seismic events, with three modules: deformation pattern prediction using neural networks trained on ground motion data, nonlinear behavior analysis validated against physics, and damage state classification with Random Forest at 94.8% accuracy. It processes lateral and roof displacements to compute interstory drift ratio in real time and sorts it into three levels, from acceptable to severe. It targets multi-story reinforced concrete frames."
+    },
+    "prediccion-de-campos-de-esfuerzos-con-graph-neural-networks": {
+      "summary": "System that predicts stress fields by turning the finite element mesh into a graph, where each node is a point on the structure and the network learns the physical relationships between them. Trained on around 300 beam configurations, it solves von Mises stress in 0.18 seconds against the 28 seconds of conventional FEM, at 98% accuracy. It is based on Maurizi et al. 2022, published in Nature Scientific Reports, and targets exploratory design phases and sensitivity analysis."
+    },
+    "digital-twin-sismico-en-tiempo-real-con-machine-learning": {
+      "summary": "Seismic digital twin simulation built as two synchronized panels. The first plays a synthetic accelerogram generated with the Kanai-Tajimi and Clough-Penzien model calibrated to type D soil under NEC-15; the second runs an LSTM that estimates the interstory drift of a 5-story reinforced concrete frame while the earthquake happens. Structural response is solved by Newmark-β integration and damage state is classified into four levels using FEMA P-58 thresholds, on synthetic data and real physics."
+    },
+    "sistema-de-registro-de-laboratorios-universitarios": {
+      "summary": "Django web application for real-time control and monitoring of access to university laboratories. It offers two registration modes, first-time and quick, with automatic validation, an admin panel, live monitoring over AJAX, and PDF and Excel reports. It handles the Ecuador timezone, blocks duplicate entries and updates expired statuses on its own."
+    },
+    "predictor-de-costos-de-construccion-con-machine-learning-y-gui-profesional": {
+      "summary": "Construction cost predictor trained on real San Francisco building permit data. The XGBoost model uses 24 engineered features derived from 8 base variables, reaches 98.97% accuracy with an average error of 628 dollars, and 92.4% of its predictions fall within 10% of the actual value. The PySide6 interface validates input and runs prediction on a separate thread so the window never blocks."
+    },
+    "predictor-de-resistencia-de-hormigon-interfaz-grafica-pyqt6": {
+      "summary": "PyQt6 application that predicts concrete compressive strength with a Random Forest model in under 100 ms per prediction. It includes a circular gauge, classification under the Ecuadorian NEC standard, C20, C25 and C30 mix presets, a history exportable to CSV, and real-time validation. The model scores R² of 0.8426 and MAE of 46.04 kg/cm²."
+    },
+    "prediccion-de-carga-ultima-en-acero-a36-con-machine-learning": {
+      "summary": "Machine learning model that predicts ultimate load in A36 steel tensile tests from the physical dimensions of the specimen. It cuts down the number of destructive tests needed in manufacturing control. The work is developed in notebooks, with prior exploratory analysis and a focus on how well the model generalizes."
+    },
+    "prediccion-de-carga-ultima-en-materiales-usando-machine-learning": {
+      "summary": "Random Forest model that predicts the ultimate strength of A36, S275 and S355 structural materials with 90.29% accuracy. It is trained on 124,639 tensile tests and estimates ultimate load from physical and mechanical properties. It ships with an interactive interface for querying the model."
+    },
+    "sistema-de-gestion-y-control-de-laboratorios-academicos": {
+      "summary": "Desktop application built with PySide6 and SQLAlchemy on SQLite to manage academic laboratories: usage registration and tracking, faculty and space management, and CSV import and export. It generates PDF reports and ships as a Windows installer packaged with PyInstaller and Inno Setup."
+    },
+    "petshop-adm-sistema-de-gestion-para-tiendas-de-mascotas": {
+      "summary": "Django-based management system for pet stores: product and service inventory, quick sales registration, and a dashboard with key business metrics. Bootstrap interface on top of a SQLAlchemy and SQLite data layer."
+    },
+    "predictor-de-curvas-esfuerzo-deformacion-para-materiales-compuestos": {
+      "summary": "Streamlit web application that predicts the stress-strain behavior of materials with varying tailings content, using Scikit-learn machine learning models. Users can adjust curing time and composition and see the resulting curve in real time, as an alternative to a full physical test."
+    },
+    "agavepredictor-ml-sistema-predictivo-para-el-crecimiento-de-agave": {
+      "summary": "Machine learning system that predicts agave growth time with an optimized RandomForest, R² of 0.92, trained on 8,000 synthetic observations based on plant morphology. The PySide6 interface includes a representation of the agave that responds to the input parameters."
+    },
+    "prediccion-de-pandeo-en-estructuras-de-acero-con-machine-learning": {
+      "summary": "CatBoost model that predicts buckling in steel structural elements with 99.6% accuracy, using technical data gathered via web scraping and cleaned with pandas. Includes interactive 3D visualization in PyVista and automatic Excel export, with results checked against analytical methods and engineering standards."
+    },
+    "prediccion-de-consumo-en-pollos-cobb-500": {
+      "summary": "PyQt5 system that predicts daily feed consumption and growth for Cobb 500 chickens using machine learning models. Built to support decision-making in poultry production."
+    }
+  },
+  "microcopy": {
+    "areas": {
+      "data": "Data",
+      "developer": "Developer",
+      "civil_bim": "Civil & BIM"
+    },
+    "subareas": {
+      "data": {
+        "analyst": "Data Analyst",
+        "scientist": "Data Scientist",
+        "engineer": "Data Engineering"
+      },
+      "developer": {
+        "fullstack": "Full Stack",
+        "backend": "Backend",
+        "desktop": "Desktop"
+      },
+      "civil_bim": {
+        "structural": "Structural",
+        "geotechnical": "Geotechnical",
+        "construction": "Construction",
+        "bim": "BIM",
+        "automation": "Automation"
+      }
+    },
+    "buttons": {
+      "view_project": "View project",
+      "view_repository": "View repository",
+      "view_demo": "View demo",
+      "view_all_projects": "View all projects",
+      "back": "Back",
+      "back_to_projects": "Back to projects",
+      "download_document": "Download document",
+      "play_video": "Play video",
+      "read_more": "Read more"
+    },
+    "empty_states": {
+      "no_projects_generic": "No projects match this filter.",
+      "no_media": "No additional media for this project."
+    },
+    "footer": {
+      "tagline": "An engineer who automates: from construction site to dataset.",
+      "copyright": "© {year} Félix Ruiz M."
+    }
+  },
+  "chrome": {
+    "skip_to_content": "Skip to content",
+    "eyebrow": "Portfolio · Félix Ruiz M.",
+    "thesis": "A drawing without dimensions is an illustration. With dimensions it is data.",
+    "measure": "Measurement",
+    "menu": {
+      "label": "Main navigation",
+      "open": "Open menu",
+      "close": "Close menu"
+    },
+    "language_label": "Language",
+    "theme": {
+      "label": "Change theme",
+      "system": "Auto",
+      "light": "Paper",
+      "dark": "Cyanotype"
+    },
+    "areas_index": {
+      "heading": "Areas",
+      "note": "One catalogue, three readings"
+    },
+    "layers": {
+      "label": "Layers",
+      "help": "The chips switch layers of the same catalogue on and off, like in CAD.",
+      "reset": "Turn every layer on",
+      "showing": "Showing",
+      "of": "of",
+      "projects": "projects",
+      "all_off": "Every layer is off. The sheet is empty",
+      "projects_one": "project"
+    },
+    "metrics": {
+      "projects": "projects",
+      "years_in_data": "years in data",
+      "areas": "areas",
+      "experience": "experience",
+      "certifications": "certifications",
+      "publications": "publications",
+      "projects_one": "project",
+      "experience_one": "experience",
+      "certifications_one": "certification",
+      "publications_one": "publication"
+    },
+    "sheet": {
+      "label": "Sheet",
+      "scale": "Scale",
+      "source": "Data source",
+      "source_seed": "local seed",
+      "source_api": "api"
+    },
+    "video": {
+      "close": "Close video",
+      "duration": "Duration",
+      "size": "Size",
+      "dialog": "Video player",
+      "unsupported": "Your browser cannot play this video."
+    },
+    "project": {
+      "technologies": "Technologies",
+      "links": "Links",
+      "video": "Video",
+      "images": "Images",
+      "documents": "Documents"
+    },
+    "about": {
+      "experience": "Experience",
+      "education": "Education",
+      "certifications": "Certifications",
+      "publications": "Publications",
+      "present": "Present",
+      "credential": "View credential"
+    },
+    "contact_channels": "Channels",
+    "contact_form_offline": "The form is waiting on the backend. The channels on the left already work.",
+    "civil_bim": {
+      "stamp": "Under construction",
+      "note": "No published projects on this layer. No filler.",
+      "meanwhile": "Meanwhile",
+      "meanwhile_body": "The rest of the catalogue is already documented in the other layers.",
+      "placeholder_3d": "2D structural plan: simplified view of the frame",
+      "extrusion_plan": "2D structural plan: 3 bays × 3 storeys · dimensions in m",
+      "extrusion_scene": "From 2D plan to 3D frame. Scrolling drives the extrusion",
+      "extrusion_alt": "Structural plan of a three-bay frame: setting-out axes, columns at their intersections and an overall 18.00 m dimension."
+    },
+    "not_found": {
+      "eyebrow": "404 · off sheet",
+      "title": "This dimension measures nothing",
+      "body": "The page you are looking for is not drawn on this plan. It may have been renamed, or it may never have existed.",
+      "back": "Back to the cover"
+    }
+  }
+}

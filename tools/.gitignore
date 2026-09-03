@@ -1,0 +1,8 @@
+# Volcado crudo del media del sitio en vivo: 463 MB de originales sin optimizar.
+# Se regenera con `python tools/download_live_media.py`.
+media/live/
+media/live-download.json
+
+# `live-html/` SI se versiona a proposito: es la evidencia contra la que
+# `verify_catalog_seed.py` comprueba que cada repository_url y project_url del
+# seed existe de verdad en el sitio. Sin el, esa comprobacion no se puede repetir.

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Felix Ruiz M.</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    
+<style>
+    .education-description {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        margin-top: 0;
+        border-top: 1px solid #eee;
+    }
+    
+    .education-description.active {
+        max-height: 500px; /* Altura máxima arbitraria para la animación */
+        margin-top: 15px;
+        padding-top: 15px;
+    }
+    
+    .description-toggle.active {
+        background-color: #e67e22;
+    }
+    
+    .education-card {
+        transition: all 0.3s ease;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        background-color: #fff;
+    }
+</style>
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="/portfolio/">
+                
+                <img src="/media/profile/professional/Dise%C3%B1o_sin_t%C3%ADtulo_4.png" alt="Félix Ruiz M." class="navbar-profile-img me-2" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                
+                <span class="fw-bold text-orange">Felix</span> <span class="text-dark">Ruiz M.</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/portfolio/education/">
+                            Education
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/certifications/">
+                            Certifications
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/projects/">
+                            Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/experience/">
+                            Work Experience
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/publications/">
+                            Publications
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/contact/">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown ms-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe"></i> English
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item " href="/set-language/?lang=es&next=/portfolio/education/">Español</a></li>
+                            <li><a class="dropdown-item active" href="/set-language/?lang=en&next=/portfolio/education/">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        
+        
+        
+<!-- Education Header -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold" data-aos="fade-up">Education</h1>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100">My academic background and qualifications</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education List -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            
+                
+                    
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    
+                        <div class="education-card h-100">
+                            <div class="education-card-header">
+                                <h4>
+                                    
+                                        International University of Ecuador (UIDE) in collaboration with EIG Business School (Spain) and Arizona State University
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Master&#x27;s Degree in Data Science and Learning Machines with Specialization in Artificial Intelligence
+                                    
+                                </p>
+                                <span class="education-year">2026</span>
+                            </div>
+                            <div class="education-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="education-description-6">
+                                    Description
+                                </button>
+                                
+                                <div id="education-description-6" class="education-description">
+                                    <p>
+                                        
+                                            One-year online postgraduate program focused on artificial intelligence, machine learning, and deep learning
+Dual degree valid in European Union countries through EIG Business School (Spain)
+Academic curriculum incorporating methodologies from MIT, Stanford&#x27;s Design Thinking, and the STEM model
+Development of skills in ETL process design, data architecture and modeling, advanced visualization, machine learning, and neural networks
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    
+                        <div class="education-card h-100">
+                            <div class="education-card-header">
+                                <h4>
+                                    
+                                        University Diploma in Data Science
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        National University of Córdoba (UNC)
+                                    
+                                </p>
+                                <span class="education-year">2025</span>
+                            </div>
+                            <div class="education-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="education-description-3">
+                                    Description
+                                </button>
+                                
+                                <div id="education-description-3" class="education-description">
+                                    <p>
+                                        
+                                            In this program, I acquired knowledge about the complete data lifecycle, from collection and cleaning to visualization and analysis. I developed skills in programming (R and Python), statistics, databases, data visualization, machine learning, and deep learning. The program included 26 sessions over 7 months, with an integrative project that allowed me to apply the acquired competencies to a real-world case.
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    
+                        <div class="education-card h-100">
+                            <div class="education-card-header">
+                                <h4>
+                                    
+                                        Specialization in Python Programming
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Tokio New Technology School
+                                    
+                                </p>
+                                <span class="education-year">2024</span>
+                            </div>
+                            <div class="education-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="education-description-4">
+                                    Description
+                                </button>
+                                
+                                <div id="education-description-4" class="education-description">
+                                    <p>
+                                        
+                                            Comprehensive 400-hour program on Python programming, including object-oriented programming concepts, data manipulation, and web and desktop application development
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    
+                        <div class="education-card h-100">
+                            <div class="education-card-header">
+                                <h4>
+                                    
+                                        Specialization in Artificial Intelligence
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Tokio New Technology School
+                                    
+                                </p>
+                                <span class="education-year">2024</span>
+                            </div>
+                            <div class="education-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="education-description-5">
+                                    Description
+                                </button>
+                                
+                                <div id="education-description-5" class="education-description">
+                                    <p>
+                                        
+                                            Advanced 200-hour program on machine learning, deep learning, and artificial intelligence applications using Python
+Development of predictive models and data analysis using TensorFlow, Scikit-learn, and other specialized libraries
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    
+                        <div class="education-card h-100">
+                            <div class="education-card-header">
+                                <h4>
+                                    
+                                        Master&#x27;s Degree in Occupational Health and Safety with specialization in Occupational Risk Prevention
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        SEK International University
+                                    
+                                </p>
+                                <span class="education-year">2023</span>
+                            </div>
+                            <div class="education-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="education-description-2">
+                                    Description
+                                </button>
+                                
+                                <div id="education-description-2" class="education-description">
+                                    <p>
+                                        
+                                            As a professional with a Master&#x27;s Degree in Occupational Health and Safety, I possess specialized knowledge in identifying, evaluating, and controlling workplace hazards across diverse work environments. My training enables me to develop and implement preventive management systems that promote safe and healthy workplaces. I am prepared to conduct risk assessments, design training programs, manage emergencies, and ensure regulatory compliance in safety matters. I excel at integrating ergonomic, psychosocial, and technical principles to create organizational cultures where prevention is a priority, thus contributing to reducing workplace accidents and improving productivity through protected work environments and comprehensive risk management strategies.
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    
+                        <div class="education-card h-100">
+                            <div class="education-card-header">
+                                <h4>
+                                    
+                                        Civil Engineer
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Technical University of Ambato
+                                    
+                                </p>
+                                <span class="education-year">2018</span>
+                            </div>
+                            <div class="education-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="education-description-1">
+                                    Description
+                                </button>
+                                
+                                <div id="education-description-1" class="education-description">
+                                    <p>
+                                        
+                                            As a certified Civil Engineer, I am a professional specialized in the design, construction and maintenance of essential infrastructure. My training enables me to develop projects ranging from buildings and roads to hydraulic systems, applying knowledge in structures, geotechnics, hydraulics, and project management. I excel at creating innovative technical solutions that balance functionality, aesthetics, and sustainability, while ensuring compliance with regulations and quality standards. My goal is to develop safe and durable infrastructure that improves quality of life, complementing my technical skills with leadership abilities and management of multidisciplinary teams.
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Felix Ruiz M.</h5>
+                    <p>Python Developer & Data Scientist</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-icons">
+                        
+                            
+                                <a href="https://www.linkedin.com/in/felix-ruiz-mu%C3%B1oz-111784b8/" class="text-light me-3" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+                            
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                                <a href="https://www.instagram.com/f.alejorm93/?hl=es3" class="text-light me-3" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                            
+                            
+                        
+                            
+                            
+                                <a href="https://github.com/MFelix9310" class="text-light me-3" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+                            
+                            
+                            
+                        
+                    </div>
+                    <p class="mt-2">&copy; 2026 Felix Ruiz M. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/static/js/main.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Agregar evento de clic a todos los botones de descripción
+        const descriptionToggles = document.querySelectorAll('.description-toggle');
+        
+        descriptionToggles.forEach(function(toggle) {
+            toggle.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const descriptionElement = document.getElementById(targetId);
+                
+                // Alternar la clase active para la descripción
+                descriptionElement.classList.toggle('active');
+                
+                // Alternar la clase active para el botón
+                this.classList.toggle('active');
+            });
+        });
+    });
+</script>
+
+</body>
+</html> 

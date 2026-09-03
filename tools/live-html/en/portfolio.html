@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix Ruiz M. - Python Developer & Data Scientist</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    
+<style>
+    .education-description, .certification-description {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        margin-top: 0;
+        border-top: 1px solid #eee;
+    }
+    
+    .education-description.active, .certification-description.active {
+        max-height: 500px; /* Altura máxima arbitraria para la animación */
+        margin-top: 15px;
+        padding-top: 15px;
+    }
+    
+    .description-toggle.active {
+        background-color: #e67e22;
+    }
+    
+    .education-card, .certification-card, .project-card, .work-card {
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        background-color: #fff;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    /* Estilo de las cabeceras naranjas */
+    .certification-card-header, .project-card-header, .work-card-header {
+        background-color: #ff7a00;
+        color: white;
+        padding: 1.5rem;
+    }
+    
+    .certification-card-body, .project-card-body, .work-card-body {
+        padding: 1.5rem;
+    }
+    
+    .hero-social-icons {
+        margin-top: 20px;
+    }
+    
+    .hero-social-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        margin-right: 15px;
+        border-radius: 50%;
+        background-color: #e67e22;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+    
+    .hero-social-icons a:hover {
+        background-color: #d35400;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .hero-social-icon {
+        width: 25px;
+        height: 25px;
+        transition: all 0.3s ease;
+    }
+    
+    .bio-container {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        opacity: 0;
+        margin-bottom: 0;
+    }
+    
+    .bio-container.active {
+        max-height: 500px; /* Altura máxima arbitraria para la animación */
+        opacity: 1;
+        margin-bottom: 1rem;
+    }
+    
+    .about-me-btn.active {
+        background-color: #d35400;
+    }
+    
+    /* Estilos para la sección de experiencia laboral */
+    .work-card {
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        border: none;
+    }
+    
+    .work-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .work-img-container {
+        height: 220px;
+        overflow: hidden;
+        position: relative;
+        background-color: #f8f9fa;
+    }
+    
+    .work-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s ease;
+    }
+    
+    .work-card:hover .work-img {
+        transform: scale(1.05);
+    }
+    
+    .company-logo {
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+        border-radius: 6px;
+        background-color: #f8f9fa;
+        padding: 3px;
+    }
+    
+    .position-title {
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    
+    .work-dates {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+    }
+    
+    .work-dates i {
+        color: #e67e22;
+        margin-right: 6px;
+    }
+</style>
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="/portfolio/">
+                
+                <img src="/media/profile/professional/Dise%C3%B1o_sin_t%C3%ADtulo_4.png" alt="Félix Ruiz M." class="navbar-profile-img me-2" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                
+                <span class="fw-bold text-orange">Felix</span> <span class="text-dark">Ruiz M.</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/portfolio/">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/education/">
+                            Education
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/certifications/">
+                            Certifications
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/projects/">
+                            Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/experience/">
+                            Work Experience
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/publications/">
+                            Publications
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/contact/">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown ms-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe"></i> English
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item " href="/set-language/?lang=es&next=/portfolio/">Español</a></li>
+                            <li><a class="dropdown-item active" href="/set-language/?lang=en&next=/portfolio/">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        
+        
+        
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="hero-img-container" data-aos="fade-left">
+                    
+                        <img src="/media/profile/Dise%C3%B1o_sin_t%C3%ADtulo_4.png" alt="Félix Ruiz M." class="hero-img">
+                    
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="hero-content" data-aos="fade-right">
+                    <h1>
+                        
+                            
+                                Félix Ruiz M.
+                            
+                        
+                    </h1>
+                    <p class="subtitle">
+                        
+                            
+                                Python Developer &amp; Data Scientist
+                            
+                        
+                    </p>
+                    
+                    <div id="bioContainer" class="bio-container">
+                        <p>
+                            
+                                
+                                    Data Science specialist with strong training in Python and Machine Learning. My portfolio includes comprehensive projects as a Data Scientist, Data Analyst, and Python Developer, leveraging TensorFlow, Scikit-learn, and Keras for predictive modeling and deep learning implementations. Experienced in data visualization with Matplotlib and Plotly, web development with Django and Flask, ETL workflows, and process automation. I combine advanced Python ecosystem expertise with analytical capabilities to transform complex datasets into actionable insights and develop functional applications that deliver immediate business value.
+                                
+                            
+                        </p>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <button id="aboutMeBtn" class="btn btn-orange about-me-btn me-3">
+                            About Me
+                        </button>
+                        <a href="/portfolio/projects/" class="btn btn-orange me-3">View Projects</a>
+                        <a href="/portfolio/contact/" class="btn btn-outline-dark">Contact Me</a>
+                    </div>
+                    
+                    <!-- Social Icons -->
+                    <div class="hero-social-icons">
+                        
+                            
+                                
+                                    <a href="https://www.linkedin.com/in/felix-ruiz-mu%C3%B1oz-111784b8/" target="_blank" title="LinkedIn">
+                                        <img src="/static/images/social/linkedin.svg" alt="LinkedIn" class="hero-social-icon">
+                                    </a>
+                                    
+                                
+                                
+                                
+                                
+                            
+                                
+                                
+                                
+                                    <a href="https://www.instagram.com/f.alejorm93/?hl=es3" target="_blank" title="Instagram">
+                                        <img src="/static/images/social/instagram.svg" alt="Instagram" class="hero-social-icon">
+                                    </a>
+                                    
+                                
+                                
+                            
+                                
+                                
+                                    <a href="https://github.com/MFelix9310" target="_blank" title="GitHub">
+                                        <img src="/static/images/social/github.svg" alt="GitHub" class="hero-social-icon">
+                                    </a>
+                                    
+                                
+                                
+                                
+                            
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section class="py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title" data-aos="fade-up">Education</h2>
+            </div>
+        </div>
+        <div class="row">
+            
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    
+                        <div class="education-card h-100">
+                            <div class="education-card-header">
+                                <h4>
+                                    
+                                        International University of Ecuador (UIDE) in collaboration with EIG Business School (Spain) and Arizona State University
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Master&#x27;s Degree in Data Science and Learning Machines with Specialization in Artificial Intelligence
+                                    
+                                </p>
+                                <span class="education-year">2026</span>
+                            </div>
+                            <div class="education-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="home-education-description-6">
+                                    Description
+                                </button>
+                                
+                                <div id="home-education-description-6" class="education-description">
+                                    <p>
+                                        
+                                            One-year online postgraduate program focused on artificial intelligence, machine learning, and deep learning
+Dual degree valid in European Union countries through EIG Business School (Spain)
+Academic curriculum incorporating methodologies from MIT, Stanford&#x27;s Design Thinking, and the STEM model
+Development of skills in ETL process design, data architecture and modeling, advanced visualization, machine learning, and neural networks
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    
+                        <div class="education-card h-100">
+                            <div class="education-card-header">
+                                <h4>
+                                    
+                                        University Diploma in Data Science
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        National University of Córdoba (UNC)
+                                    
+                                </p>
+                                <span class="education-year">2025</span>
+                            </div>
+                            <div class="education-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="home-education-description-3">
+                                    Description
+                                </button>
+                                
+                                <div id="home-education-description-3" class="education-description">
+                                    <p>
+                                        
+                                            In this program, I acquired knowledge about the complete data lifecycle, from collection and cleaning to visualization and analysis. I developed skills in programming (R and Python), statistics, databases, data visualization, machine learning, and deep learning. The program included 26 sessions over 7 months, with an integrative project that allowed me to apply the acquired competencies to a real-world case.
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    
+                        <div class="education-card h-100">
+                            <div class="education-card-header">
+                                <h4>
+                                    
+                                        Specialization in Python Programming
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Tokio New Technology School
+                                    
+                                </p>
+                                <span class="education-year">2024</span>
+                            </div>
+                            <div class="education-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="home-education-description-4">
+                                    Description
+                                </button>
+                                
+                                <div id="home-education-description-4" class="education-description">
+                                    <p>
+                                        
+                                            Comprehensive 400-hour program on Python programming, including object-oriented programming concepts, data manipulation, and web and desktop application development
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title" data-aos="fade-up">Certifications</h2>
+            </div>
+        </div>
+        <div class="row">
+            
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    
+                        <div class="certification-card h-100">
+                            <div class="certification-card-header">
+                                <h4>
+                                    
+                                        Professional Certificate in Artificial Intelligence
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Tokio New Technology School
+                                    
+                                </p>
+                                <span class="certification-date">July 2025</span>
+                            </div>
+                            <div class="certification-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="home-certification-description-4">
+                                    Description
+                                </button>
+                                
+                                
+                                    <a href="/media/certificates/1_Iyhdt23.pdf" class="btn btn-sm btn-outline-secondary mb-2 ms-2" target="_blank">
+                                        View Certificate
+                                    </a>
+                                
+                                
+                                <div id="home-certification-description-4" class="certification-description">
+                                    <p>
+                                        
+                                            200-hour professional program in Artificial Intelligence covering AI fundamentals, machine learning, deep learning, natural language processing, and practical implementation of intelligent systems. Certificate awarded by Tokio School (January 2026).
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    
+                        <div class="certification-card h-100">
+                            <div class="certification-card-header">
+                                <h4>
+                                    
+                                        PCEP – Certified Entry-Level Python Programmer
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        OpenEDG Python Institute
+                                    
+                                </p>
+                                <span class="certification-date">August 2024</span>
+                            </div>
+                            <div class="certification-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="home-certification-description-1">
+                                    Description
+                                </button>
+                                
+                                
+                                    <a href="/media/certificates/pcep.png" class="btn btn-sm btn-outline-secondary mb-2 ms-2" target="_blank">
+                                        View Certificate
+                                    </a>
+                                
+                                
+                                <div id="home-certification-description-1" class="certification-description">
+                                    <p>
+                                        
+                                            The PCEP (Certified Entry-Level Python Programmer) is a basic Python programming certification offered by OpenEDG Python Institute. This certification is designed for beginners who want to validate their fundamental Python skills and is the first step in the Python professional certification path.
+The PCEP verifies that the candidate has a general understanding of Python programming concepts, understands the syntax and semantics of the language, and is capable of solving basic problems using Python. The certification demonstrates that the programmer can work with the essential features of the language and perform simple coding tasks independently.
+This certification is ideal for students, career changers, or professionals looking to complement their technical skills with Python programming knowledge.
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    
+                        <div class="certification-card h-100">
+                            <div class="certification-card-header">
+                                <h4>
+                                    
+                                        Python Essentials 1
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Cisco
+                                    
+                                </p>
+                                <span class="certification-date">August 2024</span>
+                            </div>
+                            <div class="certification-card-body">
+                                <button class="btn btn-sm btn-orange description-toggle mb-2" data-target="home-certification-description-2">
+                                    Description
+                                </button>
+                                
+                                
+                                
+                                <div id="home-certification-description-2" class="certification-description">
+                                    <p>
+                                        
+                                            This introductory course from Cisco Networking Academy provides a solid foundation in Python programming. Designed for beginners, it covers fundamental concepts including variables, data types, operators, control structures (conditionals and loops), functions, and object-oriented programming basics. Students learn to write clean and efficient code, solving practical problems through interactive labs. Upon completion, participants can earn the PCEP (Python Certified Entry-level Programmer) certification, an official recognition from the Python Institute that validates basic Python programming skills.
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title" data-aos="fade-up">Projects</h2>
+            </div>
+        </div>
+        <div class="row">
+            
+                
+                    
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    
+                        <div class="project-card h-100">
+                            <div class="project-card-header">
+                                <h4>
+                                    
+                                        StructRelAI — Data Engineering &amp; Data Science for Structural Reliability
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Python, NumPy, Pandas, SciPy, Scikit-learn, Matplotlib, PyYAML, Pytest
+                                    
+                                </p>
+                                
+                                
+                            </div>
+                            
+                            <div class="project-card-body">
+                                
+                                    <img src="/media/projects/monte_carlo_structural.gif" alt="StructRelAI — Data Engineering &amp; Data Science for Structural Reliability" class="img-fluid rounded mb-3">
+                                
+                                
+                                <p>
+                                    
+                                        Production-grade data pipeline using Medallion architecture (Bronze, Silver, Gold) to estimate prob…
+                                    
+                                </p>
+                                <div class="d-flex flex-wrap mt-3">
+                                    
+                                    
+                                            <a href="https://github.com/MFelix9310/StructRelAI" target="_blank" class="btn btn-sm btn-orange me-2 mb-2">GitHub</a>
+                                    
+                                    
+                                    
+                                    <a href="/portfolio/projects/29/" class="btn btn-sm btn-orange mb-2">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    
+                        <div class="project-card h-100">
+                            <div class="project-card-header">
+                                <h4>
+                                    
+                                        Medallion Pipeline for EERSA Electrical Generation Data
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Microsoft Fabric, PySpark, Delta Lake, Python, pandas, OneLake, Medallion Architecture, Kimball
+                                    
+                                </p>
+                                
+                                
+                            </div>
+                            
+                            <div class="project-card-body">
+                                
+                                    <img src="/media/projects/task_flow_medallion.png" alt="Medallion Pipeline for EERSA Electrical Generation Data" class="img-fluid rounded mb-3">
+                                
+                                
+                                <p>
+                                    
+                                        End-to-end data engineering pipeline that processes daily electrical generation records from EERSA …
+                                    
+                                </p>
+                                <div class="d-flex flex-wrap mt-3">
+                                    
+                                    
+                                            <a href="https://github.com/MFelix9310/eersa-data-plataform/tree/master" target="_blank" class="btn btn-sm btn-orange me-2 mb-2">GitHub</a>
+                                    
+                                    
+                                    
+                                    <a href="/portfolio/projects/28/" class="btn btn-sm btn-orange mb-2">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    
+                        <div class="project-card h-100">
+                            <div class="project-card-header">
+                                <h4>
+                                    
+                                        Drought Monitoring Pipeline — Medallion Architecture with Satellite Data
+                                    
+                                </h4>
+                                <p class="mb-0">
+                                    
+                                        Python, xarray, pandas, NumPy, earthaccess, pyhdf, NetCDF4, scipy, REST API, HDF-EOS, Parquet, PyYAML, pytest, Git
+                                    
+                                </p>
+                                
+                                
+                            </div>
+                            
+                            <div class="project-card-body">
+                                
+                                    <img src="/media/projects/WhatsApp_Image_2026-03-30_at_17.40.58.jpeg" alt="Drought Monitoring Pipeline — Medallion Architecture with Satellite Data" class="img-fluid rounded mb-3">
+                                
+                                
+                                <p>
+                                    
+                                        End-to-end Data Engineering pipeline for drought monitoring in the Ecuadorian Andes using Medallion…
+                                    
+                                </p>
+                                <div class="d-flex flex-wrap mt-3">
+                                    
+                                    
+                                            <a href="https://github.com/MFelix9310/chimborazo-drought-pipeline" target="_blank" class="btn btn-sm btn-orange me-2 mb-2">GitHub</a>
+                                    
+                                    
+                                    
+                                    <a href="/portfolio/projects/27/" class="btn btn-sm btn-orange mb-2">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            
+        </div>
+    </div>
+</section>
+
+<!-- Work Experience Section -->
+<section id="work-experience" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Work Experience</h2>
+            <p class="section-subtitle">My professional journey</p>
+        </div>
+        
+        <div class="row">
+            
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    
+                        <div class="work-card h-100">
+                            <div class="work-card-header">
+                                
+                                <img src="/media/companies/8base.png" alt="8base" class="me-2 company-logo" style="background-color: white; border-radius: 4px; padding: 3px; height: 30px; width: auto; margin-bottom: 10px;">
+                                
+                                <h4>
+                                    
+                                        8base
+                                    
+                                </h4>
+                                <h5 class="mb-2">
+                                    
+                                        Computer Vision Engineer (Contractor) - BIM Automation
+                                    
+                                </h5>
+                                <p class="mb-0">
+                                    <i class="far fa-calendar-alt me-1"></i>
+                                    October 2025 - 
+                                    
+                                        Present
+                                    
+                                </p>
+                            </div>
+                            <div class="work-card-body">
+                                
+                                <img src="/media/work/8base.png" class="img-fluid rounded mb-3" alt="Computer Vision Engineer (Contractor) - BIM Automation">
+                                
+                                <p>
+                                    
+                                        Contracted as Computer Vision specialist to develop an automated architectural plan recognition system and BIM model generation in IFC format. Indepe…
+                                    
+                                </p>
+                                <div class="text-end mt-3">
+                                    <a href="/portfolio/experience/2/" class="btn btn-sm btn-orange">
+                                        Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    
+                        <div class="work-card h-100">
+                            <div class="work-card-header">
+                                
+                                <h4>
+                                    
+                                        Upwork
+                                    
+                                </h4>
+                                <h5 class="mb-2">
+                                    
+                                        Freelance Data Scientist &amp; Python Developer
+                                    
+                                </h5>
+                                <p class="mb-0">
+                                    <i class="far fa-calendar-alt me-1"></i>
+                                    July 2024 - 
+                                    
+                                        Present
+                                    
+                                </p>
+                            </div>
+                            <div class="work-card-body">
+                                
+                                <img src="/media/work/images.png" class="img-fluid rounded mb-3" alt="Freelance Data Scientist &amp; Python Developer">
+                                
+                                <p>
+                                    
+                                        International freelance projects in data science, Python automation, and BIM, working with clients from the US and Latin America.
+Sistema Futura (US…
+                                    
+                                </p>
+                                <div class="text-end mt-3">
+                                    <a href="/portfolio/experience/3/" class="btn btn-sm btn-orange">
+                                        Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    
+                        <div class="work-card h-100">
+                            <div class="work-card-header">
+                                
+                                <img src="/media/companies/ESPOCH-LOGO.jpg" alt="Escuela Superior Politécnica de Chimborazo" class="me-2 company-logo" style="background-color: white; border-radius: 4px; padding: 3px; height: 30px; width: auto; margin-bottom: 10px;">
+                                
+                                <h4>
+                                    
+                                        Escuela Superior Politécnica de Chimborazo
+                                    
+                                </h4>
+                                <h5 class="mb-2">
+                                    
+                                        Laboratory Technical Specialist &amp; Data Science Engineer
+                                    
+                                </h5>
+                                <p class="mb-0">
+                                    <i class="far fa-calendar-alt me-1"></i>
+                                    May 2022 - 
+                                    
+                                        Present
+                                    
+                                </p>
+                            </div>
+                            <div class="work-card-body">
+                                
+                                <img src="/media/work/ESPOCH-LOGO.jpg" class="img-fluid rounded mb-3" alt="Especialista Técnico de Laboratorio &amp; Ingeniero de Ciencia de Datos">
+                                
+                                <p>
+                                    
+                                        Data professional with expertise in predictive analytics, machine learning, and technical laboratory management. Skills span data science, data analy…
+                                    
+                                </p>
+                                <div class="text-end mt-3">
+                                    <a href="/portfolio/experience/1/" class="btn btn-sm btn-orange">
+                                        Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="section-title text-center" data-aos="fade-up">Contact</h2>
+                <p class="lead mb-5" data-aos="fade-up">Do you have any questions or proposals? Don't hesitate to contact me!</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8" data-aos="fade-up">
+                <div class="contact-info text-center">
+                    
+                        
+                            <div class="contact-info-item d-inline-block mx-3">
+                                
+                                    <a href="https://www.linkedin.com/in/felix-ruiz-mu%C3%B1oz-111784b8/" target="_blank" class="text-dark">
+                                        <i class="fab fa-linkedin fa-2x"></i>
+                                    </a>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="contact-info-item d-inline-block mx-3">
+                                
+                                    <a href="https://www.instagram.com/f.alejorm93/?hl=es3" target="_blank" class="text-dark">
+                                        <i class="fab fa-instagram fa-2x"></i>
+                                    </a>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="contact-info-item d-inline-block mx-3">
+                                
+                                    <a href="https://github.com/MFelix9310" target="_blank" class="text-dark">
+                                        <i class="fab fa-github fa-2x"></i>
+                                    </a>
+                                
+                            </div>
+                        
+                    
+                </div>
+                <div class="text-center mt-4">
+                    <a href="/portfolio/contact/" class="btn btn-orange">Contact Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Felix Ruiz M.</h5>
+                    <p>Python Developer & Data Scientist</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-icons">
+                        
+                            
+                                <a href="https://www.linkedin.com/in/felix-ruiz-mu%C3%B1oz-111784b8/" class="text-light me-3" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+                            
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                                <a href="https://www.instagram.com/f.alejorm93/?hl=es3" class="text-light me-3" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                            
+                            
+                        
+                            
+                            
+                                <a href="https://github.com/MFelix9310" class="text-light me-3" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+                            
+                            
+                            
+                        
+                    </div>
+                    <p class="mt-2">&copy; 2026 Felix Ruiz M. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/static/js/main.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Funcionalidad para el botón "Acerca de mí"
+        const aboutMeBtn = document.getElementById('aboutMeBtn');
+        const bioContainer = document.getElementById('bioContainer');
+        
+        if (aboutMeBtn && bioContainer) {
+            aboutMeBtn.addEventListener('click', function() {
+                bioContainer.classList.toggle('active');
+                aboutMeBtn.classList.toggle('active');
+            });
+        }
+        
+        // Funcionalidad para botones de descripción
+        const descriptionToggles = document.querySelectorAll('.description-toggle');
+        
+        descriptionToggles.forEach(function(toggle) {
+            toggle.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const descriptionElement = document.getElementById(targetId);
+                
+                // Alternar la clase active para la descripción
+                descriptionElement.classList.toggle('active');
+                
+                // Alternar la clase active para el botón
+                this.classList.toggle('active');
+            });
+        });
+    });
+</script>
+
+</body>
+</html> 

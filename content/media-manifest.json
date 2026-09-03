@@ -1,0 +1,874 @@
+{
+  "_generated_by": "tools/media/manifest.mjs",
+  "_base": "tools/media",
+  "_note": "Clave = ruta del sitio antiguo tal como aparece en catalog.seed.json. Valor = destino en Supabase Storage + archivo local a subir.",
+  "entries": {
+    "certificates/pcep.png": {
+      "kind": "image",
+      "storagePath": "media/certificates/pcep.webp",
+      "localFile": "out\\images\\certificates\\pcep.webp",
+      "bytes": 30742
+    },
+    "companies/8base.png": {
+      "kind": "image",
+      "storagePath": "media/companies/8base.webp",
+      "localFile": "out\\images\\companies\\8base.webp",
+      "bytes": 4256
+    },
+    "companies/ESPOCH-LOGO.jpg": {
+      "kind": "image",
+      "storagePath": "media/companies/espoch-logo.webp",
+      "localFile": "out\\images\\companies\\espoch-logo.webp",
+      "bytes": 19476
+    },
+    "profile/Diseño_sin_título_4.png": {
+      "kind": "image",
+      "storagePath": "media/profile/diseno-sin-titulo-4.webp",
+      "localFile": "out\\images\\profile\\diseno-sin-titulo-4.webp",
+      "bytes": 56522
+    },
+    "profile/professional/Diseño_sin_título_4.png": {
+      "kind": "image",
+      "storagePath": "media/profile/professional/diseno-sin-titulo-4.webp",
+      "localFile": "out\\images\\profile\\professional\\diseno-sin-titulo-4.webp",
+      "bytes": 56522
+    },
+    "projects/1_REGISTROS.png": {
+      "kind": "image",
+      "storagePath": "media/projects/1-registros.webp",
+      "localFile": "out\\images\\projects\\1-registros.webp",
+      "bytes": 35278
+    },
+    "projects/1_vXKcRh4.png": {
+      "kind": "image",
+      "storagePath": "media/projects/1-vxkcrh4.webp",
+      "localFile": "out\\images\\projects\\1-vxkcrh4.webp",
+      "bytes": 82804
+    },
+    "projects/3.png": {
+      "kind": "image",
+      "storagePath": "media/projects/3.webp",
+      "localFile": "out\\images\\projects\\3.webp",
+      "bytes": 15796
+    },
+    "projects/animacion_viga_completa.gif": {
+      "kind": "image",
+      "storagePath": "media/projects/animacion-viga-completa.webp",
+      "localFile": "out\\images\\projects\\animacion-viga-completa.webp",
+      "bytes": 2505896,
+      "animated": true,
+      "frames": 146,
+      "video": {
+        "storagePath": "media/projects/animacion-viga-completa.mp4",
+        "localFile": "out\\images\\projects\\animacion-viga-completa.mp4",
+        "bytes": 155640
+      }
+    },
+    "projects/buckling_euler_3modes.gif": {
+      "kind": "image",
+      "storagePath": "media/projects/buckling-euler-3modes.webp",
+      "localFile": "out\\images\\projects\\buckling-euler-3modes.webp",
+      "bytes": 1673416,
+      "animated": true,
+      "frames": 40,
+      "video": {
+        "storagePath": "media/projects/buckling-euler-3modes.mp4",
+        "localFile": "out\\images\\projects\\buckling-euler-3modes.mp4",
+        "bytes": 236349
+      }
+    },
+    "projects/cpm.png": {
+      "kind": "image",
+      "storagePath": "media/projects/cpm.webp",
+      "localFile": "out\\images\\projects\\cpm.webp",
+      "bytes": 50488
+    },
+    "projects/cpt1.png": {
+      "kind": "image",
+      "storagePath": "media/projects/cpt1.webp",
+      "localFile": "out\\images\\projects\\cpt1.webp",
+      "bytes": 51834
+    },
+    "projects/DIGITAL_TWIN_ML_PRO1.gif": {
+      "kind": "image",
+      "storagePath": "media/projects/digital-twin-ml-pro1.webp",
+      "localFile": "out\\images\\projects\\digital-twin-ml-pro1.webp",
+      "bytes": 3111960,
+      "animated": true,
+      "frames": 200,
+      "video": {
+        "storagePath": "media/projects/digital-twin-ml-pro1.mp4",
+        "localFile": "out\\images\\projects\\digital-twin-ml-pro1.mp4",
+        "bytes": 218054
+      }
+    },
+    "projects/GNN_STRESS_METICULOUS.gif": {
+      "kind": "image",
+      "storagePath": "media/projects/gnn-stress-meticulous.webp",
+      "localFile": "out\\images\\projects\\gnn-stress-meticulous.webp",
+      "bytes": 4099022,
+      "animated": true,
+      "frames": 225,
+      "video": {
+        "storagePath": "media/projects/gnn-stress-meticulous.mp4",
+        "localFile": "out\\images\\projects\\gnn-stress-meticulous.mp4",
+        "bytes": 176447
+      }
+    },
+    "projects/images/1.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/1.webp",
+      "localFile": "out\\images\\projects\\images\\1.webp",
+      "bytes": 34776
+    },
+    "projects/images/1_68UHTCO.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/1-68uhtco.webp",
+      "localFile": "out\\images\\projects\\images\\1-68uhtco.webp",
+      "bytes": 13336
+    },
+    "projects/images/1_bwFXzac.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/1-bwfxzac.webp",
+      "localFile": "out\\images\\projects\\images\\1-bwfxzac.webp",
+      "bytes": 114304
+    },
+    "projects/images/1_n3FCnJ5.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/1-n3fcnj5.webp",
+      "localFile": "out\\images\\projects\\images\\1-n3fcnj5.webp",
+      "bytes": 21312
+    },
+    "projects/images/1_pandeo.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/1-pandeo.webp",
+      "localFile": "out\\images\\projects\\images\\1-pandeo.webp",
+      "bytes": 57282
+    },
+    "projects/images/1_PzoAr2d.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/1-pzoar2d.webp",
+      "localFile": "out\\images\\projects\\images\\1-pzoar2d.webp",
+      "bytes": 59328
+    },
+    "projects/images/2.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/2.webp",
+      "localFile": "out\\images\\projects\\images\\2.webp",
+      "bytes": 24200
+    },
+    "projects/images/2_2nSP92U.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/2-2nsp92u.webp",
+      "localFile": "out\\images\\projects\\images\\2-2nsp92u.webp",
+      "bytes": 25146
+    },
+    "projects/images/2_ci6iQe4.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/2-ci6iqe4.webp",
+      "localFile": "out\\images\\projects\\images\\2-ci6iqe4.webp",
+      "bytes": 22460
+    },
+    "projects/images/2_CslLvUU.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/2-csllvuu.webp",
+      "localFile": "out\\images\\projects\\images\\2-csllvuu.webp",
+      "bytes": 25970
+    },
+    "projects/images/2_l4rVHk4.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/2-l4rvhk4.webp",
+      "localFile": "out\\images\\projects\\images\\2-l4rvhk4.webp",
+      "bytes": 96426
+    },
+    "projects/images/2_pandeo.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/2-pandeo.webp",
+      "localFile": "out\\images\\projects\\images\\2-pandeo.webp",
+      "bytes": 33430
+    },
+    "projects/images/2_pet.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/2-pet.webp",
+      "localFile": "out\\images\\projects\\images\\2-pet.webp",
+      "bytes": 44006
+    },
+    "projects/images/2_REGISTROS.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/2-registros.webp",
+      "localFile": "out\\images\\projects\\images\\2-registros.webp",
+      "bytes": 40826
+    },
+    "projects/images/3.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/3.webp",
+      "localFile": "out\\images\\projects\\images\\3.webp",
+      "bytes": 36918
+    },
+    "projects/images/3_9emacx4.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/3-9emacx4.webp",
+      "localFile": "out\\images\\projects\\images\\3-9emacx4.webp",
+      "bytes": 18334
+    },
+    "projects/images/3_pandeo.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/3-pandeo.webp",
+      "localFile": "out\\images\\projects\\images\\3-pandeo.webp",
+      "bytes": 30220
+    },
+    "projects/images/3_pet.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/3-pet.webp",
+      "localFile": "out\\images\\projects\\images\\3-pet.webp",
+      "bytes": 60866
+    },
+    "projects/images/3_REGISTROS.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/3-registros.webp",
+      "localFile": "out\\images\\projects\\images\\3-registros.webp",
+      "bytes": 44250
+    },
+    "projects/images/3_ZGo7qfO.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/3-zgo7qfo.webp",
+      "localFile": "out\\images\\projects\\images\\3-zgo7qfo.webp",
+      "bytes": 37992
+    },
+    "projects/images/3_ztnKgtI.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/3-ztnkgti.webp",
+      "localFile": "out\\images\\projects\\images\\3-ztnkgti.webp",
+      "bytes": 6788
+    },
+    "projects/images/4.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/4.webp",
+      "localFile": "out\\images\\projects\\images\\4.webp",
+      "bytes": 41592
+    },
+    "projects/images/4_0gnJFVP.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/4-0gnjfvp.webp",
+      "localFile": "out\\images\\projects\\images\\4-0gnjfvp.webp",
+      "bytes": 249240
+    },
+    "projects/images/4_4amNTyr.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/4-4amntyr.webp",
+      "localFile": "out\\images\\projects\\images\\4-4amntyr.webp",
+      "bytes": 14660
+    },
+    "projects/images/4_A4LJeI4.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/4-a4ljei4.webp",
+      "localFile": "out\\images\\projects\\images\\4-a4ljei4.webp",
+      "bytes": 56090
+    },
+    "projects/images/4_pet.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/4-pet.webp",
+      "localFile": "out\\images\\projects\\images\\4-pet.webp",
+      "bytes": 29730
+    },
+    "projects/images/4_REGISTROS.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/4-registros.webp",
+      "localFile": "out\\images\\projects\\images\\4-registros.webp",
+      "bytes": 95130
+    },
+    "projects/images/5.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/5.webp",
+      "localFile": "out\\images\\projects\\images\\5.webp",
+      "bytes": 53832
+    },
+    "projects/images/5_pet.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/5-pet.webp",
+      "localFile": "out\\images\\projects\\images\\5-pet.webp",
+      "bytes": 30658
+    },
+    "projects/images/5_R5Z4jHe.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/5-r5z4jhe.webp",
+      "localFile": "out\\images\\projects\\images\\5-r5z4jhe.webp",
+      "bytes": 12128
+    },
+    "projects/images/6.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/6.webp",
+      "localFile": "out\\images\\projects\\images\\6.webp",
+      "bytes": 43140
+    },
+    "projects/images/6_pet.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/6-pet.webp",
+      "localFile": "out\\images\\projects\\images\\6-pet.webp",
+      "bytes": 34152
+    },
+    "projects/images/6_vUy0Bqy.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/6-vuy0bqy.webp",
+      "localFile": "out\\images\\projects\\images\\6-vuy0bqy.webp",
+      "bytes": 13262
+    },
+    "projects/images/animacion_viga_completa.gif": {
+      "kind": "image",
+      "storagePath": "media/projects/images/animacion-viga-completa.webp",
+      "localFile": "out\\images\\projects\\images\\animacion-viga-completa.webp",
+      "bytes": 2505896,
+      "animated": true,
+      "frames": 146,
+      "video": {
+        "storagePath": "media/projects/images/animacion-viga-completa.mp4",
+        "localFile": "out\\images\\projects\\images\\animacion-viga-completa.mp4",
+        "bytes": 155640
+      }
+    },
+    "projects/images/buckling_euler_3modes.gif": {
+      "kind": "image",
+      "storagePath": "media/projects/images/buckling-euler-3modes.webp",
+      "localFile": "out\\images\\projects\\images\\buckling-euler-3modes.webp",
+      "bytes": 1673416,
+      "animated": true,
+      "frames": 40,
+      "video": {
+        "storagePath": "media/projects/images/buckling-euler-3modes.mp4",
+        "localFile": "out\\images\\projects\\images\\buckling-euler-3modes.mp4",
+        "bytes": 236349
+      }
+    },
+    "projects/images/DIGITAL_TWIN_ML_PRO1.gif": {
+      "kind": "image",
+      "storagePath": "media/projects/images/digital-twin-ml-pro1.webp",
+      "localFile": "out\\images\\projects\\images\\digital-twin-ml-pro1.webp",
+      "bytes": 3111960,
+      "animated": true,
+      "frames": 200,
+      "video": {
+        "storagePath": "media/projects/images/digital-twin-ml-pro1.mp4",
+        "localFile": "out\\images\\projects\\images\\digital-twin-ml-pro1.mp4",
+        "bytes": 218054
+      }
+    },
+    "projects/images/evolucion_modelo_Vk52tgH.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/evolucion-modelo-vk52tgh.webp",
+      "localFile": "out\\images\\projects\\images\\evolucion-modelo-vk52tgh.webp",
+      "bytes": 41890
+    },
+    "projects/images/GNN_STRESS_METICULOUS.gif": {
+      "kind": "image",
+      "storagePath": "media/projects/images/gnn-stress-meticulous.webp",
+      "localFile": "out\\images\\projects\\images\\gnn-stress-meticulous.webp",
+      "bytes": 4099022,
+      "animated": true,
+      "frames": 225,
+      "video": {
+        "storagePath": "media/projects/images/gnn-stress-meticulous.mp4",
+        "localFile": "out\\images\\projects\\images\\gnn-stress-meticulous.mp4",
+        "bytes": 176447
+      }
+    },
+    "projects/images/monte_carlo_structural.gif": {
+      "kind": "image",
+      "storagePath": "media/projects/images/monte-carlo-structural.webp",
+      "localFile": "out\\images\\projects\\images\\monte-carlo-structural.webp",
+      "bytes": 1889782,
+      "animated": true,
+      "frames": 90,
+      "video": {
+        "storagePath": "media/projects/images/monte-carlo-structural.mp4",
+        "localFile": "out\\images\\projects\\images\\monte-carlo-structural.mp4",
+        "bytes": 145333
+      }
+    },
+    "projects/images/p2_7ZMoNkI.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/p2-7zmonki.webp",
+      "localFile": "out\\images\\projects\\images\\p2-7zmonki.webp",
+      "bytes": 26668
+    },
+    "projects/images/p3_tCbdPU3.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/p3-tcbdpu3.webp",
+      "localFile": "out\\images\\projects\\images\\p3-tcbdpu3.webp",
+      "bytes": 29220
+    },
+    "projects/images/p4_stLyr3V.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/p4-stlyr3v.webp",
+      "localFile": "out\\images\\projects\\images\\p4-stlyr3v.webp",
+      "bytes": 29292
+    },
+    "projects/images/seismic_twin_plt_1.gif": {
+      "kind": "image",
+      "storagePath": "media/projects/images/seismic-twin-plt-1.webp",
+      "localFile": "out\\images\\projects\\images\\seismic-twin-plt-1.webp",
+      "bytes": 6085444,
+      "animated": true,
+      "frames": 334,
+      "video": {
+        "storagePath": "media/projects/images/seismic-twin-plt-1.mp4",
+        "localFile": "out\\images\\projects\\images\\seismic-twin-plt-1.mp4",
+        "bytes": 205919
+      }
+    },
+    "projects/images/task_flow_medallion.png": {
+      "kind": "image",
+      "storagePath": "media/projects/images/task-flow-medallion.webp",
+      "localFile": "out\\images\\projects\\images\\task-flow-medallion.webp",
+      "bytes": 17222
+    },
+    "projects/images/WhatsApp_Image_2026-03-02_at_11.19.05.jpeg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/whatsapp-image-2026-03-02-at-11-19-05.webp",
+      "localFile": "out\\images\\projects\\images\\whatsapp-image-2026-03-02-at-11-19-05.webp",
+      "bytes": 46034
+    },
+    "projects/images/WhatsApp_Image_2026-03-03_at_16.54.36.jpeg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/whatsapp-image-2026-03-03-at-16-54-36.webp",
+      "localFile": "out\\images\\projects\\images\\whatsapp-image-2026-03-03-at-16-54-36.webp",
+      "bytes": 92924
+    },
+    "projects/images/WhatsApp_Image_2026-03-04_at_10.48.34.jpeg": {
+      "kind": "image",
+      "storagePath": "media/projects/images/whatsapp-image-2026-03-04-at-10-48-34.webp",
+      "localFile": "out\\images\\projects\\images\\whatsapp-image-2026-03-04-at-10-48-34.webp",
+      "bytes": 77462
+    },
+    "projects/images.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/images.webp",
+      "localFile": "out\\images\\projects\\images.webp",
+      "bytes": 1896
+    },
+    "projects/MINIATURA.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/miniatura.webp",
+      "localFile": "out\\images\\projects\\miniatura.webp",
+      "bytes": 52426
+    },
+    "projects/Miniatura.png": {
+      "kind": "image",
+      "storagePath": "media/projects/miniatura-2.webp",
+      "localFile": "out\\images\\projects\\miniatura-2.webp",
+      "bytes": 49960
+    },
+    "projects/miniatura_agave.png": {
+      "kind": "image",
+      "storagePath": "media/projects/miniatura-agave.webp",
+      "localFile": "out\\images\\projects\\miniatura-agave.webp",
+      "bytes": 43932
+    },
+    "projects/MINIATURA_NLOQUES.png": {
+      "kind": "image",
+      "storagePath": "media/projects/miniatura-nloques.webp",
+      "localFile": "out\\images\\projects\\miniatura-nloques.webp",
+      "bytes": 26550
+    },
+    "projects/miniatura_pandeo.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/miniatura-pandeo.webp",
+      "localFile": "out\\images\\projects\\miniatura-pandeo.webp",
+      "bytes": 30380
+    },
+    "projects/MINIATURA_WB7CAIP.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/miniatura-wb7caip.webp",
+      "localFile": "out\\images\\projects\\miniatura-wb7caip.webp",
+      "bytes": 51318
+    },
+    "projects/miniatura.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/miniatura-3.webp",
+      "localFile": "out\\images\\projects\\miniatura-3.webp",
+      "bytes": 52272
+    },
+    "projects/monte_carlo_structural.gif": {
+      "kind": "image",
+      "storagePath": "media/projects/monte-carlo-structural.webp",
+      "localFile": "out\\images\\projects\\monte-carlo-structural.webp",
+      "bytes": 1889782,
+      "animated": true,
+      "frames": 90,
+      "video": {
+        "storagePath": "media/projects/monte-carlo-structural.mp4",
+        "localFile": "out\\images\\projects\\monte-carlo-structural.mp4",
+        "bytes": 145333
+      }
+    },
+    "projects/p1_1S19453.jpg": {
+      "kind": "image",
+      "storagePath": "media/projects/p1-1s19453.webp",
+      "localFile": "out\\images\\projects\\p1-1s19453.webp",
+      "bytes": 25118
+    },
+    "projects/seismic_twin_plt_1.gif": {
+      "kind": "image",
+      "storagePath": "media/projects/seismic-twin-plt-1.webp",
+      "localFile": "out\\images\\projects\\seismic-twin-plt-1.webp",
+      "bytes": 6085444,
+      "animated": true,
+      "frames": 334,
+      "video": {
+        "storagePath": "media/projects/seismic-twin-plt-1.mp4",
+        "localFile": "out\\images\\projects\\seismic-twin-plt-1.mp4",
+        "bytes": 205919
+      }
+    },
+    "projects/task_flow_medallion.png": {
+      "kind": "image",
+      "storagePath": "media/projects/task-flow-medallion.webp",
+      "localFile": "out\\images\\projects\\task-flow-medallion.webp",
+      "bytes": 17222
+    },
+    "projects/WhatsApp_Image_2026-03-04_at_10.48.34.jpeg": {
+      "kind": "image",
+      "storagePath": "media/projects/whatsapp-image-2026-03-04-at-10-48-34.webp",
+      "localFile": "out\\images\\projects\\whatsapp-image-2026-03-04-at-10-48-34.webp",
+      "bytes": 77462
+    },
+    "projects/WhatsApp_Image_2026-03-30_at_17.40.58.jpeg": {
+      "kind": "image",
+      "storagePath": "media/projects/whatsapp-image-2026-03-30-at-17-40-58.webp",
+      "localFile": "out\\images\\projects\\whatsapp-image-2026-03-30-at-17-40-58.webp",
+      "bytes": 23808
+    },
+    "publications/Captura_de_pantalla_2025-05-13_072544.png": {
+      "kind": "image",
+      "storagePath": "media/publications/captura-de-pantalla-2025-05-13-072544.webp",
+      "localFile": "out\\images\\publications\\captura-de-pantalla-2025-05-13-072544.webp",
+      "bytes": 18756
+    },
+    "work/8base.png": {
+      "kind": "image",
+      "storagePath": "media/work/8base.webp",
+      "localFile": "out\\images\\work\\8base.webp",
+      "bytes": 4256
+    },
+    "work/ESPOCH-LOGO.jpg": {
+      "kind": "image",
+      "storagePath": "media/work/espoch-logo.webp",
+      "localFile": "out\\images\\work\\espoch-logo.webp",
+      "bytes": 19476
+    },
+    "work/images/FÉLIX_ALEJANDRO.png": {
+      "kind": "image",
+      "storagePath": "media/work/images/felix-alejandro.webp",
+      "localFile": "out\\images\\work\\images\\felix-alejandro.webp",
+      "bytes": 82354
+    },
+    "work/images.png": {
+      "kind": "image",
+      "storagePath": "media/work/images.webp",
+      "localFile": "out\\images\\work\\images.webp",
+      "bytes": 2934
+    },
+    "projects/videos/1_8PLJEtw.mp4": {
+      "kind": "video",
+      "storagePath": "media/projects/videos/1-8pljetw-1080.mp4",
+      "posterPath": "media/projects/videos/1-8pljetw-poster.webp",
+      "posterLocalFile": "out\\videos\\1-8pljetw-poster.webp",
+      "durationSeconds": 26.13,
+      "width": 1896,
+      "height": 860,
+      "renditions": {
+        "720": {
+          "storagePath": "media/projects/videos/1-8pljetw-720.mp4",
+          "localFile": "out\\videos\\1-8pljetw-720.mp4",
+          "bytes": 1850632
+        },
+        "1080": {
+          "storagePath": "media/projects/videos/1-8pljetw-1080.mp4",
+          "localFile": "out\\videos\\1-8pljetw-1080.mp4",
+          "bytes": 2824466
+        }
+      }
+    },
+    "projects/videos/1_agHDpMa.mp4": {
+      "kind": "video",
+      "storagePath": "media/projects/videos/1-aghdpma-1080.mp4",
+      "posterPath": "media/projects/videos/1-aghdpma-poster.webp",
+      "posterLocalFile": "out\\videos\\1-aghdpma-poster.webp",
+      "durationSeconds": 24.47,
+      "width": 1918,
+      "height": 984,
+      "renditions": {
+        "720": {
+          "storagePath": "media/projects/videos/1-aghdpma-720.mp4",
+          "localFile": "out\\videos\\1-aghdpma-720.mp4",
+          "bytes": 644062
+        },
+        "1080": {
+          "storagePath": "media/projects/videos/1-aghdpma-1080.mp4",
+          "localFile": "out\\videos\\1-aghdpma-1080.mp4",
+          "bytes": 1053846
+        }
+      }
+    },
+    "projects/videos/1_cvGy6dM.mp4": {
+      "kind": "video",
+      "storagePath": "media/projects/videos/1-cvgy6dm-1080.mp4",
+      "posterPath": "media/projects/videos/1-cvgy6dm-poster.webp",
+      "posterLocalFile": "out\\videos\\1-cvgy6dm-poster.webp",
+      "durationSeconds": 40.26,
+      "width": 1184,
+      "height": 772,
+      "renditions": {
+        "720": {
+          "storagePath": "media/projects/videos/1-cvgy6dm-720.mp4",
+          "localFile": "out\\videos\\1-cvgy6dm-720.mp4",
+          "bytes": 1116832
+        },
+        "1080": {
+          "storagePath": "media/projects/videos/1-cvgy6dm-1080.mp4",
+          "localFile": "out\\videos\\1-cvgy6dm-1080.mp4",
+          "bytes": 1263993
+        }
+      }
+    },
+    "projects/videos/1_UxmOm0Z.mp4": {
+      "kind": "video",
+      "storagePath": "media/projects/videos/1-uxmom0z-1080.mp4",
+      "posterPath": "media/projects/videos/1-uxmom0z-poster.webp",
+      "posterLocalFile": "out\\videos\\1-uxmom0z-poster.webp",
+      "durationSeconds": 38.57,
+      "width": 1920,
+      "height": 984,
+      "renditions": {
+        "720": {
+          "storagePath": "media/projects/videos/1-uxmom0z-720.mp4",
+          "localFile": "out\\videos\\1-uxmom0z-720.mp4",
+          "bytes": 2252733
+        },
+        "1080": {
+          "storagePath": "media/projects/videos/1-uxmom0z-1080.mp4",
+          "localFile": "out\\videos\\1-uxmom0z-1080.mp4",
+          "bytes": 3971390
+        }
+      }
+    },
+    "projects/videos/collar_tie.mp4": {
+      "kind": "video",
+      "storagePath": "media/projects/videos/collar-tie-1080.mp4",
+      "posterPath": "media/projects/videos/collar-tie-poster.webp",
+      "posterLocalFile": "out\\videos\\collar-tie-poster.webp",
+      "durationSeconds": 51.18,
+      "width": 1916,
+      "height": 1030,
+      "renditions": {
+        "720": {
+          "storagePath": "media/projects/videos/collar-tie-720.mp4",
+          "localFile": "out\\videos\\collar-tie-720.mp4",
+          "bytes": 2748935
+        },
+        "1080": {
+          "storagePath": "media/projects/videos/collar-tie-1080.mp4",
+          "localFile": "out\\videos\\collar-tie-1080.mp4",
+          "bytes": 5216892
+        }
+      }
+    },
+    "projects/videos/cpt_v.mp4": {
+      "kind": "video",
+      "storagePath": "media/projects/videos/cpt-v-1080.mp4",
+      "posterPath": "media/projects/videos/cpt-v-poster.webp",
+      "posterLocalFile": "out\\videos\\cpt-v-poster.webp",
+      "durationSeconds": 59.61,
+      "width": 1914,
+      "height": 1020,
+      "renditions": {
+        "720": {
+          "storagePath": "media/projects/videos/cpt-v-720.mp4",
+          "localFile": "out\\videos\\cpt-v-720.mp4",
+          "bytes": 1805160
+        },
+        "1080": {
+          "storagePath": "media/projects/videos/cpt-v-1080.mp4",
+          "localFile": "out\\videos\\cpt-v-1080.mp4",
+          "bytes": 3274569
+        }
+      }
+    },
+    "projects/videos/Diseño_sin_título_2.mp4": {
+      "kind": "video",
+      "storagePath": "media/projects/videos/diseno-sin-titulo-2-1080.mp4",
+      "posterPath": "media/projects/videos/diseno-sin-titulo-2-poster.webp",
+      "posterLocalFile": "out\\videos\\diseno-sin-titulo-2-poster.webp",
+      "durationSeconds": 36.19,
+      "width": 1910,
+      "height": 1028,
+      "renditions": {
+        "720": {
+          "storagePath": "media/projects/videos/diseno-sin-titulo-2-720.mp4",
+          "localFile": "out\\videos\\diseno-sin-titulo-2-720.mp4",
+          "bytes": 1839789
+        },
+        "1080": {
+          "storagePath": "media/projects/videos/diseno-sin-titulo-2-1080.mp4",
+          "localFile": "out\\videos\\diseno-sin-titulo-2-1080.mp4",
+          "bytes": 3875203
+        }
+      }
+    },
+    "projects/videos/video_agave.mp4": {
+      "kind": "video",
+      "storagePath": "media/projects/videos/video-agave-1080.mp4",
+      "posterPath": "media/projects/videos/video-agave-poster.webp",
+      "posterLocalFile": "out\\videos\\video-agave-poster.webp",
+      "durationSeconds": 29.91,
+      "width": 1910,
+      "height": 984,
+      "renditions": {
+        "720": {
+          "storagePath": "media/projects/videos/video-agave-720.mp4",
+          "localFile": "out\\videos\\video-agave-720.mp4",
+          "bytes": 714305
+        },
+        "1080": {
+          "storagePath": "media/projects/videos/video-agave-1080.mp4",
+          "localFile": "out\\videos\\video-agave-1080.mp4",
+          "bytes": 1180793
+        }
+      }
+    },
+    "projects/videos/VIDEO_BLOQUES.mp4": {
+      "kind": "video",
+      "storagePath": "media/projects/videos/video-bloques-1080.mp4",
+      "posterPath": "media/projects/videos/video-bloques-poster.webp",
+      "posterLocalFile": "out\\videos\\video-bloques-poster.webp",
+      "durationSeconds": 33.05,
+      "width": 1902,
+      "height": 1024,
+      "renditions": {
+        "720": {
+          "storagePath": "media/projects/videos/video-bloques-720.mp4",
+          "localFile": "out\\videos\\video-bloques-720.mp4",
+          "bytes": 860645
+        },
+        "1080": {
+          "storagePath": "media/projects/videos/video-bloques-1080.mp4",
+          "localFile": "out\\videos\\video-bloques-1080.mp4",
+          "bytes": 1566926
+        }
+      }
+    },
+    "projects/videos/video_pandeo.mp4": {
+      "kind": "video",
+      "storagePath": "media/projects/videos/video-pandeo-1080.mp4",
+      "posterPath": "media/projects/videos/video-pandeo-poster.webp",
+      "posterLocalFile": "out\\videos\\video-pandeo-poster.webp",
+      "durationSeconds": 67.54,
+      "width": 1904,
+      "height": 1002,
+      "renditions": {
+        "720": {
+          "storagePath": "media/projects/videos/video-pandeo-720.mp4",
+          "localFile": "out\\videos\\video-pandeo-720.mp4",
+          "bytes": 2015020
+        },
+        "1080": {
+          "storagePath": "media/projects/videos/video-pandeo-1080.mp4",
+          "localFile": "out\\videos\\video-pandeo-1080.mp4",
+          "bytes": 3773646
+        }
+      }
+    },
+    "projects/videos/video_pet.mp4": {
+      "kind": "video",
+      "storagePath": "media/projects/videos/video-pet-1080.mp4",
+      "posterPath": "media/projects/videos/video-pet-poster.webp",
+      "posterLocalFile": "out\\videos\\video-pet-poster.webp",
+      "durationSeconds": 36.01,
+      "width": 1340,
+      "height": 592,
+      "renditions": {
+        "720": {
+          "storagePath": "media/projects/videos/video-pet-720.mp4",
+          "localFile": "out\\videos\\video-pet-720.mp4",
+          "bytes": 3638776
+        },
+        "1080": {
+          "storagePath": "media/projects/videos/video-pet-1080.mp4",
+          "localFile": "out\\videos\\video-pet-1080.mp4",
+          "bytes": 4289483
+        }
+      }
+    },
+    "certificates/1_Iyhdt23.pdf": {
+      "kind": "document",
+      "storagePath": "media/certificates/1-iyhdt23.pdf",
+      "localFile": "out\\documents\\certificates\\1-iyhdt23.pdf",
+      "bytes": 85975
+    },
+    "certificates/CERTIFICADO_PROGRAMADOR_PYTHON.pdf": {
+      "kind": "document",
+      "storagePath": "media/certificates/certificado-programador-python.pdf",
+      "localFile": "out\\documents\\certificates\\certificado-programador-python.pdf",
+      "bytes": 102768
+    },
+    "projects/documents/12.pdf": {
+      "kind": "document",
+      "storagePath": "media/projects/documents/12.pdf",
+      "localFile": "out\\documents\\projects\\documents\\12.pdf",
+      "bytes": 64219
+    },
+    "projects/documents/A36.pdf": {
+      "kind": "document",
+      "storagePath": "media/projects/documents/a36.pdf",
+      "localFile": "out\\documents\\projects\\documents\\a36.pdf",
+      "bytes": 409016
+    },
+    "projects/documents/CPT_Luzern_Seetalplatz.csv.pdf": {
+      "kind": "document",
+      "storagePath": "media/projects/documents/cpt-luzern-seetalplatz-csv.pdf",
+      "localFile": "out\\documents\\projects\\documents\\cpt-luzern-seetalplatz-csv.pdf",
+      "bytes": 303986
+    },
+    "projects/documents/ENTRENAMIENTO_PRECIOS.ipynb": {
+      "kind": "document",
+      "storagePath": "media/projects/documents/entrenamiento-precios.ipynb",
+      "localFile": "out\\documents\\projects\\documents\\entrenamiento-precios.ipynb",
+      "bytes": 13922191
+    },
+    "projects/documents/HORMIGON_ML.pdf": {
+      "kind": "document",
+      "storagePath": "media/projects/documents/hormigon-ml.pdf",
+      "localFile": "out\\documents\\projects\\documents\\hormigon-ml.pdf",
+      "bytes": 997258
+    },
+    "projects/documents/registro_asistencia_20250919_092332.pdf": {
+      "kind": "document",
+      "storagePath": "media/projects/documents/registro-asistencia-20250919-092332.pdf",
+      "localFile": "out\\documents\\projects\\documents\\registro-asistencia-20250919-092332.pdf",
+      "bytes": 2719
+    },
+    "projects/documents/reporte_laboratorio_Lq5rzxW.pdf": {
+      "kind": "document",
+      "storagePath": "media/projects/documents/reporte-laboratorio-lq5rzxw.pdf",
+      "localFile": "out\\documents\\projects\\documents\\reporte-laboratorio-lq5rzxw.pdf",
+      "bytes": 40555
+    },
+    "projects/documents/Simulacion_1.xlsx": {
+      "kind": "document",
+      "storagePath": "media/projects/documents/simulacion-1.xlsx",
+      "localFile": "out\\documents\\projects\\documents\\simulacion-1.xlsx",
+      "bytes": 67258
+    },
+    "projects/documents/Traccion_ML.pdf": {
+      "kind": "document",
+      "storagePath": "media/projects/documents/traccion-ml.pdf",
+      "localFile": "out\\documents\\projects\\documents\\traccion-ml.pdf",
+      "bytes": 2172326
+    },
+    "publications/MATALAB1_FIINAL.pdf": {
+      "kind": "document",
+      "storagePath": "media/publications/matalab1-fiinal.pdf",
+      "localFile": "out\\documents\\publications\\matalab1-fiinal.pdf",
+      "bytes": 2879645
+    }
+  }
+}

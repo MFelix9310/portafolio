@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+    Experiencia Laboral - Felix Ruiz M.
+</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    
+<style>
+    .company-logo {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+        padding: 5px;
+    }
+    
+    .work-card {
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        background-color: #fff;
+        overflow: hidden;
+        height: 100%;
+    }
+    
+    .work-card-header {
+        background-color: #ff7a00;
+        color: white;
+        padding: 1.5rem;
+    }
+    
+    .work-card-body {
+        padding: 1.5rem;
+    }
+    
+    .work-company {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    
+    .work-title {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: white;
+    }
+    
+    .work-company-name {
+        margin-left: 10px;
+        font-weight: 500;
+        color: white;
+    }
+    
+    .work-dates {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    .work-dates i {
+        margin-right: 6px;
+    }
+    
+    .work-skill {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        transition: all 0.3s ease;
+    }
+    
+    .filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        border-radius: 30px;
+        background-color: #f5f5f5;
+        color: #333;
+        border: 2px solid #eee;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .filter-btn:hover {
+        background-color: #e0e0e0;
+    }
+    
+    .filter-btn.active {
+        background-color: #ff7a00;
+        color: white;
+        border-color: #ff7a00;
+    }
+    
+    .category-title {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+    
+    .category-title::after {
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 3px;
+        background-color: #ff7a00;
+        bottom: 0;
+        left: 0;
+    }
+    
+    .work-description {
+        margin-top: 1rem;
+        color: #555;
+        font-size: 0.9rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+</style>
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="/portfolio/">
+                
+                <img src="/media/profile/professional/Dise%C3%B1o_sin_t%C3%ADtulo_4.png" alt="Félix Ruiz M." class="navbar-profile-img me-2" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                
+                <span class="fw-bold text-orange">Felix</span> <span class="text-dark">Ruiz M.</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/education/">
+                            Educación
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/certifications/">
+                            Certificaciones
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/projects/">
+                            Proyectos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/portfolio/experience/">
+                            Experiencia Laboral
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/publications/">
+                            Publicaciones
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/contact/">
+                            Contacto
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown ms-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe"></i> Español
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item active" href="/set-language/?lang=es&next=/portfolio/experience/">Español</a></li>
+                            <li><a class="dropdown-item " href="/set-language/?lang=en&next=/portfolio/experience/">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        
+        
+        
+<!-- Header Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold" data-aos="fade-up">
+                    Experiencia Laboral
+                </h1>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100">
+                    
+                        Mi trayectoria profesional y desarrollo de carrera
+                    
+                </p>
+                <div class="mt-4">
+                    <a href="/portfolio/projects/" class="btn btn-outline-dark">
+                        Ver Proyectos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience List Section -->
+<section class="py-5">
+    <div class="container">
+        
+            
+                <div class="filter-buttons" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all">
+                        Todos
+                    </button>
+                    <button class="filter-btn" data-filter="data_scientist">Data Scientist</button>
+                    <button class="filter-btn" data-filter="data_analyst">Data Analyst</button>
+                    <button class="filter-btn" data-filter="python_developer">Python Developer</button>
+                </div>
+            
+            
+            <div class="row">
+                
+                    
+                    <div class="col-md-6 mb-4 work-item " data-aos="fade-up" data-aos-delay="100">
+                        <div class="work-card h-100">
+                            <div class="work-card-header">
+                                <div class="work-company">
+                                    
+                                        <img src="/media/companies/8base.png" alt="8base" class="company-logo">
+                                    
+                                    <h4 class="work-company-name">
+                                        
+                                            8base
+                                        
+                                    </h4>
+                                </div>
+                                
+                                <h5 class="work-title">
+                                    
+                                        Computer Vision Engineer (Contractor) - BIM Automation
+                                    
+                                </h5>
+                                
+                                <p class="work-dates">
+                                    <i class="far fa-calendar-alt"></i>
+                                    octubre 2025 - 
+                                    
+                                        Actualidad
+                                    
+                                </p>
+                                
+                                
+                            </div>
+                            
+                            <div class="work-card-body">
+                                <div class="work-description">
+                                    
+                                        <p>Contratado como especialista en Computer Vision para desarrollar un sistema de reconocimiento automático de planos arquitectónicos y generación de…
+                                    
+                                </div>
+                                
+                                <div class="text-center mt-3">
+                                    <a href="/portfolio/experience/2/" class="btn btn-sm btn-orange">
+                                        Ver Detalles
+                                        <i class="fas fa-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <div class="col-md-6 mb-4 work-item " data-aos="fade-up" data-aos-delay="200">
+                        <div class="work-card h-100">
+                            <div class="work-card-header">
+                                <div class="work-company">
+                                    
+                                    <h4 class="work-company-name">
+                                        
+                                            Upwork
+                                        
+                                    </h4>
+                                </div>
+                                
+                                <h5 class="work-title">
+                                    
+                                        Freelance Data Scientist &amp; Python Developer
+                                    
+                                </h5>
+                                
+                                <p class="work-dates">
+                                    <i class="far fa-calendar-alt"></i>
+                                    julio 2024 - 
+                                    
+                                        Actualidad
+                                    
+                                </p>
+                                
+                                
+                            </div>
+                            
+                            <div class="work-card-body">
+                                <div class="work-description">
+                                    
+                                        <p>Proyectos freelance internacionales en ciencia de datos, automatización Python y BIM, trabajando con clientes de EE.UU. y América Latina.<br>Siste…
+                                    
+                                </div>
+                                
+                                <div class="text-center mt-3">
+                                    <a href="/portfolio/experience/3/" class="btn btn-sm btn-orange">
+                                        Ver Detalles
+                                        <i class="fas fa-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <div class="col-md-6 mb-4 work-item " data-aos="fade-up" data-aos-delay="100">
+                        <div class="work-card h-100">
+                            <div class="work-card-header">
+                                <div class="work-company">
+                                    
+                                        <img src="/media/companies/ESPOCH-LOGO.jpg" alt="Escuela Superior Politécnica de Chimborazo" class="company-logo">
+                                    
+                                    <h4 class="work-company-name">
+                                        
+                                            Escuela Superior Politécnica de Chimborazo
+                                        
+                                    </h4>
+                                </div>
+                                
+                                <h5 class="work-title">
+                                    
+                                        Especialista Técnico de Laboratorio &amp; Ingeniero de Ciencia de Datos
+                                    
+                                </h5>
+                                
+                                <p class="work-dates">
+                                    <i class="far fa-calendar-alt"></i>
+                                    mayo 2022 - 
+                                    
+                                        Actualidad
+                                    
+                                </p>
+                                
+                                
+                            </div>
+                            
+                            <div class="work-card-body">
+                                <div class="work-description">
+                                    
+                                        <p>Profesional de datos con experiencia en análisis predictivo, machine learning y gestión técnica de laboratorios. Competencias en ciencia de datos,…
+                                    
+                                </div>
+                                
+                                <div class="text-center mt-3">
+                                    <a href="/portfolio/experience/1/" class="btn btn-sm btn-orange">
+                                        Ver Detalles
+                                        <i class="fas fa-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+            </div>
+        
+    </div>
+</section>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Filtrado por habilidades
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Actualizar botones activos
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filtrar elementos
+                const workItems = document.querySelectorAll('.work-item');
+                
+                if (filter === 'all') {
+                    workItems.forEach(item => {
+                        item.style.display = 'block';
+                    });
+                } else {
+                    workItems.forEach(item => {
+                        if (item.classList.contains('skill-' + filter)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Felix Ruiz M.</h5>
+                    <p>Python Developer & Data Scientist</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-icons">
+                        
+                            
+                                <a href="https://www.linkedin.com/in/felix-ruiz-mu%C3%B1oz-111784b8/" class="text-light me-3" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+                            
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                                <a href="https://www.instagram.com/f.alejorm93/?hl=es3" class="text-light me-3" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                            
+                            
+                        
+                            
+                            
+                                <a href="https://github.com/MFelix9310" class="text-light me-3" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+                            
+                            
+                            
+                        
+                    </div>
+                    <p class="mt-2">&copy; 2026 Felix Ruiz M. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/static/js/main.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Filtrado por habilidades
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Actualizar botones activos
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filtrar elementos
+                const workItems = document.querySelectorAll('.work-item');
+                
+                if (filter === 'all') {
+                    workItems.forEach(item => {
+                        item.style.display = 'block';
+                    });
+                } else {
+                    workItems.forEach(item => {
+                        if (item.classList.contains('skill-' + filter)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html> 

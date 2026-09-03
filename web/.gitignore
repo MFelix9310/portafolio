@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+next-env.d.ts
+.env.local
+.DS_Store
+*.tsbuildinfo
+
+# Copia de trabajo: se regenera con `node scripts/sync-media.mjs`
+public/media

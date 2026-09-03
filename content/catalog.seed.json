@@ -1,0 +1,2248 @@
+{
+  "_generated_by": "tools/build_catalog_seed.py",
+  "_source": "https://gambito93.pythonanywhere.com/portfolio/ (HTML en tools/live-html/)",
+  "_legacy_seed": "content/catalog.seed.legacy.json",
+  "profile": {
+    "name": "Félix Ruiz M.",
+    "legacy_title": {
+      "es": "Python Developer & Data Scientist"
+    },
+    "bio": {
+      "es": "Especialista en Data Science con sólida formación en Python y Machine Learning. Mi portfolio incluye proyectos completos como Data Scientist, Data Analyst y Python Developer, utilizando TensorFlow, Scikit-learn y Keras para modelado predictivo e implementaciones de deep learning. Experiencia en visualización de datos con Matplotlib y Plotly, desarrollo web con Django y Flask, flujos ETL y automatización de procesos. Combino experiencia avanzada en el ecosistema Python con capacidades analíticas para transformar conjuntos de datos complejos en insights accionables y desarrollar aplicaciones funcionales que generan valor de negocio inmediato.",
+      "en": "Data Science specialist with strong training in Python and Machine Learning. My portfolio includes comprehensive projects as a Data Scientist, Data Analyst, and Python Developer, leveraging TensorFlow, Scikit-learn, and Keras for predictive modeling and deep learning implementations. Experienced in data visualization with Matplotlib and Plotly, web development with Django and Flask, ETL workflows, and process automation. I combine advanced Python ecosystem expertise with analytical capabilities to transform complex datasets into actionable insights and develop functional applications that deliver immediate business value."
+    },
+    "photo": "profile/Diseño_sin_título_4.png",
+    "professional_photo": "profile/professional/Diseño_sin_título_4.png"
+  },
+  "projects": [
+    {
+      "legacy_id": 29,
+      "slug": "structrelai-data-engineering-data-science-para-confiabilidad-estructural",
+      "title": {
+        "es": "StructRelAI — Data Engineering & Data Science para Confiabilidad Estructural",
+        "en": "StructRelAI — Data Engineering & Data Science for Structural Reliability"
+      },
+      "summary": {
+        "es": "Pipeline de datos con arquitectura Medallion (Bronze, Silver, Gold) para estimar la probabilidad de falla y el indice de confiabilidad de elementos estructurales de acero mediante simulacion Monte Carlo. Incluye validacion con el metodo FORM (First Order Reliability Method), intervalos de confianza al 95%, y un modelo ML surrogate (regresion logistica) con metricas de calibracion (Brier score, ROC AUC). El proyecto integra ingenieria de datos, machine learning e ingenieria estructural siguiendo referencias normativas (Eurocode EN 1990, ASCE 7-22).",
+        "en": "Production-grade data pipeline using Medallion architecture (Bronze, Silver, Gold) to estimate probability of failure and reliability index of steel structural members via Monte Carlo simulation. Includes FORM (First Order Reliability Method) analytical validation, 95% Wilson confidence intervals, and an ML surrogate model (logistic regression) with calibration metrics (Brier score, ROC AUC). The project bridges data engineering, machine learning, and structural engineering following design code references (Eurocode EN 1990, ASCE 7-22)"
+      },
+      "technologies": [
+        "Python",
+        "NumPy",
+        "Pandas",
+        "SciPy",
+        "Scikit-learn",
+        "Matplotlib",
+        "PyYAML",
+        "Pytest"
+      ],
+      "technologies_en": [
+        "Python",
+        "NumPy",
+        "Pandas",
+        "SciPy",
+        "Scikit-learn",
+        "Matplotlib",
+        "PyYAML",
+        "Pytest"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/StructRelAI",
+      "thumbnail": "projects/monte_carlo_structural.gif",
+      "created_at": null,
+      "display_order": 0,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "data",
+          "subarea": "engineer"
+        },
+        {
+          "area": "data",
+          "subarea": "scientist"
+        },
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/monte_carlo_structural.gif",
+          "caption": {
+            "es": "Convergencia Monte Carlo — Simulación de falla estructural en tiempo real",
+            "en": "Monte Carlo Convergence — Real-time structural failure simulation"
+          },
+          "order": 0
+        }
+      ],
+      "videos": [],
+      "documents": []
+    },
+    {
+      "legacy_id": 28,
+      "slug": "pipeline-medallion-para-datos-de-generacion-electrica-eersa",
+      "title": {
+        "es": "Pipeline Medallion para datos de generación eléctrica EERSA",
+        "en": "Medallion Pipeline for EERSA Electrical Generation Data"
+      },
+      "summary": {
+        "es": "Pipeline de ingeniería de datos end-to-end que procesa registros diarios de generación eléctrica de EERSA (Empresa Eléctrica Riobamba) implementando arquitectura Medallion Bronze/Silver/Gold sobre Microsoft Fabric. Ingesta 12 archivos Excel mensuales con datos de plantas hidroeléctricas (Alao, Río Blanco, Nizag) y Sistema Nacional Interconectado, aplicando limpieza, deduplicación, quality gates con tabla de cuarentena, clasificación de fuentes y modelado dimensional Kimball. Genera 4 tablas Gold listas para BI: dimensión de plantas, hechos diarios pivoteados, agregados mensuales con factor de carga, y balance energético mensual distinguiendo generación propia vs interconexión. Procesó 7,695 filas Bronze, conformó 5,840 filas Silver y produjo KPIs mensuales para los 12 meses de 2021, con linaje completo en cada capa.",
+        "en": "End-to-end data engineering pipeline that processes daily electrical generation records from EERSA (Riobamba Electric Utility) implementing Medallion Bronze/Silver/Gold architecture on Microsoft Fabric. Ingests 12 monthly Excel files from hydroelectric plants (Alao, Río Blanco, Nizag) and the National Interconnected System, applying cleansing, deduplication, quality gates with quarantine table, source classification, and Kimball dimensional modeling. Generates 4 BI-ready Gold tables: plant dimension, pivoted daily facts, monthly aggregates with load factor, and monthly energy balance distinguishing own generation vs grid interconnection. Processed 7,695 Bronze rows, conformed 5,840 Silver rows, and produced monthly KPIs for all 12 months of 2021 with full lineage in every layer."
+      },
+      "technologies": [
+        "Microsoft Fabric",
+        "PySpark",
+        "Delta Lake",
+        "Python",
+        "pandas",
+        "OneLake",
+        "Medallion Architecture",
+        "Kimball"
+      ],
+      "technologies_en": [
+        "Microsoft Fabric",
+        "PySpark",
+        "Delta Lake",
+        "Python",
+        "pandas",
+        "OneLake",
+        "Medallion Architecture",
+        "Kimball"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/eersa-data-plataform/tree/master",
+      "thumbnail": "projects/task_flow_medallion.png",
+      "created_at": null,
+      "display_order": 1,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "data",
+          "subarea": "engineer"
+        },
+        {
+          "area": "data",
+          "subarea": "analyst"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/task_flow_medallion.png",
+          "caption": {
+            "es": "Flujo"
+          },
+          "order": 0
+        }
+      ],
+      "videos": [],
+      "documents": []
+    },
+    {
+      "legacy_id": 27,
+      "slug": "pipeline-de-monitoreo-de-sequia-arquitectura-medallon-con-datos-satelitales",
+      "title": {
+        "es": "Pipeline de Monitoreo de Sequía — Arquitectura Medallón con Datos Satelitales",
+        "en": "Drought Monitoring Pipeline — Medallion Architecture with Satellite Data"
+      },
+      "summary": {
+        "es": "Pipeline de Data Engineering end-to-end para monitoreo de sequía en los Andes ecuatorianos, construido con Arquitectura Medallón (Bronze → Silver → Gold). Extrae y procesa datos climáticos de 5 fuentes satelitales y de reanálisis: precipitación (CHIRPS, NetCDF 7GB), temperatura (NASA POWER REST API), humedad del suelo (NOAA CPC, NetCDF), índices de vegetación NDVI/EVI (MODIS MOD13C2, HDF-EOS con autenticación OAuth2) y temperatura superficial LST (MODIS MOD11C3/MYD11C3). Calcula índices de sequía VHI, SPEI y SPI a múltiples escalas temporales para 13 estaciones en Chimborazo, Ecuador. El dataset final cubre 45 años de datos climáticos mensuales y 24 años de datos satelitales, integrando más de 7.000 registros por variable en un master dataset análisis-listo en formato Parquet.",
+        "en": "End-to-end Data Engineering pipeline for drought monitoring in the Ecuadorian Andes using Medallion Architecture (Bronze → Silver → Gold). Extracts and processes climate data from 5 satellite and reanalysis sources: precipitation (CHIRPS, 7GB NetCDF), temperature (NASA POWER REST API), soil moisture (NOAA CPC, NetCDF), vegetation indices NDVI/EVI (MODIS MOD13C2, HDF-EOS with OAuth2 authentication) and land surface temperature (MODIS MOD11C3/MYD11C3). Calculates drought indices VHI, SPEI and SPI at multiple temporal scales for 13 stations. Final dataset covers 45 years of monthly climate data and 24 years of satellite data, integrating 7,000+ records per variable into an analysis-ready Parquet master dataset."
+      },
+      "technologies": [
+        "Python",
+        "xarray",
+        "pandas",
+        "NumPy",
+        "earthaccess",
+        "pyhdf",
+        "NetCDF4",
+        "scipy",
+        "REST API",
+        "HDF-EOS",
+        "Parquet",
+        "PyYAML",
+        "pytest",
+        "Git"
+      ],
+      "technologies_en": [
+        "Python",
+        "xarray",
+        "pandas",
+        "NumPy",
+        "earthaccess",
+        "pyhdf",
+        "NetCDF4",
+        "scipy",
+        "REST API",
+        "HDF-EOS",
+        "Parquet",
+        "PyYAML",
+        "pytest",
+        "Git"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/chimborazo-drought-pipeline",
+      "thumbnail": "projects/WhatsApp_Image_2026-03-30_at_17.40.58.jpeg",
+      "created_at": null,
+      "display_order": 2,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "data",
+          "subarea": "engineer"
+        },
+        {
+          "area": "data",
+          "subarea": "scientist"
+        }
+      ],
+      "images": [],
+      "videos": [],
+      "documents": []
+    },
+    {
+      "legacy_id": 26,
+      "slug": "pipeline-de-clustering-para-250m-ofertas-de-trabajo-data-engineering",
+      "title": {
+        "es": "Pipeline de Clustering para 250M Ofertas de Trabajo — Data Engineering",
+        "en": "Data Engineering Pipeline — 250M Job Postings Clustering & O*NET Gap Analysis"
+      },
+      "summary": {
+        "es": "Pipeline end-to-end de ingeniería de datos que procesa 250 millones de ofertas laborales (2007–2025) usando embeddings densos BGE-large-en-v1.5. El sistema lee 2,160 shards parquet en streaming desde DigitalOcean Spaces vía FUSE sin descargar los 953GB, aplica PCA incremental, UMAP y HDBSCAN para descubrir 208 grupos ocupacionales automáticamente, y calcula un gap score por cosine similarity contra las descripciones oficiales de O*NET. El resultado demuestra qué ocupaciones emergentes no están correctamente clasificadas en la taxonomía SOC — con evidencia cuantitativa: DBCV=0.240 vs Silhouette=−0.010 del baseline K-Mean",
+        "en": "End-to-end data engineering pipeline processing 250M US job postings (2007–2025). Streams 953GB of BGE-large embeddings from cloud storage via FUSE mount with zero local download. Applies IncrementalPCA (1024→50D), UMAP (50→5D), and HDBSCAN to auto-discover 208 occupational clusters — outperforming K-Means baseline (DBCV=0.240 vs Silhouette=−0.010). c-TF-IDF labels each cluster, SOC purity analysis flags 17 emerging occupations and 14 taxonomy misalignments, and gap scores quantify divergence between real job postings and official O*NET descriptions. Built to support a PhD dissertation at Stevens Institute of Technology."
+      },
+      "technologies": [
+        "Python",
+        "BGE-large-en-v1.5",
+        "UMAP",
+        "HDBSCAN",
+        "IncrementalPCA",
+        "DuckDB",
+        "PyArrow",
+        "sentence-transformers",
+        "BERTopic",
+        "DigitalOcean Spaces",
+        "rclone FUSE",
+        "RAPIDS cuML",
+        "Parquet"
+      ],
+      "technologies_en": [
+        "Python",
+        "BGE-large-en-v1.5",
+        "UMAP",
+        "HDBSCAN",
+        "IncrementalPCA",
+        "DuckDB",
+        "PyArrow",
+        "sentence-transformers",
+        "BERTopic",
+        "DigitalOcean Spaces",
+        "rclone FUSE",
+        "RAPIDS cuML",
+        "Parquet"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/labor-market-clustering",
+      "thumbnail": "projects/WhatsApp_Image_2026-03-04_at_10.48.34.jpeg",
+      "created_at": null,
+      "display_order": 3,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "data",
+          "subarea": "engineer"
+        },
+        {
+          "area": "data",
+          "subarea": "scientist"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/WhatsApp_Image_2026-03-02_at_11.19.05.jpeg",
+          "caption": {
+            "es": "Primera iteración: 988 clusters, ajustado en iteración siguiente",
+            "en": "irst iteration with min_cluster_size=50: 988 clusters, over-fragmented. Tuned to mcs=200 for final run (+20% DBCV)."
+          },
+          "order": 0
+        },
+        {
+          "path": "projects/images/WhatsApp_Image_2026-03-03_at_16.54.36.jpeg",
+          "caption": {
+            "es": "Baseline K-Means: Silhouette=−0.010, equivalente a asignación aleatoria",
+            "en": "Baseline comparison: K-Means with fixed k, Silhouette=−0.010. No labels, no outlier detection, no quality validation."
+          },
+          "order": 1
+        },
+        {
+          "path": "projects/images/WhatsApp_Image_2026-03-04_at_10.48.34.jpeg",
+          "caption": {
+            "es": "Pipeline final: 208 clusters ocupacionales, DBCV=0.240",
+            "en": "Final clustering result: 208 occupational groups auto-discovered by HDBSCAN. DBCV=0.240 confirms real density structure."
+          },
+          "order": 2
+        }
+      ],
+      "videos": [],
+      "documents": []
+    },
+    {
+      "legacy_id": 25,
+      "slug": "constructplan-pro-sistema-de-planificacion-de-obras-con-cpm",
+      "title": {
+        "es": "ConstructPlan Pro — Sistema de Planificacion de Obras con CPM",
+        "en": "ConstructPlan Pro — Construction Scheduling System with CPM Engine"
+      },
+      "summary": {
+        "es": "Sistema de escritorio para la planificacion, programacion y control de proyectos de construccion. Implementa el metodo de ruta critica (CPM) con calculo automatico de duraciones, holguras, fechas tempranas/tardias y ruta critica.\nCaracteristicas principales:\n- Motor CPM completo (Forward/Backward Pass, Total Float, Free Float)\n- Diagrama de Gantt interactivo con ruta critica resaltada\n- Gestion de actividades WBS con fases, predecesoras y progreso\n- Control de recursos y costos (Labor, Equipos, Materiales, Subcontratistas)\n- Exportacion PDF profesional multipagina y Excel con 4 hojas de datos\n- Importacion masiva desde CSV\n- Templates predefinidos para edificios residenciales, comerciales, naves industriales e infraestructura vial\n- Arquitectura hexagonal (Ports & Adapters) con separacion de dominio, aplicacion e infraestructura",
+        "en": "ConstructPlan Pro — Construction Scheduling System with CPM Engine"
+      },
+      "technologies": [
+        "Python",
+        "PySide6",
+        "Matplotlib",
+        "NetworkX",
+        "ReportLab",
+        "OpenPyXL",
+        "Arquitectura Hexagonal"
+      ],
+      "technologies_en": [
+        "Python",
+        "PySide6",
+        "Matplotlib",
+        "NetworkX",
+        "ReportLab",
+        "OpenPyXL",
+        "Arquitectura Hexagonal"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/ConstructPlan-Pro",
+      "thumbnail": "projects/cpm.png",
+      "created_at": null,
+      "display_order": 4,
+      "status": "published",
+      "legacy_skills": [
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "construction"
+        },
+        {
+          "area": "developer",
+          "subarea": "desktop"
+        }
+      ],
+      "images": [],
+      "videos": [
+        {
+          "path": "projects/videos/Diseño_sin_título_2.mp4",
+          "caption": {
+            "es": "Video de la página",
+            "en": "Tutorial"
+          },
+          "order": 0
+        }
+      ],
+      "documents": []
+    },
+    {
+      "legacy_id": 24,
+      "slug": "geoprofile-plataforma-de-analisis-cpt",
+      "title": {
+        "es": "GeoProfile - Plataforma de Analisis CPT",
+        "en": "GeoProfile - CPT Analysis Platform"
+      },
+      "summary": {
+        "es": "Aplicacion de escritorio profesional para el procesamiento y analisis de datos CPT (Cone Penetration Test) orientada a la ingenieria geotecnica suiza. Incluye clasificacion de suelos Robertson SBT (1990/2009) con calculo iterativo del exponente de tension, pipeline completo de procesamiento (qt, Qt, Fr, Bq, Ic), control de calidad automatizado con 7 verificaciones y sistema de puntuacion, visualizacion interactiva de perfiles CPT, grafico Robertson log-log con contornos Ic, perfil Ic con columna de suelos, y generacion de informes en PDF y Excel. Interfaz oscura profesional con PySide6.",
+        "en": "Professional desktop application for CPT (Cone Penetration Test) data processing and analysis, designed for Swiss geotechnical engineering. Features Robertson SBT classification (1990/2009) with iterative stress exponent calculation, full processing pipeline (qt, Qt, Fr, Bq, Ic), automated quality control with 7 checks and scoring system, interactive CPT profile visualization, log-log Robertson chart with Ic contours, Ic profile with soil classification column, and PDF/Excel report generation. Dark-themed professional interface built with PySide6."
+      },
+      "technologies": [
+        "Python",
+        "PySide6",
+        "Matplotlib",
+        "NumPy",
+        "Pandas",
+        "ReportLab",
+        "OpenPyXL",
+        "SciPy"
+      ],
+      "technologies_en": [
+        "Python",
+        "PySide6",
+        "Matplotlib",
+        "NumPy",
+        "Pandas",
+        "ReportLab",
+        "OpenPyXL",
+        "SciPy"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/GeoProfile",
+      "thumbnail": "projects/cpt1.png",
+      "created_at": null,
+      "display_order": 5,
+      "status": "published",
+      "legacy_skills": [
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "geotechnical"
+        },
+        {
+          "area": "developer",
+          "subarea": "desktop"
+        },
+        {
+          "area": "data",
+          "subarea": "analyst"
+        }
+      ],
+      "images": [],
+      "videos": [
+        {
+          "path": "projects/videos/cpt_v.mp4",
+          "caption": {
+            "es": "video"
+          },
+          "order": 0
+        }
+      ],
+      "documents": [
+        {
+          "path": "projects/documents/CPT_Luzern_Seetalplatz.csv.pdf",
+          "title": {
+            "es": "Memoria de Cálculo",
+            "en": "Mem Calc"
+          },
+          "order": 0
+        }
+      ]
+    },
+    {
+      "legacy_id": 23,
+      "slug": "collar-tie-calculator",
+      "title": {
+        "es": "Collar Tie Calculator"
+      },
+      "summary": {
+        "es": "Aplicación de escritorio para el cálculo estructural de collar ties en techos residenciales de madera. Permite ingresar cargas, geometría del techo y propiedades del material para obtener en tiempo real la tensión del collar tie, momento flector en rafters, empuje horizontal y diseño de conexión clavada. Incluye diagrama estructural dinámico, verificación PASS/FAIL por tamaño de rafter y exportación de memoria de cálculo completa en PDF con fórmulas paso a paso. Basado en CBC 2022, NDS 2018 y método ASD.",
+        "en": "Desktop application for structural design of collar ties in residential wood-frame roofs. Users input loads, roof geometry and material properties to get real-time results for collar tie tension, rafter bending moment, horizontal thrust and nailed connection design. Includes a dynamic structural diagram, PASS/FAIL verification by rafter size and PDF export of a full calculation memory with step-by-step formulas. Based on CBC 2022, NDS 2018 and ASD method."
+      },
+      "technologies": [
+        "Python",
+        "PySide6",
+        "Matplotlib",
+        "ReportLab",
+        "NumPy"
+      ],
+      "technologies_en": [
+        "Python",
+        "PySide6",
+        "Matplotlib",
+        "ReportLab",
+        "NumPy"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/collar-tie-calculator",
+      "thumbnail": "projects/3.png",
+      "created_at": null,
+      "display_order": 6,
+      "status": "published",
+      "legacy_skills": [
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        },
+        {
+          "area": "developer",
+          "subarea": "desktop"
+        }
+      ],
+      "images": [],
+      "videos": [
+        {
+          "path": "projects/videos/collar_tie.mp4",
+          "caption": {
+            "es": "Tutorial"
+          },
+          "order": 0
+        }
+      ],
+      "documents": [
+        {
+          "path": "projects/documents/12.pdf",
+          "title": {
+            "es": "Memoria de Cálculo",
+            "en": "Mem Calc"
+          },
+          "order": 0
+        }
+      ]
+    },
+    {
+      "legacy_id": 22,
+      "slug": "prediccion-de-pandeo-en-acero-conformado-en-frio-con-machine-learning",
+      "title": {
+        "es": "Predicción de Pandeo en Acero Conformado en Frío con Machine Learning",
+        "en": "Cold-Formed Steel Buckling Prediction with Machine Learning"
+      },
+      "summary": {
+        "es": "Visualización animada de los tres modos de pandeo (local, distorsional y global) de un perfil C150×50×20×2.0 en acero conformado en frío, con curvas de diseño generadas en tiempo real. Se entrenaron modelos de Machine Learning con resultados de elementos finitos para predecir el esfuerzo crítico de pandeo en cada modo, alcanzando valores de R² superiores a 0.96. Las ecuaciones de referencia son teoría de placas, Euler y Perry-Robertson. El enfoque permite evaluar cientos de configuraciones de secciones en segundos, lo cual es útil en la etapa de investigación y prediseño estructural.",
+        "en": "Animated visualization of the three buckling modes (local, distortional and global) of a C150×50×20×2.0 cold-formed steel section, with design curves generated in real time. Machine Learning models were trained on finite element results to predict the critical buckling stress for each mode, achieving R² values above 0.96. The reference equations are plate buckling theory, Euler and Perry-Robertson. This approach allows evaluating hundreds of section configurations in seconds, which is useful in the research and preliminary structural design stage."
+      },
+      "technologies": [
+        "Python",
+        "matplotlib",
+        "seaborn",
+        "NumPy",
+        "XGBoost",
+        "FEM"
+      ],
+      "technologies_en": [
+        "Python",
+        "matplotlib",
+        "seaborn",
+        "NumPy",
+        "XGBoost",
+        "FEM"
+      ],
+      "project_url": "https://www.linkedin.com/feed/update/urn:li:activity:7429593117952999424/",
+      "repository_url": null,
+      "thumbnail": "projects/buckling_euler_3modes.gif",
+      "created_at": null,
+      "display_order": 7,
+      "status": "published",
+      "legacy_skills": [],
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        },
+        {
+          "area": "data",
+          "subarea": "scientist"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/buckling_euler_3modes.gif",
+          "caption": null,
+          "order": 0
+        }
+      ],
+      "videos": [],
+      "documents": []
+    },
+    {
+      "legacy_id": 21,
+      "slug": "analisis-estructural-con-machine-learning-viga-de-acero-a36",
+      "title": {
+        "es": "Análisis Estructural con Machine Learning - Viga de Acero A36",
+        "en": "ML-Based Structural Analysis - A36 Steel Beam"
+      },
+      "summary": {
+        "es": "Sistema de análisis estructural que combina mecánica computacional con machine learning para predicción de comportamiento de vigas de acero empotradas. El modelo integra tres componentes clave: (1) deformación elástica bajo carga variable, (2) análisis de trayectoria esfuerzo-deformación con identificación de límite elástico y zona plástica, y (3) generación de diagramas de momento flector.\nImplementa análisis no lineal considerando comportamiento elastoplástico del acero A36 (límite elástico 250 MPa). El sistema predice deflexión máxima, identifica punto de plastificación (E.P), y genera curvas completas de respuesta estructural. Visualización en tiempo real muestra evolución de carga vs deformación.\nHerramienta útil para diseño preliminar, validación rápida de configuraciones, y entendimiento del comportamiento no lineal de elementos estructurales de acero. Reduce tiempo de análisis de horas a segundos manteniendo precisión ingenieril.",
+        "en": "Structural analysis system combining computational mechanics with machine learning for predicting behavior of fixed-end steel beams. Model integrates three key components: (1) elastic deformation under variable loading, (2) stress-strain trajectory analysis with elastic limit and plastic zone identification, and (3) bending moment diagram generation.\nImplements nonlinear analysis considering elastoplastic behavior of A36 steel (yield strength 250 MPa). System predicts maximum deflection, identifies plastification point (E.P), and generates complete structural response curves. Real-time visualization shows load vs deformation evolution.\nUseful tool for preliminary design, rapid configuration validation, and understanding nonlinear behavior of steel structural elements. Reduces analysis time from hours to seconds while maintaining engineering accuracy."
+      },
+      "technologies": [
+        "Machine Learning",
+        "Structural Analysis",
+        "Nonlinear Analysis",
+        "Matplotlib",
+        "NumPy",
+        "SciPy",
+        "Computational Mechanics",
+        "Elastoplastic Behavior",
+        "Python"
+      ],
+      "technologies_en": [
+        "Machine Learning",
+        "Structural Analysis",
+        "Nonlinear Analysis",
+        "Matplotlib",
+        "NumPy",
+        "SciPy",
+        "Computational Mechanics",
+        "Elastoplastic Behavior",
+        "Python"
+      ],
+      "project_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7425200850404388864/",
+      "repository_url": null,
+      "thumbnail": "projects/animacion_viga_completa.gif",
+      "created_at": null,
+      "display_order": 8,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst"
+      ],
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        },
+        {
+          "area": "data",
+          "subarea": "scientist"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/animacion_viga_completa.gif",
+          "caption": null,
+          "order": 0
+        }
+      ],
+      "videos": [],
+      "documents": []
+    },
+    {
+      "legacy_id": 20,
+      "slug": "digital-twin-con-ml-para-monitoreo-sismico-de-edificios",
+      "title": {
+        "es": "Digital Twin con ML para Monitoreo Sísmico de Edificios",
+        "en": "ML-Driven Digital Twin for Building Seismic Response Monitoring"
+      },
+      "summary": {
+        "es": "Sistema de gemelo digital impulsado por machine learning para monitoreo en tiempo real de salud estructural de edificios durante eventos sísmicos. Integra tres módulos: (A) predicción de patrones de deformación estructural mediante redes neuronales entrenadas con datos de movimiento del suelo, (B) análisis predictivo de comportamiento no lineal con datos experimentales validados mediante física informada, y (C) clasificación de estado de daño utilizando Random Forest con 94.8% de precisión.\nEl modelo procesa desplazamientos laterales y de techo para calcular Interstory Drift Ratio (IDR) en tiempo real, clasificando el nivel de daño estructural en L1 (OK), L2 (ligero), y L3 (severo). Permite evaluación instantánea post-sismo sin necesidad de inspección física inmediata.\nCombina ML supervisado (Random Forest) con validación física para garantizar predicciones confiables en estructuras de hormigón armado de múltiples pisos.",
+        "en": "Machine learning-powered digital twin system for real-time structural health monitoring of buildings during seismic events. Integrates three modules: (A) structural deformation pattern prediction via neural networks trained on ground motion data, (B) predictive nonlinear behavior analysis with physics-informed experimental validation, and (C) damage state classification using Random Forest with 94.8% accuracy.\nModel processes lateral and roof displacements to calculate real-time Interstory Drift Ratio (IDR), classifying structural damage level as L1 (OK), L2 (light), and L3 (severe). Enables instant post-earthquake assessment without immediate physical inspection.\nCombines supervised ML (Random Forest) with physics validation to ensure reliable predictions in multi-story reinforced concrete frame structures."
+      },
+      "technologies": [
+        "Random Forest",
+        "Neural Networks",
+        "Physics-Informed ML",
+        "Scikit-learn",
+        "Digital Twin",
+        "Seismic Analysis",
+        "Real-Time Monitoring",
+        "Structural Health Monitoring",
+        "Python"
+      ],
+      "technologies_en": [
+        "Random Forest",
+        "Neural Networks",
+        "Physics-Informed ML",
+        "Scikit-learn",
+        "Digital Twin",
+        "Seismic Analysis",
+        "Real-Time Monitoring",
+        "Structural Health Monitoring",
+        "Python"
+      ],
+      "project_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7425551659335860224/",
+      "repository_url": null,
+      "thumbnail": "projects/DIGITAL_TWIN_ML_PRO1.gif",
+      "created_at": null,
+      "display_order": 9,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        },
+        {
+          "area": "data",
+          "subarea": "scientist"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/DIGITAL_TWIN_ML_PRO1.gif",
+          "caption": null,
+          "order": 0
+        }
+      ],
+      "videos": [],
+      "documents": []
+    },
+    {
+      "legacy_id": 19,
+      "slug": "prediccion-de-campos-de-esfuerzos-con-graph-neural-networks",
+      "title": {
+        "es": "Predicción de Campos de Esfuerzos con Graph Neural Networks",
+        "en": "Structural Stress Field Prediction with Graph Neural Networks"
+      },
+      "summary": {
+        "es": "Sistema de machine learning que predice campos de esfuerzos estructurales 150 veces más rápido que análisis FEM tradicional. Implementa Graph Neural Networks (GNNs) para convertir mallas de elementos finitos en grafos, donde cada nodo representa un punto de la estructura y la red aprende las relaciones físicas entre ellos.\nEl modelo entrenado con ~300 configuraciones de vigas logra predicción de esfuerzos von Mises en 0.18 segundos vs 28 segundos de FEM convencional, manteniendo 98% de precisión. Aplicable en fases exploratorias de diseño, optimización paramétrica con 100+ variantes, y análisis de sensibilidad donde se requiere rapidez sobre precisión milimétrica.\nBasado en investigación de Maurizi et al. (2022) publicada en Nature Scientific Reports. La visualización muestra deformación de viga cantiléver bajo carga con mapa de calor del campo de esfuerzos evolucionando en tiempo real.",
+        "en": "Machine learning system that predicts structural stress fields 150x faster than traditional FEM analysis. Implements Graph Neural Networks (GNNs) to convert finite element meshes into graphs, where each node represents a structural point and the network learns physical relationships between them.\nModel trained on ~300 beam configurations achieves von Mises stress prediction in 0.18 seconds vs 28 seconds for conventional FEM, maintaining 98% accuracy. Applicable in exploratory design phases, parametric optimization with 100+ variants, and sensitivity analysis where speed is prioritized over millimeter precision.\nBased on Maurizi et al. (2022) research published in Nature Scientific Reports. Visualization shows cantilever beam deformation under load with real-time evolving stress field heat map."
+      },
+      "technologies": [
+        "Graph Neural Networks",
+        "PyTorch",
+        "FEM",
+        "Matplotlib",
+        "NumPy",
+        "Deep Learning",
+        "Structural Mechanics",
+        "Python"
+      ],
+      "technologies_en": [
+        "Structural Stress Field Prediction with Graph Neural Networks"
+      ],
+      "project_url": "https://www.linkedin.com/feed/update/urn:li:activity:7426617142164447232",
+      "repository_url": null,
+      "thumbnail": "projects/GNN_STRESS_METICULOUS.gif",
+      "created_at": null,
+      "display_order": 10,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        },
+        {
+          "area": "data",
+          "subarea": "scientist"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/GNN_STRESS_METICULOUS.gif",
+          "caption": null,
+          "order": 0
+        }
+      ],
+      "videos": [],
+      "documents": []
+    },
+    {
+      "legacy_id": 18,
+      "slug": "digital-twin-sismico-en-tiempo-real-con-machine-learning",
+      "title": {
+        "es": "Digital Twin Sísmico en Tiempo Real con Machine Learning",
+        "en": "Real-Time Seismic Digital Twin with Machine Learning"
+      },
+      "summary": {
+        "es": "Desarrollé desde cero una simulación de Digital Twin sísmico en Python que predice el daño estructural de un edificio mientras un terremoto ocurre. El proyecto consta de dos paneles animados sincronizados: el primero reproduce un acelerograma sintético generado con el modelo Kanai-Tajimi + Clough-Penzien calibrado a condiciones de suelo ecuatorianas (Tipo D, NEC-15), y el segundo muestra la predicción de un modelo LSTM que estima el inter-story drift ratio de un marco de concreto reforzado de 5 pisos en tiempo real. La respuesta estructural se calculó mediante integración Newmark-β (método estándar en ETABS y SAP2000). El modelo clasifica el estado de daño progresivamente: Operational → Slight → Moderate → Extensive, con umbrales basados en FEMA P-58. Los datos son 100% sintéticos con física 100% real, respaldados por literatura con R² > 0.95",
+        "en": "Built from scratch a seismic Digital Twin simulation in Python that predicts structural damage while an earthquake is happening. The project features two synchronized animated panels: the first displays a synthetic accelerogram generated with the Kanai-Tajimi + Clough-Penzien model calibrated to Ecuadorian soil conditions (Type D, NEC-15), and the second shows an LSTM model predicting the inter-story drift ratio of a 5-story RC frame in real time. Structural response was computed using Newmark-β integration (the standard method behind ETABS and SAP2000). The model classifies damage states progressively: Operational → Slight → Moderate → Extensive, based on FEMA P-58 thresholds. Synthetic data, real physics, supported by literature reporting R² > 0.95"
+      },
+      "technologies": [
+        "Python",
+        "NumPy",
+        "Matplotlib",
+        "Seaborn",
+        "SciPy",
+        "Scikit-learn"
+      ],
+      "technologies_en": [
+        "Python",
+        "NumPy",
+        "Matplotlib",
+        "Seaborn",
+        "SciPy",
+        "Scikit-learn"
+      ],
+      "project_url": "https://www.linkedin.com/feed/update/urn:li:activity:7427341395650351104/",
+      "repository_url": null,
+      "thumbnail": "projects/seismic_twin_plt_1.gif",
+      "created_at": null,
+      "display_order": 11,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        },
+        {
+          "area": "data",
+          "subarea": "scientist"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/seismic_twin_plt_1.gif",
+          "caption": {
+            "es": "Gemelo Digital Sismico en tiempo real",
+            "en": "Real-Time Seismic Digital Twins"
+          },
+          "order": 0
+        }
+      ],
+      "videos": [],
+      "documents": []
+    },
+    {
+      "legacy_id": 17,
+      "slug": "sistema-de-registro-de-laboratorios-universitarios",
+      "title": {
+        "es": "Sistema de Registro de Laboratorios Universitarios",
+        "en": "University Laboratory Registration System"
+      },
+      "summary": {
+        "es": "Aplicación web completa desarrollada con Django para el control y monitoreo en tiempo real del acceso a laboratorios universitarios. Incluye doble modalidad de registro (primera vez y rápido), validaciones automáticas, panel de administración, monitoreo en tiempo real con AJAX, y generación de reportes en PDF/Excel. Maneja zona horaria de Ecuador, prevención de registros duplicados y actualización automática\nde estados.",
+        "en": "Complete web application built with Django for real-time control and monitoring of university laboratory access. Features dual registration modes (first-time and quick), automatic validations, admin panel, real-time monitoring with AJAX, and PDF/Excel report generation. Handles Ecuador timezone, prevents duplicate registrations, and automatically updates expired statuses."
+      },
+      "technologies": [
+        "Django 4.2",
+        "Python 3.10",
+        "SQLite/MySQL",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap 5",
+        "AJAX",
+        "ReportLab",
+        "openpyxl",
+        "PythonAnywhere"
+      ],
+      "technologies_en": [
+        "Django 4.2",
+        "Python 3.10",
+        "SQLite/MySQL",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap 5",
+        "AJAX",
+        "ReportLab",
+        "openpyxl",
+        "PythonAnywhere"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/REGISTROS_ESTUDIANTES_LABS",
+      "thumbnail": "projects/MINIATURA_WB7CAIP.jpg",
+      "created_at": null,
+      "display_order": 12,
+      "status": "published",
+      "legacy_skills": [
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "developer",
+          "subarea": "fullstack"
+        },
+        {
+          "area": "developer",
+          "subarea": "backend"
+        },
+        {
+          "area": "data",
+          "subarea": "analyst"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/1.jpg",
+          "caption": {
+            "es": "PRIMER REGISTRO DE ESTUDIANTES"
+          },
+          "order": 0
+        },
+        {
+          "path": "projects/images/2_ci6iQe4.jpg",
+          "caption": {
+            "es": "REGISTRO RÁPIDO CON CÓDIGO"
+          },
+          "order": 1
+        },
+        {
+          "path": "projects/images/3.jpg",
+          "caption": {
+            "es": "AGREGAR NUEVO LABORATORIO"
+          },
+          "order": 2
+        },
+        {
+          "path": "projects/images/4.jpg",
+          "caption": {
+            "es": "DASHBOARD DE ADMINISTRADOR"
+          },
+          "order": 3
+        },
+        {
+          "path": "projects/images/5.jpg",
+          "caption": {
+            "es": "MONITOREO EN TIEMPO REAL"
+          },
+          "order": 4
+        },
+        {
+          "path": "projects/images/6.jpg",
+          "caption": {
+            "es": "GENERADOR DE REPORTES"
+          },
+          "order": 5
+        }
+      ],
+      "videos": [
+        {
+          "path": "projects/videos/1_8PLJEtw.mp4",
+          "caption": {
+            "es": "SISTEMA COMPLETO"
+          },
+          "order": 0
+        }
+      ],
+      "documents": [
+        {
+          "path": "projects/documents/registro_asistencia_20250919_092332.pdf",
+          "title": {
+            "es": "REPORTE GENERADO"
+          },
+          "order": 0
+        }
+      ]
+    },
+    {
+      "legacy_id": 16,
+      "slug": "predictor-de-costos-de-construccion-con-machine-learning-y-gui-profesional",
+      "title": {
+        "es": "Predictor de Costos de Construcción con Machine Learning y GUI Profesional",
+        "en": "Construction Cost Predictor with Machine Learning and Professional GUI"
+      },
+      "summary": {
+        "es": "Desarrollé una aplicación completa que predice costos de construcción con 98.97% de precisión usando datos reales de San Francisco Building Permits. El modelo XGBoost procesa 24 características ingeniadas desde 8 variables base, logrando un error promedio de solo $628 USD. La interfaz GUI en PySide6 incluye threading asíncrono para experiencia fluida y validación automática. El 92.4% de predicciones caen dentro del ±10% del valor real. La herramienta identifica patrones ocultos en tipos de construcción, correlaciones ubicación-materiales, impacto de permisos municipales y estacionalidad en precios. Casos de uso: estimación de presupuestos, análisis de viabilidad, planificación financiera inmobiliaria y apoyo para constructoras. Combina ciencia de datos robusta con UX intuitiva para resolver problemas reales del sector construcción.",
+        "en": "Built a comprehensive application that predicts construction costs with 98.97% accuracy using real San Francisco Building Permits data. The XGBoost model processes 24 engineered features from 8 base variables, achieving an average error of only $628 USD. The PySide6 GUI interface includes asynchronous threading for smooth experience and automatic validation. 92.4% of predictions fall within ±10% of actual values. The tool identifies hidden patterns in construction types, location-material correlations, municipal permit impacts, and labor price seasonality. Use cases: budget estimation, project viability analysis, real estate financial planning, and construction company support. Combines robust data science with intuitive UX to solve real construction sector problems."
+      },
+      "technologies": [
+        "Python",
+        "XGBoost",
+        "Scikit-learn",
+        "PySide6",
+        "NumPy",
+        "Joblib",
+        "Feature Engineering",
+        "Machine Learning",
+        "GUI Development"
+      ],
+      "technologies_en": [
+        "Python",
+        "XGBoost",
+        "Scikit-learn",
+        "PySide6",
+        "NumPy",
+        "Joblib",
+        "Feature Engineering",
+        "Machine Learning",
+        "GUI Development"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/PRECIOS_ML",
+      "thumbnail": "projects/MINIATURA.jpg",
+      "created_at": null,
+      "display_order": 13,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "construction"
+        },
+        {
+          "area": "data",
+          "subarea": "scientist"
+        },
+        {
+          "area": "developer",
+          "subarea": "desktop"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/1_68UHTCO.png",
+          "caption": {
+            "es": "1"
+          },
+          "order": 0
+        },
+        {
+          "path": "projects/images/2_2nSP92U.png",
+          "caption": {
+            "es": "2"
+          },
+          "order": 1
+        },
+        {
+          "path": "projects/images/3_9emacx4.png",
+          "caption": {
+            "es": "3"
+          },
+          "order": 2
+        },
+        {
+          "path": "projects/images/4_4amNTyr.png",
+          "caption": {
+            "es": "4"
+          },
+          "order": 3
+        },
+        {
+          "path": "projects/images/5_R5Z4jHe.png",
+          "caption": {
+            "es": "5"
+          },
+          "order": 4
+        },
+        {
+          "path": "projects/images/6_vUy0Bqy.png",
+          "caption": {
+            "es": "6"
+          },
+          "order": 5
+        }
+      ],
+      "videos": [
+        {
+          "path": "projects/videos/1_cvGy6dM.mp4",
+          "caption": {
+            "es": "VIDEO DE FUNCIONAMIENTO"
+          },
+          "order": 0
+        }
+      ],
+      "documents": [
+        {
+          "path": "projects/documents/ENTRENAMIENTO_PRECIOS.ipynb",
+          "title": {
+            "es": "Notebook de entrenamiento con su proceso"
+          },
+          "order": 0
+        }
+      ]
+    },
+    {
+      "legacy_id": 15,
+      "slug": "predictor-de-resistencia-de-hormigon-interfaz-grafica-pyqt6",
+      "title": {
+        "es": "Predictor de Resistencia de Hormigón - Interfaz Gráfica PyQt6",
+        "en": "Concrete Strength Predictor - PyQt6 Graphical Interface"
+      },
+      "summary": {
+        "es": "Aplicación profesional con interfaz gráfica PyQt6 para predecir la resistencia a compresión del hormigón utilizando Random Forest. Diseñada para ingenieros civiles con funcionalidades avanzadas: predicción instantánea (<100ms), gauge circular visual, clasificación según normas NEC Ecuador, presets inteligentes de mezclas (C20, C25, C30), historial completo con exportación CSV, y múltiples visualizaciones dinámicas. Incluye validación en tiempo real, análisis del modelo (R²=0.8426, MAE=46.04 kg/cm²) y herramientas profesionales para control de calidad del hormigón.",
+        "en": "Professional GUI application built with PyQt6 to predict concrete compressive strength using Random Forest ML models. Designed for civil engineers featuring: instant predictions (<100ms), circular gauge visualization, NEC Ecuador standard classification, intelligent mix presets (C20, C25, C30), complete history with CSV export, and multiple dynamic visualizations. Includes real-time validation, model analysis (R²=0.8426, MAE=46.04 kg/cm²), and professional tools for concrete quality control in construction projects."
+      },
+      "technologies": [
+        "Python 3.11+",
+        "PyQt6",
+        "scikit-learn",
+        "matplotlib",
+        "pandas",
+        "numpy",
+        "Random Forest",
+        "Machine Learning"
+      ],
+      "technologies_en": [
+        "Python 3.11+",
+        "PyQt6",
+        "scikit-learn",
+        "matplotlib",
+        "pandas",
+        "numpy",
+        "Random Forest",
+        "Machine Learning"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/HORMIGON_ML",
+      "thumbnail": "projects/miniatura.jpg",
+      "created_at": null,
+      "display_order": 14,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        },
+        {
+          "area": "data",
+          "subarea": "scientist"
+        },
+        {
+          "area": "developer",
+          "subarea": "desktop"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/1_PzoAr2d.png",
+          "caption": {
+            "es": "Resultados Obtenidos del Entrenamiento",
+            "en": "Results Obtained from Training"
+          },
+          "order": 0
+        },
+        {
+          "path": "projects/images/2.jpg",
+          "caption": {
+            "es": "Resultados de entrenamiento",
+            "en": "Training Results"
+          },
+          "order": 1
+        }
+      ],
+      "videos": [
+        {
+          "path": "projects/videos/1_agHDpMa.mp4",
+          "caption": {
+            "es": "Interfaz Gráfica",
+            "en": "Graphic Interface GUI"
+          },
+          "order": 0
+        }
+      ],
+      "documents": [
+        {
+          "path": "projects/documents/HORMIGON_ML.pdf",
+          "title": {
+            "es": "Notebook de entrenamiento con su proceso"
+          },
+          "order": 0
+        }
+      ]
+    },
+    {
+      "legacy_id": 14,
+      "slug": "prediccion-de-carga-ultima-en-acero-a36-con-machine-learning",
+      "title": {
+        "es": "Predicción de Carga Última en Acero A36 con Machine Learning",
+        "en": "Ultimate Load Prediction in A36 Steel using Machine Learning"
+      },
+      "summary": {
+        "es": "Este proyecto desarrolla un modelo de Machine Learning para predecir la carga última en pruebas de tensión de acero A36, utilizando las dimensiones físicas de las muestras. Optimiza el diseño estructural, reduce la necesidad de pruebas destructivas y mejora la calidad y seguridad en la fabricación. Se enfoca en la robustez, precisión y generalización del modelo, con un análisis exploratorio de datos exhaustivo y visualizaciones impactantes.",
+        "en": "This project develops a Machine Learning model to predict the ultimate load in A36 steel tensile tests, using the physical dimensions of the samples. It optimizes structural design, reduces the need for destructive testing, and improves manufacturing quality and safety. The focus is on model robustness, accuracy, and generalization, with comprehensive exploratory data analysis and impactful visualizations."
+      },
+      "technologies": [
+        "Python",
+        "Jupyter Notebook",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Seaborn",
+        "Git",
+        "GitHub."
+      ],
+      "technologies_en": [
+        "Python",
+        "Jupyter Notebook",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Seaborn",
+        "Git",
+        "GitHub."
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/TRACCION_A36/tree/main",
+      "thumbnail": "projects/1_vXKcRh4.png",
+      "created_at": null,
+      "display_order": 15,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        },
+        {
+          "area": "data",
+          "subarea": "scientist"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/1_n3FCnJ5.png",
+          "caption": null,
+          "order": 0
+        },
+        {
+          "path": "projects/images/2_CslLvUU.png",
+          "caption": null,
+          "order": 1
+        },
+        {
+          "path": "projects/images/3_ztnKgtI.png",
+          "caption": null,
+          "order": 2
+        },
+        {
+          "path": "projects/images/4_0gnJFVP.png",
+          "caption": null,
+          "order": 3
+        }
+      ],
+      "videos": [],
+      "documents": [
+        {
+          "path": "projects/documents/A36.pdf",
+          "title": {
+            "es": "Jupyter en pdf"
+          },
+          "order": 0
+        }
+      ]
+    },
+    {
+      "legacy_id": 13,
+      "slug": "prediccion-de-carga-ultima-en-materiales-usando-machine-learning",
+      "title": {
+        "es": "Predicción de Carga Última en Materiales usando Machine Learning",
+        "en": "Ultimate Load Prediction in Materials using Machine Learning"
+      },
+      "summary": {
+        "es": "Desarrollé un modelo RandomForest que predice la resistencia última de materiales estructurales (A36, S275, S355) con 90.29% de precisión. El sistema analiza 124,639 ensayos de tracción y proporciona predicciones automáticas de carga última basadas en propiedades físicas y mecánicas. Incluye interfaz interactiva para ingenieros y optimización de diseños estructurales.",
+        "en": "Developed a RandomForest model that predicts ultimate strength of structural materials (A36, S275, S355) with 90.29% accuracy. The system analyzes 124,639 tensile tests and provides automatic ultimate load predictions based on physical and mechanical properties. Features interactive interface for engineers and structural design optimization."
+      },
+      "technologies": [
+        "Python",
+        "scikit-learn",
+        "pandas",
+        "matplotlib",
+        "seaborn",
+        "Random Forest",
+        "Machine Learning",
+        "Data Analysis"
+      ],
+      "technologies_en": [
+        "Python",
+        "scikit-learn",
+        "pandas",
+        "matplotlib",
+        "seaborn",
+        "Random Forest",
+        "Machine Learning",
+        "Data Analysis"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/Traccion_Machine_Learning",
+      "thumbnail": "projects/images.jpg",
+      "created_at": null,
+      "display_order": 16,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        },
+        {
+          "area": "data",
+          "subarea": "scientist"
+        },
+        {
+          "area": "data",
+          "subarea": "analyst"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/1_bwFXzac.png",
+          "caption": null,
+          "order": 0
+        },
+        {
+          "path": "projects/images/2_l4rVHk4.png",
+          "caption": null,
+          "order": 1
+        },
+        {
+          "path": "projects/images/3_ZGo7qfO.png",
+          "caption": null,
+          "order": 2
+        },
+        {
+          "path": "projects/images/4_A4LJeI4.png",
+          "caption": null,
+          "order": 3
+        }
+      ],
+      "videos": [],
+      "documents": [
+        {
+          "path": "projects/documents/Traccion_ML.pdf",
+          "title": {
+            "es": "Pdf del notebook"
+          },
+          "order": 0
+        }
+      ]
+    },
+    {
+      "legacy_id": 12,
+      "slug": "prediccion-de-consumo-en-pollos-cobb-500",
+      "title": {
+        "es": "Predicción de Consumo en Pollos Cobb 500",
+        "en": "Cobb 500 Chicken Feed Consumption Prediction"
+      },
+      "summary": {
+        "es": "Sistema inteligente que predice el consumo diario de alimento y el crecimiento de pollos Cobb 500 usando modelos de machine learning, facilitando la toma de decisiones en granjas avícolas.",
+        "en": "Smart system that predicts daily feed consumption and growth for Cobb 500 chickens using machine learning models, supporting decision-making in poultry farms."
+      },
+      "technologies": [
+        "Python",
+        "Scikit-learn",
+        "PyQt5",
+        "Pandas",
+        "Matplotlib"
+      ],
+      "technologies_en": [
+        "Python",
+        "Scikit-learn",
+        "PyQt5",
+        "Pandas",
+        "Matplotlib"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/POLLOS_ML",
+      "thumbnail": "projects/p1_1S19453.jpg",
+      "created_at": "2025-05-30 19:18:23.682376",
+      "display_order": 17,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "data",
+          "subarea": "scientist"
+        },
+        {
+          "area": "developer",
+          "subarea": "desktop"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/p2_7ZMoNkI.jpg",
+          "caption": {
+            "es": "IMAGEN PESTAÑA"
+          },
+          "order": 0
+        },
+        {
+          "path": "projects/images/p3_tCbdPU3.jpg",
+          "caption": {
+            "es": "IMAGEN PESTAÑA"
+          },
+          "order": 1
+        },
+        {
+          "path": "projects/images/p4_stLyr3V.jpg",
+          "caption": {
+            "es": "IMAGEN PESTAÑA"
+          },
+          "order": 2
+        }
+      ],
+      "videos": [],
+      "documents": []
+    },
+    {
+      "legacy_id": 11,
+      "slug": "predictor-de-curvas-esfuerzo-deformacion-para-materiales-compuestos",
+      "title": {
+        "es": "Predictor de Curvas Esfuerzo-Deformación para Materiales Compuestos",
+        "en": "Stress-Strain Curve Predictor for Composite Materials"
+      },
+      "summary": {
+        "es": "Desarrollé una aplicación web interactiva que predice el comportamiento mecánico de materiales con diferentes porcentajes de relave mediante modelos de machine learning. La herramienta permite ajustar parámetros como tiempo de curado y composición, generando visualizaciones en tiempo real que optimizan el diseño de materiales y reducen la necesidad de costosos ensayos físicos.",
+        "en": "I developed an interactive web application that predicts the mechanical behavior of materials with varying tailings percentages using machine learning models. The tool allows adjusting parameters such as curing time and composition, generating real-time visualizations that optimize material design and reduce the need for costly physical tests."
+      },
+      "technologies": [
+        "Python",
+        "Streamlit",
+        "Scikit-learn",
+        "NumPy",
+        "Pandas",
+        "Matplotlib",
+        "Joblib",
+        "SciPy"
+      ],
+      "technologies_en": [
+        "Python",
+        "Streamlit",
+        "Scikit-learn",
+        "NumPy",
+        "Pandas",
+        "Matplotlib",
+        "Joblib",
+        "SciPy"
+      ],
+      "project_url": "https://www.linkedin.com/feed/update/urn:li:activity:7316513974152294400/",
+      "repository_url": null,
+      "thumbnail": "projects/MINIATURA_NLOQUES.png",
+      "created_at": "2025-05-13 20:52:03.355282",
+      "display_order": 18,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        },
+        {
+          "area": "data",
+          "subarea": "scientist"
+        }
+      ],
+      "images": [],
+      "videos": [
+        {
+          "path": "projects/videos/VIDEO_BLOQUES.mp4",
+          "caption": {
+            "es": "Video de la página BLOQUES"
+          },
+          "order": 0
+        }
+      ],
+      "documents": []
+    },
+    {
+      "legacy_id": 10,
+      "slug": "prediccion-de-pandeo-en-estructuras-de-acero-con-machine-learning",
+      "title": {
+        "es": "Predicción de Pandeo en Estructuras de Acero con Machine Learning",
+        "en": "Steel Structure Buckling Prediction with Machine Learning"
+      },
+      "summary": {
+        "es": "Aplicación de machine learning que predice el comportamiento a pandeo en elementos estructurales de acero con precisión del 99.6%. Incluye web scraping de datos técnicos, limpieza con pandas, modelo CatBoost, visualización 3D interactiva y exportación automática a Excel. Valida resultados con métodos analíticos y normativas de ingeniería.",
+        "en": "Machine learning application that predicts buckling behavior in steel structural elements with 99.6% accuracy. Features technical data web scraping, pandas data cleaning, CatBoost model, interactive 3D visualization, and automatic Excel export. Validates results with analytical methods and engineering standards."
+      },
+      "technologies": [
+        "Python",
+        "CatBoost",
+        "Pandas",
+        "PyVista",
+        "Jupyter Notebook",
+        "Web Scraping",
+        "Machine Learning",
+        "Excel"
+      ],
+      "technologies_en": [
+        "Python",
+        "CatBoost",
+        "Pandas",
+        "PyVista",
+        "Jupyter Notebook",
+        "Web Scraping",
+        "Machine Learning",
+        "Excel"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/PANDEO_ML",
+      "thumbnail": "projects/miniatura_pandeo.jpg",
+      "created_at": "2025-05-30 18:45:19.618945",
+      "display_order": 19,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        },
+        {
+          "area": "data",
+          "subarea": "scientist"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/1_pandeo.jpg",
+          "caption": {
+            "es": "IMAGEN PESTAÑA"
+          },
+          "order": 0
+        },
+        {
+          "path": "projects/images/2_pandeo.jpg",
+          "caption": {
+            "es": "IMAGEN PESTAÑA"
+          },
+          "order": 1
+        },
+        {
+          "path": "projects/images/3_pandeo.jpg",
+          "caption": {
+            "es": "IMAGEN PESTAÑA"
+          },
+          "order": 2
+        }
+      ],
+      "videos": [
+        {
+          "path": "projects/videos/video_pandeo.mp4",
+          "caption": {
+            "es": "Video de la página"
+          },
+          "order": 0
+        }
+      ],
+      "documents": [
+        {
+          "path": "projects/documents/Simulacion_1.xlsx",
+          "title": {
+            "es": "Excel_Resumen"
+          },
+          "order": 0
+        }
+      ]
+    },
+    {
+      "legacy_id": 9,
+      "slug": "agavepredictor-ml-sistema-predictivo-para-el-crecimiento-de-agave",
+      "title": {
+        "es": "AgavePredictor ML: Sistema predictivo para el crecimiento de agave",
+        "en": "AgavePredictor ML: Predictive System for Agave Growth"
+      },
+      "summary": {
+        "es": "Sistema de machine learning que predice con alta precisión (R² = 0.92) el tiempo de crecimiento de plantas de agave. Utiliza RandomForest optimizado, técnicas avanzadas de ingeniería de datos y 8,000 observaciones sintéticas. La interfaz gráfica desarrollada con PySide6 ofrece visualizaciones interactivas y una representación dinámica del agave que se adapta a los parámetros ingresados. Esta herramienta apoya la agricultura sostenible con predicciones precisas basadas en la morfología de la planta.",
+        "en": "Machine learning system that predicts agave plant growth time with high precision (R² = 0.92). Utilizes optimized RandomForest, advanced data engineering techniques, and 8,000 synthetic observations. The graphical interface built with PySide6 provides interactive visualizations and a dynamic representation of the agave that adapts to input parameters. This tool supports sustainable agriculture with accurate predictions based on plant morphology."
+      },
+      "technologies": [
+        "Python",
+        "RandomForest",
+        "PySide6",
+        "Matplotlib",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "BeautifulSoup",
+        "Seaborn"
+      ],
+      "technologies_en": [
+        "Python",
+        "RandomForest",
+        "PySide6",
+        "Matplotlib",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "BeautifulSoup",
+        "Seaborn"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/AGAVE_WEB",
+      "thumbnail": "projects/miniatura_agave.png",
+      "created_at": "2025-05-16 15:50:57.419646",
+      "display_order": 20,
+      "status": "published",
+      "legacy_skills": [
+        "data_scientist",
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "data",
+          "subarea": "scientist"
+        },
+        {
+          "area": "developer",
+          "subarea": "desktop"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/evolucion_modelo_Vk52tgH.png",
+          "caption": {
+            "es": "IMAGEN PESTAÑA"
+          },
+          "order": 0
+        }
+      ],
+      "videos": [
+        {
+          "path": "projects/videos/video_agave.mp4",
+          "caption": {
+            "es": "Video de la página"
+          },
+          "order": 0
+        }
+      ],
+      "documents": []
+    },
+    {
+      "legacy_id": 8,
+      "slug": "petshop-adm-sistema-de-gestion-para-tiendas-de-mascotas",
+      "title": {
+        "es": "PetShop ADM - Sistema de Gestión para Tiendas de Mascotas",
+        "en": "PetShop ADM - Management System for Pet Stores"
+      },
+      "summary": {
+        "es": "Sistema completo de administración para tiendas de mascotas que permite gestionar inventario de productos, servicios, ventas y reportes analíticos. La aplicación facilita el control de stock, registro de ventas rápidas, seguimiento de servicios prestados y visualización de métricas clave del negocio a través de un dashboard interactivo.",
+        "en": "Complete management system for pet stores that allows inventory management of products, services, sales, and analytical reports. The application facilitates stock control, quick sales registration, tracking of services provided, and visualization of key business metrics through an interactive dashboard."
+      },
+      "technologies": [
+        "Python",
+        "Django",
+        "SQLAlchemy",
+        "SQLite",
+        "HTML",
+        "Bootstrap",
+        "JavaScript",
+        "Whitenoise",
+        "Python-dotenv"
+      ],
+      "technologies_en": [
+        "Python",
+        "Django",
+        "SQLAlchemy",
+        "SQLite",
+        "HTML",
+        "Bootstrap",
+        "JavaScript",
+        "Whitenoise",
+        "Python-dotenv"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/REGISTROS_LABS",
+      "thumbnail": "projects/Miniatura.png",
+      "created_at": "2025-05-13 20:42:39.992513",
+      "display_order": 21,
+      "status": "published",
+      "legacy_skills": [
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "developer",
+          "subarea": "fullstack"
+        },
+        {
+          "area": "developer",
+          "subarea": "backend"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/2_pet.png",
+          "caption": {
+            "es": "IMAGEN PESTAÑA"
+          },
+          "order": 0
+        },
+        {
+          "path": "projects/images/3_pet.png",
+          "caption": {
+            "es": "IMAGEN PESTAÑA"
+          },
+          "order": 1
+        },
+        {
+          "path": "projects/images/4_pet.png",
+          "caption": {
+            "es": "IMAGEN PESTAÑA"
+          },
+          "order": 2
+        },
+        {
+          "path": "projects/images/5_pet.png",
+          "caption": {
+            "es": "IMAGEN PESTAÑA"
+          },
+          "order": 3
+        },
+        {
+          "path": "projects/images/6_pet.png",
+          "caption": {
+            "es": "IMAGEN PESTAÑA"
+          },
+          "order": 4
+        }
+      ],
+      "videos": [
+        {
+          "path": "projects/videos/video_pet.mp4",
+          "caption": {
+            "es": "Video de la página"
+          },
+          "order": 0
+        }
+      ],
+      "documents": []
+    },
+    {
+      "legacy_id": 7,
+      "slug": "sistema-de-gestion-y-control-de-laboratorios-academicos",
+      "title": {
+        "es": "Sistema de Gestión y Control de Laboratorios Académicos",
+        "en": "Academic Laboratory Management and Control System"
+      },
+      "summary": {
+        "es": "Sistema integral para la administración de laboratorios académicos que permite el registro y seguimiento de uso, generación de reportes personalizados en PDF con diseño profesional, gestión de docentes y laboratorios, e importación/exportación de datos. Facilita el control de acceso, la documentación de actividades y el análisis de utilización de recursos educativos.",
+        "en": "Comprehensive system for academic laboratory administration that enables usage registration and tracking, generation of customized PDF reports with professional design, management of faculty and laboratories, and data import/export. It facilitates access control, activity documentation, and analysis of educational resource utilization.\nTechnologi"
+      },
+      "technologies": [
+        "Python",
+        "PySide6 (Qt)",
+        "SQLAlchemy ORM",
+        "SQLite",
+        "PDF Rendering",
+        "CSV Processing",
+        "PyInstaller",
+        "Inno Setup",
+        "Git"
+      ],
+      "technologies_en": [
+        "Python",
+        "PySide6 (Qt)",
+        "SQLAlchemy ORM",
+        "SQLite",
+        "PDF Rendering",
+        "CSV Processing",
+        "PyInstaller",
+        "Inno Setup",
+        "Git"
+      ],
+      "project_url": null,
+      "repository_url": "https://github.com/MFelix9310/REGISTROS_LABS",
+      "thumbnail": "projects/1_REGISTROS.png",
+      "created_at": "2025-05-13 20:27:39.761053",
+      "display_order": 22,
+      "status": "published",
+      "legacy_skills": [
+        "data_analyst",
+        "python_developer"
+      ],
+      "taxonomy": [
+        {
+          "area": "developer",
+          "subarea": "desktop"
+        },
+        {
+          "area": "developer",
+          "subarea": "backend"
+        }
+      ],
+      "images": [
+        {
+          "path": "projects/images/2_REGISTROS.png",
+          "caption": {
+            "es": "IMAGEN PESTAÑA"
+          },
+          "order": 0
+        },
+        {
+          "path": "projects/images/3_REGISTROS.png",
+          "caption": {
+            "es": "IMAGEN PESTAÑA"
+          },
+          "order": 1
+        },
+        {
+          "path": "projects/images/4_REGISTROS.png",
+          "caption": {
+            "es": "IMAGEN PESTAÑA"
+          },
+          "order": 2
+        }
+      ],
+      "videos": [
+        {
+          "path": "projects/videos/1_UxmOm0Z.mp4",
+          "caption": {
+            "es": "Video de la página Registros"
+          },
+          "order": 0
+        }
+      ],
+      "documents": [
+        {
+          "path": "projects/documents/reporte_laboratorio_Lq5rzxW.pdf",
+          "title": {
+            "es": "csv_resumen_registros"
+          },
+          "order": 0
+        }
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "legacy_id": 2,
+      "slug": "computer-vision-engineer-contractor-bim-automation-8base",
+      "company": {
+        "es": "8base"
+      },
+      "position": {
+        "es": "Computer Vision Engineer (Contractor) - BIM Automation"
+      },
+      "description": {
+        "es": "Contratado como especialista en Computer Vision para desarrollar un sistema de reconocimiento automático de planos arquitectónicos y generación de modelos BIM en formato IFC. Proyecto independiente enfocado en automatización del proceso de conversión de documentación 2D a modelos tridimensionales estructurados.\nAlcance del proyecto:\n- Diseño e implementación de pipeline completo de Computer Vision para detección y clasificación de elementos arquitectónicos (muros, puertas, ventanas, columnas)\n- Desarrollo de algoritmos de extracción de geometría y relaciones espaciales desde planos 2D\n- Generación automática de archivos IFC (Industry Foundation Classes) siguiendo estándares OpenBIM\n- Procesamiento de documentación técnica de construcción mediante técnicas de ML/Deep Learning\n- Integración end-to-end desde input (planos PDF/DWG) hasta output (modelos IFC validados)\nEntregables: Sistema funcional de reconocimiento automático, pipeline de procesamiento escalable, documentación técnica.",
+        "en": "Contracted as Computer Vision specialist to develop an automated architectural plan recognition system and BIM model generation in IFC format. Independent project focused on automating the conversion process from 2D documentation to structured three-dimensional models.\nProject Scope:\n- Design and implementation of complete Computer Vision pipeline for detection and classification of architectural elements (walls, doors, windows, columns)\n- Development of algorithms for geometry extraction and spatial relationships from 2D plans\n- Automatic generation of IFC (Industry Foundation Classes) files following OpenBIM standards\n- Processing of construction technical documentation using ML/Deep Learning techniques\n- End-to-end integration from input (PDF/DWG plans) to output (validated IFC models)\nDeliverables: Functional automatic recognition system, scalable processing pipeline, technical documentation.\nTech Stack: Python, Computer Vision, Deep Learning, IFC, IfcOpenShell, Object Detection, Image Processing."
+      },
+      "keywords": [
+        "Computer Vision",
+        "BIM",
+        "IFC",
+        "Python",
+        "Deep Learning",
+        "Object Detection",
+        "IfcOpenShell",
+        "Freelance Developer",
+        "Construction Tech",
+        "OpenBIM",
+        "Machine Learning",
+        "Image Processing",
+        "Architectural Plans Recognition",
+        "Remote Contractor",
+        "ConTech",
+        "AI Automation",
+        "Independent"
+      ],
+      "keywords_en": [
+        "Computer Vision",
+        "BIM",
+        "IFC",
+        "Python",
+        "Deep Learning",
+        "Object Detection",
+        "IfcOpenShell",
+        "Freelance Developer",
+        "Construction Tech",
+        "OpenBIM",
+        "Machine Learning",
+        "Image Processing",
+        "Architectural Plans Recognition",
+        "Remote Contractor",
+        "ConTech",
+        "AI Automation",
+        "Independent"
+      ],
+      "company_logo": "companies/8base.png",
+      "thumbnail": "work/8base.png",
+      "start_date": "2025-10-01",
+      "end_date": null,
+      "is_current": true,
+      "display_order": 0,
+      "status": "published",
+      "images": [
+        {
+          "path": "work/images/FÉLIX_ALEJANDRO.png",
+          "caption": {
+            "es": "Bienvenida",
+            "en": "On boarding"
+          },
+          "order": 0
+        }
+      ]
+    },
+    {
+      "legacy_id": 3,
+      "slug": "freelance-data-scientist-python-developer-upwork",
+      "company": {
+        "es": "Upwork"
+      },
+      "position": {
+        "es": "Freelance Data Scientist & Python Developer"
+      },
+      "description": {
+        "es": "Proyectos freelance internacionales en ciencia de datos, automatización Python y BIM, trabajando con clientes de EE.UU. y América Latina.\nSistema Futura (EE.UU.): Pipeline completo de forecasting de demanda con LSTM y ARIMA (R²>0.93), modelo de clasificación XGBoost (AUC 0.87) y scoring de endeudamiento (F1 0.81). Reducción del 40% en tiempo de entrenamiento con SHAP y backtesting temporal para evitar data leakage.\nLeslie Marshall (EE.UU.): Automatización BIM con Python — pipeline ETABS→Revit→Dynamo con exportación IFC LOD 300/350. Integración de Claude API para generación automática de memorias de cálculo. 100% de hitos entregados a tiempo.\nDogo Armani PetShop: Segmentación RFM (89% pureza), modelo de churn (AUC 0.84) y estimación CLV/LTV. Identificación del 20% de clientes generando el 65% del revenue. Dashboard Plotly Dash en producción con reportes automatizados al 100%",
+        "en": "International freelance projects in data science, Python automation, and BIM, working with clients from the US and Latin America.\nSistema Futura (US): Full demand forecasting pipeline using LSTM and ARIMA (R²>0.93), XGBoost classification model (AUC 0.87), and debt scoring (F1 0.81). 40% reduction in training time via SHAP feature selection and temporal backtesting to prevent data leakage.\nLeslie Marshall (US): BIM automation with Python — ETABS→Revit→Dynamo pipeline with IFC LOD 300/350 export. Claude API integration for automatic calculation report generation. 100% on-time delivery across all milestones.\nDogo Armani PetShop: RFM segmentation (89% purity), churn model (AUC 0.84), and CLV/LTV estimation. Identified the 20% of customers generating 65% of revenue. Plotly Dash dashboard deployed in production with 100% automated reporting."
+      },
+      "keywords": [
+        "Forecasting",
+        "LSTM",
+        "ARIMA",
+        "XGBoost",
+        "RFM",
+        "CLV",
+        "Churn",
+        "BIM",
+        "Revit API",
+        "Dynamo",
+        "IFC",
+        "ETL",
+        "Python",
+        "Plotly Dash",
+        "Data Science",
+        "Freelance"
+      ],
+      "keywords_en": [
+        "Forecasting",
+        "LSTM",
+        "ARIMA",
+        "XGBoost",
+        "RFM",
+        "CLV",
+        "Churn",
+        "BIM",
+        "Revit API",
+        "Dynamo",
+        "IFC",
+        "ETL",
+        "Python",
+        "Plotly Dash",
+        "Data Science",
+        "Freelance"
+      ],
+      "company_logo": null,
+      "thumbnail": "work/images.png",
+      "start_date": "2024-07-01",
+      "end_date": null,
+      "is_current": true,
+      "display_order": 1,
+      "status": "published",
+      "images": []
+    },
+    {
+      "legacy_id": 1,
+      "slug": "especialista-tecnico-de-laboratorio-ingeniero-de-ciencia-de-datos-escuela-superi",
+      "company": {
+        "es": "Escuela Superior Politécnica de Chimborazo"
+      },
+      "position": {
+        "es": "Especialista Técnico de Laboratorio & Ingeniero de Ciencia de Datos",
+        "en": "Laboratory Technical Specialist & Data Science Engineer"
+      },
+      "description": {
+        "es": "Profesional de datos con experiencia en análisis predictivo, machine learning y gestión técnica de laboratorios. Competencias en ciencia de datos, análisis de datos, desarrollo Python y automatización de procesos para entornos de investigación. Especializado en procesamiento de datos experimentales, soluciones de visualización y proyectos de transformación digital que mejoran flujos de trabajo científicos.",
+        "en": "Data professional with expertise in predictive analytics, machine learning, and technical laboratory management. Skills span data science, data analysis, Python development, and process automation for research environments. Specialized in experimental data processing, visualization solutions, and digital transformation projects that enhance scientific workflows."
+      },
+      "keywords": [
+        "Machine Learning",
+        "Predictive Modeling",
+        "Python Development",
+        "Data Visualization",
+        "OpenCV",
+        "OCR/Tesseract",
+        "ETL Processes",
+        "Statistical Analysis",
+        "Dashboard Development",
+        "Laboratory Automation",
+        "Research Optimization",
+        "Web Application Development",
+        "Desktop Applicatio"
+      ],
+      "keywords_en": [
+        "Machine Learning",
+        "Predictive Modeling",
+        "Python Development",
+        "Data Visualization",
+        "OpenCV",
+        "OCR/Tesseract",
+        "ETL Processes",
+        "Statistical Analysis",
+        "Dashboard Development",
+        "Laboratory Automation",
+        "Research Optimization",
+        "Web Application Development",
+        "Desktop Applicatio"
+      ],
+      "company_logo": "companies/ESPOCH-LOGO.jpg",
+      "thumbnail": "work/ESPOCH-LOGO.jpg",
+      "start_date": "2022-05-24",
+      "end_date": null,
+      "is_current": true,
+      "display_order": 2,
+      "status": "published",
+      "images": []
+    }
+  ],
+  "certifications": [
+    {
+      "legacy_id": 4,
+      "slug": "certificacion-profesional-en-inteligencia-artificial",
+      "name": {
+        "es": "Certificación Profesional en Inteligencia Artificial",
+        "en": "Professional Certificate in Artificial Intelligence"
+      },
+      "issuer": {
+        "es": "Tokio New Technology School"
+      },
+      "description": {
+        "es": "Programa profesional de 200 horas en Inteligencia Artificial enfocado en fundamentos de IA, machine learning, deep learning, procesamiento de lenguaje natural y aplicaciones prácticas de sistemas inteligentes. Certificación otorgada por Tokio School (enero 2026).",
+        "en": "200-hour professional program in Artificial Intelligence covering AI fundamentals, machine learning, deep learning, natural language processing, and practical implementation of intelligent systems. Certificate awarded by Tokio School (January 2026)."
+      },
+      "issued_on": "2025-07-01",
+      "expires_on": null,
+      "credential_url": null,
+      "certificate_file": "certificates/1_Iyhdt23.pdf",
+      "display_order": 0,
+      "status": "published"
+    },
+    {
+      "legacy_id": 1,
+      "slug": "pcep-certified-entry-level-python-programmer",
+      "name": {
+        "es": "PCEP – Certified Entry-Level Python Programmer"
+      },
+      "issuer": {
+        "es": "OpenEDG Python Institute"
+      },
+      "description": {
+        "es": "El PCEP (Certified Entry-Level Python Programmer) es una certificación básica de programación en Python ofrecida por el Python Institute de OpenEDG. Esta certificación está diseñada para principiantes que desean validar sus habilidades fundamentales en Python y es el primer paso en la ruta de certificaciones profesionales de Python.\nEl PCEP verifica que el candidato tiene un conocimiento general de los conceptos de programación en Python, entiende la sintaxis y la semántica del lenguaje, y es capaz de resolver problemas básicos utilizando Python. La certificación demuestra que el programador puede trabajar con las características esenciales del lenguaje y realizar tareas de codificación simples de manera independiente.\nEsta certificación es ideal para estudiantes, personas que están cambiando de carrera, o profesionales que buscan complementar sus habilidades técnicas con conocimientos de programación en Python.",
+        "en": "The PCEP (Certified Entry-Level Python Programmer) is a basic Python programming certification offered by OpenEDG Python Institute. This certification is designed for beginners who want to validate their fundamental Python skills and is the first step in the Python professional certification path.\nThe PCEP verifies that the candidate has a general understanding of Python programming concepts, understands the syntax and semantics of the language, and is capable of solving basic problems using Python. The certification demonstrates that the programmer can work with the essential features of the language and perform simple coding tasks independently.\nThis certification is ideal for students, career changers, or professionals looking to complement their technical skills with Python programming knowledge."
+      },
+      "issued_on": "2024-08-21",
+      "expires_on": "2028-08-21",
+      "credential_url": "https://www.credly.com/badges/5c659716-c25c-4ed0-8c31-f3d2682d4ccd/linked_in_profile",
+      "certificate_file": "certificates/pcep.png",
+      "display_order": 1,
+      "status": "published"
+    },
+    {
+      "legacy_id": 2,
+      "slug": "python-essentials-1",
+      "name": {
+        "es": "Python Essentials 1"
+      },
+      "issuer": {
+        "es": "Cisco"
+      },
+      "description": {
+        "es": "Este curso introductorio de Cisco Networking Academy proporciona una base sólida en programación con Python. Diseñado para principiantes, cubre conceptos fundamentales como variables, tipos de datos, operadores, estructuras de control (condicionales y bucles), funciones, y fundamentos de programación orientada a objetos. Los estudiantes aprenden a escribir código limpio y eficiente, resolviendo problemas prácticos mediante laboratorios interactivos. Al completar el curso, los participantes pueden obtener la certificación PCEP (Python Certified Entry-level Programmer), un reconocimiento oficial de la Python Institute que valida las habilidades básicas de programación en Python.",
+        "en": "This introductory course from Cisco Networking Academy provides a solid foundation in Python programming. Designed for beginners, it covers fundamental concepts including variables, data types, operators, control structures (conditionals and loops), functions, and object-oriented programming basics. Students learn to write clean and efficient code, solving practical problems through interactive labs. Upon completion, participants can earn the PCEP (Python Certified Entry-level Programmer) certification, an official recognition from the Python Institute that validates basic Python programming skills."
+      },
+      "issued_on": "2024-08-09",
+      "expires_on": "2028-08-09",
+      "credential_url": "https://www.credly.com/badges/3cd7618e-63f7-4fcb-8bfe-081e55e1ca9f/linked_in_profile",
+      "certificate_file": null,
+      "display_order": 2,
+      "status": "published"
+    },
+    {
+      "legacy_id": 3,
+      "slug": "programador-python",
+      "name": {
+        "es": "Programador Python",
+        "en": "Python Developer"
+      },
+      "issuer": {
+        "es": "Tokio New Technology School"
+      },
+      "description": {
+        "es": "El certificado de Programador Python de Tokio School es un título propio que se completa en 400 horas académicas intensivas, formando profesionales en el lenguaje de programación más demandado mundialmente. Este programa oficial es muy completo ya que prepara para obtener la Certificación PCAP (Python Institute) y nos deja como programadores Python profesionales listos para el mundo laboral, combinando formación teórica con aplicación práctica en proyectos reales.",
+        "en": "The Python Programmer certificate from Tokio School is a proprietary qualification completed in 400 intensive academic hours, training professionals in the world's most in-demand programming language. This official program is very comprehensive as it prepares students for PCAP Certification (Python Institute) and leaves us as professional Python programmers ready for the job market, combining theoretical training with practical application in real projects."
+      },
+      "issued_on": "2025-02-01",
+      "expires_on": null,
+      "credential_url": null,
+      "certificate_file": "certificates/CERTIFICADO_PROGRAMADOR_PYTHON.pdf",
+      "display_order": 3,
+      "status": "published"
+    }
+  ],
+  "education": [
+    {
+      "legacy_id": 6,
+      "institution": {
+        "es": "Universidad Internacional del Ecuador (UIDE) en colaboración con EIG Business School (España) y Arizona State University",
+        "en": "Master's Degree in Data Science and Learning Machines with Specialization in Artificial Intelligence"
+      },
+      "title": {
+        "es": "Maestría en Ciencias de Datos y Máquinas de Aprendizaje, Mención en Inteligencia Artificial",
+        "en": "International University of Ecuador (UIDE) in collaboration with EIG Business School (Spain) and Arizona State University"
+      },
+      "description": {
+        "es": "Programa de posgrado de un año en modalidad en línea con enfoque en inteligencia artificial, machine learning y deep learning\nDoble titulación con validez en países de la Unión Europea a través de EIG Business School (España)\nCurrículo académico que incluye metodologías del MIT, Design Thinking de Stanford y el modelo STEM\nDesarrollo de competencias en diseño de procesos ETL, arquitectura y modelado de datos, visualización avanzada, machine learning y redes neuronales",
+        "en": "One-year online postgraduate program focused on artificial intelligence, machine learning, and deep learning\nDual degree valid in European Union countries through EIG Business School (Spain)\nAcademic curriculum incorporating methodologies from MIT, Stanford's Design Thinking, and the STEM model\nDevelopment of skills in ETL process design, data architecture and modeling, advanced visualization, machine learning, and neural networks"
+      },
+      "graduation_year": 2026,
+      "display_order": 0,
+      "status": "published"
+    },
+    {
+      "legacy_id": 3,
+      "institution": {
+        "es": "Universidad Nacional de Córdoba (UNC)",
+        "en": "National University of Córdoba (UNC)"
+      },
+      "title": {
+        "es": "Diploma en Data Science",
+        "en": "University Diploma in Data Science"
+      },
+      "description": {
+        "es": "En este programa adquirí conocimientos sobre el ciclo de vida completo de los datos, desde la obtención y limpieza hasta su visualización y análisis. Desarrollé habilidades en programación (R y Python), estadística, bases de datos, visualización de datos, machine learning y deep learning. El programa incluyó 26 encuentros a lo largo de 7 meses, con un proyecto integrador que me permitió aplicar las competencias adquiridas en un caso real.",
+        "en": "In this program, I acquired knowledge about the complete data lifecycle, from collection and cleaning to visualization and analysis. I developed skills in programming (R and Python), statistics, databases, data visualization, machine learning, and deep learning. The program included 26 sessions over 7 months, with an integrative project that allowed me to apply the acquired competencies to a real-world case."
+      },
+      "graduation_year": 2025,
+      "display_order": 1,
+      "status": "published"
+    },
+    {
+      "legacy_id": 4,
+      "institution": {
+        "es": "Tokio New Technology School"
+      },
+      "title": {
+        "es": "Especialización en Python",
+        "en": "Specialization in Python Programming"
+      },
+      "description": {
+        "es": "Programa completo de 400 horas sobre programación en Python, incluyendo conceptos de programación orientada a objetos, manipulación de datos y desarrollo de aplicaciones web y de escritorio",
+        "en": "Comprehensive 400-hour program on Python programming, including object-oriented programming concepts, data manipulation, and web and desktop application development"
+      },
+      "graduation_year": 2024,
+      "display_order": 2,
+      "status": "published"
+    },
+    {
+      "legacy_id": 5,
+      "institution": {
+        "es": "Tokio New Technology School"
+      },
+      "title": {
+        "es": "Especialización en Inteligencia Artificial",
+        "en": "Specialization in Artificial Intelligence"
+      },
+      "description": {
+        "es": "Programa avanzado de 200 horas sobre machine learning, deep learning y aplicaciones de inteligencia artificial utilizando Python\nDesarrollo de modelos predictivos y análisis de datos utilizando TensorFlow, Scikit-learn y otras bibliotecas especializadas",
+        "en": "Advanced 200-hour program on machine learning, deep learning, and artificial intelligence applications using Python\nDevelopment of predictive models and data analysis using TensorFlow, Scikit-learn, and other specialized libraries"
+      },
+      "graduation_year": 2024,
+      "display_order": 3,
+      "status": "published"
+    },
+    {
+      "legacy_id": 2,
+      "institution": {
+        "es": "Maestría en Salud y Seguridad Ocupacional mención Prevención de Riesgos Laborales",
+        "en": "SEK International University"
+      },
+      "title": {
+        "es": "Universidad Internacional SEK",
+        "en": "Master's Degree in Occupational Health and Safety with specialization in Occupational Risk Prevention"
+      },
+      "description": {
+        "es": "Como profesional con una Maestría en Salud y Seguridad Ocupacional, poseo conocimientos especializados en la identificación, evaluación y control de riesgos laborales en diversos entornos de trabajo. Mi formación me capacita para desarrollar e implementar sistemas de gestión preventiva que promueven ambientes laborales seguros y saludables. Estoy preparado para realizar evaluaciones de riesgo, diseñar programas de capacitación, manejar emergencias y garantizar el cumplimiento normativo en materia de seguridad. Me destaco por integrar principios ergonómicos, psicosociales y técnicos para crear culturas organizacionales donde la prevención es prioritaria, contribuyendo así a reducir la siniestralidad laboral y mejorar la productividad mediante entornos de trabajo protegidos.",
+        "en": "As a professional with a Master's Degree in Occupational Health and Safety, I possess specialized knowledge in identifying, evaluating, and controlling workplace hazards across diverse work environments. My training enables me to develop and implement preventive management systems that promote safe and healthy workplaces. I am prepared to conduct risk assessments, design training programs, manage emergencies, and ensure regulatory compliance in safety matters. I excel at integrating ergonomic, psychosocial, and technical principles to create organizational cultures where prevention is a priority, thus contributing to reducing workplace accidents and improving productivity through protected work environments and comprehensive risk management strategies."
+      },
+      "graduation_year": 2023,
+      "display_order": 4,
+      "status": "published"
+    },
+    {
+      "legacy_id": 1,
+      "institution": {
+        "es": "Universidad Técnica de Ambato",
+        "en": "Technical University of Ambato"
+      },
+      "title": {
+        "es": "Ingeniero Civil",
+        "en": "Civil Engineer"
+      },
+      "description": {
+        "es": "Como Ingeniero Civil titulado, soy un profesional especializado en el diseño, construcción y mantenimiento de infraestructuras esenciales. Mi formación me capacita para desarrollar proyectos que abarcan desde edificaciones y carreteras hasta sistemas hidráulicos, aplicando conocimientos en estructuras, geotecnia, hidráulica y gestión de proyectos. Me destaco por crear soluciones técnicas innovadoras que equilibran funcionalidad, estética y sostenibilidad, mientras garantizo el cumplimiento de normativas y estándares de calidad. Mi objetivo es desarrollar infraestructuras seguras y duraderas que mejoren la calidad de vida, complementando mis habilidades técnicas con capacidades de liderazgo y gestión de equipos multidisciplinarios.",
+        "en": "As a certified Civil Engineer, I am a professional specialized in the design, construction and maintenance of essential infrastructure. My training enables me to develop projects ranging from buildings and roads to hydraulic systems, applying knowledge in structures, geotechnics, hydraulics, and project management. I excel at creating innovative technical solutions that balance functionality, aesthetics, and sustainability, while ensuring compliance with regulations and quality standards. My goal is to develop safe and durable infrastructure that improves quality of life, complementing my technical skills with leadership abilities and management of multidisciplinary teams."
+      },
+      "graduation_year": 2018,
+      "display_order": 5,
+      "status": "published"
+    }
+  ],
+  "publications": [
+    {
+      "legacy_id": 1,
+      "slug": "programacion-con-matlab",
+      "kind": "book",
+      "title": {
+        "es": "Programación con MATLAB",
+        "en": "Programming with MATLAB"
+      },
+      "authors": {
+        "es": "Pazmiño A., Alexandra O. Jácome T., Jairo R. Ruiz M., Félix A."
+      },
+      "venue": {
+        "es": "Publicaciones CIDE"
+      },
+      "abstract": {
+        "es": "En la actualidad conocer de programaci´on es de vital importancia para estudiantes y profesionales,\npara la lectura del libro es necesario conocer el funcionamiento b´asico del software Matlab el cual se\nutiliza para estudiar las diferentes estructuras que existen en la programaci´on.\nEs por ello que en el primer cap´ıtulo se hace un revisi´on r´apida a Matlab recordando los principios\nb´asicos de su funcionamiento, c´omo se ingresa y maneja vectores y matrices en el software, en el\nsegundo cap´ıtulo se realiza una introducci´on a la Programaci´on con ejercicios resueltos de estructuras\nsecuenciales, estructuras de control y sus diferentes tipos como la Bifurcaci´on simple, anidada, compuesta y m´ultiple.\nSin dejar de lado las estructuras de repetici´on se contin´ua con ejercicios resueltos con la estructura\nfor y while. Finalmente en el cap´ıtulo se deja un n´umero de ejercicios para resolver y practicar lo\naprendido en el cap´ıtulo.\nEn el tercer cap´ıtulo es necesario abordar el tema de manejo de vectores y matrices utilizando\nestructuras de control y repetici´on, de tal manera que se permita manejar la informaci´on que esta\nalmacenada, accediendo a cada una de las posiciones de estas variables estructuradas.\nEn el cuarto y ´ultimo cap´ıtulo se trata el tema de funciones definidas por el usuario, al Matlab ser\nun software modular, se resuelve ejercicios utilizando lo aprendido en los cap´ıtulos anteriores, creando\nlos diferentes tipos de funciones como funciones con una sola entrada y una sola salida, funciones\ncon varias entradas y una salida, funciones con varias entradas y varias salidas, permitiendo crear\nprogramas en m´odulos mucho m´as f´acil de leer y dar soluci´on a ejercicios planteados.\nEn cada uno de los cap´ıtulos se ha dejado ejercicios por resolver de tal manera que el lector pueda\npracticar lo aprendido y reforzar sus conocimientos.",
+        "en": "In today's world, programming knowledge is vitally important for students and professionals. To read this book, it is necessary to understand the basic functioning of MATLAB software, which is used to study different programming structures.\nThe first chapter provides a quick review of MATLAB, covering basic operating principles and how to input and manage vectors and matrices in the software. The second chapter introduces programming with solved exercises focusing on sequential structures, control structures, and their different types such as simple, nested, compound, and multiple branching.\nThe chapter also covers repetition structures with solved exercises using for and while loops. To reinforce learning, a number of practice exercises are provided at the end of the chapter.\nThe third chapter addresses the management of vectors and matrices using control and repetition structures, enabling readers to effectively handle stored information by accessing each position within these structured variables.\nThe fourth and final chapter deals with user-defined functions. As MATLAB is modular software, exercises are solved using knowledge from previous chapters, creating different types of functions including single-input/single-output functions, multi-input/single-output functions, and multi-input/multi-output functions. This modular approach allows readers to create programs that are easier to read and provides solutions to proposed exercises.\nEach chapter includes exercises for readers to solve, allowing them to practice what they've learned and reinforce their knowledge."
+      },
+      "published_on": "2023-03-10",
+      "doi": null,
+      "isbn": null,
+      "url": "https://repositorio.cidecuador.org/handle/123456789/2377?locale=es",
+      "pdf_file": "publications/MATALAB1_FIINAL.pdf",
+      "thumbnail": "publications/Captura_de_pantalla_2025-05-13_072544.png",
+      "display_order": 0,
+      "status": "published"
+    }
+  ],
+  "contacts": [
+    {
+      "kind": "linkedin",
+      "value": "https://www.linkedin.com/in/felix-ruiz-mu%C3%B1oz-111784b8/",
+      "display_order": 1,
+      "status": "published"
+    },
+    {
+      "kind": "instagram",
+      "value": "https://www.instagram.com/f.alejorm93/?hl=es3",
+      "display_order": 2,
+      "status": "published"
+    },
+    {
+      "kind": "github",
+      "value": "https://github.com/MFelix9310",
+      "display_order": 3,
+      "status": "published"
+    }
+  ]
+}

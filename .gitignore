@@ -1,0 +1,37 @@
+# dependencias
+node_modules/
+.pnpm-store/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# builds
+.next/
+out/
+dist/
+build/
+*.egg-info/
+
+# entorno — nunca se commitea ninguna credencial
+.env
+.env.*
+!.env.example
+
+# supabase local
+supabase/.temp/
+supabase/.branches/
+
+# media intermedia: se regenera con `tools/media`, no se versiona
+tools/media/out/
+
+# sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# tests / cobertura
+.pytest_cache/
+.coverage
+htmlcov/
+coverage/

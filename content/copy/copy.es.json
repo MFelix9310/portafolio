@@ -1,0 +1,298 @@
+{
+  "meta": {
+    "language": "es",
+    "positioning": "Ingeniero que automatiza: de obra a datos"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "areas": {
+      "data": "Datos",
+      "developer": "Desarrollo",
+      "civil_bim": "Civil & BIM"
+    }
+  },
+  "home": {
+    "headline": "Ingeniero que automatiza: de obra a datos",
+    "subtitle": "Ingeniero civil por la Universidad Técnica de Ambato, 2018. Ciencia de datos y automatización en ESPOCH desde 2022. Visión por computador para automatización BIM en 8base desde octubre de 2025. Máster en Ciencia de Datos e IA en curso: UIDE, EIG Business School y Arizona State University.",
+    "intro": "Predigo cómo se comporta la materia antes de ensayarla. Redes neuronales de grafos que resuelven un campo de esfuerzos en 0,18 segundos, donde el cálculo por elementos finitos tarda 28. Un gemelo digital que estima el drift entre pisos de un pórtico de hormigón mientras el sismo todavía ocurre. Clasificación de suelos a partir de ensayos CPT. Cuando el problema es de volumen, arquitectura Medallion: 250 millones de ofertas de trabajo agrupadas leyendo 953 GB en streaming, sin descargarlos. La parte difícil nunca es el modelo. Es saber qué se está midiendo, y eso lo aprendí calculando estructuras.",
+    "cta_view_projects": "Ver proyectos",
+    "area_cards": {
+      "data": {
+        "title": "Datos",
+        "description": "Modelos, limpieza y pipelines Medallion para decidir sobre datos reales."
+      },
+      "developer": {
+        "title": "Desarrollo",
+        "description": "Software de escritorio y web en Python, de la base de datos a la interfaz."
+      },
+      "civil_bim": {
+        "title": "Civil & BIM",
+        "description": "Cálculo estructural, geotecnia y planificación de obra resueltos con código."
+      }
+    }
+  },
+  "areas": {
+    "data": {
+      "intro": "Modelos y sistemas de datos pensados para decidir, no solo para reportar. Cada proyecto cubre el ciclo completo: obtención y limpieza, modelado con Scikit-learn, CatBoost o RandomForest, y visualización. Aquí viven también los pipelines con arquitectura Medallion, de la capa Bronze a la Gold, sobre datos satelitales, de generación eléctrica y de mercado laboral."
+    },
+    "developer": {
+      "intro": "Software en Python para instalarse y usarse: interfaces de escritorio en PySide6 y Qt, backends web en Django, persistencia con SQLAlchemy. Cada repositorio incluye lo necesario para correr el proyecto, no solo para leerlo."
+    },
+    "civil_bim": {
+      "intro": "El cruce entre ingeniería civil y datos: cálculo estructural, geotecnia, planificación de obra y automatización BIM. Reúne 15 proyectos, desde gemelos digitales sísmicos y predicción de campos de esfuerzos con redes de grafos hasta análisis de ensayos CPT y programación de obra por ruta crítica. Es el punto de partida de este portafolio.",
+      "empty_state": {
+        "title": "Lámina en blanco",
+        "body": "Esta capa existe en la estructura del sitio, todavía no en su contenido. Se levanta con el mismo criterio que el resto: nada se publica sin estar medido. Hasta entonces la lámina se queda con el cajetín puesto y el cuadro de dibujo vacío, que es exactamente lo que es."
+      }
+    }
+  },
+  "about": {
+    "heading": "Sobre mí",
+    "paragraphs": [
+      "Soy ingeniero civil por la Universidad Técnica de Ambato, 2018. Mi formación fue en estructuras, geotecnia e hidráulica: leer un plano, calcular una carga, verificar que algo se sostiene antes de construirlo.",
+      "Desde mayo de 2022 trabajo en la Escuela Superior Politécnica de Chimborazo como Especialista Técnico de Laboratorio e Ingeniero de Ciencia de Datos. El puesto tiene dos mitades y la interesante es la segunda: modelos predictivos, procesos ETL, visión por computador con OpenCV y OCR, y la automatización de los reportes que antes se escribían a mano.",
+      "Desde julio de 2024 tomo proyectos freelance en Upwork para clientes de Estados Unidos y América Latina. El trabajo va de forecasting de demanda con LSTM y ARIMA a segmentación RFM y modelos de churn, y también a automatización BIM con Python sobre el flujo ETABS, Revit y Dynamo con exportación IFC.",
+      "En octubre de 2025 entré en 8base como Computer Vision Engineer para automatización BIM. El encargo es un sistema que reconoce planos arquitectónicos y genera modelos IFC: detección y clasificación de muros, puertas, ventanas y columnas, extracción de geometría y relaciones espaciales, y salida validada bajo estándares OpenBIM.",
+      "En 2023 fui coautor del libro Programación con MATLAB, publicado por CIDE, y sostengo certificaciones de Python: PCEP del Python Institute y Python Essentials 1 de Cisco. No leo esto como un cambio de carrera. Es el mismo oficio, medir antes de intervenir, aplicado primero a estructuras y ahora a datos."
+    ]
+  },
+  "contact": {
+    "heading": "Hablemos",
+    "support_text": "Cuéntame el proyecto, el plazo y qué necesitas resolver. Respondo por correo o LinkedIn.",
+    "form": {
+      "labels": {
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "subject": "Asunto",
+        "message": "Mensaje"
+      },
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando…",
+      "success": "Mensaje recibido. Te responderé pronto.",
+      "errors": {
+        "name_required": "Escribe tu nombre.",
+        "email_required": "Escribe tu correo.",
+        "email_invalid": "Ese correo no parece válido.",
+        "subject_required": "Escribe un asunto.",
+        "message_required": "Escribe tu mensaje.",
+        "message_too_short": "El mensaje es demasiado corto.",
+        "generic_error": "No se pudo enviar el mensaje. Intenta de nuevo en un momento."
+      }
+    },
+    "channels": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "instagram": "Instagram"
+    }
+  },
+  "projects": {
+    "structrelai-data-engineering-data-science-para-confiabilidad-estructural": {
+      "summary": "Pipeline de datos con arquitectura Medallion, de Bronze a Gold, que estima la probabilidad de falla y el índice de confiabilidad de elementos estructurales de acero por simulación Monte Carlo. Valida contra el método analítico FORM, calcula intervalos de confianza al 95 % y entrena un modelo surrogate de regresión logística con métricas de calibración Brier y ROC AUC. Las referencias normativas son Eurocode EN 1990 y ASCE 7-22."
+    },
+    "pipeline-medallion-para-datos-de-generacion-electrica-eersa": {
+      "summary": "Pipeline Bronze, Silver y Gold sobre Microsoft Fabric para los registros diarios de generación eléctrica de EERSA. Ingesta 12 archivos Excel mensuales de las centrales Alao, Río Blanco y Nizag más el Sistema Nacional Interconectado, con limpieza, deduplicación, quality gates y tabla de cuarentena. Procesó 7.695 filas Bronze, conformó 5.840 en Silver y produjo 4 tablas Gold con modelado dimensional Kimball para los 12 meses de 2021, con linaje en cada capa."
+    },
+    "pipeline-de-monitoreo-de-sequia-arquitectura-medallon-con-datos-satelitales": {
+      "summary": "Pipeline Medallion para monitoreo de sequía en los Andes ecuatorianos, con cinco fuentes satelitales y de reanálisis: CHIRPS, NASA POWER, NOAA CPC y los productos MODIS de NDVI y temperatura superficial. Calcula los índices VHI, SPEI y SPI a varias escalas temporales para 13 estaciones en Chimborazo. El dataset final cubre 45 años de datos climáticos mensuales y 24 años de satélite, consolidados en Parquet."
+    },
+    "pipeline-de-clustering-para-250m-ofertas-de-trabajo-data-engineering": {
+      "summary": "Pipeline de ingeniería de datos sobre 250 millones de ofertas de trabajo publicadas entre 2007 y 2025. Lee 2.160 shards Parquet en streaming desde almacenamiento en la nube con un montaje FUSE, sin descargar los 953 GB de embeddings, y encadena PCA incremental, UMAP y HDBSCAN hasta descubrir 208 grupos ocupacionales. Mide por similitud de coseno la distancia entre las ofertas reales y las descripciones oficiales de O*NET, con DBCV de 0,240 frente al Silhouette de -0,010 del baseline K-Means."
+    },
+    "constructplan-pro-sistema-de-planificacion-de-obras-con-cpm": {
+      "summary": "Aplicación de escritorio para planificar y controlar obras con el método de la ruta crítica. Calcula duraciones, holgura total y libre, y fechas tempranas y tardías, dibuja un diagrama de Gantt con la ruta crítica resaltada y lleva el control de mano de obra, equipos, materiales y subcontratos. Exporta a PDF multipágina y a Excel, importa actividades desde CSV y separa dominio, aplicación e infraestructura con arquitectura hexagonal."
+    },
+    "geoprofile-plataforma-de-analisis-cpt": {
+      "summary": "Aplicación de escritorio para procesar y analizar ensayos CPT en ingeniería geotécnica. Implementa la clasificación de suelos Robertson de 1990 y 2009 con cálculo iterativo del exponente de tensión, el pipeline completo de qt, Qt, Fr, Bq e Ic, y un control de calidad automatizado con 7 verificaciones y puntuación. Genera el gráfico Robertson log-log con contornos de Ic, el perfil de Ic con columna de suelos, y reportes en PDF y Excel."
+    },
+    "collar-tie-calculator": {
+      "summary": "Aplicación de escritorio para el cálculo estructural de collar ties en cubiertas residenciales de madera. A partir de cargas, geometría del techo y propiedades del material devuelve en tiempo real la tensión del tirante, el momento flector en las viguetas, el empuje horizontal y el diseño de la conexión clavada, con verificación de aprobado o rechazado según el tamaño de vigueta. Exporta la memoria de cálculo en PDF con las fórmulas paso a paso, sobre CBC 2022, NDS 2018 y método ASD."
+    },
+    "prediccion-de-pandeo-en-acero-conformado-en-frio-con-machine-learning": {
+      "summary": "Visualización animada de los tres modos de pandeo, local, distorsional y global, de un perfil C150×50×20×2.0 en acero conformado en frío, con las curvas de diseño generadas en tiempo real. Los modelos de machine learning se entrenaron con resultados de elementos finitos para predecir el esfuerzo crítico de cada modo, con R² por encima de 0,96. Las referencias analíticas son teoría de placas, Euler y Perry-Robertson."
+    },
+    "analisis-estructural-con-machine-learning-viga-de-acero-a36": {
+      "summary": "Análisis de vigas de acero A36 empotradas que combina mecánica computacional con machine learning. Cubre la deformación elástica bajo carga variable, la trayectoria esfuerzo-deformación con identificación del límite elástico y la zona plástica, y la generación de diagramas de momento flector. El análisis es no lineal, con comportamiento elastoplástico y límite elástico de 250 MPa, y la visualización muestra la evolución de carga contra deformación en tiempo real."
+    },
+    "digital-twin-con-ml-para-monitoreo-sismico-de-edificios": {
+      "summary": "Gemelo digital para monitoreo de salud estructural de edificios durante eventos sísmicos, con tres módulos: predicción de patrones de deformación con redes neuronales entrenadas sobre datos de movimiento del suelo, análisis del comportamiento no lineal validado con física, y clasificación del estado de daño con Random Forest al 94,8 % de precisión. Procesa desplazamientos laterales y de techo para calcular el drift entre pisos en tiempo real y ordenarlo en tres niveles, de correcto a severo. Está pensado para pórticos de hormigón armado de varios pisos."
+    },
+    "prediccion-de-campos-de-esfuerzos-con-graph-neural-networks": {
+      "summary": "Sistema que predice campos de esfuerzos convirtiendo la malla de elementos finitos en un grafo, donde cada nodo es un punto de la estructura y la red aprende las relaciones físicas entre ellos. Entrenado con unas 300 configuraciones de viga, resuelve el esfuerzo de von Mises en 0,18 segundos frente a los 28 del FEM convencional, con un 98 % de precisión. Está basado en la investigación de Maurizi et al. de 2022 publicada en Nature Scientific Reports, y apunta a fases exploratorias de diseño y análisis de sensibilidad."
+    },
+    "digital-twin-sismico-en-tiempo-real-con-machine-learning": {
+      "summary": "Simulación de gemelo digital sísmico en dos paneles sincronizados. El primero reproduce un acelerograma sintético generado con el modelo Kanai-Tajimi y Clough-Penzien calibrado a suelo tipo D según NEC-15; el segundo muestra un modelo LSTM que estima el drift entre pisos de un pórtico de hormigón armado de 5 plantas mientras el sismo ocurre. La respuesta estructural se resuelve por integración Newmark-β y el estado de daño se clasifica en cuatro niveles con umbrales de FEMA P-58, sobre datos sintéticos y física real."
+    },
+    "sistema-de-registro-de-laboratorios-universitarios": {
+      "summary": "Aplicación web en Django para controlar y monitorear en tiempo real el acceso a laboratorios universitarios. Tiene dos modos de registro, primera vez y rápido, con validaciones automáticas, panel de administración, monitoreo en vivo con AJAX y reportes en PDF y Excel. Maneja la zona horaria de Ecuador, evita registros duplicados y actualiza por sí solo los estados vencidos."
+    },
+    "predictor-de-costos-de-construccion-con-machine-learning-y-gui-profesional": {
+      "summary": "Predictor de costos de construcción entrenado con datos reales de permisos de obra de San Francisco. El modelo XGBoost usa 24 características derivadas de 8 variables base, alcanza un 98,97 % de precisión con un error medio de 628 dólares, y el 92,4 % de las predicciones cae dentro del 10 % del valor real. La interfaz en PySide6 valida la entrada y ejecuta la predicción en un hilo aparte para no bloquear la ventana."
+    },
+    "predictor-de-resistencia-de-hormigon-interfaz-grafica-pyqt6": {
+      "summary": "Aplicación con interfaz PyQt6 que predice la resistencia a compresión del hormigón con un modelo Random Forest, en menos de 100 ms por predicción. Incluye gauge circular, clasificación según normativa NEC de Ecuador, presets de mezcla C20, C25 y C30, historial exportable a CSV y validación en tiempo real. El modelo tiene R² de 0,8426 y MAE de 46,04 kg/cm²."
+    },
+    "prediccion-de-carga-ultima-en-acero-a36-con-machine-learning": {
+      "summary": "Modelo de machine learning que predice la carga última en ensayos de tracción de acero A36 a partir de las dimensiones físicas de la probeta. Reduce la cantidad de ensayos destructivos necesarios en el control de fabricación. El trabajo está desarrollado en notebooks, con análisis exploratorio previo y foco en la generalización del modelo."
+    },
+    "prediccion-de-carga-ultima-en-materiales-usando-machine-learning": {
+      "summary": "Modelo Random Forest que predice la resistencia última de materiales estructurales A36, S275 y S355 con un 90,29 % de precisión. Está entrenado sobre 124.639 ensayos de tracción y estima la carga última a partir de propiedades físicas y mecánicas. Incluye una interfaz interactiva para consultar el modelo."
+    },
+    "sistema-de-gestion-y-control-de-laboratorios-academicos": {
+      "summary": "Aplicación de escritorio en PySide6 y SQLAlchemy sobre SQLite para administrar laboratorios académicos: registro y seguimiento de uso, gestión de docentes y espacios, e importación y exportación de datos en CSV. Genera reportes en PDF y se distribuye como instalador de Windows empaquetado con PyInstaller e Inno Setup."
+    },
+    "petshop-adm-sistema-de-gestion-para-tiendas-de-mascotas": {
+      "summary": "Sistema de administración en Django para tiendas de mascotas: inventario de productos y servicios, registro rápido de ventas y un dashboard con las métricas del negocio. Interfaz en Bootstrap sobre una capa de datos con SQLAlchemy y SQLite."
+    },
+    "predictor-de-curvas-esfuerzo-deformacion-para-materiales-compuestos": {
+      "summary": "Aplicación web en Streamlit que predice el comportamiento esfuerzo-deformación de materiales con distintos porcentajes de relave, mediante modelos de machine learning en Scikit-learn. Permite ajustar tiempo de curado y composición y ver la curva resultante en tiempo real, como alternativa a un ensayo físico completo."
+    },
+    "agavepredictor-ml-sistema-predictivo-para-el-crecimiento-de-agave": {
+      "summary": "Sistema de machine learning que predice el tiempo de crecimiento de plantas de agave con un RandomForest optimizado, R² de 0,92, entrenado sobre 8.000 observaciones sintéticas basadas en la morfología de la planta. La interfaz en PySide6 incluye una representación del agave que responde a los parámetros ingresados."
+    },
+    "prediccion-de-pandeo-en-estructuras-de-acero-con-machine-learning": {
+      "summary": "Modelo en CatBoost que predice el pandeo en elementos estructurales de acero con una precisión del 99,6 %, sobre datos técnicos obtenidos por web scraping y depurados con pandas. Incluye visualización 3D interactiva en PyVista y exportación automática a Excel, con resultados contrastados frente a métodos analíticos y normativa de ingeniería."
+    },
+    "prediccion-de-consumo-en-pollos-cobb-500": {
+      "summary": "Sistema en PyQt5 que predice el consumo diario de alimento y el crecimiento de pollos Cobb 500 con modelos de machine learning. Pensado como apoyo a la toma de decisiones en producción avícola."
+    }
+  },
+  "microcopy": {
+    "areas": {
+      "data": "Datos",
+      "developer": "Desarrollo",
+      "civil_bim": "Civil & BIM"
+    },
+    "subareas": {
+      "data": {
+        "analyst": "Analista de datos",
+        "scientist": "Científico de datos",
+        "engineer": "Ingeniería de datos"
+      },
+      "developer": {
+        "fullstack": "Fullstack",
+        "backend": "Backend",
+        "desktop": "Escritorio"
+      },
+      "civil_bim": {
+        "structural": "Estructuras",
+        "geotechnical": "Geotecnia",
+        "construction": "Construcción",
+        "bim": "BIM",
+        "automation": "Automatización"
+      }
+    },
+    "buttons": {
+      "view_project": "Ver proyecto",
+      "view_repository": "Ver repositorio",
+      "view_demo": "Ver demo",
+      "view_all_projects": "Ver todos los proyectos",
+      "back": "Volver",
+      "back_to_projects": "Volver a proyectos",
+      "download_document": "Descargar documento",
+      "play_video": "Reproducir video",
+      "read_more": "Leer más"
+    },
+    "empty_states": {
+      "no_projects_generic": "Sin proyectos que mostrar con este filtro.",
+      "no_media": "Sin material adicional para este proyecto."
+    },
+    "footer": {
+      "tagline": "Ingeniero que automatiza: de obra a datos.",
+      "copyright": "© {year} Félix Ruiz M."
+    }
+  },
+  "chrome": {
+    "skip_to_content": "Saltar al contenido",
+    "eyebrow": "Portafolio · Félix Ruiz M.",
+    "thesis": "Un plano sin cotas es una ilustración. Con cotas es un dato.",
+    "measure": "Medición",
+    "menu": {
+      "label": "Menú principal",
+      "open": "Abrir menú",
+      "close": "Cerrar menú"
+    },
+    "language_label": "Idioma",
+    "theme": {
+      "label": "Cambiar tema",
+      "system": "Auto",
+      "light": "Papel",
+      "dark": "Cianotipo"
+    },
+    "areas_index": {
+      "heading": "Áreas",
+      "note": "Un solo catálogo, tres lecturas"
+    },
+    "layers": {
+      "label": "Capas",
+      "help": "Los chips encienden y apagan capas del mismo catálogo, como en un CAD.",
+      "reset": "Encender todas las capas",
+      "showing": "Mostrando",
+      "of": "de",
+      "projects": "proyectos",
+      "all_off": "Todas las capas apagadas. La lámina está vacía",
+      "projects_one": "proyecto"
+    },
+    "metrics": {
+      "projects": "proyectos",
+      "years_in_data": "años en datos",
+      "areas": "áreas",
+      "experience": "experiencias",
+      "certifications": "certificaciones",
+      "publications": "publicaciones",
+      "projects_one": "proyecto",
+      "experience_one": "experiencia",
+      "certifications_one": "certificación",
+      "publications_one": "publicación"
+    },
+    "sheet": {
+      "label": "Lámina",
+      "scale": "Escala",
+      "source": "Origen de datos",
+      "source_seed": "seed local",
+      "source_api": "api"
+    },
+    "video": {
+      "close": "Cerrar video",
+      "duration": "Duración",
+      "size": "Peso",
+      "dialog": "Reproductor de video",
+      "unsupported": "Tu navegador no puede reproducir este video."
+    },
+    "project": {
+      "technologies": "Tecnologías",
+      "links": "Enlaces",
+      "video": "Video",
+      "images": "Imágenes",
+      "documents": "Documentos"
+    },
+    "about": {
+      "experience": "Experiencia",
+      "education": "Formación",
+      "certifications": "Certificaciones",
+      "publications": "Publicaciones",
+      "present": "Actualidad",
+      "credential": "Ver credencial"
+    },
+    "contact_channels": "Canales",
+    "contact_form_offline": "Formulario en espera del backend. Los canales de la izquierda funcionan ya.",
+    "civil_bim": {
+      "stamp": "En obra",
+      "note": "Sin proyectos publicados en esta capa. Sin relleno.",
+      "meanwhile": "Mientras tanto",
+      "meanwhile_body": "El resto del catálogo ya está documentado en las otras capas.",
+      "placeholder_3d": "Planta estructural en 2D: vista simplificada del pórtico",
+      "extrusion_plan": "Planta estructural: 3 vanos × 3 plantas · cotas en m",
+      "extrusion_scene": "De la planta 2D al pórtico 3D. El scroll conduce la extrusión",
+      "extrusion_alt": "Planta estructural de un pórtico de tres vanos: ejes de replanteo, soportes en sus cruces y cota total de 18,00 m"
+    },
+    "not_found": {
+      "eyebrow": "404 · fuera de lámina",
+      "title": "Esta cota no mide nada",
+      "body": "La página que buscas no está dibujada en este plano. Puede que la hayan renombrado o que nunca existiera.",
+      "back": "Volver a la portada"
+    }
+  }
+}

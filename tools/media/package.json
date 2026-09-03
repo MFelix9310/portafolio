@@ -1,0 +1,8 @@
+{
+  "name": "@portafolio/media-pipeline",
+  "private": true,
+  "type": "module",
+  "description": "Transcodifica y optimiza el media heredado del portafolio anterior.",
+  "scripts": { "transcode": "node transcode.mjs" },
+  "dependencies": { "ffmpeg-static": "^5.2.0", "ffprobe-static": "^3.1.0" }
+}

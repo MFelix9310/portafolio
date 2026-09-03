@@ -1,0 +1,2304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - Felix Ruiz M.</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    
+<style>
+    .project-description {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        margin-top: 0;
+        border-top: 1px solid #eee;
+    }
+    
+    .project-description.active {
+        max-height: 500px;
+        margin-top: 15px;
+        padding-top: 15px;
+    }
+    
+    .project-image-container {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        margin-top: 0;
+    }
+    
+    .project-image-container.active {
+        max-height: 500px;
+        margin-top: 15px;
+        padding-top: 15px;
+    }
+    
+    .btn-toggle.active {
+        background-color: #e67e22;
+    }
+    
+    .project-card {
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        background-color: #fff;
+        overflow: hidden;
+    }
+    
+    .project-card-header {
+        background-color: #ff7a00;
+        color: white;
+        padding: 1.5rem;
+    }
+    
+    .project-card-body {
+        padding: 1.5rem;
+    }
+    
+    .category-badge {
+        display: inline-block;
+        padding: 0.3rem 0.8rem;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 20px;
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+        color: white;
+    }
+    
+    .category-title {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+    
+    .category-title::after {
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 3px;
+        background-color: #ff7a00;
+        bottom: 0;
+        left: 0;
+    }
+    
+    .filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        border-radius: 30px;
+        background-color: #f5f5f5;
+        color: #333;
+        border: 2px solid #eee;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .filter-btn:hover {
+        background-color: #e0e0e0;
+    }
+    
+    .filter-btn.active {
+        background-color: #ff7a00;
+        color: white;
+        border-color: #ff7a00;
+    }
+    
+    .debug-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        z-index: 1000;
+        cursor: pointer;
+        opacity: 0.7;
+        font-size: 12px;
+        display: none;
+    }
+    
+    .debug-button:hover {
+        opacity: 1;
+    }
+    
+    .debug-info {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.7);
+        color: white;
+        padding: 5px;
+        font-size: 10px;
+        z-index: 10;
+    }
+</style>
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="/portfolio/">
+                
+                <img src="/media/profile/professional/Dise%C3%B1o_sin_t%C3%ADtulo_4.png" alt="Félix Ruiz M." class="navbar-profile-img me-2" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                
+                <span class="fw-bold text-orange">Felix</span> <span class="text-dark">Ruiz M.</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/education/">
+                            Educación
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/certifications/">
+                            Certificaciones
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/portfolio/projects/">
+                            Proyectos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/experience/">
+                            Experiencia Laboral
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/publications/">
+                            Publicaciones
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/portfolio/contact/">
+                            Contacto
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown ms-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe"></i> Español
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item active" href="/set-language/?lang=es&next=/portfolio/projects/">Español</a></li>
+                            <li><a class="dropdown-item " href="/set-language/?lang=en&next=/portfolio/projects/">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        
+        
+        
+<!-- Projects Header -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold" data-aos="fade-up">Proyectos</h1>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100">Investigación y desarrollos destacados</p>
+                <div class="mt-4">
+                    <a href="/portfolio/experience/" class="btn btn-outline-dark">
+                        Ver Experiencia Laboral
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects List - React Root Container -->
+<section class="py-5">
+    <div class="container">
+        <div id="react-projects-container">
+            <!-- La versión sin React (fallback) -->
+            
+                <div class="filter-buttons" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all">
+                        Todos los Proyectos
+                    </button>
+                    <button class="filter-btn" data-filter="data_scientist">
+                        Data Scientist
+                    </button>
+                    <button class="filter-btn" data-filter="data_analyst">
+                        Data Analyst
+                    </button>
+                    <button class="filter-btn" data-filter="python_developer">
+                        Python Developer
+                    </button>
+                </div>
+                
+                <div class="row" id="projects-container">
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="200" data-skills="data_scientist,data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            StructRelAI — Data Engineering &amp; Data Science para Confiabilidad Estructural
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, NumPy, Pandas, SciPy, Scikit-learn, Matplotlib, PyYAML, Pytest
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-29">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-29">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/29/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/StructRelAI" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-29" class="project-image-container">
+                                        
+                                        <img src="/media/projects/monte_carlo_structural.gif" alt="StructRelAI — Data Engineering &amp; Data Science para Confiabilidad Estructural" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-29" class="project-description">
+                                        <p>
+                                            
+                                                Pipeline de datos con arquitectura Medallion (Bronze, Silver, Gold) para estimar la probabilidad de falla y el indice de confiabilidad de elementos estructurales de acero mediante simulacion Monte Carlo. Incluye validacion con el metodo FORM (First Order Reliability Method), intervalos de confianza al 95%, y un modelo ML surrogate (regresion logistica) con metricas de calibracion (Brier score, ROC AUC). El proyecto integra ingenieria de datos, machine learning e ingenieria estructural siguiendo referencias normativas (Eurocode EN 1990, ASCE 7-22).
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="100" data-skills="data_scientist,data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Pipeline Medallion para datos de generación eléctrica EERSA
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Microsoft Fabric, PySpark, Delta Lake, Python, pandas, OneLake, Medallion Architecture, Kimball
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-28">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-28">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/28/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/eersa-data-plataform/tree/master" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-28" class="project-image-container">
+                                        
+                                        <img src="/media/projects/task_flow_medallion.png" alt="Pipeline Medallion para datos de generación eléctrica EERSA" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-28" class="project-description">
+                                        <p>
+                                            
+                                                Pipeline de ingeniería de datos end-to-end que procesa registros diarios de generación eléctrica de EERSA (Empresa Eléctrica Riobamba) implementando arquitectura Medallion Bronze/Silver/Gold sobre Microsoft Fabric. Ingesta 12 archivos Excel mensuales con datos de plantas hidroeléctricas (Alao, Río Blanco, Nizag) y Sistema Nacional Interconectado, aplicando limpieza, deduplicación, quality gates con tabla de cuarentena, clasificación de fuentes y modelado dimensional Kimball. Genera 4 tablas Gold listas para BI: dimensión de plantas, hechos diarios pivoteados, agregados mensuales con factor de carga, y balance energético mensual distinguiendo generación propia vs interconexión. Procesó 7,695 filas Bronze, conformó 5,840 filas Silver y produjo KPIs mensuales para los 12 meses de 2021, con linaje completo en cada capa.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="100" data-skills="data_scientist,data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Pipeline de Monitoreo de Sequía — Arquitectura Medallón con Datos Satelitales
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, xarray, pandas, NumPy, earthaccess, pyhdf, NetCDF4, scipy, REST API, HDF-EOS, Parquet, PyYAML, pytest, Git
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-27">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-27">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/27/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/chimborazo-drought-pipeline" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-27" class="project-image-container">
+                                        
+                                        <img src="/media/projects/WhatsApp_Image_2026-03-30_at_17.40.58.jpeg" alt="Pipeline de Monitoreo de Sequía — Arquitectura Medallón con Datos Satelitales" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-27" class="project-description">
+                                        <p>
+                                            
+                                                Pipeline de Data Engineering end-to-end para monitoreo de sequía en los Andes ecuatorianos, construido con Arquitectura Medallón (Bronze → Silver → Gold). Extrae y procesa datos climáticos de 5 fuentes satelitales y de reanálisis: precipitación (CHIRPS, NetCDF 7GB), temperatura (NASA POWER REST API), humedad del suelo (NOAA CPC, NetCDF), índices de vegetación NDVI/EVI (MODIS MOD13C2, HDF-EOS con autenticación OAuth2) y temperatura superficial LST (MODIS MOD11C3/MYD11C3). Calcula índices de sequía VHI, SPEI y SPI a múltiples escalas temporales para 13 estaciones en Chimborazo, Ecuador. El dataset final cubre 45 años de datos climáticos mensuales y 24 años de datos satelitales, integrando más de 7.000 registros por variable en un master dataset análisis-listo en formato Parquet.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="200" data-skills="data_scientist,data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Pipeline de Clustering para 250M Ofertas de Trabajo — Data Engineering
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, BGE-large-en-v1.5, UMAP, HDBSCAN, IncrementalPCA, DuckDB, PyArrow, sentence-transformers, BERTopic, DigitalOcean Spaces, rclone FUSE, RAPIDS cuML, Parquet
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-26">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-26">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/26/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/labor-market-clustering" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-26" class="project-image-container">
+                                        
+                                        <img src="/media/projects/WhatsApp_Image_2026-03-04_at_10.48.34.jpeg" alt="Pipeline de Clustering para 250M Ofertas de Trabajo — Data Engineering" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-26" class="project-description">
+                                        <p>
+                                            
+                                                Pipeline end-to-end de ingeniería de datos que procesa 250 millones de ofertas laborales (2007–2025) usando embeddings densos BGE-large-en-v1.5. El sistema lee 2,160 shards parquet en streaming desde DigitalOcean Spaces vía FUSE sin descargar los 953GB, aplica PCA incremental, UMAP y HDBSCAN para descubrir 208 grupos ocupacionales automáticamente, y calcula un gap score por cosine similarity contra las descripciones oficiales de O*NET. El resultado demuestra qué ocupaciones emergentes no están correctamente clasificadas en la taxonomía SOC — con evidencia cuantitativa: DBCV=0.240 vs Silhouette=−0.010 del baseline K-Mean
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="100" data-skills="data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            ConstructPlan Pro — Sistema de Planificacion de Obras con CPM
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, PySide6, Matplotlib, NetworkX, ReportLab, OpenPyXL, Arquitectura Hexagonal
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-25">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-25">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/25/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/ConstructPlan-Pro" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-25" class="project-image-container">
+                                        
+                                        <img src="/media/projects/cpm.png" alt="ConstructPlan Pro — Sistema de Planificacion de Obras con CPM" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-25" class="project-description">
+                                        <p>
+                                            
+                                                Sistema de escritorio para la planificacion, programacion y control de proyectos de construccion. Implementa el metodo de ruta critica (CPM) con calculo automatico de duraciones, holguras, fechas tempranas/tardias y ruta critica.
+
+Caracteristicas principales:
+- Motor CPM completo (Forward/Backward Pass, Total Float, Free Float)
+- Diagrama de Gantt interactivo con ruta critica resaltada
+- Gestion de actividades WBS con fases, predecesoras y progreso
+- Control de recursos y costos (Labor, Equipos, Materiales, Subcontratistas)
+- Exportacion PDF profesional multipagina y Excel con 4 hojas de datos
+- Importacion masiva desde CSV
+- Templates predefinidos para edificios residenciales, comerciales, naves industriales e infraestructura vial
+- Arquitectura hexagonal (Ports &amp; Adapters) con separacion de dominio, aplicacion e infraestructura
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="100" data-skills="data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            GeoProfile - Plataforma de Analisis CPT
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, PySide6, Matplotlib, NumPy, Pandas, ReportLab, OpenPyXL, SciPy
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-24">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-24">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/24/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/GeoProfile" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-24" class="project-image-container">
+                                        
+                                        <img src="/media/projects/cpt1.png" alt="GeoProfile - Plataforma de Analisis CPT" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-24" class="project-description">
+                                        <p>
+                                            
+                                                Aplicacion de escritorio profesional para el procesamiento y analisis de datos CPT (Cone Penetration Test) orientada a la ingenieria geotecnica suiza. Incluye clasificacion de suelos Robertson SBT (1990/2009) con calculo iterativo del exponente de tension, pipeline completo de procesamiento (qt, Qt, Fr, Bq, Ic), control de calidad automatizado con 7 verificaciones y sistema de puntuacion, visualizacion interactiva de perfiles CPT, grafico Robertson log-log con contornos Ic, perfil Ic con columna de suelos, y generacion de informes en PDF y Excel. Interfaz oscura profesional con PySide6.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="200" data-skills="python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Collar Tie Calculator
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, PySide6, Matplotlib, ReportLab, NumPy
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-23">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-23">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/23/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/collar-tie-calculator" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-23" class="project-image-container">
+                                        
+                                        <img src="/media/projects/3.png" alt="Collar Tie Calculator" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-23" class="project-description">
+                                        <p>
+                                            
+                                                Aplicación de escritorio para el cálculo estructural de collar ties en techos residenciales de madera. Permite ingresar cargas, geometría del techo y propiedades del material para obtener en tiempo real la tensión del collar tie, momento flector en rafters, empuje horizontal y diseño de conexión clavada. Incluye diagrama estructural dinámico, verificación PASS/FAIL por tamaño de rafter y exportación de memoria de cálculo completa en PDF con fórmulas paso a paso. Basado en CBC 2022, NDS 2018 y método ASD.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="100" data-skills="">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Predicción de Pandeo en Acero Conformado en Frío con Machine Learning
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, matplotlib, seaborn, NumPy, XGBoost, FEM
+                                        
+                                    </p>
+                                    
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-22">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-22">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/22/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        
+                                        
+                                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7429593117952999424/" target="_blank" class="btn btn-sm btn-orange">
+                                            Demo
+                                        </a>
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-22" class="project-image-container">
+                                        
+                                        <img src="/media/projects/buckling_euler_3modes.gif" alt="Predicción de Pandeo en Acero Conformado en Frío con Machine Learning" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-22" class="project-description">
+                                        <p>
+                                            
+                                                Visualización animada de los tres modos de pandeo (local, distorsional y global) de un perfil C150×50×20×2.0 en acero conformado en frío, con curvas de diseño generadas en tiempo real. Se entrenaron modelos de Machine Learning con resultados de elementos finitos para predecir el esfuerzo crítico de pandeo en cada modo, alcanzando valores de R² superiores a 0.96. Las ecuaciones de referencia son teoría de placas, Euler y Perry-Robertson. El enfoque permite evaluar cientos de configuraciones de secciones en segundos, lo cual es útil en la etapa de investigación y prediseño estructural.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="100" data-skills="data_scientist,data_analyst">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Análisis Estructural con Machine Learning - Viga de Acero A36
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Machine Learning, Structural Analysis, Nonlinear Analysis, Matplotlib, NumPy, SciPy, Computational Mechanics, Elastoplastic Behavior, Python
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-21">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-21">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/21/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        
+                                        
+                                        <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7425200850404388864/" target="_blank" class="btn btn-sm btn-orange">
+                                            Demo
+                                        </a>
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-21" class="project-image-container">
+                                        
+                                        <img src="/media/projects/animacion_viga_completa.gif" alt="Análisis Estructural con Machine Learning - Viga de Acero A36" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-21" class="project-description">
+                                        <p>
+                                            
+                                                Sistema de análisis estructural que combina mecánica computacional con machine learning para predicción de comportamiento de vigas de acero empotradas. El modelo integra tres componentes clave: (1) deformación elástica bajo carga variable, (2) análisis de trayectoria esfuerzo-deformación con identificación de límite elástico y zona plástica, y (3) generación de diagramas de momento flector.
+
+Implementa análisis no lineal considerando comportamiento elastoplástico del acero A36 (límite elástico 250 MPa). El sistema predice deflexión máxima, identifica punto de plastificación (E.P), y genera curvas completas de respuesta estructural. Visualización en tiempo real muestra evolución de carga vs deformación.
+
+Herramienta útil para diseño preliminar, validación rápida de configuraciones, y entendimiento del comportamiento no lineal de elementos estructurales de acero. Reduce tiempo de análisis de horas a segundos manteniendo precisión ingenieril.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="200" data-skills="data_scientist,data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Digital Twin con ML para Monitoreo Sísmico de Edificios
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Random Forest, Neural Networks, Physics-Informed ML, Scikit-learn, Digital Twin, Seismic Analysis, Real-Time Monitoring, Structural Health Monitoring, Python
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-20">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-20">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/20/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        
+                                        
+                                        <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7425551659335860224/" target="_blank" class="btn btn-sm btn-orange">
+                                            Demo
+                                        </a>
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-20" class="project-image-container">
+                                        
+                                        <img src="/media/projects/DIGITAL_TWIN_ML_PRO1.gif" alt="Digital Twin con ML para Monitoreo Sísmico de Edificios" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-20" class="project-description">
+                                        <p>
+                                            
+                                                Sistema de gemelo digital impulsado por machine learning para monitoreo en tiempo real de salud estructural de edificios durante eventos sísmicos. Integra tres módulos: (A) predicción de patrones de deformación estructural mediante redes neuronales entrenadas con datos de movimiento del suelo, (B) análisis predictivo de comportamiento no lineal con datos experimentales validados mediante física informada, y (C) clasificación de estado de daño utilizando Random Forest con 94.8% de precisión.
+
+El modelo procesa desplazamientos laterales y de techo para calcular Interstory Drift Ratio (IDR) en tiempo real, clasificando el nivel de daño estructural en L1 (OK), L2 (ligero), y L3 (severo). Permite evaluación instantánea post-sismo sin necesidad de inspección física inmediata.
+
+Combina ML supervisado (Random Forest) con validación física para garantizar predicciones confiables en estructuras de hormigón armado de múltiples pisos.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="100" data-skills="data_scientist,data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Predicción de Campos de Esfuerzos con Graph Neural Networks
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Graph Neural Networks, PyTorch, FEM, Matplotlib, NumPy, Deep Learning, Structural Mechanics, Python
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-19">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-19">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/19/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        
+                                        
+                                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7426617142164447232" target="_blank" class="btn btn-sm btn-orange">
+                                            Demo
+                                        </a>
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-19" class="project-image-container">
+                                        
+                                        <img src="/media/projects/GNN_STRESS_METICULOUS.gif" alt="Predicción de Campos de Esfuerzos con Graph Neural Networks" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-19" class="project-description">
+                                        <p>
+                                            
+                                                Sistema de machine learning que predice campos de esfuerzos estructurales 150 veces más rápido que análisis FEM tradicional. Implementa Graph Neural Networks (GNNs) para convertir mallas de elementos finitos en grafos, donde cada nodo representa un punto de la estructura y la red aprende las relaciones físicas entre ellos.
+
+El modelo entrenado con ~300 configuraciones de vigas logra predicción de esfuerzos von Mises en 0.18 segundos vs 28 segundos de FEM convencional, manteniendo 98% de precisión. Aplicable en fases exploratorias de diseño, optimización paramétrica con 100+ variantes, y análisis de sensibilidad donde se requiere rapidez sobre precisión milimétrica.
+
+Basado en investigación de Maurizi et al. (2022) publicada en Nature Scientific Reports. La visualización muestra deformación de viga cantiléver bajo carga con mapa de calor del campo de esfuerzos evolucionando en tiempo real.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="100" data-skills="data_scientist,data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Digital Twin Sísmico en Tiempo Real con Machine Learning
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, NumPy, Matplotlib, Seaborn, SciPy, Scikit-learn
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-18">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-18">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/18/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        
+                                        
+                                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7427341395650351104/" target="_blank" class="btn btn-sm btn-orange">
+                                            Demo
+                                        </a>
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-18" class="project-image-container">
+                                        
+                                        <img src="/media/projects/seismic_twin_plt_1.gif" alt="Digital Twin Sísmico en Tiempo Real con Machine Learning" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-18" class="project-description">
+                                        <p>
+                                            
+                                                Desarrollé desde cero una simulación de Digital Twin sísmico en Python que predice el daño estructural de un edificio mientras un terremoto ocurre. El proyecto consta de dos paneles animados sincronizados: el primero reproduce un acelerograma sintético generado con el modelo Kanai-Tajimi + Clough-Penzien calibrado a condiciones de suelo ecuatorianas (Tipo D, NEC-15), y el segundo muestra la predicción de un modelo LSTM que estima el inter-story drift ratio de un marco de concreto reforzado de 5 pisos en tiempo real. La respuesta estructural se calculó mediante integración Newmark-β (método estándar en ETABS y SAP2000). El modelo clasifica el estado de daño progresivamente: Operational → Slight → Moderate → Extensive, con umbrales basados en FEMA P-58. Los datos son 100% sintéticos con física 100% real, respaldados por literatura con R² &gt; 0.95
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="200" data-skills="data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Sistema de Registro de Laboratorios Universitarios
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Django 4.2, Python 3.10, SQLite/MySQL, HTML5, CSS3, JavaScript,    Bootstrap 5, AJAX, ReportLab, openpyxl, PythonAnywhere
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-17">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-17">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/17/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/REGISTROS_ESTUDIANTES_LABS" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-17" class="project-image-container">
+                                        
+                                        <img src="/media/projects/MINIATURA_WB7CAIP.jpg" alt="Sistema de Registro de Laboratorios Universitarios" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-17" class="project-description">
+                                        <p>
+                                            
+                                                Aplicación web completa desarrollada con Django para el control y monitoreo en tiempo real del acceso a laboratorios universitarios. Incluye doble modalidad de registro (primera vez y rápido), validaciones automáticas, panel de administración, monitoreo en tiempo real con AJAX, y generación de reportes en PDF/Excel. Maneja zona horaria de Ecuador, prevención de registros duplicados y actualización automática
+de estados.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="100" data-skills="data_scientist,data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Predictor de Costos de Construcción con Machine Learning y GUI Profesional
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, XGBoost, Scikit-learn, PySide6, NumPy, Joblib, Feature Engineering, Machine Learning, GUI Development
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-16">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-16">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/16/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/PRECIOS_ML" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-16" class="project-image-container">
+                                        
+                                        <img src="/media/projects/MINIATURA.jpg" alt="Predictor de Costos de Construcción con Machine Learning y GUI Profesional" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-16" class="project-description">
+                                        <p>
+                                            
+                                                Desarrollé una aplicación completa que predice costos de construcción con 98.97% de precisión usando datos reales de San Francisco Building Permits. El modelo XGBoost procesa 24 características ingeniadas desde 8 variables base, logrando un error promedio de solo $628 USD. La interfaz GUI en PySide6 incluye threading asíncrono para experiencia fluida y validación automática. El 92.4% de predicciones caen dentro del ±10% del valor real. La herramienta identifica patrones ocultos en tipos de construcción, correlaciones ubicación-materiales, impacto de permisos municipales y estacionalidad en precios. Casos de uso: estimación de presupuestos, análisis de viabilidad, planificación financiera inmobiliaria y apoyo para constructoras. Combina ciencia de datos robusta con UX intuitiva para resolver problemas reales del sector construcción.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="100" data-skills="data_scientist,data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Predictor de Resistencia de Hormigón - Interfaz Gráfica PyQt6
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python 3.11+, PyQt6, scikit-learn, matplotlib, pandas, numpy, Random Forest, Machine Learning
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-15">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-15">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/15/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/HORMIGON_ML" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-15" class="project-image-container">
+                                        
+                                        <img src="/media/projects/miniatura.jpg" alt="Predictor de Resistencia de Hormigón - Interfaz Gráfica PyQt6" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-15" class="project-description">
+                                        <p>
+                                            
+                                                Aplicación profesional con interfaz gráfica PyQt6 para predecir la resistencia a compresión del hormigón utilizando Random Forest. Diseñada para ingenieros civiles con funcionalidades avanzadas: predicción instantánea (&lt;100ms), gauge circular visual, clasificación según normas NEC Ecuador, presets inteligentes de mezclas (C20, C25, C30), historial completo con exportación CSV, y múltiples visualizaciones dinámicas. Incluye validación en tiempo real, análisis del modelo (R²=0.8426, MAE=46.04 kg/cm²) y herramientas profesionales para control de calidad del hormigón.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="200" data-skills="data_scientist,data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Predicción de Carga Última en Acero A36 con Machine Learning
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, Jupyter Notebook, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Git, GitHub.
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-14">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-14">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/14/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/TRACCION_A36/tree/main" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-14" class="project-image-container">
+                                        
+                                        <img src="/media/projects/1_vXKcRh4.png" alt="Predicción de Carga Última en Acero A36 con Machine Learning" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-14" class="project-description">
+                                        <p>
+                                            
+                                                Este proyecto desarrolla un modelo de Machine Learning para predecir la carga última en pruebas de tensión de acero A36, utilizando las dimensiones físicas de las muestras. Optimiza el diseño estructural, reduce la necesidad de pruebas destructivas y mejora la calidad y seguridad en la fabricación. Se enfoca en la robustez, precisión y generalización del modelo, con un análisis exploratorio de datos exhaustivo y visualizaciones impactantes.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="100" data-skills="data_scientist,data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Predicción de Carga Última en Materiales usando Machine Learning
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, scikit-learn, pandas, matplotlib, seaborn, Random Forest, Machine Learning, Data Analysis
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-13">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-13">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/13/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/Traccion_Machine_Learning" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-13" class="project-image-container">
+                                        
+                                        <img src="/media/projects/images.jpg" alt="Predicción de Carga Última en Materiales usando Machine Learning" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-13" class="project-description">
+                                        <p>
+                                            
+                                                Desarrollé un modelo RandomForest que predice la resistencia última de materiales estructurales (A36, S275, S355) con 90.29% de precisión. El sistema analiza 124,639 ensayos de tracción y proporciona predicciones automáticas de carga última basadas en propiedades físicas y mecánicas. Incluye interfaz interactiva para ingenieros y optimización de diseños estructurales.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="100" data-skills="data_scientist,data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Predicción de Consumo en Pollos Cobb 500
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, Scikit-learn, PyQt5, Pandas, Matplotlib
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-12">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-12">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/12/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/POLLOS_ML" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-12" class="project-image-container">
+                                        
+                                        <img src="/media/projects/p1_1S19453.jpg" alt="Predicción de Consumo en Pollos Cobb 500" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-12" class="project-description">
+                                        <p>
+                                            
+                                                Sistema inteligente que predice el consumo diario de alimento y el crecimiento de pollos Cobb 500 usando modelos de machine learning, facilitando la toma de decisiones en granjas avícolas.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="200" data-skills="data_scientist,data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Predictor de Curvas Esfuerzo-Deformación para Materiales Compuestos
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, Streamlit, Scikit-learn, NumPy, Pandas, Matplotlib, Joblib, SciPy
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-11">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-11">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/11/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        
+                                        
+                                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7316513974152294400/" target="_blank" class="btn btn-sm btn-orange">
+                                            Demo
+                                        </a>
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-11" class="project-image-container">
+                                        
+                                        <img src="/media/projects/MINIATURA_NLOQUES.png" alt="Predictor de Curvas Esfuerzo-Deformación para Materiales Compuestos" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-11" class="project-description">
+                                        <p>
+                                            
+                                                Desarrollé una aplicación web interactiva que predice el comportamiento mecánico de materiales con diferentes porcentajes de relave mediante modelos de machine learning. La herramienta permite ajustar parámetros como tiempo de curado y composición, generando visualizaciones en tiempo real que optimizan el diseño de materiales y reducen la necesidad de costosos ensayos físicos.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="100" data-skills="data_scientist,data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Predicción de Pandeo en Estructuras de Acero con Machine Learning
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, CatBoost, Pandas, PyVista, Jupyter Notebook, Web Scraping, Machine Learning, Excel
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-10">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-10">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/10/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/PANDEO_ML" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-10" class="project-image-container">
+                                        
+                                        <img src="/media/projects/miniatura_pandeo.jpg" alt="Predicción de Pandeo en Estructuras de Acero con Machine Learning" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-10" class="project-description">
+                                        <p>
+                                            
+                                                Aplicación de machine learning que predice el comportamiento a pandeo en elementos estructurales de acero con precisión del 99.6%. Incluye web scraping de datos técnicos, limpieza con pandas, modelo CatBoost, visualización 3D interactiva y exportación automática a Excel. Valida resultados con métodos analíticos y normativas de ingeniería.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="100" data-skills="data_scientist,data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            AgavePredictor ML: Sistema predictivo para el crecimiento de agave
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, RandomForest, PySide6, Matplotlib, Pandas, NumPy, Scikit-learn, BeautifulSoup, Seaborn
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Scientist
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-9">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-9">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/9/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/AGAVE_WEB" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-9" class="project-image-container">
+                                        
+                                        <img src="/media/projects/miniatura_agave.png" alt="AgavePredictor ML: Sistema predictivo para el crecimiento de agave" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-9" class="project-description">
+                                        <p>
+                                            
+                                                Sistema de machine learning que predice con alta precisión (R² = 0.92) el tiempo de crecimiento de plantas de agave. Utiliza RandomForest optimizado, técnicas avanzadas de ingeniería de datos y 8,000 observaciones sintéticas. La interfaz gráfica desarrollada con PySide6 ofrece visualizaciones interactivas y una representación dinámica del agave que se adapta a los parámetros ingresados. Esta herramienta apoya la agricultura sostenible con predicciones precisas basadas en la morfología de la planta.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="200" data-skills="data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            PetShop ADM - Sistema de Gestión para Tiendas de Mascotas
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, Django, SQLAlchemy, SQLite, HTML, Bootstrap, JavaScript, Whitenoise, Python-dotenv
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-8">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-8">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/8/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/REGISTROS_LABS" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-8" class="project-image-container">
+                                        
+                                        <img src="/media/projects/Miniatura.png" alt="PetShop ADM - Sistema de Gestión para Tiendas de Mascotas" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-8" class="project-description">
+                                        <p>
+                                            
+                                                Sistema completo de administración para tiendas de mascotas que permite gestionar inventario de productos, servicios, ventas y reportes analíticos. La aplicación facilita el control de stock, registro de ventas rápidas, seguimiento de servicios prestados y visualización de métricas clave del negocio a través de un dashboard interactivo.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up" data-aos-delay="100" data-skills="data_analyst,python_developer">
+                        
+                            <div class="project-card h-100">
+                                <div class="project-card-header">
+                                    <h4>
+                                        
+                                            Sistema de Gestión y Control de Laboratorios Académicos
+                                        
+                                    </h4>
+                                    
+                                    <p class="mb-0">
+                                        
+                                            Python, PySide6 (Qt), SQLAlchemy ORM, SQLite, PDF Rendering, CSV Processing, PyInstaller, Inno Setup, Git
+                                        
+                                    </p>
+                                    
+                                    
+                                        <div class="mt-2">
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Data Analyst
+                                                    
+                                                </span>
+                                            
+                                                <span class="category-badge">
+                                                    
+                                                        Python Developer
+                                                    
+                                                </span>
+                                            
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="project-card-body">
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <button class="btn btn-sm btn-orange btn-toggle description-toggle" data-target="description-7">
+                                            Descripción
+                                        </button>
+                                        
+                                        <button class="btn btn-sm btn-orange btn-toggle image-toggle" data-target="image-7">
+                                            Imagen
+                                        </button>
+                                        
+                                        <a href="/portfolio/projects/7/" class="btn btn-sm btn-orange">
+                                            Detalles
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/MFelix9310/REGISTROS_LABS" target="_blank" class="btn btn-sm btn-orange">
+                                            GitHub
+                                        </a>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de imagen (oculto por defecto) -->
+                                    <div id="image-7" class="project-image-container">
+                                        
+                                        <img src="/media/projects/1_REGISTROS.png" alt="Sistema de Gestión y Control de Laboratorios Académicos" class="img-fluid rounded">
+                                        
+                                    </div>
+                                    
+                                    <!-- Contenedor de descripción (oculto por defecto) -->
+                                    <div id="description-7" class="project-description">
+                                        <p>
+                                            
+                                                Sistema integral para la administración de laboratorios académicos que permite el registro y seguimiento de uso, generación de reportes personalizados en PDF con diseño profesional, gestión de docentes y laboratorios, e importación/exportación de datos. Facilita el control de acceso, la documentación de actividades y el análisis de utilización de recursos educativos.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Felix Ruiz M.</h5>
+                    <p>Python Developer & Data Scientist</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-icons">
+                        
+                            
+                                <a href="https://www.linkedin.com/in/felix-ruiz-mu%C3%B1oz-111784b8/" class="text-light me-3" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+                            
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                                <a href="https://www.instagram.com/f.alejorm93/?hl=es3" class="text-light me-3" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                            
+                            
+                        
+                            
+                            
+                                <a href="https://github.com/MFelix9310" class="text-light me-3" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+                            
+                            
+                            
+                        
+                    </div>
+                    <p class="mt-2">&copy; 2026 Felix Ruiz M. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/static/js/main.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    
+    
+<!-- Cargar los scripts de React solo si están disponibles -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Código JS existente para la versión sin React
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectItems = document.querySelectorAll('.project-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Quitar la clase 'active' de todos los botones
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    // Añadir la clase 'active' al botón actual
+                    this.classList.add('active');
+                    
+                    // Obtener el filtro seleccionado
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Mostrar u ocultar proyectos según el filtro
+                    projectItems.forEach(item => {
+                        const skills = item.getAttribute('data-skills');
+                        
+                        if (filter === 'all') {
+                            item.style.display = 'block';
+                        } else {
+                            // Verificar si la habilidad está en la lista de habilidades del proyecto
+                            if (skills && skills.includes(filter)) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Gestionar toggles de descripción e imagen
+            const toggleButtons = document.querySelectorAll('.btn-toggle');
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    const targetElement = document.getElementById(targetId);
+                    
+                    // Toggle clase active
+                    this.classList.toggle('active');
+                    targetElement.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html> 
