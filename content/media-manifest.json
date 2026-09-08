@@ -869,6 +869,12 @@
       "storagePath": "media/publications/matalab1-fiinal.pdf",
       "localFile": "out\\documents\\publications\\matalab1-fiinal.pdf",
       "bytes": 2879645
+    },
+    "projects/plataforma-estructural/01-editor-planos.png": {
+      "kind": "image",
+      "storagePath": "media/projects/plataforma-estructural/01-editor-planos.webp",
+      "localFile": "out\\images\\projects\\plataforma-estructural\\01-editor-planos.webp",
+      "bytes": 72364
     }
   }
 }

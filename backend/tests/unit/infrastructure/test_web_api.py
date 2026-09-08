@@ -82,13 +82,23 @@ class TestPublicRoutes:
         assert response.status_code == 200
         assert response.json()
 
-    def test_area_sin_proyectos_devuelve_lista_vacia_no_error(self, client: TestClient) -> None:
-        # Una subarea sin contenido debe dar 200 y lista vacia, no 404 ni error.
-        response = client.get(
-            f"{PREFIX}/projects", params={"area": "civil-bim", "subarea": "bim"}
-        )
-        assert response.status_code == 200
-        assert response.json() == []
+    def test_subarea_sin_proyectos_devuelve_lista_vacia_no_error(self, client: TestClient) -> None:
+        """Una subarea sin contenido da 200 y lista vacia, no 404 ni error.
+
+        La subarea vacia se busca en los datos en vez de fijarla: cual esta
+        vacia depende del catalogo y cambia cada vez que se publica algo.
+        """
+        areas = client.get(f"{PREFIX}/areas").json()
+        for area in areas:
+            for subarea in area["subareas"]:
+                response = client.get(
+                    f"{PREFIX}/projects",
+                    params={"area": area["key"], "subarea": subarea["key"]},
+                )
+                assert response.status_code == 200
+                if not response.json():
+                    return
+        pytest.skip("no hay ninguna subarea vacia en el catalogo actual")
 
     def test_subarea_sin_area_es_422(self, client: TestClient) -> None:
         response = client.get(f"{PREFIX}/projects", params={"subarea": "analyst"})

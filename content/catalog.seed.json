@@ -16,6 +16,59 @@
   },
   "projects": [
     {
+      "slug": "plataforma-estructural",
+      "featured": true,
+      "display_order": -100,
+      "status": "published",
+      "title": {
+        "es": "Plataforma de diseño estructural y permisos",
+        "en": "Structural design and permitting platform"
+      },
+      "summary": {
+        "es": "Plataforma web en producción para el diseño y la tramitación de permisos de estructuras de patio en Florida, desarrollada para un cliente estadounidense. Lee planos en PDF, los convierte en un modelo paramétrico, calcula bajo ACI 318-19, AISC 360-22 y ASCE 7-22, y produce el juego de planos a escala que el ingeniero colegiado revisa y sella.",
+        "en": "Production web platform for designing and permitting patio structures in Florida, built for a US client. It reads PDF drawings, turns them into a parametric model, calculates under ACI 318-19, AISC 360-22 and ASCE 7-22, and produces the scaled plan set that the licensed engineer reviews and seals."
+      },
+      "body": {
+        "es": "El problema es de coordinación: el propietario, el contratista y el ingeniero colegiado que firma los planos trabajan con herramientas distintas, y cada cambio de dimensión es una llamada. La plataforma los pone sobre el mismo proyecto y le da a cada uno las herramientas de su parte del trabajo.\n\nMi papel fue la arquitectura, el desarrollo y el despliegue. El criterio estructural y la validación de ingeniería los aportó un ingeniero colegiado del cliente.\n\nCuatro decisiones definen el sistema.\n\nEl modelo de inteligencia artificial tiene permiso explícito para abstenerse. Ningún dato de viento se adivina: cuando el ingeniero no ha suministrado la velocidad básica o la categoría de exposición, la salida dice que lo determina el ingeniero en vez de rellenar un número plausible. En un producto donde alguien firma con su licencia, inventar un valor es peor que no darlo.\n\nHay una sola fuente de verdad estructural. Materiales, normas, combinaciones de carga, zapatas y anclajes viven en un módulo puro sin dependencias de framework que alimenta a la vez las notas generales, los detalles constructivos, el despiece de materiales, el modelo tridimensional y el panel del ingeniero. La aleación que aparece en el despiece no puede divergir de la de la hoja de notas porque salen del mismo sitio.\n\nLa regla de negocio que separa al cliente del ingeniero vive en el esquema de la base de datos. Los datos personales están en una tabla aparte, la ficha que ve el ingeniero documenta qué columnas deliberadamente no existen, y una restricción hace estructuralmente imposible una reseña entre ambos. Un fallo en la interfaz no puede filtrar lo que la interfaz nunca recibe.\n\nEl cobro falla cerrado. La firma del webhook se verifica sobre el cuerpo crudo antes de interpretarlo, con idempotencia persistida, y los créditos se descuentan solo después de una generación correcta mediante una función restringida al rol de servicio.",
+        "en": "The problem is coordination: the homeowner, the contractor and the licensed engineer who signs the drawings all work in different tools, and every dimension change is a phone call. The platform puts them on the same project and gives each one the tools for their part of the job.\n\nMy role was architecture, development and deployment. Structural judgement and engineering validation came from a licensed engineer on the client side.\n\nFour decisions define the system.\n\nThe AI model has explicit permission to abstain. No wind data is guessed: when the engineer has not supplied the basic wind speed or the exposure category, the output says the engineer determines it rather than filling in a plausible number. In a product where someone signs with their license, inventing a value is worse than withholding it.\n\nThere is a single structural source of truth. Materials, codes, load combinations, footings and anchorage live in a pure module with no framework dependencies that feeds the general notes, the construction details, the material takeoff, the 3D model and the engineer panel at once. The alloy shown in the takeoff cannot drift from the one on the notes sheet because both read the same place.\n\nThe business rule separating client from engineer lives in the database schema. Personal data sits in its own table, the posting the engineer sees documents which columns deliberately do not exist, and a constraint makes a review between the two structurally impossible. An interface bug cannot leak what the interface never receives.\n\nBilling fails closed. The webhook signature is verified over the raw body before parsing, with persisted idempotency, and credits are deducted only after a successful generation through a function restricted to the service role."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "Supabase",
+        "Postgres",
+        "Row Level Security",
+        "Deno",
+        "Stripe",
+        "pdf.js",
+        "Vitest",
+        "Playwright"
+      ],
+      "project_url": null,
+      "repository_url": null,
+      "taxonomy": [
+        {
+          "area": "developer",
+          "subarea": "fullstack"
+        },
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        },
+        {
+          "area": "civil-bim",
+          "subarea": "bim"
+        }
+      ],
+      "thumbnail": "projects/plataforma-estructural/01-editor-planos.png",
+      "images": [],
+      "videos": [],
+      "documents": [],
+      "legacy_id": null,
+      "created_at": null
+    },
+    {
       "legacy_id": 29,
       "slug": "structrelai-data-engineering-data-science-para-confiabilidad-estructural",
       "title": {

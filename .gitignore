@@ -35,3 +35,6 @@ desktop.ini
 .coverage
 htmlcov/
 coverage/
+
+# Capturas sin procesar: pesan y su version optimizada ya viaja en Storage.
+content/incoming/
