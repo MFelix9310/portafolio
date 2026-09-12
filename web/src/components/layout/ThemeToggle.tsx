@@ -33,12 +33,15 @@ export function ThemeToggle({ locale }: { locale: Locale }) {
     }
   };
 
+  // WCAG 2.5.3: el estado visible («Auto», «Papel», «Cianotipo») va delante de la
+  // acción en el nombre accesible. Si la etiqueta sólo dijera la acción, quien
+  // dicta lo que lee no activaría el botón.
   return (
     <button
       type="button"
       onClick={cycle}
       className="border filete px-2 py-1 font-mono text-note uppercase tracking-[0.14em] text-muted transition-colors duration-200 hover:text-content"
-      aria-label={labels.label}
+      aria-label={`${labels[theme]} · ${labels.label}`}
     >
       {labels[theme]}
     </button>

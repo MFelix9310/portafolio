@@ -1,13 +1,11 @@
 'use client';
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 
 import LayerChips from './LayerChips';
-import ProjectGrid from './ProjectGrid';
-import Annotation from '@/components/primitives/Annotation';
+import { useLayers } from './LayerState';
 import type { Area, Project } from '@/lib/api/types';
-import { copy, plural } from '@/lib/i18n/copy';
 import type { Locale } from '@/lib/i18n/locale';
 
 interface AreaCatalogProps {
@@ -17,15 +15,20 @@ interface AreaCatalogProps {
 }
 
 /**
- * Estado de las capas en la URL (`?subarea=scientist,analyst`), no en memoria:
- * el filtro se comparte, se marca y se navega con el botón atrás.
- * Sin el parámetro, todas las capas están encendidas.
+ * Conmutador de capas del catálogo. Es la única pieza que lee la URL, así que es
+ * la única que cae dentro del límite de Suspense: la rejilla se prerenderiza
+ * fuera y sus tarjetas van en el HTML servido.
+ *
+ * El estado de las capas vive en la URL (`?subarea=scientist,analyst`), no en
+ * memoria: el filtro se comparte, se marca y se navega con el botón atrás. Sin
+ * el parámetro, todas las capas están encendidas —que es justo lo que el
+ * servidor puede dibujar.
  */
 export function AreaCatalog({ area, projects, locale }: AreaCatalogProps) {
-  const c = copy(locale);
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const { publish } = useLayers();
 
   const allKeys = useMemo(() => area.subareas.map((subarea) => subarea.key), [area.subareas]);
   const raw = searchParams.get('subarea');
@@ -37,6 +40,14 @@ export function AreaCatalog({ area, projects, locale }: AreaCatalogProps) {
       .map((key) => key.trim())
       .filter((key) => allKeys.includes(key));
   }, [raw, allKeys]);
+
+  // `null` cuando no hay parámetro: así la rejilla sabe que el estado coincide
+  // con el que sirvió el servidor y no tiene que tocar nada.
+  const selection = useMemo(() => (raw === null ? null : active), [raw, active]);
+
+  useEffect(() => {
+    publish(selection);
+  }, [selection, publish]);
 
   const write = (next: string[]) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -54,35 +65,20 @@ export function AreaCatalog({ area, projects, locale }: AreaCatalogProps) {
     () =>
       projects.filter((project) =>
         project.tags.some((tag) => tag.area === area.key && active.includes(tag.subarea)),
-      ),
+      ).length,
     [projects, active, area.key],
   );
 
   return (
-    <div className="flex flex-col gap-8">
-      <div className="flex flex-col gap-3 border-y filete py-4">
-        <LayerChips
-          subareas={area.subareas}
-          active={active}
-          locale={locale}
-          onToggle={toggle}
-          onReset={() => write(allKeys)}
-        />
-        <Annotation aria-live="polite">
-          {c.chrome.layers.showing} {String(visible.length).padStart(2, '0')} {c.chrome.layers.of}{' '}
-          {String(projects.length).padStart(2, '0')}{' '}
-          {plural(projects.length, c.chrome.layers.projects_one, c.chrome.layers.projects)}
-        </Annotation>
-      </div>
-
-      {visible.length > 0 ? (
-        <ProjectGrid projects={visible} locale={locale} />
-      ) : (
-        <p className="border filete p-8 text-center font-mono text-note uppercase tracking-[0.14em] text-muted">
-          {c.chrome.layers.all_off}
-        </p>
-      )}
-    </div>
+    <LayerChips
+      subareas={area.subareas}
+      active={active}
+      visible={visible}
+      total={projects.length}
+      locale={locale}
+      onToggle={toggle}
+      onReset={() => write(allKeys)}
+    />
   );
 }
 

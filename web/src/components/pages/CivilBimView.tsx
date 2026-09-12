@@ -4,6 +4,9 @@ import Annotation from '@/components/primitives/Annotation';
 import Reveal from '@/components/motion/Reveal';
 import { getArea, getProjectsByArea } from '@/lib/api/catalog';
 import AreaCatalog from '@/components/catalog/AreaCatalog';
+import LayerChips from '@/components/catalog/LayerChips';
+import LayerProvider from '@/components/catalog/LayerState';
+import ProjectGrid from '@/components/catalog/ProjectGrid';
 import { copy } from '@/lib/i18n/copy';
 import { t as localize, type Locale } from '@/lib/i18n/locale';
 import { Suspense } from 'react';
@@ -41,9 +44,27 @@ export async function CivilBimView({ locale }: { locale: Locale }) {
       {projects.length === 0 ? (
         <EmptyArea locale={locale} sheet="C-01" />
       ) : (
-        <Suspense fallback={<div className="min-h-[40vh]" aria-hidden="true" />}>
-          <AreaCatalog area={area} projects={projects} locale={locale} />
-        </Suspense>
+        <LayerProvider>
+          <div className="flex flex-col gap-8">
+            {/* Igual que en AreaView: dentro del Suspense sólo va el conmutador,
+                que es lo único que lee la URL. La rejilla se prerenderiza. */}
+            <Suspense
+              fallback={
+                <LayerChips
+                  subareas={area.subareas}
+                  active={area.subareas.map((subarea) => subarea.key)}
+                  visible={projects.length}
+                  total={projects.length}
+                  locale={locale}
+                />
+              }
+            >
+              <AreaCatalog area={area} projects={projects} locale={locale} />
+            </Suspense>
+
+            <ProjectGrid projects={projects} areaKey={area.key} locale={locale} />
+          </div>
+        </LayerProvider>
       )}
     </div>
   );

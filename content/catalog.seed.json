@@ -2522,19 +2522,25 @@
   "contacts": [
     {
       "kind": "linkedin",
-      "value": "https://www.linkedin.com/in/felix-ruiz-mu%C3%B1oz-111784b8/",
-      "display_order": 1,
-      "status": "published"
-    },
-    {
-      "kind": "instagram",
-      "value": "https://www.instagram.com/f.alejorm93/?hl=es3",
-      "display_order": 2,
+      "value": "https://www.linkedin.com/in/felix-ruiz-munoz-data-science",
+      "display_order": 0,
       "status": "published"
     },
     {
       "kind": "github",
       "value": "https://github.com/MFelix9310",
+      "display_order": 1,
+      "status": "published"
+    },
+    {
+      "kind": "tiktok",
+      "value": "https://www.tiktok.com/@civil.py",
+      "display_order": 2,
+      "status": "published"
+    },
+    {
+      "kind": "instagram",
+      "value": "https://www.instagram.com/f.alejorm93/",
       "display_order": 3,
       "status": "published"
     }

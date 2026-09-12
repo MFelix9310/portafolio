@@ -1,123 +1,209 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 import ProjectCard from './ProjectCard';
-import type { Project } from '@/lib/api/types';
+import { useLayers } from './LayerState';
+import type { AreaKey, Project } from '@/lib/api/types';
+import { copy } from '@/lib/i18n/copy';
 import type { Locale } from '@/lib/i18n/locale';
 import { DUR, EASE, ensureGsap, prefersReducedMotion } from '@/lib/motion';
 
 interface ProjectGridProps {
   projects: Project[];
+  areaKey: AreaKey;
   locale: Locale;
 }
 
-const signatureOf = (projects: Project[]) => projects.map((project) => project.slug).join('|');
+interface Pending {
+  /** Capas apagadas que hay que confirmar cuando acabe la animación. */
+  hidden: string[];
+  entering: string[];
+  leaving: string[];
+}
 
 /**
  * Gesto 2 — capas CAD.
  *
+ * La rejilla la dibuja el servidor con **todos** los proyectos del área, porque
+ * ése es el estado por defecto y así las tarjetas existen en el HTML servido
+ * (indexación, previsualizaciones al compartir, rastreadores). Sin JavaScript se
+ * ven todos: la degradación correcta.
+ *
+ * El cliente sólo *oculta*. Y lo hace por `className`, que es de React, no
+ * escribiendo `style.display` a mano: en un rerender React no tiene nada que
+ * deshacer. GSAP se queda con `opacity` y `transform`, que nadie más toca.
+ *
  * Al apagar una capa, sus proyectos no desaparecen de golpe: primero se vacía el
  * contenido y queda el filete (el rectángulo de la capa oculta), y sólo después
- * se retira. Sólo se animan `opacity` y `transform`.
+ * se retira de la lámina.
  */
-export function ProjectGrid({ projects, locale }: ProjectGridProps) {
+export function ProjectGrid({ projects, areaKey, locale }: ProjectGridProps) {
+  const c = copy(locale);
   const container = useRef<HTMLDivElement>(null);
-  const [rendered, setRendered] = useState<Project[]>(projects);
-  const previous = useRef<string>(signatureOf(projects));
-  const firstRender = useRef(true);
-  const signature = signatureOf(projects);
+  const { active } = useLayers();
+
+  // Estado confirmado. Arranca vacío para que el cliente hidrate exactamente el
+  // HTML que sirvió el servidor: nada oculto.
+  const [hidden, setHidden] = useState<string[]>([]);
+  const [pending, setPending] = useState<Pending | null>(null);
+
+  /** Última selección pedida, confirmada o aún animándose. */
+  const requested = useRef<string[] | null>(null);
+  const applied = useRef(false);
+
+  const subareasOf = (project: Project) =>
+    project.tags.filter((tag) => tag.area === areaKey).map((tag) => tag.subarea);
+
+  const target = useMemo(() => {
+    if (active === null) return [] as string[];
+    return projects
+      .filter((project) => !subareasOf(project).some((subarea) => active.includes(subarea)))
+      .map((project) => project.slug);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [active, projects, areaKey]);
+
+  const targetKey = target.join('|');
 
   useEffect(() => {
-    if (previous.current === signature) return;
+    if (applied.current && requested.current !== null && requested.current.join('|') === targetKey)
+      return;
+
+    const before = new Set(requested.current ?? []);
+    const after = new Set(target);
+    const slugs = projects.map((project) => project.slug);
+    const entering = slugs.filter((slug) => before.has(slug) && !after.has(slug));
+    const leaving = slugs.filter((slug) => !before.has(slug) && after.has(slug));
+
+    const first = !applied.current;
+    applied.current = true;
+    requested.current = target;
+
+    // Al montar sin filtro en la URL no hay nada que cambiar: el HTML servido ya
+    // es el estado correcto.
+    if (first && target.length === 0) return;
 
     const element = container.current;
-    const nextSlugs = new Set(projects.map((project) => project.slug));
-    const leaving = rendered.filter((project) => !nextSlugs.has(project.slug));
+    const node = (slug: string) =>
+      element?.querySelector<HTMLElement>(`[data-slot="${slug}"]`) ?? null;
 
-    if (!element || prefersReducedMotion() || leaving.length === 0) {
-      previous.current = signature;
-      setRendered(projects);
+    // Primera aplicación (la que viene de la URL al cargar) y movimiento
+    // reducido: se confirma sin animar. Se limpian los estilos en línea que
+    // pudiera haber dejado GSAP para que nada reaparezca transparente.
+    if (first || prefersReducedMotion() || (entering.length === 0 && leaving.length === 0)) {
+      const reset = entering.map(node).filter((item): item is HTMLElement => item !== null);
+      if (reset.length > 0) {
+        ensureGsap().set([...reset, ...parts(reset)], { clearProps: 'all' });
+      }
+      setHidden(target);
+      return;
+    }
+
+    // Fase 1: los que entran ya se dibujan, los que salen siguen en la lámina
+    // mientras se animan. Fase 2 (efecto de abajo) confirma el estado final.
+    setHidden(slugs.filter((slug) => before.has(slug) && after.has(slug)));
+    setPending({ hidden: target, entering, leaving });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [targetKey]);
+
+  useEffect(() => {
+    if (pending === null) return;
+
+    const element = container.current;
+    const commit = () => {
+      setHidden(pending.hidden);
+      setPending(null);
+    };
+
+    if (!element) {
+      commit();
       return;
     }
 
     const gsap = ensureGsap();
-    const slots = leaving
-      .map((project) => element.querySelector<HTMLElement>(`[data-slot="${project.slug}"]`))
-      .filter((node): node is HTMLElement => node !== null);
+    const nodes = (slugs: string[]) =>
+      slugs
+        .map((slug) => element.querySelector<HTMLElement>(`[data-slot="${slug}"]`))
+        .filter((item): item is HTMLElement => item !== null);
 
-    if (slots.length === 0) {
-      previous.current = signature;
-      setRendered(projects);
+    // Los que entran vienen del estado "capa apagada": filete primero, contenido
+    // después. `clearProps` borra lo que dejó la salida anterior.
+    const enter = nodes(pending.entering);
+    if (enter.length > 0) {
+      gsap.set([...enter, ...parts(enter)], { clearProps: 'all' });
+      gsap.fromTo(
+        enter,
+        { autoAlpha: 0, y: 12 },
+        { autoAlpha: 1, y: 0, duration: DUR.layer, ease: EASE, stagger: 0.05 },
+      );
+    }
+
+    const leave = nodes(pending.leaving);
+    if (leave.length === 0) {
+      commit();
       return;
     }
 
-    const timeline = gsap.timeline({
-      onComplete: () => {
-        previous.current = signature;
-        setRendered(projects);
-      },
-    });
-
+    const timeline = gsap.timeline({ onComplete: commit });
     timeline
       .to(
-        slots.map((slot) => slot.querySelector('[data-slot-body]')),
+        leave.map((slot) => slot.querySelector('[data-slot-body]')),
         { autoAlpha: 0, duration: DUR.layer, ease: EASE },
         0,
       )
       .to(
-        slots.map((slot) => slot.querySelector('[data-slot-ghost]')),
+        leave.map((slot) => slot.querySelector('[data-slot-ghost]')),
         { autoAlpha: 1, duration: DUR.layer * 0.6, ease: EASE },
         0,
       )
-      .to(slots, { autoAlpha: 0, scale: 0.99, duration: DUR.layer, ease: EASE }, DUR.layer * 0.9);
+      .to(leave, { autoAlpha: 0, scale: 0.99, duration: DUR.layer, ease: EASE }, DUR.layer * 0.9);
 
     return () => {
       timeline.kill();
     };
-  }, [signature, projects, rendered]);
+  }, [pending]);
 
-  // Los que entran vienen del estado "capa apagada": filete primero, contenido después.
-  useEffect(() => {
-    const element = container.current;
-    if (!element) return;
-
-    const fresh = element.querySelectorAll<HTMLElement>('[data-slot][data-fresh="true"]');
-    fresh.forEach((slot) => slot.setAttribute('data-fresh', 'false'));
-
-    // En el primer montaje no hay "entrada": las tarjetas ya están dibujadas.
-    if (firstRender.current) {
-      firstRender.current = false;
-      return;
-    }
-    if (prefersReducedMotion() || fresh.length === 0) return;
-
-    const gsap = ensureGsap();
-    gsap.fromTo(
-      fresh,
-      { autoAlpha: 0, y: 12 },
-      { autoAlpha: 1, y: 0, duration: DUR.layer, ease: EASE, stagger: 0.05 },
-    );
-  }, [rendered]);
+  const off = new Set(hidden);
+  const allOff = projects.length > 0 && off.size === projects.length;
 
   return (
-    <div
-      ref={container}
-      className="grid grid-cols-1 gap-gutter sm:grid-cols-2 xl:grid-cols-3"
-    >
-      {rendered.map((project) => (
-        <div key={project.slug} data-slot={project.slug} data-fresh="true" className="relative">
-          <span
-            data-slot-ghost
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 border filete opacity-0"
-          />
-          <div data-slot-body className="h-full">
-            <ProjectCard project={project} locale={locale} />
+    <>
+      <div ref={container} className="grid grid-cols-1 gap-gutter sm:grid-cols-2 xl:grid-cols-3">
+        {projects.map((project) => (
+          <div
+            key={project.slug}
+            data-slot={project.slug}
+            data-subarea={subareasOf(project).join(' ')}
+            className={off.has(project.slug) ? 'relative hidden' : 'relative'}
+          >
+            <span
+              data-slot-ghost
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 border filete opacity-0"
+            />
+            <div data-slot-body className="h-full">
+              <ProjectCard project={project} locale={locale} />
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+
+      {allOff ? (
+        <p className="border filete p-8 text-center font-mono text-note uppercase tracking-[0.14em] text-muted">
+          {c.chrome.layers.all_off}
+        </p>
+      ) : null}
+    </>
+  );
+}
+
+/** Cuerpo y filete de cada hueco: lo que anima la transición de capa. */
+function parts(slots: HTMLElement[]): HTMLElement[] {
+  return slots.flatMap((slot) =>
+    [
+      slot.querySelector<HTMLElement>('[data-slot-body]'),
+      slot.querySelector<HTMLElement>('[data-slot-ghost]'),
+    ].filter((item): item is HTMLElement => item !== null),
   );
 }
 

@@ -2,6 +2,9 @@ import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 
 import AreaCatalog from '@/components/catalog/AreaCatalog';
+import LayerChips from '@/components/catalog/LayerChips';
+import LayerProvider from '@/components/catalog/LayerState';
+import ProjectGrid from '@/components/catalog/ProjectGrid';
 import Annotation from '@/components/primitives/Annotation';
 import DimensionLine from '@/components/primitives/DimensionLine';
 import Reveal from '@/components/motion/Reveal';
@@ -48,11 +51,30 @@ export async function AreaView({ areaKey, locale }: AreaViewProps) {
         </div>
       </Reveal>
 
-      {/* `useSearchParams` obliga a un límite de Suspense para que la página siga
-          siendo estática y sirva desde el CDN con ISR. */}
-      <Suspense fallback={<div className="min-h-[40vh]" aria-hidden="true" />}>
-        <AreaCatalog area={area} projects={projects} locale={locale} />
-      </Suspense>
+      <LayerProvider>
+        <div className="flex flex-col gap-8">
+          {/* `useSearchParams` obliga a un límite de Suspense, así que sólo el
+              conmutador de capas queda dentro: la rejilla se prerenderiza fuera y
+              sus tarjetas van en el HTML servido. El fallback es la misma barra
+              sin manejadores, para que el HTML estático ya la traiga y no haya
+              salto al hidratar. */}
+          <Suspense
+            fallback={
+              <LayerChips
+                subareas={area.subareas}
+                active={area.subareas.map((subarea) => subarea.key)}
+                visible={projects.length}
+                total={projects.length}
+                locale={locale}
+              />
+            }
+          >
+            <AreaCatalog area={area} projects={projects} locale={locale} />
+          </Suspense>
+
+          <ProjectGrid projects={projects} areaKey={area.key} locale={locale} />
+        </div>
+      </LayerProvider>
     </div>
   );
 }

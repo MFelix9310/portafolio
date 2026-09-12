@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Marca de cota: la idea del sitio reducida a lo que sobrevive a 16 px.
+       Dos marcas de extremo y la linea que mide entre ellas, en rojo revision
+       sobre tinta. Sin texto: una inicial a este tamano es una mancha. -->
+  <rect width="32" height="32" fill="#0F1216"/>
+  <g stroke="#D8341F" stroke-width="2.5" stroke-linecap="square">
+    <line x1="7" y1="8" x2="7" y2="24"/>
+    <line x1="25" y1="8" x2="25" y2="24"/>
+    <line x1="7" y1="16" x2="25" y2="16"/>
+  </g>
+</svg>

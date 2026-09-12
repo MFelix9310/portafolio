@@ -11,6 +11,9 @@ import { route, swapLocale, type RouteKey } from '@/lib/routes';
 
 const LINKS: RouteKey[] = ['data', 'developer', 'civil-bim', 'about', 'contact'];
 
+/** Una sola fuente para el cajetín: lo que se lee y lo que se anuncia no pueden separarse. */
+const WORDMARK = { initials: 'FRM', name: 'Félix Ruiz M.' } as const;
+
 /** Cajetín superior de la lámina: identidad a la izquierda, índice a la derecha. */
 export function SiteHeader({ locale }: { locale: Locale }) {
   const c = copy(locale);
@@ -26,15 +29,17 @@ export function SiteHeader({ locale }: { locale: Locale }) {
   return (
     <header className="relative z-30 border-b filete bg-surface/85 backdrop-blur-sm">
       <div className="lamina flex h-14 items-center justify-between gap-4">
+        {/* WCAG 2.5.3: la etiqueta tiene que *contener* el texto visible del
+            cajetín, no sustituirlo, o el control por voz no encuentra el enlace. */}
         <Link
           href={route('home', locale)}
           className="group flex items-baseline gap-2"
-          aria-label={c.nav.home}
+          aria-label={`${WORDMARK.initials} ${WORDMARK.name} — ${c.nav.home}`}
         >
-          <span className="text-cajetin text-sm font-semibold text-content">FRM</span>
-          <span className="hidden font-mono text-note text-muted sm:inline">
-            Félix Ruiz M.
+          <span className="text-cajetin text-sm font-semibold text-content">
+            {WORDMARK.initials}
           </span>
+          <span className="hidden font-mono text-note text-muted sm:inline">{WORDMARK.name}</span>
         </Link>
 
         <nav aria-label={c.chrome.menu.label} className="hidden items-center gap-6 md:flex">

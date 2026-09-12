@@ -104,11 +104,14 @@ export function ProjectCard({ project, locale }: ProjectCardProps) {
         ))}
       </div>
 
-      <h3 className="mb-2 font-display text-xl font-semibold leading-tight tracking-tight text-content">
+      {/* `h2`, no `h3`: el `h1` de la página es el nombre del área y la rejilla
+          cuelga directamente de él. Saltarse el escalón rompe la navegación por
+          encabezados y deja al rastreador sin la jerarquía del índice. */}
+      <h2 className="mb-2 font-display text-xl font-semibold leading-tight tracking-tight text-content">
         <Link href={href} onClick={openDetail} className="underline-offset-4 hover:underline">
           {title}
         </Link>
-      </h3>
+      </h2>
 
       <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-muted">
         {localize(project.summary, locale)}

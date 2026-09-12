@@ -63,6 +63,7 @@ export const CONTACT_KIND_OPTIONS = [
   { value: 'linkedin', label: 'LinkedIn' },
   { value: 'github', label: 'GitHub' },
   { value: 'instagram', label: 'Instagram' },
+  { value: 'tiktok', label: 'TikTok' },
   { value: 'website', label: 'Web' },
 ] as const;
 
