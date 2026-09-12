@@ -1,11 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <!-- Marca de cota: la idea del sitio reducida a lo que sobrevive a 16 px.
-       Dos marcas de extremo y la linea que mide entre ellas, en rojo revision
-       sobre tinta. Sin texto: una inicial a este tamano es una mancha. -->
-  <rect width="32" height="32" fill="#0F1216"/>
-  <g stroke="#D8341F" stroke-width="2.5" stroke-linecap="square">
-    <line x1="7" y1="8" x2="7" y2="24"/>
-    <line x1="25" y1="8" x2="25" y2="24"/>
-    <line x1="7" y1="16" x2="25" y2="16"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Monograma FRM, el mismo de la cabecera del sitio.
+       Las letras van como trazados, no como texto: un favicon no puede depender
+       de que la tipografia este disponible al renderizarlo.
+
+       Dos decisiones tomadas mirandolo a 16 px, que es donde se usa de verdad:
+       las astas son gruesas y condensadas para que no se empasten, y el rojo
+       revision va a sangre en el borde inferior en vez de como filete suelto.
+       Un filete fino a ese tamano desaparece; una banda al borde se lee. -->
+  <rect width="64" height="64" fill="#0F1216"/>
+  <g fill="#F0EEE7">
+    <!-- F -->
+    <path d="M6 47 V11 H21 V18 H13 V25 H19 V32 H13 V47 Z"/>
+    <!-- R, con el ojo calado y la pierna en diagonal -->
+    <path d="M24 47 V11 H39 V32 H34 L39 47 H32 L28 33 V47 Z M31 18 V25 H33 V18 Z"
+          fill-rule="evenodd"/>
+    <!-- M -->
+    <path d="M42 47 V11 H47 L50 28 L53 11 H58 V47 H53 V26 L50 37 L47 26 V47 Z"/>
   </g>
+  <!-- Cota a sangre: la firma de la direccion de arte, visible aun a 16 px. -->
+  <rect x="0" y="54" width="64" height="10" fill="#D8341F"/>
 </svg>
