@@ -87,6 +87,12 @@ class MediaMap:
                     plan[rendition["storagePath"]] = self.local(rendition["localFile"])
             else:
                 plan[found["storagePath"]] = self.local(found["localFile"])
+                # Un GIF animado trae ademas una rendition H.264 que el front
+                # prefiere por pesar un orden de magnitud menos. Sin esta rama
+                # se referenciaba desde el sitio y nunca se subia: 400 al pedirla.
+                video = found.get("video")
+                if video and video.get("localFile"):
+                    plan[video["storagePath"]] = self.local(video["localFile"])
         return sorted(plan.items())
 
 

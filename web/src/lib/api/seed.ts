@@ -42,7 +42,18 @@ interface ManifestEntry {
   renditions?: Record<string, { storagePath: string; bytes: number }>;
 }
 
-const MEDIA_BASE = '/media';
+/**
+ * Base publica de la media, tambien en modo seed.
+ *
+ * Estaba fijada a `/media`, que solo existe en local porque `public/media` se
+ * puebla con `pnpm media:sync` y no viaja en el repo. En el primer despliegue a
+ * Netlify, sin backend, el sitio caia al seed y **todas** las imagenes daban 404.
+ *
+ * Con `NEXT_PUBLIC_MEDIA_URL` apunta a Supabase Storage; sin ella, a la copia
+ * local. En ambos casos la URL es la base mas el `storagePath` completo, que ya
+ * incluye el bucket como primer segmento (contrato A4).
+ */
+const MEDIA_BASE = process.env.NEXT_PUBLIC_MEDIA_URL?.replace(/\/+$/, '') ?? '';
 
 // `slugify` vivía aquí para recomponer a mano las rutas de media. Desde que el
 // manifiesto es la fuente de verdad no se usa: las rutas se leen, no se deducen.
@@ -131,7 +142,9 @@ function optionalLocalized(
 
 /** `media/projects/...` incluye el bucket; el front lo sirve bajo `/media/...`. */
 function assetUrl(storagePath: string | undefined): string | null {
-  return storagePath ? `${MEDIA_BASE}/${storagePath.replace(/^media\//, '')}` : null;
+  // El bucket se conserva: local sirve en `/media/...` y Storage en
+  // `.../object/public/media/...`, asi que en los dos casos la ruta es la misma.
+  return storagePath ? `${MEDIA_BASE}/${storagePath.replace(/^\/+/, '')}` : null;
 }
 
 function toRenditions(entry: ManifestEntry): { '720'?: Rendition; '1080'?: Rendition } {
