@@ -69,6 +69,184 @@
       "created_at": null
     },
     {
+      "slug": "bajada-cargas-columnas",
+      "featured": true,
+      "display_order": -99,
+      "status": "published",
+      "title": {
+        "es": "Bajada de cargas y diseño de columnas desde el plano",
+        "en": "Load takedown and column design from the drawing"
+      },
+      "summary": {
+        "es": "Aplicación de escritorio para un despacho estructural estadounidense que sustituyó una cadena de hojas de cálculo encadenadas por un flujo único, desde el plano en DXF hasta el reporte de diseño, bajo ACI 318-19 y ASCE 7-16. Siete motores de cálculo, todos verificados a paridad numérica exacta contra las hojas del despacho: ese fue el criterio de aceptación del proyecto.",
+        "en": "Desktop application for a US structural firm that replaced a chain of linked spreadsheets with a single flow, from the DXF drawing to the design report, under ACI 318-19 and ASCE 7-16. Seven calculation engines, every one verified to exact numerical parity against the firm spreadsheets: that was the acceptance criterion for the project."
+      },
+      "body": {
+        "es": "El punto de partida eran hojas de cálculo encadenadas: cada piso alimentaba al siguiente, y un cambio de dimensión obligaba a rehacer la cadena entera a mano. El sistema la sustituye por un flujo único que arranca en el plano y termina en el reporte.\n\nLee el DXF de cada nivel y detecta columnas, muros, aberturas y zonas de ocupación por capa. Calcula áreas tributarias por dos métodos, el diagrama de Voronoi y el método de paneles que usaba el despacho, con edición interactiva sobre lienzo para los casos que ninguno de los dos resuelve bien. Acumula cargas muertas, vivas y factorizadas piso por piso, aplica la reducción de carga viva por KLL y clasifica cada columna como interior, de borde o de esquina.\n\nEn el lado del diseño resuelve la capacidad axial por sección y cuantía, verifica punzonamiento con transferencia de momento en las secciones críticas, dimensiona rieles de pernos con cabeza cuando la sección falla, y resuelve flexión biaxial con diagramas de interacción por compatibilidad de deformaciones. La salida es la matriz de cargas, el cuadro de columnas y las cargas de servicio para la cimentación.\n\nLo que definió el proyecto no fue el alcance sino el criterio de aceptación. En un sistema que sustituye a una hoja de cálculo que el ingeniero lleva años usando y en la que confía, parecerse no vale: cada uno de los siete motores tenía que devolver exactamente el mismo número que la hoja, y esa fue la condición de entrega. Doce rondas de revisión con el ingeniero del despacho hasta que coincidieron todos.\n\nUnas veintiséis mil líneas de producción en ciento veintiséis archivos, con trescientas cuarenta y siete pruebas automatizadas, incluida una auditoría adversarial de integridad. Arquitectura hexagonal con el dominio puro y los motores de cálculo como funciones puras, que es lo que permite verificarlos uno a uno contra la hoja.",
+        "en": "The starting point was a chain of linked spreadsheets: each floor fed the next, and a single dimension change meant redoing the whole chain by hand. The system replaces it with one flow that starts at the drawing and ends at the report.\n\nIt reads the DXF for each level and detects columns, walls, openings and occupancy zones by layer. It computes tributary areas by two methods, the Voronoi diagram and the panel method the firm already used, with interactive canvas editing for the cases neither resolves well. It accumulates dead, live and factored loads floor by floor, applies live load reduction by KLL, and classifies each column as interior, edge or corner.\n\nOn the design side it resolves axial capacity by section and reinforcement ratio, checks punching shear with moment transfer at the critical sections, sizes headed stud rails when the section fails, and solves biaxial bending with interaction diagrams by strain compatibility. The output is the load matrix, the column schedule and the service loads for the foundation.\n\nWhat defined the project was not the scope but the acceptance criterion. In a system replacing a spreadsheet the engineer has used and trusted for years, close is not good enough: each of the seven engines had to return exactly the same number as the sheet, and that was the delivery condition. Twelve review rounds with the firm engineer until they all matched.\n\nAround twenty six thousand production lines across one hundred and twenty six files, with three hundred and forty seven automated tests including an adversarial integrity audit. Hexagonal architecture with a pure domain and the calculation engines as pure functions, which is what makes it possible to verify them one by one against the sheet."
+      },
+      "technologies": [
+        "Python",
+        "PySide6",
+        "Shapely",
+        "ezdxf",
+        "matplotlib",
+        "openpyxl",
+        "Supabase",
+        "Arquitectura hexagonal",
+        "ACI 318-19",
+        "ASCE 7-16"
+      ],
+      "project_url": null,
+      "repository_url": null,
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        },
+        {
+          "area": "developer",
+          "subarea": "desktop"
+        },
+        {
+          "area": "data",
+          "subarea": "scientist"
+        }
+      ],
+      "thumbnail": "projects/bajada-cargas-columnas/02_metodo_voronoi.png",
+      "images": [
+        {
+          "path": "projects/bajada-cargas-columnas/05_bajada_de_cargas.png",
+          "caption": {
+            "es": "Bajada de cargas piso por piso, con reducción de carga viva por KLL y clasificación de cada columna como interior, de borde o de esquina",
+            "en": "Floor by floor load takedown, with live load reduction by KLL and each column classified as interior, edge or corner"
+          },
+          "order": 1
+        },
+        {
+          "path": "projects/bajada-cargas-columnas/08_analisis_biaxial.png",
+          "caption": {
+            "es": "Flexión biaxial resuelta con diagramas de interacción P-M por compatibilidad de deformaciones",
+            "en": "Biaxial bending solved with P-M interaction diagrams by strain compatibility"
+          },
+          "order": 2
+        },
+        {
+          "path": "projects/bajada-cargas-columnas/10_matriz_de_columnas.png",
+          "caption": {
+            "es": "Matriz de capacidad axial φPn por sección y cuantía, con el armado sugerido para cada combinación",
+            "en": "Axial capacity matrix φPn by section and reinforcement ratio, with suggested rebar for each combination"
+          },
+          "order": 3
+        },
+        {
+          "path": "projects/bajada-cargas-columnas/12_resultados_del_edificio.png",
+          "caption": {
+            "es": "Resultados del edificio: cuadro de columnas y cargas de servicio para el dimensionamiento de la cimentación",
+            "en": "Building results: column schedule and service loads for foundation sizing"
+          },
+          "order": 4
+        }
+      ],
+      "videos": [],
+      "documents": [],
+      "legacy_id": null,
+      "created_at": null
+    },
+    {
+      "slug": "revitgrid",
+      "featured": true,
+      "display_order": -98,
+      "status": "published",
+      "title": {
+        "es": "RevitGrid",
+        "en": "RevitGrid"
+      },
+      "summary": {
+        "es": "Sistema propio que modela estructuras de hormigón armado en Revit a nivel de fabricación, con el acero resuelto varilla por varilla bajo ACI 318-19. Se describe el edificio en términos de obra, ejes, niveles y secciones, y el sistema construye el modelo completo, lo audita y entrega el cuadro de hierros. Un edificio de dos plantas sale de cuatro deslizadores con 1521 conjuntos de armadura colocados.",
+        "en": "In house system that models reinforced concrete structures in Revit at fabrication level, with rebar resolved bar by bar under ACI 318-19. You describe the building in construction terms, grids, levels and sections, and the system builds the full model, audits it and delivers the bar schedule. A two storey building comes out of four sliders with 1,521 rebar sets placed."
+      },
+      "body": {
+        "es": "Modelar el armado de un edificio en Revit es trabajo manual y repetitivo: cada columna, cada nudo, cada empalme se coloca a mano, y una revisión del dimensionamiento obliga a rehacerlo. RevitGrid parte de la descripción en términos de obra y construye el modelo entero.\n\nResuelve cimentación con pedestales y replantillo, columnas rectangulares y circulares, vigas constantes y acarteladas, losas macizas, nervadas y de cimentación, y el acero completo: empalmes escalonados al cincuenta por ciento, grifado uno a seis, confinamiento en pie y cabeza, estribos con gancho a ciento treinta y cinco grados, nudos viga columna y cuantías mínimas resueltas por sección.\n\nLa decisión de arquitectura que lo sostiene es que hay un solo motor, una extensión de pyRevit, expuesto por tres interfaces: una API local, una aplicación web con visor tridimensional y asistente por pasos, y un servidor conversacional. Todo el criterio de ingeniería vive en el motor, de modo que las tres producen resultados idénticos. Si el criterio viviera en cada interfaz, tres caminos distintos darían tres armados distintos para el mismo edificio, y ninguno sería el bueno.\n\nLa otra decisión es que la auditoría mide sobre el modelo real, no sobre la intención del generador. Comprueba interferencias entre varillas, contención del acero dentro del hormigón, longitudes de empalme, recubrimientos y estribos huérfanos. Un generador que se audita a sí mismo contra sus propios parámetros siempre se aprueba; este se audita contra lo que de verdad quedó colocado en Revit.\n\nFunciona de punta a punta sobre edificios reales.",
+        "en": "Modelling a building's rebar in Revit is manual, repetitive work: every column, every joint, every splice is placed by hand, and one revision of the sizing means redoing it. RevitGrid starts from the description in construction terms and builds the whole model.\n\nIt resolves foundations with pedestals and blinding, rectangular and circular columns, prismatic and haunched beams, solid, ribbed and mat slabs, and the full rebar: staggered splices at fifty percent, one to six cranks, confinement at base and head, stirrups with one hundred and thirty five degree hooks, beam column joints, and minimum ratios resolved per section.\n\nThe architectural decision that holds it up is a single engine, a pyRevit extension, exposed through three interfaces: a local API, a web application with a 3D viewer and a step by step wizard, and a conversational server. All the engineering judgement lives in the engine, so the three produce identical results. If the judgement lived in each interface, three paths would give three different rebar layouts for the same building, and none of them would be the right one.\n\nThe other decision is that the audit measures the real model, not the generator's intent. It checks clashes between bars, containment of steel inside the concrete, splice lengths, cover and orphan stirrups. A generator that audits itself against its own parameters always passes; this one is audited against what actually ended up placed in Revit.\n\nIt runs end to end on real buildings."
+      },
+      "technologies": [
+        "Python",
+        "Revit API",
+        "pyRevit",
+        "Dynamo",
+        "Next.js",
+        "Three.js",
+        "MCP",
+        "ACI 318-19",
+        "ACI 352",
+        "LOD 400"
+      ],
+      "project_url": null,
+      "repository_url": null,
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "bim"
+        },
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        },
+        {
+          "area": "developer",
+          "subarea": "fullstack"
+        }
+      ],
+      "thumbnail": "projects/revitgrid/13_revit_acero_completo.png",
+      "images": [
+        {
+          "path": "projects/revitgrid/14_revit_columna_detalle.png",
+          "caption": {
+            "es": "Detalle de una columna con su cimentación: arranque, confinamiento en pie y cabeza, y el nudo con las vigas del nivel superior",
+            "en": "Detail of a column with its foundation: starter bars, confinement at base and head, and the joint with the upper level beams"
+          },
+          "order": 1
+        },
+        {
+          "path": "projects/revitgrid/01_ejes.png",
+          "caption": {
+            "es": "Paso uno de ocho: el edificio se describe con deslizadores de ejes y separación, y la retícula se dibuja sola en el visor",
+            "en": "Step one of eight: the building is described with grid and spacing sliders, and the layout draws itself in the viewer"
+          },
+          "order": 2
+        },
+        {
+          "path": "projects/revitgrid/09_acero.png",
+          "caption": {
+            "es": "Paso siete: los parámetros del acero, con recubrimientos, empalmes y confinamiento resueltos por sección",
+            "en": "Step seven: rebar parameters, with cover, splices and confinement resolved per section"
+          },
+          "order": 3
+        },
+        {
+          "path": "projects/revitgrid/10_listo.png",
+          "caption": {
+            "es": "Resultado: 21 zapatas, 42 columnas, 64 vigas, 24 losas y 1521 conjuntos de armadura, con la verificación LOD 400 que mide sobre el modelo real",
+            "en": "Result: 21 footings, 42 columns, 64 beams, 24 slabs and 1,521 rebar sets, with the LOD 400 check that measures the real model"
+          },
+          "order": 4
+        },
+        {
+          "path": "projects/revitgrid/12_revit_edificio.png",
+          "caption": {
+            "es": "El mismo edificio en sólido, tal como queda entregado en Revit",
+            "en": "The same building shaded, as delivered in Revit"
+          },
+          "order": 5
+        }
+      ],
+      "videos": [],
+      "documents": [],
+      "legacy_id": null,
+      "created_at": null
+    },
+    {
       "legacy_id": 29,
       "slug": "structrelai-data-engineering-data-science-para-confiabilidad-estructural",
       "title": {
@@ -1877,6 +2055,69 @@
   ],
   "experiences": [
     {
+      "legacy_id": null,
+      "slug": "ingeniero-full-stack-y-de-datos-freelance-internacional-certia-group",
+      "company": {
+        "es": "Certia Group"
+      },
+      "position": {
+        "es": "Ingeniero Full Stack y de Datos, freelance internacional",
+        "en": "Full Stack and Data Engineer, international freelance"
+      },
+      "description": {
+        "es": "Construí el sistema que estima cuánto puede bajar una constructora en una licitación de obra pública sin caer en baja temeraria. Va desde el pipeline en Python que ingiere y normaliza los expedientes del portal estatal de contratación y de los portales autonómicos, hasta la aplicación web donde el jefe de estudios simula su oferta. En medio hay un lector que extrae con IA la fórmula de temeridad del pliego en PDF y un motor determinista que la calcula: el modelo de lenguaje solo lee el documento, la aritmética nunca la hace él, y cuando el pliego no da un parámetro el sistema declara el hueco en vez de inventarlo.\n\nEl dominio entero es obra pública española y no se puede modelar sin conocerla. El motor implementa el artículo 85 del Reglamento General de la Ley de Contratos, que fija los umbrales de presunción de anormalidad según el número de licitadores, y las fórmulas propias que cada pliego define sobre la media de bajas y su desviación. El filtrado y la comparación de empresas se apoyan en la clasificación oficial de contratistas de obras por grupos, subgrupos y categorías, y en los códigos CPV del capítulo de construcción. Leer un pliego de cláusulas administrativas, distinguir sus condiciones generales de las particulares del cuadro de características y saber qué significa cada término de la fórmula es trabajo de ingeniería de obra, no de desarrollo.\n\n251.731 expedientes de licitación ingeridos, 216.646 de obra y 154.005 con baja de adjudicación conocida, más 110.186 ofertas extraídas de actas de mesa en PDF.",
+        "en": "I built the system that estimates how far a construction firm can discount its bid in a public works tender without falling into the abnormally low range. It spans the Python pipeline that ingests and normalises tender records from the national and regional procurement portals through to the web application where the bid manager simulates an offer. In between sits a reader that uses AI to extract the abnormally low bid formula from the PDF tender documents and a deterministic engine that computes it: the language model only reads the document, it never does the arithmetic, and when a parameter is missing the system declares the gap instead of inventing it.\n\nThe whole domain is Spanish public works and cannot be modelled without knowing it. The engine implements article 85 of the General Regulation of the Public Contracts Act, which sets the abnormally low thresholds by number of bidders, plus the bespoke formulas each tender document defines over the mean discount and its deviation. Filtering and company comparison rely on the official classification of works contractors by group, subgroup and category, and on the construction chapter of the CPV codes. Reading an administrative clause document, telling its general conditions from the particular ones in the specification table, and knowing what each term of the formula means is construction engineering work, not software work.\n\n251.731 expedientes de licitación ingeridos, 216.646 de obra y 154.005 con baja de adjudicación conocida, más 110.186 ofertas extraídas de actas de mesa en PDF."
+      },
+      "keywords": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Python",
+        "PostgreSQL",
+        "Supabase",
+        "ETL",
+        "Vistas materializadas",
+        "Row Level Security",
+        "lxml",
+        "Recharts",
+        "Stripe",
+        "Playwright",
+        "Extracción de PDF",
+        "LLM",
+        "Simulación Montecarlo",
+        "Vercel"
+      ],
+      "keywords_en": [],
+      "company_logo": null,
+      "thumbnail": null,
+      "start_date": "2026-06-01",
+      "end_date": null,
+      "is_current": true,
+      "display_order": 0,
+      "status": "published",
+      "images": [],
+      "_pais": "España",
+      "_taxonomy": [
+        {
+          "area": "data",
+          "subarea": "engineer"
+        },
+        {
+          "area": "developer",
+          "subarea": "fullstack"
+        },
+        {
+          "area": "civil-bim",
+          "subarea": "construction"
+        }
+      ],
+      "_simultaneo_con": [
+        "strucmind"
+      ],
+      "_no_puedo_nombrar": "La empresa constructora y de ingeniería cliente que valida el producto, sus responsables técnicos, las cifras de negocio y los expedientes concretos usados como casos de prueba."
+    },
+    {
       "legacy_id": 2,
       "slug": "computer-vision-engineer-contractor-bim-automation-8base",
       "company": {
@@ -1930,9 +2171,9 @@
       "company_logo": "companies/8base.png",
       "thumbnail": "work/8base.png",
       "start_date": "2025-10-01",
-      "end_date": null,
-      "is_current": true,
-      "display_order": 0,
+      "end_date": "2026-02-28",
+      "is_current": false,
+      "display_order": 1,
       "status": "published",
       "images": [
         {
@@ -1999,7 +2240,7 @@
       "start_date": "2024-07-01",
       "end_date": null,
       "is_current": true,
-      "display_order": 1,
+      "display_order": 2,
       "status": "published",
       "images": []
     },
@@ -2050,9 +2291,9 @@
       "company_logo": "companies/ESPOCH-LOGO.jpg",
       "thumbnail": "work/ESPOCH-LOGO.jpg",
       "start_date": "2022-05-24",
-      "end_date": null,
-      "is_current": true,
-      "display_order": 2,
+      "end_date": "2026-08-31",
+      "is_current": false,
+      "display_order": 3,
       "status": "published",
       "images": []
     }

@@ -875,6 +875,72 @@
       "storagePath": "media/projects/plataforma-estructural/01-editor-planos.webp",
       "localFile": "out\\images\\projects\\plataforma-estructural\\01-editor-planos.webp",
       "bytes": 72364
+    },
+    "projects/bajada-cargas-columnas/02_metodo_voronoi.png": {
+      "kind": "image",
+      "storagePath": "media/projects/bajada-cargas-columnas/02_metodo_voronoi.webp",
+      "localFile": "out\\images\\projects\\bajada-cargas-columnas\\02_metodo_voronoi.webp",
+      "bytes": 104692
+    },
+    "projects/bajada-cargas-columnas/05_bajada_de_cargas.png": {
+      "kind": "image",
+      "storagePath": "media/projects/bajada-cargas-columnas/05_bajada_de_cargas.webp",
+      "localFile": "out\\images\\projects\\bajada-cargas-columnas\\05_bajada_de_cargas.webp",
+      "bytes": 132196
+    },
+    "projects/bajada-cargas-columnas/08_analisis_biaxial.png": {
+      "kind": "image",
+      "storagePath": "media/projects/bajada-cargas-columnas/08_analisis_biaxial.webp",
+      "localFile": "out\\images\\projects\\bajada-cargas-columnas\\08_analisis_biaxial.webp",
+      "bytes": 67068
+    },
+    "projects/bajada-cargas-columnas/10_matriz_de_columnas.png": {
+      "kind": "image",
+      "storagePath": "media/projects/bajada-cargas-columnas/10_matriz_de_columnas.webp",
+      "localFile": "out\\images\\projects\\bajada-cargas-columnas\\10_matriz_de_columnas.webp",
+      "bytes": 149698
+    },
+    "projects/bajada-cargas-columnas/12_resultados_del_edificio.png": {
+      "kind": "image",
+      "storagePath": "media/projects/bajada-cargas-columnas/12_resultados_del_edificio.webp",
+      "localFile": "out\\images\\projects\\bajada-cargas-columnas\\12_resultados_del_edificio.webp",
+      "bytes": 64896
+    },
+    "projects/revitgrid/13_revit_acero_completo.png": {
+      "kind": "image",
+      "storagePath": "media/projects/revitgrid/13_revit_acero_completo.webp",
+      "localFile": "out\\images\\projects\\revitgrid\\13_revit_acero_completo.webp",
+      "bytes": 165660
+    },
+    "projects/revitgrid/14_revit_columna_detalle.png": {
+      "kind": "image",
+      "storagePath": "media/projects/revitgrid/14_revit_columna_detalle.webp",
+      "localFile": "out\\images\\projects\\revitgrid\\14_revit_columna_detalle.webp",
+      "bytes": 78684
+    },
+    "projects/revitgrid/01_ejes.png": {
+      "kind": "image",
+      "storagePath": "media/projects/revitgrid/01_ejes.webp",
+      "localFile": "out\\images\\projects\\revitgrid\\01_ejes.webp",
+      "bytes": 60960
+    },
+    "projects/revitgrid/09_acero.png": {
+      "kind": "image",
+      "storagePath": "media/projects/revitgrid/09_acero.webp",
+      "localFile": "out\\images\\projects\\revitgrid\\09_acero.webp",
+      "bytes": 55832
+    },
+    "projects/revitgrid/10_listo.png": {
+      "kind": "image",
+      "storagePath": "media/projects/revitgrid/10_listo.webp",
+      "localFile": "out\\images\\projects\\revitgrid\\10_listo.webp",
+      "bytes": 59954
+    },
+    "projects/revitgrid/12_revit_edificio.png": {
+      "kind": "image",
+      "storagePath": "media/projects/revitgrid/12_revit_edificio.webp",
+      "localFile": "out\\images\\projects\\revitgrid\\12_revit_edificio.webp",
+      "bytes": 35698
     }
   }
 }

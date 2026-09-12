@@ -42,7 +42,7 @@
       "intro": "Python software built to be installed and used: desktop interfaces in PySide6 and Qt, Django web backends, persistence layers in SQLAlchemy. Every repository includes what it takes to run the project, not just to read it."
     },
     "civil_bim": {
-      "intro": "Where civil engineering meets data: structural analysis, geotechnics, construction planning and BIM automation. It gathers 15 projects, from seismic digital twins and stress field prediction with graph networks to CPT test analysis and critical path scheduling. This is where the portfolio started.",
+      "intro": "Where civil engineering meets data: structural analysis, geotechnics, construction planning and BIM automation. From seismic digital twins and stress field prediction with graph networks to CPT test analysis, critical path construction scheduling and rebar modelling at fabrication level. This is where the portfolio starts.",
       "empty_state": {
         "title": "Blank sheet",
         "body": "This layer exists in the structure of the site, not yet in its content. It is built to the same standard as the rest: nothing is published without being measured first. Until then the sheet keeps its title block and an empty drawing frame, which is exactly what it is."

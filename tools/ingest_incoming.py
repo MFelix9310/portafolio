@@ -92,7 +92,9 @@ def ingerir(carpeta: pathlib.Path) -> dict:
             imagenes.append({"path": legacy, "caption": shot.get("caption"), "order": orden})
 
     proyecto = dict(proyecto)
-    proyecto["thumbnail"] = f"projects/{slug}/{portada}"
+    # Un proyecto puede entrar sin capturas todavia: el texto ya vale por si
+    # solo y la miniatura se anade despues sin tocar la ficha.
+    proyecto["thumbnail"] = f"projects/{slug}/{portada}" if portada else None
     proyecto["images"] = imagenes
     proyecto.setdefault("videos", [])
     proyecto.setdefault("documents", [])

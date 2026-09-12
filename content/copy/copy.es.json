@@ -42,7 +42,7 @@
       "intro": "Software en Python para instalarse y usarse: interfaces de escritorio en PySide6 y Qt, backends web en Django, persistencia con SQLAlchemy. Cada repositorio incluye lo necesario para correr el proyecto, no solo para leerlo."
     },
     "civil_bim": {
-      "intro": "El cruce entre ingeniería civil y datos: cálculo estructural, geotecnia, planificación de obra y automatización BIM. Reúne 15 proyectos, desde gemelos digitales sísmicos y predicción de campos de esfuerzos con redes de grafos hasta análisis de ensayos CPT y programación de obra por ruta crítica. Es el punto de partida de este portafolio.",
+      "intro": "El cruce entre ingeniería civil y datos: cálculo estructural, geotecnia, planificación de obra y automatización BIM. Desde gemelos digitales sísmicos y predicción de campos de esfuerzos con redes de grafos hasta análisis de ensayos CPT, programación de obra por ruta crítica y modelado de armado a nivel de fabricación. Es el punto de partida de este portafolio.",
       "empty_state": {
         "title": "Lámina en blanco",
         "body": "Esta capa existe en la estructura del sitio, todavía no en su contenido. Se levanta con el mismo criterio que el resto: nada se publica sin estar medido. Hasta entonces la lámina se queda con el cajetín puesto y el cuadro de dibujo vacío, que es exactamente lo que es."

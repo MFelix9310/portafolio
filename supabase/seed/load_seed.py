@@ -159,10 +159,11 @@ def build_plan(catalog: dict[str, Any], media: MediaMap) -> dict[str, Any]:
         "publications": [],
         "contacts": [],
     }
-    # Indexados por legacy_id del proyecto: su project_id real no se conoce
-    # hasta que PostgREST devuelve la fila.
-    links: dict[int, list[tuple[str, str]]] = {}
-    project_media: dict[int, list[dict[str, Any]]] = {}
+    # Indexados por SLUG del proyecto: su project_id real no se conoce hasta que
+    # PostgREST devuelve la fila, y el slug es la unica clave presente en todos.
+    # Los destacados no tienen legacy_id y todos colisionarian en None.
+    links: dict[str, list[tuple[str, str]]] = {}
+    project_media: dict[str, list[dict[str, Any]]] = {}
 
     for project in catalog["projects"]:
         legacy_id = project["legacy_id"]
@@ -178,13 +179,14 @@ def build_plan(catalog: dict[str, Any], media: MediaMap) -> dict[str, Any]:
                 "legacy_id": legacy_id,
                 "status": project["status"],
                 "display_order": project["display_order"],
-                # `body` se omite a proposito: no existe en el export y PostgREST
-                # solo actualiza las columnas que enviamos, asi que una recarga no
-                # pisa lo que Felix escriba desde /admin.
+                # `body` solo viaja cuando el seed lo trae, que es el caso de los
+                # proyectos destacados. Los heredados no lo tienen, y omitir la
+                # columna hace que una recarga no pise lo escrito desde /admin.
+                **({"body": project["body"]} if project.get("body") else {}),
             }
         )
-        links[legacy_id] = [(t["area"], t["subarea"]) for t in project["taxonomy"]]
-        project_media[legacy_id] = build_media_rows(project, media)
+        links[project["slug"]] = [(t["area"], t["subarea"]) for t in project["taxonomy"]]
+        project_media[project["slug"]] = build_media_rows(project, media)
 
     for row in catalog["experiences"]:
         legacy_id = row["legacy_id"]
@@ -378,14 +380,25 @@ class Rest:
 def apply_plan(rest: Rest, plan: dict[str, Any]) -> None:
     rest.upsert("profile", plan["profile"], "singleton")
 
-    proyectos = rest.upsert("projects", plan["projects"], "legacy_id")
-    por_legacy = {row["legacy_id"]: row["id"] for row in proyectos}
+    # Los proyectos heredados del sitio antiguo se identifican por `legacy_id`;
+    # los destacados, incorporados despues, no lo tienen y su clave estable es
+    # el slug. Upsert en dos tandas, cada una contra su clave de conflicto: una
+    # sola contra `legacy_id` intentaria insertar los nuevos y chocaria con el
+    # indice unico del slug.
+    con_legacy = [p for p in plan["projects"] if p.get("legacy_id") is not None]
+    sin_legacy = [p for p in plan["projects"] if p.get("legacy_id") is None]
+
+    proyectos = rest.upsert("projects", con_legacy, "legacy_id") if con_legacy else []
+    if sin_legacy:
+        proyectos += rest.upsert("projects", sin_legacy, "slug")
+
+    por_slug = {row["slug"]: row["id"] for row in proyectos}
     print(f"  projects          {len(proyectos)} filas")
 
     subareas = resolve_subareas(rest)
 
     enlaces: list[dict[str, Any]] = []
-    for legacy_id, pares in plan["_links"].items():
+    for slug, pares in plan["_links"].items():
         for area_key, subarea_key in pares:
             subarea_id = subareas.get((area_key, subarea_key))
             if subarea_id is None:
@@ -393,19 +406,29 @@ def apply_plan(rest: Rest, plan: dict[str, Any]) -> None:
                     f"La taxonomia '{area_key}/{subarea_key}' no existe en la base. "
                     "Falta aplicar 20260828120200_taxonomia.sql."
                 )
-            enlaces.append({"project_id": por_legacy[legacy_id], "subarea_id": subarea_id})
+            enlaces.append({"project_id": por_slug[slug], "subarea_id": subarea_id})
     rest.insert_ignore("project_subareas", enlaces, "project_id,subarea_id")
     print(f"  project_subareas  {len(enlaces)} filas")
 
     medios: list[dict[str, Any]] = []
-    for legacy_id, filas in plan["_media"].items():
+    for slug, filas in plan["_media"].items():
         for fila in filas:
-            medios.append({**fila, "project_id": por_legacy[legacy_id]})
+            medios.append({**fila, "project_id": por_slug[slug]})
     rest.upsert("project_media", medios, "project_id,storage_path")
     print(f"  project_media     {len(medios)} filas")
 
+    # Igual que en projects: lo heredado del sitio antiguo se identifica por
+    # `legacy_id` y lo incorporado despues por `slug`. Education no tiene slug,
+    # asi que todas sus filas han de traer legacy_id.
     for tabla in ("experiences", "certifications", "education", "publications"):
-        rest.upsert(tabla, plan[tabla], "legacy_id")
+        con_legacy = [r for r in plan[tabla] if r.get("legacy_id") is not None]
+        sin_legacy = [r for r in plan[tabla] if r.get("legacy_id") is None]
+        if sin_legacy and not all("slug" in r for r in sin_legacy):
+            raise SeedError(f"{tabla}: hay filas sin legacy_id y sin slug, no hay clave estable")
+        if con_legacy:
+            rest.upsert(tabla, con_legacy, "legacy_id")
+        if sin_legacy:
+            rest.upsert(tabla, sin_legacy, "slug")
         print(f"  {tabla:<17} {len(plan[tabla])} filas")
 
     rest.upsert("contacts", plan["contacts"], "kind,value")

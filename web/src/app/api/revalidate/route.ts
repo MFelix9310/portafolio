@@ -1,4 +1,4 @@
-import { revalidatePath } from 'next/cache';
+import { revalidatePath, revalidateTag } from 'next/cache';
 import { NextResponse } from 'next/server';
 
 /**
@@ -64,12 +64,20 @@ export async function POST(request: Request) {
     // Sin cuerpo o cuerpo invalido: se revalida todo, que es lo seguro.
   }
 
+  // Primero la etiqueta, luego las rutas. `revalidatePath` invalida el render
+  // de la pagina, pero no la cache de datos de los `fetch` al backend, que van
+  // etiquetados como `catalog` en lib/api/client.ts. Sin esto la pagina se
+  // regeneraba y volvia a leer del cache de peticiones: publicar desde el panel
+  // no cambiaba nada visible hasta que caducaban los 300 segundos del fetch.
+  revalidateTag('catalog');
+
   const rutas = pedidas.length ? pedidas : TODAS_LAS_RUTAS;
   for (const ruta of rutas) revalidatePath(ruta);
   for (const layout of LAYOUTS_DINAMICOS) revalidatePath(layout, 'layout');
 
   return NextResponse.json({
     revalidated: [...rutas, ...LAYOUTS_DINAMICOS],
+    tags: ['catalog'],
     at: new Date().toISOString(),
   });
 }
