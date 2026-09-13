@@ -41,16 +41,15 @@ interface Pending {
 export function ProjectGrid({ projects, areaKey, locale }: ProjectGridProps) {
   const c = copy(locale);
   const container = useRef<HTMLDivElement>(null);
-  const { active } = useLayers();
+  const { active, animate } = useLayers();
 
   // Estado confirmado. Arranca vacío para que el cliente hidrate exactamente el
   // HTML que sirvió el servidor: nada oculto.
   const [hidden, setHidden] = useState<string[]>([]);
   const [pending, setPending] = useState<Pending | null>(null);
 
-  /** Última selección pedida, confirmada o aún animándose. */
-  const requested = useRef<string[] | null>(null);
-  const applied = useRef(false);
+  /** Última selección pedida, ya confirmada o aún animándose. */
+  const requested = useRef<string[]>([]);
 
   const subareasOf = (project: Project) =>
     project.tags.filter((tag) => tag.area === areaKey).map((tag) => tag.subarea);
@@ -66,31 +65,26 @@ export function ProjectGrid({ projects, areaKey, locale }: ProjectGridProps) {
   const targetKey = target.join('|');
 
   useEffect(() => {
-    if (applied.current && requested.current !== null && requested.current.join('|') === targetKey)
-      return;
+    // El montaje y los rerenders que no mueven la selección no tocan nada: el
+    // HTML servido ya es el estado correcto.
+    if (requested.current.join('|') === targetKey) return;
 
-    const before = new Set(requested.current ?? []);
+    const before = new Set(requested.current);
     const after = new Set(target);
     const slugs = projects.map((project) => project.slug);
     const entering = slugs.filter((slug) => before.has(slug) && !after.has(slug));
     const leaving = slugs.filter((slug) => !before.has(slug) && after.has(slug));
 
-    const first = !applied.current;
-    applied.current = true;
     requested.current = target;
-
-    // Al montar sin filtro en la URL no hay nada que cambiar: el HTML servido ya
-    // es el estado correcto.
-    if (first && target.length === 0) return;
 
     const element = container.current;
     const node = (slug: string) =>
       element?.querySelector<HTMLElement>(`[data-slot="${slug}"]`) ?? null;
 
-    // Primera aplicación (la que viene de la URL al cargar) y movimiento
-    // reducido: se confirma sin animar. Se limpian los estilos en línea que
-    // pudiera haber dejado GSAP para que nada reaparezca transparente.
-    if (first || prefersReducedMotion() || (entering.length === 0 && leaving.length === 0)) {
+    // Selección que venía en la URL al cargar, o movimiento reducido: se
+    // confirma seca. Se limpian los estilos en línea que pudiera haber dejado
+    // GSAP para que nada reaparezca transparente.
+    if (!animate || prefersReducedMotion() || (entering.length === 0 && leaving.length === 0)) {
       const reset = entering.map(node).filter((item): item is HTMLElement => item !== null);
       if (reset.length > 0) {
         ensureGsap().set([...reset, ...parts(reset)], { clearProps: 'all' });
@@ -104,7 +98,7 @@ export function ProjectGrid({ projects, areaKey, locale }: ProjectGridProps) {
     setHidden(slugs.filter((slug) => before.has(slug) && after.has(slug)));
     setPending({ hidden: target, entering, leaving });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [targetKey]);
+  }, [targetKey, animate]);
 
   useEffect(() => {
     if (pending === null) return;

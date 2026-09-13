@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 
 import LayerChips from './LayerChips';
 import { useLayers } from './LayerState';
@@ -45,8 +45,12 @@ export function AreaCatalog({ area, projects, locale }: AreaCatalogProps) {
   // con el que sirvió el servidor y no tiene que tocar nada.
   const selection = useMemo(() => (raw === null ? null : active), [raw, active]);
 
+  // La primera publicación es la que trae la URL al cargar y se aplica sin
+  // animar; de la segunda en adelante vienen de un clic en un chip y sí animan.
+  const settled = useRef(false);
   useEffect(() => {
-    publish(selection);
+    publish(selection, settled.current);
+    settled.current = true;
   }, [selection, publish]);
 
   const write = (next: string[]) => {
