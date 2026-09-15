@@ -23,7 +23,6 @@ function yearsInData(startDates: string[]): number {
   return Math.round(((Date.now() - earliest) / (1000 * 60 * 60 * 24 * 365.25)) * 10) / 10;
 }
 
-/** El titular lleva la segunda mitad —«de obra a datos»— en rojo de revisión. */
 /**
  * El titular se parte para acentuar la segunda mitad en rojo revision. El corte
  * lo marca el separador del propio texto: antes era un guion largo y ahora es
@@ -66,10 +65,8 @@ export async function HomeView({ locale }: { locale: Locale }) {
             {lead}
             {accent ? (
               <>
+                {/* Sin separador: el cambio a rojo revision ya marca el corte. */}
                 {' '}
-                {/* El guion largo a 7 rem parece un filete suelto: se baja a
-                    proporción de guion y se mantiene en el flujo del texto. */}
-                <span className="align-middle text-[0.42em] text-faint">—</span>{' '}
                 <span className="text-accent-text">{accent}</span>
               </>
             ) : null}
