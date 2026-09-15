@@ -4,7 +4,7 @@ import SiteShell from '@/components/layout/SiteShell';
 import { SITE_NAME, SITE_URL } from '@/lib/site';
 import '@/styles/globals.css';
 
-const TITULO = 'Félix Ruiz M. — Portafolio';
+const TITULO = 'Félix Ruiz M. · Portafolio';
 const DESCRIPCION =
   'Ingeniero civil que construye software de ingeniería. Cálculo estructural, ' +
   'automatización BIM y pipelines de datos, con el criterio de obra dentro del código.';

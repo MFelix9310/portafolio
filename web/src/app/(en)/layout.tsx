@@ -4,7 +4,7 @@ import SiteShell from '@/components/layout/SiteShell';
 import { SITE_NAME, SITE_URL } from '@/lib/site';
 import '@/styles/globals.css';
 
-const TITLE = 'Félix Ruiz M. — Portfolio';
+const TITLE = 'Félix Ruiz M. · Portfolio';
 const DESCRIPTION =
   'Civil engineer who builds engineering software. Structural calculation, BIM ' +
   'automation and data pipelines, with construction judgement inside the code.';

@@ -8,7 +8,7 @@ import { ImageResponse } from 'next/og';
  * la frase de posicionamiento con la segunda mitad en rojo revision, y el
  * cajetin de la esquina.
  */
-export const alt = 'Félix Ruiz M. — Ingeniero que automatiza, de obra a datos';
+export const alt = 'Félix Ruiz M. · Ingeniero que automatiza, de obra a datos';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
