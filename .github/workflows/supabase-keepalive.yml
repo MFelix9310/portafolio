@@ -1,0 +1,88 @@
+# Mantiene despierto el proyecto de Supabase.
+#
+# El plan gratuito pausa el proyecto tras 7 dias sin actividad, y con el se van
+# la foto, las capturas y los videos del sitio, que viven en su Storage. Esto
+# ya paso una vez. Cada ejecucion hace una consulta real a Postgres, que es lo
+# que Supabase cuenta como actividad; pedir un fichero del Storage no basta.
+#
+# Corre a diario, asi que aunque GitHub se salte varias ejecuciones quedan
+# margen de sobra antes de los 7 dias. Si algo falla, el job falla y GitHub
+# manda un correo al dueno del repositorio.
+
+name: Supabase despierto
+
+on:
+  schedule:
+    # Minuto raro a proposito: a la hora en punto GitHub retrasa o descarta
+    # ejecuciones programadas cuando hay carga.
+    - cron: '23 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: supabase-keepalive
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+      SITE_URL: https://portafolio-felix-ruiz.netlify.app
+    steps:
+      - name: Comprobar que estan los secretos
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "::error::Faltan los secretos SUPABASE_URL o SUPABASE_ANON_KEY en el repositorio."
+            exit 1
+          fi
+
+      - name: Consulta a Postgres
+        run: |
+          set -euo pipefail
+          codigo=$(curl -sS -o respuesta.json -w '%{http_code}' \
+            --retry 5 --retry-delay 20 --retry-all-errors --max-time 30 \
+            -H "apikey: $SUPABASE_ANON_KEY" \
+            -H "Authorization: Bearer $SUPABASE_ANON_KEY" \
+            "$SUPABASE_URL/rest/v1/areas?select=*&limit=1")
+          echo "HTTP $codigo"
+          if [ "$codigo" != "200" ]; then
+            echo "::error::Supabase respondio $codigo. Si el proyecto esta en pausa, restauralo en supabase.com/dashboard."
+            head -c 500 respuesta.json || true
+            exit 1
+          fi
+          # Una respuesta 200 que no sea una lista de filas tampoco es una consulta valida.
+          python3 -c 'import json,sys; d=json.load(open("respuesta.json")); sys.exit(0 if isinstance(d,list) else 1)' \
+            || { echo "::error::La respuesta no es una lista de filas."; exit 1; }
+          echo "Postgres respondio con $(python3 -c 'import json; print(len(json.load(open("respuesta.json"))))') fila(s)."
+
+      - name: Comprobar que la foto del inicio carga
+        # Prueba lo que ve un visitante: saca del HTML vivo la URL real del
+        # retrato en vez de llevarla escrita aqui, que se quedaria vieja el dia
+        # que cambie la foto.
+        run: |
+          set -euo pipefail
+          html=$(curl -fsS --retry 3 --max-time 30 "$SITE_URL/")
+          codificada=$(printf '%s' "$html" | grep -o 'url=https%3A%2F%2F[^&"]*supabase[^&"]*' | head -1 | sed 's/^url=//')
+          if [ -z "$codificada" ]; then
+            echo "::warning::No encontre ninguna imagen de Supabase en el inicio; no compruebo el Storage."
+            exit 0
+          fi
+          imagen=$(python3 -c 'import sys,urllib.parse; print(urllib.parse.unquote(sys.argv[1]))' "$codificada")
+          codigo=$(curl -sS -o /dev/null -w '%{http_code}' --retry 3 --retry-all-errors --max-time 30 "$imagen")
+          echo "Foto: HTTP $codigo  $imagen"
+          [ "$codigo" = "200" ] || { echo "::error::La foto del inicio no carga."; exit 1; }
+
+      - name: Mantener activo este workflow
+        # GitHub desactiva los workflows programados de un repositorio publico
+        # tras 60 dias sin actividad. Reactivarlo desde el propio job reinicia
+        # ese contador, asi que el cron no se apaga solo.
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/supabase-keepalive.yml/enable"
