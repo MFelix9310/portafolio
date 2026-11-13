@@ -12,6 +12,11 @@
   base    = "web"
   command = "pnpm build"
   publish = ".next"
+  # Con `base = "web"` Netlify solo mira cambios dentro de web/ y cancela el
+  # build si no los hay. Pero el catalogo vive en ../content, asi que subir un
+  # proyecto sin tocar codigo no se publicaba nunca. Se reconstruye cuando
+  # cambia cualquiera de los dos. Sale con 0 para saltar y con 1 para construir.
+  ignore  = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ../content ../netlify.toml"
 
 [build.environment]
   NODE_VERSION = "22"
