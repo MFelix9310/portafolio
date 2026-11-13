@@ -14,8 +14,9 @@ interface ProjectShotProps {
   /** `sizes` de `next/image`; describe el ancho real del hueco en cada breakpoint. */
   sizes: string;
   /**
-   * `contain` en la galería —son planos y gráficas, recortarlos pierde datos— y
-   * `cover` en las miniaturas de la rejilla, donde manda la regularidad.
+   * `contain` por defecto, también en las miniaturas de la rejilla: son planos y
+   * capturas, y con `cover` algunas tarjetas enseñaban poco más de la mitad.
+   * `cover` queda para quien tenga una imagen compuesta para su hueco.
    */
   fit?: 'contain' | 'cover';
   className?: string;

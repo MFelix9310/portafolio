@@ -46,6 +46,14 @@
       "empty_state": {
         "title": "Lámina en blanco",
         "body": "Esta capa existe en la estructura del sitio, todavía no en su contenido. Se levanta con el mismo criterio que el resto: nada se publica sin estar medido. Hasta entonces la lámina se queda con el cajetín puesto y el cuadro de dibujo vacío, que es exactamente lo que es."
+      },
+      "completed": {
+        "heading": "Proyectos BIM realizados",
+        "intro": "Edificios diseñados y modelados de principio a fin, con su juego de planos. Cada uno abre con sus mejores vistas y cierra con las láminas completas.",
+        "sheets": "láminas",
+        "view": "Ver proyecto y planos",
+        "tools_heading": "Herramientas y sistemas propios",
+        "count": "proyectos"
       }
     }
   },
@@ -182,7 +190,8 @@
         "geotechnical": "Geotecnia",
         "construction": "Construcción",
         "bim": "BIM",
-        "automation": "Automatización"
+        "automation": "Automatización",
+        "completed": "Proyectos realizados"
       }
     },
     "buttons": {
@@ -267,7 +276,9 @@
       "links": "Enlaces",
       "video": "Video",
       "images": "Imágenes",
-      "documents": "Documentos"
+      "documents": "Documentos",
+      "plans": "Planos",
+      "open_sheet": "Abrir lámina a resolución completa"
     },
     "about": {
       "experience": "Experiencia",

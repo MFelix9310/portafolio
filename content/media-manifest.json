@@ -941,6 +941,282 @@
       "storagePath": "media/projects/revitgrid/12_revit_edificio.webp",
       "localFile": "out\\images\\projects\\revitgrid\\12_revit_edificio.webp",
       "bytes": 35698
+    },
+    "projects/casa-de-huespedes/00_miniatura.png": {
+      "kind": "image",
+      "storagePath": "media/projects/casa-de-huespedes/00_miniatura.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\00_miniatura.webp",
+      "bytes": 56452
+    },
+    "projects/casa-de-huespedes/01_perspectiva_fachada.png": {
+      "kind": "image",
+      "storagePath": "media/projects/casa-de-huespedes/01_perspectiva_fachada.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\01_perspectiva_fachada.webp",
+      "bytes": 41290
+    },
+    "projects/casa-de-huespedes/07_corte_longitudinal_3d.png": {
+      "kind": "image",
+      "storagePath": "media/projects/casa-de-huespedes/07_corte_longitudinal_3d.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\07_corte_longitudinal_3d.webp",
+      "bytes": 113624
+    },
+    "projects/casa-de-huespedes/05_corte_fugado_planta2.png": {
+      "kind": "image",
+      "storagePath": "media/projects/casa-de-huespedes/05_corte_fugado_planta2.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\05_corte_fugado_planta2.webp",
+      "bytes": 125230
+    },
+    "projects/casa-de-huespedes/04_perspectiva_terraza.png": {
+      "kind": "image",
+      "storagePath": "media/projects/casa-de-huespedes/04_perspectiva_terraza.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\04_perspectiva_terraza.webp",
+      "bytes": 81464
+    },
+    "projects/casa-de-huespedes/02_perspectiva_interior.png": {
+      "kind": "image",
+      "storagePath": "media/projects/casa-de-huespedes/02_perspectiva_interior.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\02_perspectiva_interior.webp",
+      "bytes": 75806
+    },
+    "projects/casa-de-huespedes/03_corte_fugado_baja.png": {
+      "kind": "image",
+      "storagePath": "media/projects/casa-de-huespedes/03_corte_fugado_baja.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\03_corte_fugado_baja.webp",
+      "bytes": 81718
+    },
+    "projects/casa-de-huespedes/06_planta_baja_amoblada.png": {
+      "kind": "image",
+      "storagePath": "media/projects/casa-de-huespedes/06_planta_baja_amoblada.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\06_planta_baja_amoblada.webp",
+      "bytes": 102014
+    },
+    "projects/casa-de-huespedes/08_isometria_agua.png": {
+      "kind": "image",
+      "storagePath": "media/projects/casa-de-huespedes/08_isometria_agua.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\08_isometria_agua.webp",
+      "bytes": 146412
+    },
+    "projects/casa-de-huespedes/09_detalle_bano.png": {
+      "kind": "image",
+      "storagePath": "media/projects/casa-de-huespedes/09_detalle_bano.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\09_detalle_bano.webp",
+      "bytes": 217354
+    },
+    "projects/casa-de-huespedes/10_instalaciones_electricas_3d.png": {
+      "kind": "image",
+      "storagePath": "media/projects/casa-de-huespedes/10_instalaciones_electricas_3d.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\10_instalaciones_electricas_3d.webp",
+      "bytes": 121670
+    },
+    "projects/casa-de-huespedes/planos/lamina_p01.png": {
+      "kind": "document",
+      "storagePath": "media/projects/casa-de-huespedes/planos/lamina_p01.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\planos\\lamina_p01.webp",
+      "bytes": 322988
+    },
+    "projects/casa-de-huespedes/planos/lamina_p02.png": {
+      "kind": "document",
+      "storagePath": "media/projects/casa-de-huespedes/planos/lamina_p02.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\planos\\lamina_p02.webp",
+      "bytes": 584928
+    },
+    "projects/casa-de-huespedes/planos/lamina_p03.png": {
+      "kind": "document",
+      "storagePath": "media/projects/casa-de-huespedes/planos/lamina_p03.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\planos\\lamina_p03.webp",
+      "bytes": 288410
+    },
+    "projects/casa-de-huespedes/planos/lamina_p04.png": {
+      "kind": "document",
+      "storagePath": "media/projects/casa-de-huespedes/planos/lamina_p04.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\planos\\lamina_p04.webp",
+      "bytes": 593952
+    },
+    "projects/casa-de-huespedes/planos/lamina_p05.png": {
+      "kind": "document",
+      "storagePath": "media/projects/casa-de-huespedes/planos/lamina_p05.webp",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\planos\\lamina_p05.webp",
+      "bytes": 510054
+    },
+    "projects/casa-de-huespedes/planos/casa-de-huespedes.pdf": {
+      "kind": "document",
+      "storagePath": "media/projects/casa-de-huespedes/planos/casa-de-huespedes.pdf",
+      "localFile": "out\\images\\projects\\casa-de-huespedes\\planos\\casa-de-huespedes.pdf",
+      "bytes": 8157882
+    },
+    "projects/edificio-muros-estructurales/00_miniatura.png": {
+      "kind": "image",
+      "storagePath": "media/projects/edificio-muros-estructurales/00_miniatura.webp",
+      "localFile": "out\\images\\projects\\edificio-muros-estructurales\\00_miniatura.webp",
+      "bytes": 74048
+    },
+    "projects/edificio-muros-estructurales/01_estructura_completa.png": {
+      "kind": "image",
+      "storagePath": "media/projects/edificio-muros-estructurales/01_estructura_completa.webp",
+      "localFile": "out\\images\\projects\\edificio-muros-estructurales\\01_estructura_completa.webp",
+      "bytes": 82094
+    },
+    "projects/edificio-muros-estructurales/02_muros_y_porticos.png": {
+      "kind": "image",
+      "storagePath": "media/projects/edificio-muros-estructurales/02_muros_y_porticos.webp",
+      "localFile": "out\\images\\projects\\edificio-muros-estructurales\\02_muros_y_porticos.webp",
+      "bytes": 143304
+    },
+    "projects/edificio-muros-estructurales/03_pisos_1_a_3.png": {
+      "kind": "image",
+      "storagePath": "media/projects/edificio-muros-estructurales/03_pisos_1_a_3.webp",
+      "localFile": "out\\images\\projects\\edificio-muros-estructurales\\03_pisos_1_a_3.webp",
+      "bytes": 42500
+    },
+    "projects/edificio-muros-estructurales/04_planta_estructural.png": {
+      "kind": "image",
+      "storagePath": "media/projects/edificio-muros-estructurales/04_planta_estructural.webp",
+      "localFile": "out\\images\\projects\\edificio-muros-estructurales\\04_planta_estructural.webp",
+      "bytes": 82204
+    },
+    "projects/edificio-muros-estructurales/05_cortes_longitudinales.png": {
+      "kind": "image",
+      "storagePath": "media/projects/edificio-muros-estructurales/05_cortes_longitudinales.webp",
+      "localFile": "out\\images\\projects\\edificio-muros-estructurales\\05_cortes_longitudinales.webp",
+      "bytes": 82756
+    },
+    "projects/edificio-muros-estructurales/06_detalles_armado.png": {
+      "kind": "image",
+      "storagePath": "media/projects/edificio-muros-estructurales/06_detalles_armado.webp",
+      "localFile": "out\\images\\projects\\edificio-muros-estructurales\\06_detalles_armado.webp",
+      "bytes": 182256
+    },
+    "projects/edificio-muros-estructurales/planos/lamina_p01.png": {
+      "kind": "document",
+      "storagePath": "media/projects/edificio-muros-estructurales/planos/lamina_p01.webp",
+      "localFile": "out\\images\\projects\\edificio-muros-estructurales\\planos\\lamina_p01.webp",
+      "bytes": 180108
+    },
+    "projects/edificio-muros-estructurales/planos/lamina_p02.png": {
+      "kind": "document",
+      "storagePath": "media/projects/edificio-muros-estructurales/planos/lamina_p02.webp",
+      "localFile": "out\\images\\projects\\edificio-muros-estructurales\\planos\\lamina_p02.webp",
+      "bytes": 163414
+    },
+    "projects/edificio-muros-estructurales/planos/lamina_p03.png": {
+      "kind": "document",
+      "storagePath": "media/projects/edificio-muros-estructurales/planos/lamina_p03.webp",
+      "localFile": "out\\images\\projects\\edificio-muros-estructurales\\planos\\lamina_p03.webp",
+      "bytes": 198130
+    },
+    "projects/edificio-muros-estructurales/planos/lamina_p04.png": {
+      "kind": "document",
+      "storagePath": "media/projects/edificio-muros-estructurales/planos/lamina_p04.webp",
+      "localFile": "out\\images\\projects\\edificio-muros-estructurales\\planos\\lamina_p04.webp",
+      "bytes": 160654
+    },
+    "projects/edificio-muros-estructurales/planos/lamina_p05.png": {
+      "kind": "document",
+      "storagePath": "media/projects/edificio-muros-estructurales/planos/lamina_p05.webp",
+      "localFile": "out\\images\\projects\\edificio-muros-estructurales\\planos\\lamina_p05.webp",
+      "bytes": 240750
+    },
+    "projects/edificio-muros-estructurales/planos/lamina_p06.png": {
+      "kind": "document",
+      "storagePath": "media/projects/edificio-muros-estructurales/planos/lamina_p06.webp",
+      "localFile": "out\\images\\projects\\edificio-muros-estructurales\\planos\\lamina_p06.webp",
+      "bytes": 379362
+    },
+    "projects/edificio-muros-estructurales/planos/lamina_p07.png": {
+      "kind": "document",
+      "storagePath": "media/projects/edificio-muros-estructurales/planos/lamina_p07.webp",
+      "localFile": "out\\images\\projects\\edificio-muros-estructurales\\planos\\lamina_p07.webp",
+      "bytes": 209036
+    },
+    "projects/edificio-muros-estructurales/planos/edificio-muros-estructurales.pdf": {
+      "kind": "document",
+      "storagePath": "media/projects/edificio-muros-estructurales/planos/edificio-muros-estructurales.pdf",
+      "localFile": "out\\images\\projects\\edificio-muros-estructurales\\planos\\edificio-muros-estructurales.pdf",
+      "bytes": 5184298
+    },
+    "projects/nave-industrial/00_miniatura.png": {
+      "kind": "image",
+      "storagePath": "media/projects/nave-industrial/00_miniatura.webp",
+      "localFile": "out\\images\\projects\\nave-industrial\\00_miniatura.webp",
+      "bytes": 276842
+    },
+    "projects/nave-industrial/01_isometria_general.png": {
+      "kind": "image",
+      "storagePath": "media/projects/nave-industrial/01_isometria_general.webp",
+      "localFile": "out\\images\\projects\\nave-industrial\\01_isometria_general.webp",
+      "bytes": 276842
+    },
+    "projects/nave-industrial/02_portico_3d.png": {
+      "kind": "image",
+      "storagePath": "media/projects/nave-industrial/02_portico_3d.webp",
+      "localFile": "out\\images\\projects\\nave-industrial\\02_portico_3d.webp",
+      "bytes": 76504
+    },
+    "projects/nave-industrial/05_portico_tipo.png": {
+      "kind": "image",
+      "storagePath": "media/projects/nave-industrial/05_portico_tipo.webp",
+      "localFile": "out\\images\\projects\\nave-industrial\\05_portico_tipo.webp",
+      "bytes": 66304
+    },
+    "projects/nave-industrial/03_medio_portico.png": {
+      "kind": "image",
+      "storagePath": "media/projects/nave-industrial/03_medio_portico.webp",
+      "localFile": "out\\images\\projects\\nave-industrial\\03_medio_portico.webp",
+      "bytes": 83338
+    },
+    "projects/nave-industrial/06_zapata_pedestal.png": {
+      "kind": "image",
+      "storagePath": "media/projects/nave-industrial/06_zapata_pedestal.webp",
+      "localFile": "out\\images\\projects\\nave-industrial\\06_zapata_pedestal.webp",
+      "bytes": 62192
+    },
+    "projects/nave-industrial/07_armado_zapata.png": {
+      "kind": "image",
+      "storagePath": "media/projects/nave-industrial/07_armado_zapata.webp",
+      "localFile": "out\\images\\projects\\nave-industrial\\07_armado_zapata.webp",
+      "bytes": 45056
+    },
+    "projects/nave-industrial/08_planta_cimentacion.png": {
+      "kind": "image",
+      "storagePath": "media/projects/nave-industrial/08_planta_cimentacion.webp",
+      "localFile": "out\\images\\projects\\nave-industrial\\08_planta_cimentacion.webp",
+      "bytes": 72524
+    },
+    "projects/nave-industrial/planos/lamina_p01.png": {
+      "kind": "document",
+      "storagePath": "media/projects/nave-industrial/planos/lamina_p01.webp",
+      "localFile": "out\\images\\projects\\nave-industrial\\planos\\lamina_p01.webp",
+      "bytes": 313696
+    },
+    "projects/nave-industrial/planos/lamina_p02.png": {
+      "kind": "document",
+      "storagePath": "media/projects/nave-industrial/planos/lamina_p02.webp",
+      "localFile": "out\\images\\projects\\nave-industrial\\planos\\lamina_p02.webp",
+      "bytes": 324292
+    },
+    "projects/nave-industrial/planos/lamina_p03.png": {
+      "kind": "document",
+      "storagePath": "media/projects/nave-industrial/planos/lamina_p03.webp",
+      "localFile": "out\\images\\projects\\nave-industrial\\planos\\lamina_p03.webp",
+      "bytes": 329950
+    },
+    "projects/nave-industrial/planos/lamina_p04.png": {
+      "kind": "document",
+      "storagePath": "media/projects/nave-industrial/planos/lamina_p04.webp",
+      "localFile": "out\\images\\projects\\nave-industrial\\planos\\lamina_p04.webp",
+      "bytes": 411958
+    },
+    "projects/nave-industrial/planos/lamina_p05.png": {
+      "kind": "document",
+      "storagePath": "media/projects/nave-industrial/planos/lamina_p05.webp",
+      "localFile": "out\\images\\projects\\nave-industrial\\planos\\lamina_p05.webp",
+      "bytes": 378124
+    },
+    "projects/nave-industrial/planos/nave-industrial.pdf": {
+      "kind": "document",
+      "storagePath": "media/projects/nave-industrial/planos/nave-industrial.pdf",
+      "localFile": "out\\images\\projects\\nave-industrial\\planos\\nave-industrial.pdf",
+      "bytes": 1200505
     }
   }
 }

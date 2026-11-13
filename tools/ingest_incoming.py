@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import json
 import pathlib
+import shutil
 import subprocess
 import sys
 
@@ -39,14 +40,14 @@ def guardar(path: pathlib.Path, data: dict) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def a_webp(origen: pathlib.Path, destino: pathlib.Path) -> int:
-    """WebP calidad 82 con tope de 1920 px de ancho, como el resto del catalogo."""
+def a_webp(origen: pathlib.Path, destino: pathlib.Path, ancho: int = 1920, calidad: int = 82) -> int:
+    """WebP con tope de ancho. 1920 y calidad 82 para capturas, como el resto del catalogo."""
     destino.parent.mkdir(parents=True, exist_ok=True)
     subprocess.run(
         [
             str(FFMPEG), "-y", "-i", str(origen),
-            "-vf", "scale='min(1920,iw)':-2:flags=lanczos",
-            "-c:v", "libwebp", "-quality", "82",
+            "-vf", f"scale='min({ancho},iw)':-2:flags=lanczos",
+            "-c:v", "libwebp", "-quality", str(calidad),
             str(destino),
         ],
         check=True,
@@ -91,12 +92,54 @@ def ingerir(carpeta: pathlib.Path) -> dict:
         if shot["file"] != portada:
             imagenes.append({"path": legacy, "caption": shot.get("caption"), "order": orden})
 
+    # Laminas completas de un proyecto realizado. Van como documentos con imagen
+    # y a mas resolucion que una captura: a 1920 px una lamina A1 no deja leer
+    # una cota, y quien la abre es para leerla.
+    documentos: list[dict] = []
+    for hoja in capturas.get("sheets", []):
+        origen = carpeta / hoja["file"]
+        if not origen.is_file():
+            raise SystemExit(f"falta {origen}")
+        storage = f"projects/{slug}/planos/{pathlib.Path(hoja['file']).stem}.webp"
+        destino = SALIDA_IMG / storage
+        antes += origen.stat().st_size
+        despues += a_webp(origen, destino, ancho=4800, calidad=80)
+        legacy = f"projects/{slug}/planos/{hoja['file']}"
+        entradas[legacy] = {
+            "kind": "document",
+            "storagePath": f"media/{storage}",
+            "localFile": str(pathlib.Path("out") / "images" / storage),
+            "bytes": destino.stat().st_size,
+        }
+        documentos.append({"path": legacy, "title": hoja["title"]})
+
+    # El juego de planos en PDF, el ultimo documento de la ficha.
+    pdf = capturas.get("pdf")
+    if pdf:
+        origen = carpeta / pdf["file"]
+        if not origen.is_file():
+            raise SystemExit(f"falta {origen}")
+        storage = f"projects/{slug}/planos/{origen.name}"
+        destino = SALIDA_IMG / storage
+        destino.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(origen, destino)
+        legacy = f"projects/{slug}/planos/{origen.name}"
+        entradas[legacy] = {
+            "kind": "document",
+            "storagePath": f"media/{storage}",
+            "localFile": str(pathlib.Path("out") / "images" / storage),
+            "bytes": destino.stat().st_size,
+        }
+        documentos.append({"path": legacy, "title": pdf["title"]})
+
     proyecto = dict(proyecto)
     # Un proyecto puede entrar sin capturas todavia: el texto ya vale por si
     # solo y la miniatura se anade despues sin tocar la ficha.
     proyecto["thumbnail"] = f"projects/{slug}/{portada}" if portada else None
     proyecto["images"] = imagenes
     proyecto.setdefault("videos", [])
+    if documentos:
+        proyecto["documents"] = documentos
     proyecto.setdefault("documents", [])
     proyecto.setdefault("legacy_id", None)
     proyecto.setdefault("created_at", None)

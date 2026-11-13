@@ -8,6 +8,7 @@ import ProjectShot from '@/components/media/ProjectShot';
 import ProjectVideo from '@/components/media/ProjectVideo';
 import Reveal from '@/components/motion/Reveal';
 import { getProject } from '@/lib/api/catalog';
+import { isCompleted, isSheet } from '@/lib/api/sheets';
 import { areaName, subareaName } from '@/lib/api/taxonomy';
 import { copy } from '@/lib/i18n/copy';
 import { t as localize, type Locale } from '@/lib/i18n/locale';
@@ -26,7 +27,11 @@ export async function ProjectView({ slug, locale }: ProjectViewProps) {
   const title = localize(project.title, locale);
   const videos = project.media.filter((item) => item.kind === 'video');
   const images = project.media.filter((item) => item.kind === 'image');
-  const documents = project.media.filter((item) => item.kind === 'document');
+  const sheets = project.media.filter(isSheet);
+  const documents = project.media.filter((item) => item.kind === 'document' && !isSheet(item));
+  // En un proyecto realizado las imágenes son vistas del modelo: van a dos
+  // columnas para que se lean, y cada una abre a resolución completa.
+  const completed = isCompleted(project);
   const primaryArea = project.tags[0]?.area ?? 'data';
 
   return (
@@ -124,15 +129,30 @@ export async function ProjectView({ slug, locale }: ProjectViewProps) {
             <h2 id="imagenes" className="mb-4 font-display text-xl font-semibold text-content">
               {c.chrome.project.images}
             </h2>
-            <Reveal stagger="[data-shot]" className="grid gap-gutter sm:grid-cols-2 lg:grid-cols-3">
+            <Reveal
+              stagger="[data-shot]"
+              className={`grid gap-gutter sm:grid-cols-2 ${completed ? '' : 'lg:grid-cols-3'}`}
+            >
               {images.map((media) => (
                 <figure key={media.id} data-shot className="relative border filete bg-surface-sunken">
                   <CornerTicks size={8} />
-                  <ProjectShot
-                    media={media}
-                    alt={media.caption ? localize(media.caption, locale) : ''}
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  />
+                  {completed && !media.video ? (
+                    <a href={media.src} target="_blank" rel="noreferrer noopener" className="block bg-white">
+                      <ProjectShot
+                        media={media}
+                        alt={media.caption ? localize(media.caption, locale) : ''}
+                        ratio="4 / 3"
+                        className="!bg-white"
+                        sizes="(min-width: 640px) 50vw, 100vw"
+                      />
+                    </a>
+                  ) : (
+                    <ProjectShot
+                      media={media}
+                      alt={media.caption ? localize(media.caption, locale) : ''}
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    />
+                  )}
                   {media.caption ? (
                     <figcaption className="border-t filete px-3 py-2">
                       <Annotation className="!normal-case">
@@ -143,6 +163,53 @@ export async function ProjectView({ slug, locale }: ProjectViewProps) {
                 </figure>
               ))}
             </Reveal>
+          </section>
+        ) : null}
+
+        {sheets.length > 0 ? (
+          <section aria-labelledby="planos" className="mb-14">
+            <h2 id="planos" className="mb-4 font-display text-xl font-semibold text-content">
+              {c.chrome.project.plans}
+            </h2>
+            {/* Una lámina por fila y a todo el ancho: es el único tamaño en el
+                que un plano se lee. El enlace abre el original para hacer zoom. */}
+            <ol className="flex flex-col gap-gutter">
+              {sheets.map((media) => {
+                const sheetTitle = media.title ? localize(media.title, locale) : '';
+                return (
+                  <li key={media.id}>
+                    <figure className="relative border filete bg-white">
+                      <CornerTicks size={8} />
+                      <a
+                        href={media.src}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        aria-label={`${c.chrome.project.open_sheet}: ${sheetTitle}`}
+                        className="block"
+                      >
+                        <ProjectShot
+                          media={{ src: media.src, video: null, width: null, height: null }}
+                          alt={sheetTitle}
+                          ratio="1.414 / 1"
+                          sizes="(min-width: 1280px) 1200px, 100vw"
+                        />
+                      </a>
+                      <figcaption className="flex items-center justify-between gap-4 border-t filete px-3 py-2">
+                        <Annotation className="!normal-case">{sheetTitle}</Annotation>
+                        <a
+                          href={media.src}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="font-mono text-note uppercase tracking-[0.14em] text-muted transition-colors duration-200 hover:text-accent-text"
+                        >
+                          {c.chrome.project.open_sheet} <span aria-hidden="true">↗</span>
+                        </a>
+                      </figcaption>
+                    </figure>
+                  </li>
+                );
+              })}
+            </ol>
           </section>
         ) : null}
 

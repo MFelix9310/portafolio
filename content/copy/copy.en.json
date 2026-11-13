@@ -46,6 +46,14 @@
       "empty_state": {
         "title": "Blank sheet",
         "body": "This layer exists in the structure of the site, not yet in its content. It is built to the same standard as the rest: nothing is published without being measured first. Until then the sheet keeps its title block and an empty drawing frame, which is exactly what it is."
+      },
+      "completed": {
+        "heading": "Completed BIM projects",
+        "intro": "Buildings designed and modelled from start to finish, with their drawing set. Each one opens with its best views and closes with the full sheets.",
+        "sheets": "sheets",
+        "view": "See project and drawings",
+        "tools_heading": "In house tools and systems",
+        "count": "projects"
       }
     }
   },
@@ -182,7 +190,8 @@
         "geotechnical": "Geotechnical",
         "construction": "Construction",
         "bim": "BIM",
-        "automation": "Automation"
+        "automation": "Automation",
+        "completed": "Completed projects"
       }
     },
     "buttons": {
@@ -267,7 +276,9 @@
       "links": "Links",
       "video": "Video",
       "images": "Images",
-      "documents": "Documents"
+      "documents": "Documents",
+      "plans": "Drawings",
+      "open_sheet": "Open sheet at full resolution"
     },
     "about": {
       "experience": "Experience",

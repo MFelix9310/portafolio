@@ -85,7 +85,7 @@ export function ProjectCard({ project, locale }: ProjectCardProps) {
             media={{ src: cover, video: coverVideo, width: null, height: null }}
             alt=""
             ratio="16 / 9"
-            fit="cover"
+            fit="contain"
             sizes="(min-width: 1280px) 33vw, (min-width: 640px) 50vw, 100vw"
             className="h-full"
           />

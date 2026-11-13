@@ -922,6 +922,174 @@
       "documents": []
     },
     {
+      "slug": "casa-de-huespedes",
+      "featured": true,
+      "display_order": 10,
+      "status": "published",
+      "title": {
+        "es": "Casa de huéspedes",
+        "en": "Guest house"
+      },
+      "summary": {
+        "es": "Proyecto BIM completo en Revit de una casa de huéspedes de tres plantas más terraza, con doce habitaciones con baño. Arquitectura, instalaciones eléctricas e hidrosanitarias modeladas en un solo modelo coordinado y entregadas en cinco láminas.",
+        "en": "Full BIM project in Revit for a three storey guest house with a roof terrace and twelve rooms with private bathrooms. Architecture, electrical and plumbing systems modelled in one coordinated model and delivered in five sheets."
+      },
+      "body": {
+        "es": "El edificio tiene tres plantas tipo de cuatro habitaciones cada una y una terraza accesible con torre de escalera. Todo sale de un mismo modelo: las plantas amobladas, las fachadas, los cortes, las perspectivas y las dos especialidades de instalaciones, así que una modificación en arquitectura llega sola a las láminas de instalaciones.\n\nLas instalaciones eléctricas resuelven iluminación y tomacorrientes por planta con su tablero de distribución y cuadro de cargas. Las hidrosanitarias resuelven agua potable fría y caliente, aguas servidas y pluviales, con bajantes agrupadas en un ducto de fachada y un baño tipo detallado en 3D.\n\nEl diseño se apoya en la NEC: accesibilidad universal NEC-HS-AU, capítulo 16 de la NEC-11 para la norma hidrosanitaria e instalaciones eléctricas NEC-SB-IE.",
+        "en": "The building has three typical floors with four rooms each and an accessible roof terrace with a stair tower. Everything comes out of one model: furnished plans, elevations, sections, perspectives and both building services disciplines, so a change in the architecture reaches the services sheets on its own.\n\nThe electrical design covers lighting and power outlets per floor with the distribution board and load schedule. The plumbing design covers hot and cold water supply, wastewater and stormwater, with stacks grouped in a facade shaft and a typical bathroom detailed in 3D.\n\nThe design follows the Ecuadorian code NEC: universal accessibility NEC-HS-AU, chapter 16 of NEC-11 for plumbing, and NEC-SB-IE for electrical installations."
+      },
+      "technologies": [
+        "Revit",
+        "BIM",
+        "Arquitectura",
+        "Instalaciones eléctricas",
+        "Instalaciones hidrosanitarias",
+        "NEC"
+      ],
+      "project_url": null,
+      "repository_url": null,
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "completed"
+        },
+        {
+          "area": "civil-bim",
+          "subarea": "bim"
+        }
+      ],
+      "thumbnail": "projects/casa-de-huespedes/00_miniatura.png",
+      "images": [
+        {
+          "path": "projects/casa-de-huespedes/01_perspectiva_fachada.png",
+          "caption": {
+            "es": "Perspectiva de la fachada principal",
+            "en": "Main facade perspective"
+          },
+          "order": 1
+        },
+        {
+          "path": "projects/casa-de-huespedes/07_corte_longitudinal_3d.png",
+          "caption": {
+            "es": "Corte longitudinal 3D por las tres plantas de habitaciones",
+            "en": "3D longitudinal section through the three room floors"
+          },
+          "order": 2
+        },
+        {
+          "path": "projects/casa-de-huespedes/05_corte_fugado_planta2.png",
+          "caption": {
+            "es": "Corte fugado de la planta 2 con las habitaciones amobladas",
+            "en": "Cutaway of floor 2 with the furnished rooms"
+          },
+          "order": 3
+        },
+        {
+          "path": "projects/casa-de-huespedes/04_perspectiva_terraza.png",
+          "caption": {
+            "es": "Perspectiva aérea de la terraza",
+            "en": "Aerial view of the roof terrace"
+          },
+          "order": 4
+        },
+        {
+          "path": "projects/casa-de-huespedes/02_perspectiva_interior.png",
+          "caption": {
+            "es": "Perspectiva interior de la planta 2",
+            "en": "Interior perspective of floor 2"
+          },
+          "order": 5
+        },
+        {
+          "path": "projects/casa-de-huespedes/03_corte_fugado_baja.png",
+          "caption": {
+            "es": "Corte fugado de la planta baja",
+            "en": "Ground floor cutaway"
+          },
+          "order": 6
+        },
+        {
+          "path": "projects/casa-de-huespedes/06_planta_baja_amoblada.png",
+          "caption": {
+            "es": "Planta baja amoblada con áreas por ambiente",
+            "en": "Furnished ground floor plan with room areas"
+          },
+          "order": 7
+        },
+        {
+          "path": "projects/casa-de-huespedes/08_isometria_agua.png",
+          "caption": {
+            "es": "Isometría de agua potable fría y caliente",
+            "en": "Hot and cold water supply isometric"
+          },
+          "order": 8
+        },
+        {
+          "path": "projects/casa-de-huespedes/09_detalle_bano.png",
+          "caption": {
+            "es": "Detalle 3D del baño tipo con sus redes",
+            "en": "3D detail of the typical bathroom and its pipework"
+          },
+          "order": 9
+        },
+        {
+          "path": "projects/casa-de-huespedes/10_instalaciones_electricas_3d.png",
+          "caption": {
+            "es": "Modelo 3D de las instalaciones eléctricas",
+            "en": "3D model of the electrical installations"
+          },
+          "order": 10
+        }
+      ],
+      "videos": [],
+      "documents": [
+        {
+          "path": "projects/casa-de-huespedes/planos/lamina_p01.png",
+          "title": {
+            "es": "A-00 Presentación",
+            "en": "A-00 Presentation"
+          }
+        },
+        {
+          "path": "projects/casa-de-huespedes/planos/lamina_p02.png",
+          "title": {
+            "es": "A-01 Plantas amobladas",
+            "en": "A-01 Furnished plans"
+          }
+        },
+        {
+          "path": "projects/casa-de-huespedes/planos/lamina_p03.png",
+          "title": {
+            "es": "A-02 Fachadas y cortes",
+            "en": "A-02 Elevations and sections"
+          }
+        },
+        {
+          "path": "projects/casa-de-huespedes/planos/lamina_p04.png",
+          "title": {
+            "es": "IE-01 Instalaciones eléctricas",
+            "en": "IE-01 Electrical installations"
+          }
+        },
+        {
+          "path": "projects/casa-de-huespedes/planos/lamina_p05.png",
+          "title": {
+            "es": "IS-01 Instalaciones hidrosanitarias",
+            "en": "IS-01 Plumbing"
+          }
+        },
+        {
+          "path": "projects/casa-de-huespedes/planos/casa-de-huespedes.pdf",
+          "title": {
+            "es": "Juego completo de planos en PDF",
+            "en": "Full drawing set in PDF"
+          }
+        }
+      ],
+      "legacy_id": null,
+      "created_at": null
+    },
+    {
       "legacy_id": 19,
       "slug": "prediccion-de-campos-de-esfuerzos-con-graph-neural-networks",
       "title": {
@@ -1036,6 +1204,300 @@
       ],
       "videos": [],
       "documents": []
+    },
+    {
+      "slug": "nave-industrial",
+      "featured": true,
+      "display_order": 11,
+      "status": "published",
+      "title": {
+        "es": "Nave industrial",
+        "en": "Industrial warehouse"
+      },
+      "summary": {
+        "es": "Estructura metálica y cimentación de una nave industrial de 22,50 m de luz por 30,00 m de largo, con seis pórticos de cerchas y columnas en celosía. Cinco láminas desde la planta de cimentación hasta las uniones y placas base, con la planilla de despiece de varillas.",
+        "en": "Steel structure and foundations for an industrial warehouse spanning 22.50 m over a 30.00 m length, with six portal frames built from lattice trusses and lattice columns. Five sheets from the foundation plan to the connections and base plates, with the rebar bending schedule."
+      },
+      "body": {
+        "es": "Cada pórtico es una cercha a dos aguas con pendiente del 20 %, alero a 5,15 m y cumbrera a 7,40 m, apoyada en columnas en celosía de perfiles tubulares HSS. Las correas, los clips y los tensores en cruz cierran la cubierta y la arriostran en todos los vanos.\n\nLa cimentación son zapatas aisladas con pedestal, unidas por vigas de amarre. Cada zapata lleva su armado en planta y corte, y la planilla de despiece entrega formas, longitudes, ganchos y pesos por diámetro, lista para pedir el acero.\n\nLas uniones se detallan en los nudos de cumbrera y rodilla y en la base de columna, con placa base, pernos de anclaje y grout. El diseño sigue la NEC-SE-DS para peligro sísmico, la NEC-SE-AC para acero y la NEC-SE-HM para hormigón armado.",
+        "en": "Each portal frame is a pitched truss with a 20 % slope, eaves at 5.15 m and ridge at 7.40 m, resting on lattice columns made of HSS tubes. Purlins, clips and cross bracing rods close the roof and brace it in every bay.\n\nThe foundations are isolated footings with pedestals, tied together by grade beams. Each footing has its reinforcement in plan and section, and the bending schedule gives shapes, lengths, hooks and weights per bar diameter, ready to order the steel.\n\nThe connections are detailed at the ridge and knee joints and at the column base, with base plate, anchor bolts and grout. The design follows the Ecuadorian code NEC: NEC-SE-DS for seismic hazard, NEC-SE-AC for steel and NEC-SE-HM for reinforced concrete."
+      },
+      "technologies": [
+        "Revit",
+        "Estructura metálica",
+        "Cimentaciones",
+        "NEC-SE-AC",
+        "NEC-SE-DS",
+        "ASTM A36"
+      ],
+      "project_url": null,
+      "repository_url": null,
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "completed"
+        },
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        }
+      ],
+      "thumbnail": "projects/nave-industrial/00_miniatura.png",
+      "images": [
+        {
+          "path": "projects/nave-industrial/01_isometria_general.png",
+          "caption": {
+            "es": "Isometría general de la estructura metálica",
+            "en": "General isometric of the steel structure"
+          },
+          "order": 1
+        },
+        {
+          "path": "projects/nave-industrial/02_portico_3d.png",
+          "caption": {
+            "es": "Sección 3D del pórtico tipo con correas y viga de amarre",
+            "en": "3D section of the typical portal frame with purlins and grade beam"
+          },
+          "order": 2
+        },
+        {
+          "path": "projects/nave-industrial/05_portico_tipo.png",
+          "caption": {
+            "es": "Pórtico tipo con alero a 5,15 m y cumbrera a 7,40 m",
+            "en": "Typical portal frame with eaves at 5.15 m and ridge at 7.40 m"
+          },
+          "order": 3
+        },
+        {
+          "path": "projects/nave-industrial/03_medio_portico.png",
+          "caption": {
+            "es": "Medio pórtico con la identificación de cada elemento",
+            "en": "Half portal frame with every member identified"
+          },
+          "order": 4
+        },
+        {
+          "path": "projects/nave-industrial/06_zapata_pedestal.png",
+          "caption": {
+            "es": "Corte de zapata y pedestal con pernos de anclaje",
+            "en": "Footing and pedestal section with anchor bolts"
+          },
+          "order": 5
+        },
+        {
+          "path": "projects/nave-industrial/07_armado_zapata.png",
+          "caption": {
+            "es": "Planta de armado de la zapata Z-1",
+            "en": "Reinforcement plan of footing Z-1"
+          },
+          "order": 6
+        },
+        {
+          "path": "projects/nave-industrial/08_planta_cimentacion.png",
+          "caption": {
+            "es": "Planta de cimentación con zapatas y vigas de amarre",
+            "en": "Foundation plan with footings and grade beams"
+          },
+          "order": 7
+        }
+      ],
+      "videos": [],
+      "documents": [
+        {
+          "path": "projects/nave-industrial/planos/lamina_p01.png",
+          "title": {
+            "es": "E-01 Planta de cimentación",
+            "en": "E-01 Foundation plan"
+          }
+        },
+        {
+          "path": "projects/nave-industrial/planos/lamina_p02.png",
+          "title": {
+            "es": "E-02 Zapata y pedestal",
+            "en": "E-02 Footing and pedestal"
+          }
+        },
+        {
+          "path": "projects/nave-industrial/planos/lamina_p03.png",
+          "title": {
+            "es": "E-03 Planilla de varillas",
+            "en": "E-03 Rebar schedule"
+          }
+        },
+        {
+          "path": "projects/nave-industrial/planos/lamina_p04.png",
+          "title": {
+            "es": "E-04 Estructura metálica",
+            "en": "E-04 Steel structure"
+          }
+        },
+        {
+          "path": "projects/nave-industrial/planos/lamina_p05.png",
+          "title": {
+            "es": "E-05 Cercha y uniones",
+            "en": "E-05 Truss and connections"
+          }
+        },
+        {
+          "path": "projects/nave-industrial/planos/nave-industrial.pdf",
+          "title": {
+            "es": "Juego completo de planos en PDF",
+            "en": "Full drawing set in PDF"
+          }
+        }
+      ],
+      "legacy_id": null,
+      "created_at": null
+    },
+    {
+      "slug": "edificio-muros-estructurales",
+      "featured": true,
+      "display_order": 12,
+      "status": "published",
+      "title": {
+        "es": "Edificio de muros estructurales de 10 pisos",
+        "en": "10 storey structural wall building"
+      },
+      "summary": {
+        "es": "Diseño sismorresistente de un edificio de hormigón armado de 10 pisos y 35 m de altura en Quito, zona sísmica V sobre suelo D. Muros estructurales con elementos de borde confinados, modelados en ETABS y Revit y entregados en siete láminas. Proyecto de la Maestría en Construcción de Estructuras Sismorresistentes de la Universidad Politécnica Salesiana.",
+        "en": "Seismic design of a 10 storey, 35 m tall reinforced concrete building in Quito, seismic zone V on soil type D. Structural walls with confined boundary elements, modelled in ETABS and Revit and delivered in seven sheets. Project for the Master in Seismic Resistant Structures at Universidad Politécnica Salesiana."
+      },
+      "body": {
+        "es": "El sistema combina cuatro muros estructurales de 400 mm de espesor, dos de 6,00 m y dos de 5,00 m de longitud, con pórticos de columnas de 50 por 50 cm y vigas de 30 por 50 cm. Los muros toman casi todo el cortante sísmico y los pórticos cargan la gravedad.\n\nEl armado de los muros cambia a mitad de altura. En los pisos 1 a 5, donde la demanda es mayor, los elementos de borde son más largos y llevan más acero; de los pisos 6 a 10 se reducen. Cada sección se detalla con su acero de borde, sus dos cortinas de alma y su confinamiento con cercos y grapas.\n\nEl diseño sigue la NEC-SE-HM, la NEC-SE-DS 2015 y el apartado 18.10 del ACI 318-19 para muros especiales, con hormigón de 28 MPa y acero de 420 MPa. Las láminas cierran con los cuadros de muros, columnas, vigas y losas y el resumen de volumen de hormigón.",
+        "en": "The system combines four 400 mm thick structural walls, two 6.00 m and two 5.00 m long, with frames of 50 by 50 cm columns and 30 by 50 cm beams. The walls take almost all of the seismic shear and the frames carry gravity.\n\nThe wall reinforcement changes at mid height. On floors 1 to 5, where demand is highest, the boundary elements are longer and carry more steel; from floor 6 to 10 they are reduced. Each section is detailed with its boundary steel, its two web curtains and its confinement with hoops and crossties.\n\nThe design follows NEC-SE-HM, NEC-SE-DS 2015 and section 18.10 of ACI 318-19 for special walls, with 28 MPa concrete and 420 MPa steel. The sheets close with the wall, column, beam and slab schedules and the concrete volume summary."
+      },
+      "technologies": [
+        "ETABS",
+        "Revit",
+        "Hormigón armado",
+        "ACI 318-19",
+        "NEC-SE-HM",
+        "NEC-SE-DS"
+      ],
+      "project_url": null,
+      "repository_url": null,
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "completed"
+        },
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        }
+      ],
+      "thumbnail": "projects/edificio-muros-estructurales/00_miniatura.png",
+      "images": [
+        {
+          "path": "projects/edificio-muros-estructurales/01_estructura_completa.png",
+          "caption": {
+            "es": "Vista 3D de la estructura completa",
+            "en": "3D view of the full structure"
+          },
+          "order": 1
+        },
+        {
+          "path": "projects/edificio-muros-estructurales/02_muros_y_porticos.png",
+          "caption": {
+            "es": "Muros y pórticos con las losas transparentes",
+            "en": "Walls and frames with transparent slabs"
+          },
+          "order": 2
+        },
+        {
+          "path": "projects/edificio-muros-estructurales/03_pisos_1_a_3.png",
+          "caption": {
+            "es": "Vista 3D de los pisos 1 a 3",
+            "en": "3D view of floors 1 to 3"
+          },
+          "order": 3
+        },
+        {
+          "path": "projects/edificio-muros-estructurales/04_planta_estructural.png",
+          "caption": {
+            "es": "Planta estructural de los pisos 1 a 5 con los cuatro muros",
+            "en": "Structural plan of floors 1 to 5 with the four walls"
+          },
+          "order": 4
+        },
+        {
+          "path": "projects/edificio-muros-estructurales/05_cortes_longitudinales.png",
+          "caption": {
+            "es": "Cortes longitudinales por el eje de muros y por el pórtico",
+            "en": "Longitudinal sections through the wall axis and the frame"
+          },
+          "order": 5
+        },
+        {
+          "path": "projects/edificio-muros-estructurales/06_detalles_armado.png",
+          "caption": {
+            "es": "Secciones de muro con elementos de borde y elevaciones",
+            "en": "Wall sections with boundary elements and elevations"
+          },
+          "order": 6
+        }
+      ],
+      "videos": [],
+      "documents": [
+        {
+          "path": "projects/edificio-muros-estructurales/planos/lamina_p01.png",
+          "title": {
+            "es": "E-01 Planta estructural, pisos 1 a 5",
+            "en": "E-01 Structural plan, floors 1 to 5"
+          }
+        },
+        {
+          "path": "projects/edificio-muros-estructurales/planos/lamina_p02.png",
+          "title": {
+            "es": "E-02 Planta estructural, pisos 6 a 10",
+            "en": "E-02 Structural plan, floors 6 to 10"
+          }
+        },
+        {
+          "path": "projects/edificio-muros-estructurales/planos/lamina_p03.png",
+          "title": {
+            "es": "E-03 Cortes longitudinales",
+            "en": "E-03 Longitudinal sections"
+          }
+        },
+        {
+          "path": "projects/edificio-muros-estructurales/planos/lamina_p04.png",
+          "title": {
+            "es": "E-04 Cortes transversales",
+            "en": "E-04 Cross sections"
+          }
+        },
+        {
+          "path": "projects/edificio-muros-estructurales/planos/lamina_p05.png",
+          "title": {
+            "es": "E-05 Vistas 3D del modelo",
+            "en": "E-05 3D views of the model"
+          }
+        },
+        {
+          "path": "projects/edificio-muros-estructurales/planos/lamina_p06.png",
+          "title": {
+            "es": "E-06 Detalles de armado de muros",
+            "en": "E-06 Wall reinforcement details"
+          }
+        },
+        {
+          "path": "projects/edificio-muros-estructurales/planos/lamina_p07.png",
+          "title": {
+            "es": "E-07 Cuadros de elementos y cantidades",
+            "en": "E-07 Element schedules and quantities"
+          }
+        },
+        {
+          "path": "projects/edificio-muros-estructurales/planos/edificio-muros-estructurales.pdf",
+          "title": {
+            "es": "Juego completo de planos en PDF",
+            "en": "Full drawing set in PDF"
+          }
+        }
+      ],
+      "legacy_id": null,
+      "created_at": null
     },
     {
       "legacy_id": 17,

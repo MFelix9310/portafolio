@@ -33,7 +33,18 @@ export interface Copy {
   areas: {
     data: { intro: string };
     developer: { intro: string };
-    civil_bim: { intro: string; empty_state: { title: string; body: string } };
+    civil_bim: {
+      intro: string;
+      empty_state: { title: string; body: string };
+      completed: {
+        heading: string;
+        intro: string;
+        count: string;
+        sheets: string;
+        view: string;
+        tools_heading: string;
+      };
+    };
   };
   about: { heading: string; paragraphs: string[] };
   contact: {
@@ -119,6 +130,8 @@ export interface Copy {
       video: string;
       images: string;
       documents: string;
+      plans: string;
+      open_sheet: string;
     };
     about: {
       experience: string;

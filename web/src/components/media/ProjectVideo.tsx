@@ -60,7 +60,7 @@ export function ProjectVideo({ media, title, locale, className = '' }: ProjectVi
             width={media.width ?? 1920}
             height={media.height ?? 1080}
             sizes="(min-width: 1280px) 33vw, (min-width: 640px) 50vw, 100vw"
-            className="block h-full w-full object-cover transition-transform duration-500 ease-cota group-hover:scale-[1.02]"
+            className="block h-full w-full object-contain transition-transform duration-500 ease-cota group-hover:scale-[1.02]"
           />
         ) : (
           <span className="block aspect-video w-full" />

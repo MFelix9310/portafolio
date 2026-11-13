@@ -1,4 +1,6 @@
+import CompletedProjects from '@/components/catalog/CompletedProjects';
 import EmptyArea from '@/components/catalog/EmptyArea';
+import { isCompleted } from '@/lib/api/sheets';
 import ExtrusionSlot from '@/components/civil/ExtrusionSlot';
 import Annotation from '@/components/primitives/Annotation';
 import Reveal from '@/components/motion/Reveal';
@@ -19,8 +21,12 @@ import { Suspense } from 'react';
 export async function CivilBimView({ locale }: { locale: Locale }) {
   const c = copy(locale);
   const area = await getArea('civil-bim');
-  const projects = await getProjectsByArea('civil-bim');
+  const all = await getProjectsByArea('civil-bim');
   if (!area) return null;
+  // Los proyectos realizados tienen su propio apartado; la rejilla de capas se
+  // queda con las herramientas para no pintar dos veces el mismo proyecto.
+  const completed = all.filter(isCompleted);
+  const projects = all.filter((project) => !isCompleted(project));
 
   return (
     <div className="lamina py-12 md:py-16">
@@ -41,9 +47,17 @@ export async function CivilBimView({ locale }: { locale: Locale }) {
         <ExtrusionSlot locale={locale} />
       </div>
 
-      {projects.length === 0 ? (
+      <CompletedProjects projects={completed} locale={locale} />
+
+      {completed.length > 0 && projects.length > 0 ? (
+        <h2 className="mb-6 font-display text-display-sm font-semibold text-content">
+          {c.areas.civil_bim.completed.tools_heading}
+        </h2>
+      ) : null}
+
+      {projects.length === 0 && completed.length === 0 ? (
         <EmptyArea locale={locale} sheet="C-01" />
-      ) : (
+      ) : projects.length === 0 ? null : (
         <LayerProvider>
           <div className="flex flex-col gap-8">
             {/* Igual que en AreaView: dentro del Suspense sólo va el conmutador,
