@@ -1344,6 +1344,13 @@
             "es": "Juego completo de planos en PDF",
             "en": "Full drawing set in PDF"
           }
+        },
+        {
+          "path": "projects/nave-industrial/planos/memoria-calculo-nave-industrial.pdf",
+          "title": {
+            "es": "Memoria de cálculo en PDF",
+            "en": "Calculation report in PDF"
+          }
         }
       ],
       "legacy_id": null,
@@ -1493,6 +1500,13 @@
           "title": {
             "es": "Juego completo de planos en PDF",
             "en": "Full drawing set in PDF"
+          }
+        },
+        {
+          "path": "projects/edificio-muros-estructurales/planos/memoria-calculo-edificio-muros.pdf",
+          "title": {
+            "es": "Memoria de cálculo en PDF",
+            "en": "Calculation report in PDF"
           }
         }
       ],

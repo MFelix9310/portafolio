@@ -113,9 +113,10 @@ def ingerir(carpeta: pathlib.Path) -> dict:
         }
         documentos.append({"path": legacy, "title": hoja["title"]})
 
-    # El juego de planos en PDF, el ultimo documento de la ficha.
-    pdf = capturas.get("pdf")
-    if pdf:
+    # PDF descargables, al final de la ficha y en este orden: el juego de planos
+    # y, si la hay, la memoria de calculo. `pdf` suelto sigue valiendo.
+    pdfs = capturas.get("pdfs") or ([capturas["pdf"]] if capturas.get("pdf") else [])
+    for pdf in pdfs:
         origen = carpeta / pdf["file"]
         if not origen.is_file():
             raise SystemExit(f"falta {origen}")
