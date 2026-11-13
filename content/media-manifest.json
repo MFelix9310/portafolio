@@ -1222,13 +1222,13 @@
       "kind": "document",
       "storagePath": "media/projects/edificio-muros-estructurales/planos/memoria-calculo-edificio-muros.pdf",
       "localFile": "out\\images\\projects\\edificio-muros-estructurales\\planos\\memoria-calculo-edificio-muros.pdf",
-      "bytes": 6276840
+      "bytes": 6276832
     },
     "projects/nave-industrial/planos/memoria-calculo-nave-industrial.pdf": {
       "kind": "document",
       "storagePath": "media/projects/nave-industrial/planos/memoria-calculo-nave-industrial.pdf",
       "localFile": "out\\images\\projects\\nave-industrial\\planos\\memoria-calculo-nave-industrial.pdf",
-      "bytes": 3615863
+      "bytes": 1909635
     }
   }
 }
