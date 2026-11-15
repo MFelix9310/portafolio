@@ -1229,6 +1229,150 @@
       "storagePath": "media/projects/nave-industrial/planos/memoria-calculo-nave-industrial.pdf",
       "localFile": "out\\images\\projects\\nave-industrial\\planos\\memoria-calculo-nave-industrial.pdf",
       "bytes": 1909635
+    },
+    "projects/vivienda-multifamiliar/00_miniatura.png": {
+      "kind": "image",
+      "storagePath": "media/projects/vivienda-multifamiliar/00_miniatura.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\00_miniatura.webp",
+      "bytes": 114192
+    },
+    "projects/vivienda-multifamiliar/01_conjunto_sureste.png": {
+      "kind": "image",
+      "storagePath": "media/projects/vivienda-multifamiliar/01_conjunto_sureste.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\01_conjunto_sureste.webp",
+      "bytes": 114192
+    },
+    "projects/vivienda-multifamiliar/02_corte_escalera.png": {
+      "kind": "image",
+      "storagePath": "media/projects/vivienda-multifamiliar/02_corte_escalera.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\02_corte_escalera.webp",
+      "bytes": 186388
+    },
+    "projects/vivienda-multifamiliar/03_fugado_planta_baja.png": {
+      "kind": "image",
+      "storagePath": "media/projects/vivienda-multifamiliar/03_fugado_planta_baja.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\03_fugado_planta_baja.webp",
+      "bytes": 168018
+    },
+    "projects/vivienda-multifamiliar/04_fugado_dpto_1a.png": {
+      "kind": "image",
+      "storagePath": "media/projects/vivienda-multifamiliar/04_fugado_dpto_1a.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\04_fugado_dpto_1a.webp",
+      "bytes": 186016
+    },
+    "projects/vivienda-multifamiliar/06_planta_tipo_3d.png": {
+      "kind": "image",
+      "storagePath": "media/projects/vivienda-multifamiliar/06_planta_tipo_3d.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\06_planta_tipo_3d.webp",
+      "bytes": 147750
+    },
+    "projects/vivienda-multifamiliar/05_conjunto_ladera.png": {
+      "kind": "image",
+      "storagePath": "media/projects/vivienda-multifamiliar/05_conjunto_ladera.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\05_conjunto_ladera.webp",
+      "bytes": 125702
+    },
+    "projects/vivienda-multifamiliar/08_cimentacion_armado.png": {
+      "kind": "image",
+      "storagePath": "media/projects/vivienda-multifamiliar/08_cimentacion_armado.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\08_cimentacion_armado.webp",
+      "bytes": 268390
+    },
+    "projects/vivienda-multifamiliar/09_armado_losa.png": {
+      "kind": "image",
+      "storagePath": "media/projects/vivienda-multifamiliar/09_armado_losa.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\09_armado_losa.webp",
+      "bytes": 264316
+    },
+    "projects/vivienda-multifamiliar/13_columna_nudo.png": {
+      "kind": "image",
+      "storagePath": "media/projects/vivienda-multifamiliar/13_columna_nudo.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\13_columna_nudo.webp",
+      "bytes": 255440
+    },
+    "projects/vivienda-multifamiliar/10_nudos_3d.png": {
+      "kind": "image",
+      "storagePath": "media/projects/vivienda-multifamiliar/10_nudos_3d.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\10_nudos_3d.webp",
+      "bytes": 122378
+    },
+    "projects/vivienda-multifamiliar/11_armado_escalera.png": {
+      "kind": "image",
+      "storagePath": "media/projects/vivienda-multifamiliar/11_armado_escalera.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\11_armado_escalera.webp",
+      "bytes": 415180
+    },
+    "projects/vivienda-multifamiliar/12_tramo_escalera.png": {
+      "kind": "image",
+      "storagePath": "media/projects/vivienda-multifamiliar/12_tramo_escalera.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\12_tramo_escalera.webp",
+      "bytes": 177898
+    },
+    "projects/vivienda-multifamiliar/07_corte_transversal.png": {
+      "kind": "image",
+      "storagePath": "media/projects/vivienda-multifamiliar/07_corte_transversal.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\07_corte_transversal.webp",
+      "bytes": 87610
+    },
+    "projects/vivienda-multifamiliar/planos/lamina_p01.png": {
+      "kind": "document",
+      "storagePath": "media/projects/vivienda-multifamiliar/planos/lamina_p01.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\planos\\lamina_p01.webp",
+      "bytes": 594706
+    },
+    "projects/vivienda-multifamiliar/planos/lamina_p02.png": {
+      "kind": "document",
+      "storagePath": "media/projects/vivienda-multifamiliar/planos/lamina_p02.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\planos\\lamina_p02.webp",
+      "bytes": 440326
+    },
+    "projects/vivienda-multifamiliar/planos/lamina_p03.png": {
+      "kind": "document",
+      "storagePath": "media/projects/vivienda-multifamiliar/planos/lamina_p03.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\planos\\lamina_p03.webp",
+      "bytes": 316700
+    },
+    "projects/vivienda-multifamiliar/planos/lamina_p04.png": {
+      "kind": "document",
+      "storagePath": "media/projects/vivienda-multifamiliar/planos/lamina_p04.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\planos\\lamina_p04.webp",
+      "bytes": 677480
+    },
+    "projects/vivienda-multifamiliar/planos/lamina_p05.png": {
+      "kind": "document",
+      "storagePath": "media/projects/vivienda-multifamiliar/planos/lamina_p05.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\planos\\lamina_p05.webp",
+      "bytes": 615952
+    },
+    "projects/vivienda-multifamiliar/planos/lamina_p06.png": {
+      "kind": "document",
+      "storagePath": "media/projects/vivienda-multifamiliar/planos/lamina_p06.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\planos\\lamina_p06.webp",
+      "bytes": 699782
+    },
+    "projects/vivienda-multifamiliar/planos/lamina_p07.png": {
+      "kind": "document",
+      "storagePath": "media/projects/vivienda-multifamiliar/planos/lamina_p07.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\planos\\lamina_p07.webp",
+      "bytes": 618082
+    },
+    "projects/vivienda-multifamiliar/planos/lamina_p08.png": {
+      "kind": "document",
+      "storagePath": "media/projects/vivienda-multifamiliar/planos/lamina_p08.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\planos\\lamina_p08.webp",
+      "bytes": 551906
+    },
+    "projects/vivienda-multifamiliar/planos/lamina_p09.png": {
+      "kind": "document",
+      "storagePath": "media/projects/vivienda-multifamiliar/planos/lamina_p09.webp",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\planos\\lamina_p09.webp",
+      "bytes": 1012266
+    },
+    "projects/vivienda-multifamiliar/planos/vivienda-multifamiliar.pdf": {
+      "kind": "document",
+      "storagePath": "media/projects/vivienda-multifamiliar/planos/vivienda-multifamiliar.pdf",
+      "localFile": "out\\images\\projects\\vivienda-multifamiliar\\planos\\vivienda-multifamiliar.pdf",
+      "bytes": 14924973
     }
   }
 }

@@ -922,6 +922,230 @@
       "documents": []
     },
     {
+      "slug": "vivienda-multifamiliar",
+      "featured": true,
+      "display_order": 9,
+      "status": "published",
+      "title": {
+        "es": "Vivienda multifamiliar en ladera",
+        "en": "Hillside multifamily building"
+      },
+      "summary": {
+        "es": "Modelo BIM completo en Revit de la ampliación de una vivienda en Quito a tres departamentos, dos locales comerciales y terraza, sobre un terreno en ladera. Arquitectura y estructura de hormigón armado con el acero detallado varilla por varilla, documentadas en nueve láminas que cierran con las planillas de hierros.",
+        "en": "Full BIM model in Revit of a house extension in Quito into three apartments, two retail units and a roof terrace, on a hillside plot. Architecture and reinforced concrete structure with rebar detailed bar by bar, documented in nine sheets that close with the bar schedules."
+      },
+      "body": {
+        "es": "El punto de partida son los planos arquitectónicos y estructurales de 2014. A partir de ellos se construyó un solo modelo que lleva la arquitectura, el terreno con su pendiente y la estructura completa, de modo que plantas, fachadas, cortes, detalles y cantidades salen del mismo sitio y no pueden contradecirse.\n\nLa cimentación combina zapatas esquineras, de lindero, centrales y combinadas, unidas por vigas de cimentación de 30 por 55 cm. Sobre ella trabajan columnas de 30 por 30, 30 por 40 y 40 por 40 cm, vigas de 25 por 30 y 20 por 40 cm, losas por nivel y una escalera de concreto armado modelada a nivel LOD 400.\n\nEl acero está colocado en el modelo, no dibujado encima: parrillas de zapatas, armado de losas, columnas con su confinamiento en nudo y los nudos viga columna en 3D. Por eso las planillas de hierros de la última lámina salen del modelo, con marca, forma, longitud y peso de cada barra.\n\nEl modelo sigue la NEC-SE-HM, la NEC-SE-DS 2015, el ACI 318-19 y la INEN 2167 para el acero de refuerzo, con hormigón de 210 kg/cm² y acero de 4200 kg/cm².",
+        "en": "The starting point is the 2014 architectural and structural drawings. From them a single model was built that carries the architecture, the sloping terrain and the full structure, so plans, elevations, sections, details and quantities come from the same place and cannot contradict each other.\n\nThe foundations combine corner, boundary, central and combined footings, tied by 30 by 55 cm grade beams. On top of them work 30 by 30, 30 by 40 and 40 by 40 cm columns, 25 by 30 and 20 by 40 cm beams, slabs on every level and a reinforced concrete stair modelled at LOD 400.\n\nThe rebar is placed in the model, not drawn on top of it: footing mats, slab reinforcement, columns with their confinement at the joint, and beam column joints in 3D. That is why the bar schedules on the last sheet come out of the model, with mark, shape, length and weight for every bar.\n\nThe model follows NEC-SE-HM, NEC-SE-DS 2015, ACI 318-19 and INEN 2167 for reinforcing steel, with 210 kg/cm² concrete and 4200 kg/cm² steel."
+      },
+      "technologies": [
+        "Revit",
+        "BIM",
+        "LOD 400",
+        "Hormigón armado",
+        "ACI 318-19",
+        "NEC-SE-HM"
+      ],
+      "project_url": null,
+      "repository_url": null,
+      "taxonomy": [
+        {
+          "area": "civil-bim",
+          "subarea": "completed"
+        },
+        {
+          "area": "civil-bim",
+          "subarea": "bim"
+        },
+        {
+          "area": "civil-bim",
+          "subarea": "structural"
+        }
+      ],
+      "thumbnail": "projects/vivienda-multifamiliar/00_miniatura.png",
+      "images": [
+        {
+          "path": "projects/vivienda-multifamiliar/01_conjunto_sureste.png",
+          "caption": {
+            "es": "Conjunto desde el sureste, con el terreno en ladera",
+            "en": "The building from the southeast, on its hillside plot"
+          },
+          "order": 1
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/02_corte_escalera.png",
+          "caption": {
+            "es": "Corte 3D por la escalera y los departamentos",
+            "en": "3D section through the stair and the apartments"
+          },
+          "order": 2
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/03_fugado_planta_baja.png",
+          "caption": {
+            "es": "Corte fugado de la planta baja con los locales comerciales",
+            "en": "Ground floor cutaway with the retail units"
+          },
+          "order": 3
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/04_fugado_dpto_1a.png",
+          "caption": {
+            "es": "Corte fugado del departamento 1A",
+            "en": "Cutaway of apartment 1A"
+          },
+          "order": 4
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/06_planta_tipo_3d.png",
+          "caption": {
+            "es": "Planta tipo de los departamentos 2A y 3A en 3D",
+            "en": "Typical floor of apartments 2A and 3A in 3D"
+          },
+          "order": 5
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/05_conjunto_ladera.png",
+          "caption": {
+            "es": "Vista posterior contra la ladera",
+            "en": "Rear view against the hillside"
+          },
+          "order": 6
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/08_cimentacion_armado.png",
+          "caption": {
+            "es": "Cimentación con su armado: zapatas y vigas de cimentación",
+            "en": "Foundations with their rebar: footings and grade beams"
+          },
+          "order": 7
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/09_armado_losa.png",
+          "caption": {
+            "es": "Armado de losa del nivel N+3.10",
+            "en": "Slab reinforcement at level N+3.10"
+          },
+          "order": 8
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/13_columna_nudo.png",
+          "caption": {
+            "es": "Columna K2 desde el arranque, con el confinamiento en el nudo",
+            "en": "Column K2 from its base, with confinement at the joint"
+          },
+          "order": 9
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/10_nudos_3d.png",
+          "caption": {
+            "es": "Nudos viga columna B2 y A1 en 3D",
+            "en": "Beam column joints B2 and A1 in 3D"
+          },
+          "order": 10
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/11_armado_escalera.png",
+          "caption": {
+            "es": "Armado de la escalera entre dos niveles",
+            "en": "Stair reinforcement between two levels"
+          },
+          "order": 11
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/12_tramo_escalera.png",
+          "caption": {
+            "es": "Tramo de escalera modelado a nivel LOD 400",
+            "en": "Stair flight modelled at LOD 400"
+          },
+          "order": 12
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/07_corte_transversal.png",
+          "caption": {
+            "es": "Corte transversal por la escalera con sus niveles",
+            "en": "Cross section through the stair with its levels"
+          },
+          "order": 13
+        }
+      ],
+      "videos": [],
+      "documents": [
+        {
+          "path": "projects/vivienda-multifamiliar/planos/lamina_p01.png",
+          "title": {
+            "es": "A-001 Portada y vistas 3D",
+            "en": "A-001 Cover and 3D views"
+          }
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/planos/lamina_p02.png",
+          "title": {
+            "es": "A-101 Plantas",
+            "en": "A-101 Floor plans"
+          }
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/planos/lamina_p03.png",
+          "title": {
+            "es": "A-201 Fachadas y cortes",
+            "en": "A-201 Elevations and sections"
+          }
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/planos/lamina_p04.png",
+          "title": {
+            "es": "E-101 Cimentación",
+            "en": "E-101 Foundations"
+          }
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/planos/lamina_p05.png",
+          "title": {
+            "es": "E-102 Losas y notas",
+            "en": "E-102 Slabs and notes"
+          }
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/planos/lamina_p06.png",
+          "title": {
+            "es": "E-103 Columnas",
+            "en": "E-103 Columns"
+          }
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/planos/lamina_p07.png",
+          "title": {
+            "es": "E-201 Pórticos 1, 2, 3 y D, vigas y nudos",
+            "en": "E-201 Frames 1, 2, 3 and D, beams and joints"
+          }
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/planos/lamina_p08.png",
+          "title": {
+            "es": "E-202 Pórticos A, B y C y escalera",
+            "en": "E-202 Frames A, B and C and stair"
+          }
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/planos/lamina_p09.png",
+          "title": {
+            "es": "E-401 Planillas de hierros",
+            "en": "E-401 Bar schedules"
+          }
+        },
+        {
+          "path": "projects/vivienda-multifamiliar/planos/vivienda-multifamiliar.pdf",
+          "title": {
+            "es": "Juego completo de planos en PDF",
+            "en": "Full drawing set in PDF"
+          }
+        }
+      ],
+      "legacy_id": null,
+      "created_at": null
+    },
+    {
       "slug": "casa-de-huespedes",
       "featured": true,
       "display_order": 10,
